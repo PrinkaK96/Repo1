@@ -1,0 +1,29 @@
+.sign-form {
+    .login {
+        color: #23376e;
+        margin: 1.2rem 0;
+    }
+    .resendOTP {
+        cursor: pointer;
+    }
+}
+.resendOTP {
+    background-color: transparent;
+    border: none;
+}
+.backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    position: absolute;
+    left: 35px;
+    height: 35px;
+    width: 35px;
+    transform: translate(-50%, -50%);
+}
+.sign-container{
+    position: relative;
+}

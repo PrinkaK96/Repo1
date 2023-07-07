@@ -1,0 +1,169 @@
+<div class="">
+    <div class="">
+        <div class="mb-4" (click)="goBackLandPage()">
+            <button class="backBtn">
+                <img src="../../../assets/icons/back-icon.png" class="w15" alt=""></button>
+        </div>
+        <form [formGroup]="_officialForm" action="">
+            <div class="createOfficial">
+                <div class="topBar">
+                    <div class="flex-sb">
+                        <div class="leftContent">
+                            <h4 class="p-green"><b>Add Officials</b></h4>
+                            <!-- <p class="p-green p-small mt-4">Add members individually or import an excel file</p> -->
+                        </div> 
+                        <div class="reset flex-hc">
+                            <div class="flex-vc svg-combine">
+                                <p class="p-combine" (click)="resetForm()">Reset</p>
+                                <svg class="ms-2" width="10" hight="10" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.07444 1.0216C4.13731 1.38903 3.20205 2.04552 2.55192 2.81502C2.3018 3.09986 2.08265 3.34153 2.0604 3.34519C2.03816 3.34885 1.96965 3.02506 1.90377 2.62468C1.75249 1.70529 1.69824 1.65329 0.949384 1.77651C0.148625 1.90828 0.164957 1.77613 0.584642 4.32669C0.899406 6.23962 0.955716 6.48927 1.08157 6.55994C1.19138 6.62564 1.65473 6.57224 3.35264 6.29286C5.84389 5.88293 5.73877 5.93831 5.65882 5.17471C5.6164 4.77809 5.58449 4.67673 5.41434 4.52196C5.22569 4.34739 5.21086 4.34983 4.39528 4.48403L3.56364 4.61326L3.91043 4.17544C4.36375 3.59824 5.19511 3.00454 5.85396 2.79713C7.1544 2.36992 8.53742 2.62972 9.68195 3.52275C10.5034 4.16434 10.9674 4.94849 11.1407 6.00134C11.3188 7.08385 11.0981 8.10253 10.5107 8.97592C10.0548 9.6297 9.63027 10.0118 8.86601 10.4117C8.33302 10.6898 8.21298 10.7933 8.10626 11.0241C7.85313 11.5683 8.16435 12.2101 8.74342 12.3509C9.01259 12.4132 9.07932 12.4022 9.52813 12.2141C12.5548 10.9394 14.0017 7.19068 12.5983 4.21561C12.0929 3.13366 11.1229 2.05199 10.1457 1.48172C9.55715 1.1445 8.41524 0.776492 7.71744 0.700932C7.17525 0.64546 5.54051 0.845912 5.07444 1.0216Z"
+                                        fill="#1B403A" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile my-3">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="inputSection">
+                                <div class="detail-input mt-3">
+                                    <label for="detailInput">Name</label>
+                                    <input [formControlName]="'officialName'" type="text" pInputText
+                                        placeholder="Enter Name">
+                                    <div class="error-txt-msg mb-2"
+                                        *ngIf="_isSubmit && _officialForm.controls['officialName'].hasError('required')"
+                                        style="color: red">
+                                        Required Field.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="inputSection">
+                                <div class="detail-input mt-3">
+                                    <label for="detailInput">Email</label>
+                                    <input [formControlName]="'officialEmail'" type="text" pInputText
+                                        placeholder="Enter Email">
+                                    <div class="error-txt-msg mb-2"
+                                        *ngIf="_isSubmit && _officialForm.controls['officialEmail'].hasError('required')"
+                                        style="color: red">
+                                        Required Field.
+                                    </div>
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                                    _isSubmit && _officialForm.controls['officialEmail'].hasError('email')
+                                  " style="color: red; font-size: 0.7rem; font-weight: bold">
+                                        Invalid Email
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="addMember flex-ve flex-hc h-100 ">
+                                <button class="btn btn_green m-0 w-auto" (click)="AddOfficial()">Add
+                                    Member</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centerElement">
+                    <!-- <div class="row">
+                        <div class="col-lg-6">
+                            <div class="detail-input">
+                                <label for="dropdown">State</label>
+                                <p-dropdown [formControlName]="'officialState'" [options]="_state" optionLabel="name"
+                                    placeholder="Select State">
+                                </p-dropdown>
+                                <!-- <div class="error-txt-msg mb-2"
+                                    *ngIf="_isSubmit && _officialForm.controls['officialState'].hasError('required')"
+                                    style="color: red">
+                                    Required Field.
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="detail-input">
+                                <label for="dropdown">Role Select</label>
+                                <p-dropdown [formControlName]="'officialRole'" [options]="_state" optionLabel="name"
+                                    placeholder="Select role">
+                                </p-dropdown>
+                                <!-- <div class="error-txt-msg mb-2"
+                                    *ngIf="_isSubmit && _officialForm.controls['officialRole'].hasError('required')"
+                                    style="color: red">
+                                    Required Field.
+                                </div> 
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- <div class="submitter my-3">
+                        <div [ngClass]="_showMessage ? 'flex-sb flex-vc':'flex-e'">
+                            <div class="message" *ngIf="_showMessage">
+                                <p class="p-success">Member has been added to the import list</p>
+                            </div>
+                            <div class="addMember">
+                                <button class="btn btn_green m-0 w-auto" (click)="AddOfficial()">Add
+                                    Member</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="submitter my-3">
+                        <div class="flex-vc flex-e">
+                            <!-- <div (click)="downloadTemplate()" class="p-links flex-vc me-3">
+                                <i class="pi pi-download p-green"></i>
+                                <p class="ms-2 p-green">Download template</p>
+                            </div> -->
+                            <!-- <input class="input-attachment" type="file" accept=".xlsx" #selectFile /> -->
+                            <!-- <button (click)="selectFile.click()" class="btn btn_green flex-vc m-0  w-auto">
+                                <!-- <i class="i-small pi pi-plus-circle me-3"></i> 
+                                Import File
+                            </button>
+                            <p class="p-secondary mx-3">or</p> -->
+
+                        </div>
+                    </div>
+                    <!-- <div class="divider">
+                        <p class="p-secondary"><b class="fs-5 p-green">Or</b> you can also add players by importing a
+                            excel
+                            file in the format
+                            given below</p>
+                    </div> -->
+                </div>
+                <div class="bottomContainer">
+                    <div class="fileUpload my-5">
+                        <!-- <div class="row"> -->
+                        <!-- <div class="col-lg-9"> -->
+                        <table class="skeletonTable table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Role</th>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody class="mt-3">
+                                <tr *ngFor="let item of _eventOfficial">
+                                    <td> {{item.name}}
+                                    </td>
+                                    <td> None
+                                    </td>
+                                    <td> None
+                                    </td>
+                                    <td> {{item.email}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </form>
+
+    </div>
+</div>

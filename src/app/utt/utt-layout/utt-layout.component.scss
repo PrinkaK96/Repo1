@@ -1,0 +1,107 @@
+.leaderboard-layout {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    .leaderboard-sidebar {
+        width: 310px;
+        height: 100%;
+        background-color: var(--utt-main);
+        color: white;
+
+        .sidebar-menu-list {
+            .sidebar-menu {
+                height: 40px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #d4d4d461;
+                }
+
+                &._selected {
+                    transition: all .2s ease;
+                    background-color: rgb(0 0 0 / 19%);
+                }
+            }
+        }
+    }
+
+    .leaderboard-content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+
+    }
+}
+
+.genderDivider {
+    width: fit-content;
+    border: 1px solid #d4d4d4;
+    border-radius: 7px;
+
+    .header {
+        border-bottom: 1px solid #d4d4d4;
+
+        .heading {
+            flex-grow: 2;
+
+            &:first-child {
+                border-radius: 1px solid #d4d4d4;
+            }
+        }
+    }
+
+    .genderPart {
+        &:first-child {
+            border-right: 1px solid #d4d4d4;
+        }
+    }
+}
+
+.genderSeperator {
+    width: 230px;
+
+    .genderContainer {
+        padding: 2px;
+        background-color: #8080805e;
+        cursor: pointer;
+
+        &._selected {
+            background-color: var(--utt-main) !important;
+            color: white;
+        }
+    }
+}
+
+.smallBlock {
+    width: 120px;
+    text-align: center;
+}
+
+.rally-card {
+    height: 0px;
+    border: 1px solid #d4d4d4;
+    height: 60px;
+
+    .boxLine {
+        height: 60px;
+        width: 15px;
+        background-color: var(--utt-main);
+    }
+}
+
+.playerSection {
+    font-size: 12px !important;
+
+    .card-heading,
+    .flex-heading {
+        font-size: 14px;
+        font-weight: 700 !important;
+    }
+}
+
+::ng-deep {
+    .p-tooltip-text {
+        width: 450px !important;
+    }
+}

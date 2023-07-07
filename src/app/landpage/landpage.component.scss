@@ -1,0 +1,307 @@
+$green-color: #01534d;
+$green-container: #1b403a;
+$white-container: #f5f5f5;
+
+$mediaQueries: (
+    mobile: 576px,
+    tab: 1000px,
+);
+
+@mixin query($screen) {
+    @each $key, $value in $mediaQueries {
+        @if ($screen ==$key) {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+.landpage {
+    .landpage-component {
+        ._events {
+            padding: 1.5rem !important;
+        }
+        section[class^="section-"] {
+            margin-bottom: 0.5rem;
+        }
+        .section-top-image-slider {
+            .topImageSlider {
+                overflow: hidden;
+                z-index: 1;
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 50vh;
+                    object-fit: cover;
+                    object-position: center;
+                    overflow: hidden;
+                    z-index: -1;
+                }
+            }
+        }
+        .section-ongoing-events,
+        .section-recent-events {
+            background: $green-container;
+            color: white;
+            .common-carousel {
+                position: relative;
+                width: 100%;
+                .owlDta {
+                    z-index: 1;
+                    button {
+                        background: #01534d;
+                        width: 45px !important;
+                        height: 45px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50px;
+                    }
+                    img {
+                        width: 10px;
+                    }
+                    button.owl-left {
+                        position: absolute;
+                        left: -20px;
+                    }
+                    button.owl-right {
+                        position: absolute;
+                        right: -23px;
+                    }
+                }
+                ::ng-deep {
+                    owl-carousel-o {
+                        width: 100%;
+                    }
+                    .owl-next {
+                        position: absolute;
+                        right: 0;
+                        background: #2d4f4a;
+                        span {
+                            color: white;
+                        }
+                    }
+                    .owl-prev {
+                        background: #2d4f4a;
+                        display: none;
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .ongoingevent,
+            .recentevent {
+                position: relative;
+                min-height: 67vh;
+                .ongoing-heading,
+                .recent-heading {
+                    position: absolute;
+                    top: 50%;
+                    left: 25vw;
+                    transform: translate(-50%, -50%);
+                    h1 {
+                        font-size: 5vw;
+                        letter-spacing: 1.5rem;
+                    }
+                }
+                .ongoingevent_slider,
+                .recentevent_slider {
+                    position: relative;
+                    display: flex;
+                    margin: auto 0;
+                    align-items: center;
+                    .thumbnail {
+                        position: relative;
+                        height: 300px;
+                    }
+                    .event-card {
+                        right: 0;
+                    }
+                }
+                
+                // .anotherClass {
+                //     position: relative;
+                //     width: 100% !important;
+                //     display: flex;
+                //     margin: auto 0;
+                //     align-items: center;
+                //     .thumbnail {
+                //         position: relative;
+                //         height: 300px;
+                //     }
+                //     .event-card {
+                //         width: 400px !important;
+                //     }
+                // }
+
+                .seeAll {
+                    color: white;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        .section-registration-open,
+        .section-upcomming-event {
+            ::ng-deep {
+                .owl-prev {
+                    left: -18px;
+                }
+                .owl-next {
+                    right: -18px;
+                }
+                .owl-next,
+                .owl-prev {
+                    background: #eeeeee !important;
+                    position: absolute;
+                    border-radius: 50px;
+                    z-index: 1;
+                    padding: 5px 11px;
+                    i {
+                        color: #23376e;
+                        font-size: 10px;
+                    }
+                }
+                .owl-nav {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+            }
+            .event-info {
+                .registerNow {
+                    border-radius: 3px !important;
+                }
+                .event-flex {
+                    .eventList {
+                        text-decoration: none;
+                        color: #23376e;
+                    }
+                }
+            }
+        }
+        .section-recent-live {
+            ::ng-deep {
+                .owl-nav {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+                .owl-next,
+                .owl-prev {
+                    position: absolute;
+                    border-radius: 50px;
+                    background: #2d4f4a;
+                    z-index: 1;
+                    padding: 5px 11px;
+                    i {
+                        color: white;
+                        font-size: 10px;
+                    }
+                }
+                .owl-prev {
+                    left: -18px;
+                }
+                .owl-next {
+                    right: -18px;
+                }
+            }
+        }
+    }
+}
+
+// #tournaments {
+//     margin-top: 50px;
+//     padding: 0 5% 0 5%;
+// }
+// .bottomInfo {
+//     color: rgba(255, 255, 255, 0.55);
+//     .addressOverflow {
+//         max-width: 100px;
+//         overflow: hidden;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         font-size: 12px;
+//     }
+//     .date {
+//         font-size: 12px;
+//     }
+// }
+
+// .container {
+//     padding: 20px 0px;
+// }
+// .showTab {
+//     ::ng-deep {
+//         .mat-tab-label .mat-tab-label-content {
+//             color: white;
+//             font-family: "Poppins", sans-serif;
+//         }
+//         .mat-focus-indicator {
+//             background-color: rgba(31, 31, 31, 0);
+//         }
+//         .mat-tab-header {
+//             width: auto !important;
+//             display: flex;
+//             margin: auto;
+//             // overflow: hidden;
+//             position: sticky;
+//             flex-shrink: 0;
+//             top: 85px;
+//             z-index: 12;
+//         }
+//         @media only screen and (max-width: 700px) {
+//             .mat-tab-header {
+//                 margin: initial;
+//             }
+//         }
+
+//         .mat-tab-label-content {
+//             font-weight: bold;
+//             font-size: 110%;
+//             padding: 0 !important;
+//             font-family: "Poppins";
+//             overflow: visible;
+//         }
+//         .mat-tab-label {
+//             overflow: visible;
+//             opacity: 0.9;
+//         }
+//         .mat-tab-labels {
+//             justify-content: space-around !important;
+//             margin-left: 20px;
+//         }
+
+//         .mat-tab-label-container {
+//             background-color: rgba(29, 29, 29, 0.733);
+//         }
+
+//         .mat-tab-label-active {
+//             background-color: none;
+//         }
+//         .mat-ink-bar {
+//             background: transparent
+//                 linear-gradient(
+//                     100deg,
+//                     rgba(90, 61, 146, 1) 0%,
+//                     rgba(79, 65, 141, 1) 15%,
+//                     rgba(31, 93, 162, 1) 35%,
+//                     rgba(30, 146, 202, 1) 58%,
+//                     rgba(6, 180, 160, 1) 81%,
+//                     rgba(11, 173, 136, 1) 100%
+//                 );
+//         }
+
+//         .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+//             display: flex;
+//         }
+
+//         .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+//             background-color: #3f3f3f15;
+//         }
+//     }
+// }

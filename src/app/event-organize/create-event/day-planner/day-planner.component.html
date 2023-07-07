@@ -1,0 +1,222 @@
+<div class="skeletonlayout" *ngIf="!_skeleton && _eventId!==null" style="margin: 0px 20px">
+    <div class="row" style="margin-top: 1rem">
+        <div class="col-lg-3">
+            <div class="row" *ngFor="let items of idies" style="margin-top:1rem">
+                <p-skeleton shape="rectangle" width="100%" height="25px" animation="wave"
+                    styleClass="mt-2"></p-skeleton>
+            </div>
+        </div>
+        <div class="col-lg-9">
+            <div class="row" *ngFor="let items of idies" style="margin-top:1rem">
+                <div class="col-lg-6">
+                    <p-skeleton shape="rectangle" width="100%" height="20px" animation="wave"
+                        styleClass="mt-2"></p-skeleton>
+                </div>
+                <div class="col-lg-6">
+                    <p-skeleton shape="rectangle" width="100%" height="20px" animation="wave"
+                        styleClass="mt-2"></p-skeleton>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl" *ngIf="_eventId!=null">
+    <div class="topbar">
+        <div class="flex-sb flex-sb">
+            <div>
+                <h4 class="p-green">Day Planner</h4>
+                <p class="mt-2 p-green">You can schedule your matches here.</p>
+            </div>
+            <div class="flex-vc gap-2 p-links" (click)="resetForm()">
+                <p class="p-combine">Reset</p>
+                <i class="pi pi-refresh p-combine p-small"></i>
+            </div>
+        </div>
+    </div>
+    <div class="centerElement my-4">
+        <div class="row">
+            <div class="col-lg-3 sidebuttons">
+                <div class="heading">
+                    <p>Select Event Date</p>
+                </div>
+                <div class="selectedDate mt-2">
+                    <p class="p-green"><b>{{this._daysList[0]?.dayDate}}&nbsp; -
+                            {{this._daysList[this._daysList.length-1]?.dayDate}} &nbsp;</b>
+                    </p>
+                </div>
+                <div class="dayButton " *ngFor="let item of _daysList;let i=index">
+
+                    <button [disabled]="item.dayDateFromBackEnd < this._disableDate" (click)="currentDateSelected(i)"
+                        [ngClass]="item.isSelectedDay ? 'flex-sb flex-vc btn btn_green-bordered selected my-3':'flex-sb flex-vc btn btn_green-bordered  my-3'"
+                        class=" flex-sb flex-vc btn btn_green-bordered my-3">
+                        <p class="p-small">{{item.dayCount}}</p>
+                        <p><b>{{item.dayDate}}</b></p>
+                        <i class="pi pi-plus-circle i-small"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <p-divider [layout]="innerWidth > 990 ? 'vertical':'horizontal'"></p-divider>
+            </div>
+
+            <div class="col-lg-7">
+                <form [formGroup]="_dayPlannerForm">
+                    <div class="mt-4">
+                        <div class="heading">
+                            <p>Set Event Start - End Time</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <p-calendar [showIcon]="true" icon="pi pi-clock i-small "
+                                    [formControlName]="'start_time'" placeholder="Start Time" [hourFormat]="'12'"
+                                    [timeOnly]="true" dateFormat="HH:mm" [showTime]="true" inputId="timeonly"
+                                    (onSelect)="onDurationChange()"></p-calendar>
+                                <div class="error-txt-msg mb-2" *ngIf="
+                                    _isSubmit && _dayPlannerForm.controls['start_time'].hasError('required')
+                                  " style="color: red">
+                                    Required
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="flex-vc flex-hc" [style]="{'height':'100%'}">
+                                    <h6 class="p-green">--/--</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <p-calendar id="endTime" [showIcon]="true" icon="pi pi-clock i-small " #endTime
+                                    [formControlName]="'end_time'" placeholder="End Time" [hourFormat]="'12'"
+                                    [timeOnly]="true" dateFormat="HH:mm" [showTime]="true" inputId="timeonly"
+                                    (onSelect)="onDurationChange()"></p-calendar>
+                                <div class="error-txt-msg mb-2" *ngIf="
+                                    _isSubmit && _dayPlannerForm.controls['end_time'].hasError('required')
+                                  " style="color: red">
+                                    Required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="heading">
+                            <p>Set Break Start - End Time</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <p-calendar id="startTime" [showIcon]="true" icon="pi pi-clock i-small " #startTime
+                                    [formControlName]="'break_start_time'" placeholder="Start Time" [timeOnly]="true"
+                                    [hourFormat]="'12'" dateFormat="HH:mm" inputId="timeonly"></p-calendar>
+                                <!-- <div class="error-txt-msg mb-2" *ngIf="
+                                    _isSubmit && _dayPlannerForm.controls['break_start_time'].hasError('required')
+                                  " style="color: red">
+                                    Required
+                                </div> -->
+                            </div>
+                            <div class="col-md-2">
+                                <div class="flex-vc flex-hc" [style]="{'height':'100%'}">
+                                    <h6 class="p-green">--/--</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <p-calendar id="endTime" [showIcon]="true" icon="pi pi-clock i-small " #endTime
+                                    [hourFormat]="'12'" [formControlName]="'break_end_time'" placeholder="End Time"
+                                    dateFormat="HH:mm" [timeOnly]="true" inputId="timeonly"></p-calendar>
+                                <!-- <div class="error-txt-msg mb-2" *ngIf="
+                                    _isSubmit && _dayPlannerForm.controls['break_end_time'].hasError('required')
+                                  " style="color: red">
+                                    Required
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+
+                        <div class="row">
+                            <div class="col-md-5 ">
+                                <div class="heading">
+                                    <p>Set Number of umpires</p>
+                                </div>
+                                <div class="dayPlannerInputtext">
+                                    <input type="text" [formControlName]="'umpires'" pInputText
+                                        [value]="this._officialList.length" />
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-5">
+                                <div class="heading">
+                                    <p>Set Number of Tables</p>
+                                </div>
+                                <div class="dayPlannerInputtext">
+
+                                    <input type="number" [formControlName]="'tables'" pInputText
+                                        (focusout)="onTableSelection()" placeholder="Number Of Tables" />
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                                        _isSubmit && _dayPlannerForm.controls['tables'].hasError('required')
+                                      " style="color: red">
+                                        Required
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="heading">
+                            <p>Set Match Time(In Minutes)</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="dayPlannerInputtext">
+                                    <input type="number" [formControlName]="'match_duration'" pInputText
+                                        (change)="onDurationChange()" (keydown)="onDurationChange()"
+                                        (keyup)="onDurationChange()" placeholder="Match Duration" />
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                                        _isSubmit && _dayPlannerForm.controls['match_duration'].hasError('required')
+                                      " style="color: red">
+                                        Required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="_totalMatchs>0" class="mt-2">
+                        <h6 class="p-green">
+                            <strong>Based on set timings
+                                <b class="p-combine">{{_totalMatchs===0 ? '' :
+                                    _totalMatchs}}
+                                    matches</b>
+                                can be
+                                scheduled for
+                                the day</strong>
+                        </h6>
+                        <div class="setTiming-row mt-3">
+                            <div>
+                                <div class="flexRow row flex-vc" *ngFor="let item of _officialForEvent;let i=index">
+                                    <div class="col-3">
+                                        <h6 class="p-green">Table {{i+1}}</h6>
+                                    </div>
+                                    <div class="col-6 dayPlannerInputtext">
+
+                                        <p-dropdown [options]="_officialList" placeholder="Select" [filter]="true"
+                                            [ngModelOptions]="{standalone: true}" [(ngModel)]="item.dropV"
+                                            optionLabel="name" (onChange)="selectedOfficial($event,i)">
+                                        </p-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                            <p-divider></p-divider>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="update flex-e mt-4">
+        <button class="btn btn_green w-auto m-0" (click)="updatePlan()">Update</button>
+    </div>
+    <!-- [disabled]="_officialList.length===0" -->
+</div>
+
+<stupa-common-svg-msg *ngIf="_eventId===null" (eventClicked)="eventClicked()"></stupa-common-svg-msg>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

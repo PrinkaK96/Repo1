@@ -1,0 +1,402 @@
+<div class="container-xxl">
+	<button class="backbtn" (click)="goback()">
+		<img class="me-2" class="backButton_w33" src="../../../assets/icons/backbtn/boldbackBTN.png" alt="" />
+		Back
+	</button>
+	<div class="banner-tabView">
+		<div class="container-xxl">
+			<div class="header">
+				<div class="flex-sb">
+					<h6>Trending Matches</h6>
+				</div>
+			</div>
+			<form [formGroup]="_trendingFormArray">
+				<div formArrayName="trendingMatch" class="innerContent mt-2">
+					<div class="row flex-base flex-hc">
+						<div class="col-1 text-end"></div>
+						<div class="col-2 bold">Entity Name</div>
+						<div class="col-2 bold">Event Name</div>
+						<div class="col-2 bold">Match Name</div>
+						<div class="col-2 bold">Thumbnail</div>
+						<div class="col-3 flex-hc gap-3 pRelative"></div>
+					</div>
+					<div>
+						<div *ngFor="let item of _globalTrendingList; let listIndex= index">
+							<div class="row flex-base flex-hc">
+								<div class="col-1 text-end">{{ listIndex + 1 }}</div>
+								<div class="col-2">
+									<div class="hidden-input">
+										<input type="text" placeholder="{{ item.tenant }}" accept="image/x-png,
+											image/jpg, image/jpeg" #thumbnailBut />
+									</div>
+									<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut.click()">
+										{{ item.tenant=='tt'?'Stupa':'Brazil' }}
+									</button>
+								</div>
+								<div class="col-2">
+									<div class="hidden-input">
+										<input type="text" placeholder="{{ item.tenant }}" accept="image/x-png,
+											image/jpg, image/jpeg" #thumbnailBut />
+									</div>
+									<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut.click()">
+										{{ item.event_name }}
+									</button>
+								</div>
+								<div class="col-2">
+									<div class="hidden-input">
+										<input type="text" placeholder="{{ item.playerA }}" accept="image/x-png,
+											image/jpg, image/jpeg" #thumbnailBut />
+									</div>
+									<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut.click()">
+										{{ item.playerA + " -" + item.playerB }}
+									</button>
+								</div>
+								<div class="col-2">
+									<div class="hidden-input">
+										<input type="text" placeholder="Thumbnail" accept="image/x-png,
+											image/jpg, image/jpeg" #thumbnailBut />
+									</div>
+									<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut.click()">
+										Thumbnail
+									</button>
+								</div>
+								<div class="col-3 flex-hc gap-3 pRelative">
+									<div class="addBut" *ngIf="
+										trendingMatch().controls.length == 0 && _globalTrendingList.length-1==listIndex
+										">
+										<i class="pi pi-plus-circle p-links" (click)="addMoreFormArray()"></i>
+									</div>
+									<div class="preview">
+										<p class="text-center p-links" (click)="viewCreateTrenImage(item.image)">
+											Preview
+										</p>
+									</div>
+									<div class="remove">
+										<p class="bkg p-links" (click)="deleteRow(listIndex)">
+											Remove
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div *ngFor="
+							let formList of trendingMatch().controls;
+							let formIndex= index
+							" [formGroupName]="formIndex">
+							<div class="row flex-base flex-hc">
+								<div class="col-1 text-end">
+									{{ this._globalTrendingList.length + 1 + formIndex }}
+								</div>
+								<div class="col-2">
+									<p-dropdown placeholder="Select Entity" [options]="_entityList" [filter]="true"
+										optionValue="id" (onChange)="currentTrendTenant(formIndex)" appendTo="body"
+										[formControlName]="'trendEntity'" optionLabel="name"></p-dropdown>
+									<div class="error-txt-msg mb-2" *ngIf="trendingMatch().controls[formIndex].get('trendEntity')?.errors?.['required']
+										&& isValidFormSubmitted != null && !isValidFormSubmitted" style="color: red">
+										Required Field.
+									</div>
+								</div>
+								<div class="col-2">
+									<p-dropdown placeholder="Select Event" [options]="_eventList[formIndex]"
+										[filter]="true" appendTo="body" [formControlName]="'trendEvent'"
+										(onChange)="getGlobalEventMatches(formIndex)" optionLabel="event_name"
+										optionValue="event_id"></p-dropdown>
+									<div class="error-txt-msg mb-2" *ngIf="trendingMatch().controls[formIndex].get('trendEvent')?.errors?.['required']
+										&& isValidFormSubmitted != null && !isValidFormSubmitted" style="color: red">
+										Required Field.
+									</div>
+								</div>
+								<div class="col-2">
+									<p-dropdown placeholder="Select Match" [options]="_matchList[formIndex]"
+										[filter]="true" appendTo="body" [formControlName]="'trendMatch'"
+										optionValue="id" optionLabel="match_name"></p-dropdown>
+									<div class="error-txt-msg mb-2" *ngIf="trendingMatch().controls[formIndex].get('trendMatch')?.errors?.['required']
+										&& isValidFormSubmitted != null && !isValidFormSubmitted" style="color: red">
+										Required Field.
+									</div>
+								</div>
+								<div class="col-2">
+									<div class="hidden-input">
+										<input type="file" placeholder="Thumbnail" accept="image/x-png,
+											image/jpg, image/jpeg" (change)="
+											onFileDroppedTrending(
+											$any($event.target).files,
+											formIndex,
+											true
+											)
+											" [formControlName]="'trenThumbnail'" #thumbnailBut />
+									</div>
+									<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut.click()">
+										Thumbnail
+									</button>
+									<div class="error-txt-msg mb-2" *ngIf="trendingMatch().controls[formIndex].get('trenThumbnail')?.errors?.['required']
+										&& isValidFormSubmitted != null && !isValidFormSubmitted" style="color: red">
+										Required Field.
+									</div>
+								</div>
+								<div class="col-3 flex-hc gap-3 pRelative">
+									<div class="addBut" *ngIf="
+										trendingMatch().controls.length == formIndex + 1 &&
+										this._globalTrendingList.length + 1 + formIndex <10
+										">
+										<i class="pi pi-plus-circle p-links" (click)="addMoreFormArray()"></i>
+									</div>
+									<div class="preview">
+										<p class="text-center p-links" (click)="viewImage(formIndex, true)" *ngIf="
+											this.trendingMatch().controls[formIndex].controls
+											.trenThumbnail.value !== ''
+											">
+											Preview
+										</p>
+									</div>
+									<div class="remove">
+										<p *ngIf=" trendingMatch().controls.length>1 || _globalTrendingList.length>0"
+											class="bkg p-links" (click)="removeForm(formIndex)">
+											Remove
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex-e gap-3">
+
+						<button class="btn btn_green m-0 w-auto" (click)="submitTrendForm()">
+							Update
+						</button>
+						<button *ngIf="trendingMatch().controls.length>1 || _globalTrendingList.length>0 "
+							class="btn btn-danger m-0 w-auto" (click)="deleteAll()">
+							Delete All
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="container-xxl mt-4">
+			<div class="header">
+				<div class="flex-sb">
+					<h6>Recent Matches</h6>
+				</div>
+			</div>
+			<form [formGroup]="_recentFormArray">
+				<div formArrayName="recentMatch" class="innerContent mt-2">
+					<div class="row mb-1">
+						<div class="col-1"></div>
+						<div class="col-2">
+							<p><b>Entity Name</b></p>
+						</div>
+						<div class="col-2">
+							<p><b>Event Name</b></p>
+						</div>
+					</div>
+					<div *ngFor="let item of _globalRecentList; let recentListIndex= index">
+						<div class="row flex-base flex-hc">
+							<div class="col-1 text-end">{{ recentListIndex + 1 }}</div>
+							<div class="col-2">
+								<div class="hidden-input">
+									<input type="text" placeholder="{{ item.tenant }}" accept="image/x-png,
+										image/jpg, image/jpeg" #thumbnailBut />
+								</div>
+								<button class="btn thumbnailBut text-overflow">
+									{{ item.tenant=='tt'?'Stupa':'Brazil' }}
+								</button>
+							</div>
+							<div class="col-2">
+								<div class="hidden-input">
+									<input type="text" placeholder="{{ item.event_name }}" accept="image/x-png,
+										image/jpg, image/jpeg" #thumbnailBut />
+								</div>
+								<button class="btn thumbnailBut text-overflow">
+									{{ item.event_name }}
+								</button>
+							</div>
+							<div class="col-3 flex-s gap-3 pRelative">
+								<div class="remove m-0">
+									<p class="bkg p-links" (click)="deleteSubMatchRow(recentListIndex)">
+										<i class="pi pi-trash"> </i>
+									</p>
+								</div>
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+						<div class="subMatchList">
+							<div *ngFor="
+								let subMatch of item.match_details;
+								let subMatchIndex= index
+								">
+								<!-- <div class="row flex-base flex-hc innerMatches"> -->
+								<div class="row flex-base flex-hc ">
+									<div class="col-1 text-end">
+										{{ recentListIndex + 1 + "-" + (subMatchIndex + 1) }}
+									</div>
+									<div class="col-2">
+										<div class="hidden-input">
+											<input type="text" placeholder="{{
+												subMatch.playerA + '-' + subMatch.playerB
+												}}" accept="image/x-png,
+												image/jpg, image/jpeg" #thumbnailBut />
+										</div>
+										<button class="btn thumbnailBut text-overflow">
+											{{ subMatch.playerA + "-" + subMatch.playerB }}
+										</button>
+									</div>
+									<div class="col-2">
+										<div class="hidden-input">
+											<input type="text" placeholder="Thumbnail" accept="image/x-png,
+												image/jpg, image/jpeg" #thumbnailBut />
+										</div>
+										<button class="btn thumbnailBut text-overflow">Thumbnail</button>
+									</div>
+									<div class="col-2 flex-hc gap-3 pRelative">
+										<div class="preview">
+											<p class="text-center p-links"
+												(click)="viewCreateTrenImage(subMatch.image)">
+												Preview
+											</p>
+										</div>
+										<div class="col-3 "></div>
+									</div>
+									<div class="col-2"></div>
+									<div class="col-2"></div>
+									<div class="col-1"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sectionDivider">
+							<p-divider></p-divider>
+						</div>
+					</div>
+					<div *ngFor="
+						let formList of recentMatch().controls;
+						let formIndex= index
+						" [formGroupName]="formIndex">
+						<div class="row flex-base flex-hc">
+							<div class="col-1 text-end">
+								{{ this._globalRecentList.length + formIndex + 1 }}
+							</div>
+							<div class="col-2">
+								<p-dropdown placeholder="Select Entity" [options]="_entityList" [filter]="true"
+									(onChange)="currentRecentTenant(formIndex)" appendTo="body" optionValue="id"
+									[formControlName]="'recentEntity'" optionLabel="name"></p-dropdown>
+								<div class="error-txt-msg mb-2" *ngIf="recentMatch().controls[formIndex].get('recentEntity')?.errors?.['required']
+									&& isValidFormSubmittedRecent != null && !isValidFormSubmittedRecent" style="color: red">
+									Required Field.
+								</div>
+							</div>
+							<div class="col-2">
+
+								<p-dropdown placeholder="Select Event" [options]="_eventList[formIndex]" [filter]="true"
+									appendTo="body" (onChange)="addFirstSubMatch(formIndex)" optionValue="event_id"
+									[formControlName]="'recentEvent'" optionLabel="event_name"></p-dropdown>
+								<div class="error-txt-msg mb-2" *ngIf="recentMatch().controls[formIndex].get('recentEvent')?.errors?.['required']
+									&& isValidFormSubmittedRecent != null && !isValidFormSubmittedRecent" style="color: red">
+									Required Field.
+								</div>
+							</div>
+							<div class="col-3 flex-s gap-3 pRelative">
+								<div class="remove m-0"
+									*ngIf=" recentMatch().controls.length>1 || _globalRecentList.length>0">
+									<p class="bkg p-links" (click)="deleteRecentMatchRow(formIndex)">
+										<i class="pi pi-trash"> </i>
+									</p>
+								</div>
+							</div>
+							<div class="col-2"></div>
+							<div class="col-2"></div>
+						</div>
+						<div formArrayName="subMatchesList">
+							<div *ngFor="
+								let subMatch of subMatches(formIndex).controls;
+								let subMatchIndex= index
+								" [formGroupName]="subMatchIndex">
+								<!-- <div class="row flex-base flex-hc subMargin"> -->
+								<div class="row flex-base flex-hc">
+									<div class="col-1 text-end">
+										{{ formIndex + 1 + "-" + (subMatchIndex + 1) }}
+									</div>
+									<div class="col-2">
+										<p-dropdown placeholder="Select Match" [options]="_matchRecentList[formIndex]"
+											[filter]="true" appendTo="body" [formControlName]="'matchName'"
+											optionValue="id" optionLabel="match_name"></p-dropdown>
+										<div class="error-txt-msg mb-2" *ngIf="subMatches(formIndex).controls[subMatchIndex].get('matchName')?.errors?.['required']
+											&& isValidFormSubmittedRecent != null && !isValidFormSubmittedRecent" style="color: red">
+											Required Field.
+										</div>
+									</div>
+									<div class="col-2">
+										<div class="hidden-input">
+											<input type="file" placeholder="Upload Thumbnail" accept="image/x-png,
+												image/jpg, image/jpeg" (change)="
+												onFileDroppedRecent(
+												$any($event.target).files,
+												formIndex,
+												subMatchIndex
+												)
+												" [formControlName]="'thumnail'" #thumbnailBut2 />
+										</div>
+										<button class="btn thumbnailBut text-overflow" (click)="thumbnailBut2.click()">
+											Thumbnail
+										</button>
+										<div class="error-txt-msg mb-2" *ngIf="subMatches(formIndex).controls[subMatchIndex].get('thumnail')?.errors?.['required']
+											&& isValidFormSubmittedRecent != null && !isValidFormSubmittedRecent" style="color: red">
+											Required Field.
+										</div>
+									</div>
+									<div class="col-3 flex-hc gap-3 pRelative">
+										<div class="_recent addBut" *ngIf="
+											subMatches(formIndex).controls.length ==
+											subMatchIndex + 1
+											">
+											<i class="pi pi-plus-circle p-links"
+												(click)="addMoreSubMatch(formIndex)"></i>
+										</div>
+										<div class="preview">
+											<p class="text-center p-links"
+												(click)="viewRecentImage(formIndex, subMatchIndex)" *ngIf="subMatches(formIndex).controls[subMatchIndex].controls
+												.thumnail.value !== ''">
+												Preview
+											</p>
+										</div>
+										<div class="remove" *ngIf="subMatches(formIndex).controls.length> 1">
+											<p class="bkg p-links"
+												(click)="removeSubRecentForm(formIndex, subMatchIndex)">
+												Remove
+											</p>
+										</div>
+									</div>
+									<div class="col-2"></div>
+									<div class="col-2"></div>
+								</div>
+							</div>
+						</div>
+
+						<p-divider></p-divider>
+					</div>
+					<div class="flex-e gap-3">
+						<h6></h6>
+						<button class="btn btn_green m-0 w-auto" (click)="createRecentEvents()">
+							Save Recent
+						</button>
+						<button class="btn btn_green m-0 w-auto" (click)="addMoreFormRecentArray()">
+							Add More
+						</button>
+						<button *ngIf="recentMatch().controls.length>1 || _globalRecentList.length>0 "
+							class="btn btn-danger m-0 w-auto" (click)="deleteAllRecent()">
+							Delete All
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="parent">
+		<p-dialog [resizable]="false" [(visible)]="_showDialog" [modal]="true" [draggable]="false"
+			[style]="{ width: '40vw' }" [baseZIndex]="10000">
+			<img class="publish" [src]="_imgUrl" alt="publishImg" />
+		</p-dialog>
+	</div>
+	<p-toast position="bottom-center" key="bc"></p-toast>
+</div>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

@@ -1,0 +1,88 @@
+<div class="member-management">
+    <div class="settingManagement-component mx-3">
+        <div class="top-header">
+            <div class="heading">
+                <h4>{{'membershipManagement.memberShip'| translate}}</h4>
+            </div>
+        </div>
+        <div class="centerElement" *ngIf="false">
+            <div class="flex-hc flex-vc" style="flex-direction: column;">
+                <div class="imgContainer">
+                    <img src="../../../assets/icons/editprofile-icon.png" class="img-fluid" alt="">
+                </div>
+                <p class="mt-4 mb-4">Create Role</p>
+                <button class="btn btn_green flex-vc" (click)="openDialog()"><i class="pi pi-plus me-2"></i>Create
+                    Now</button>
+            </div>
+        </div>
+        <div *ngIf="true">
+            <div class="memberSlider common-owl-carousel">
+                <section class="horizontal-scroll-wrapper tabs flex-vc">
+                    <div [ngClass]="tabStyle(items)" *ngFor="let items of _roleList" (click)="setActive(items)">
+                        <p class="text-center">{{items.title}}</p>
+                    </div>
+                </section>
+            </div>
+            <div class="flex-subscription flex-vc">
+                <p>{{'membershipManagement.subs'| translate}} </p>
+                <div class="switch setButton mx-1">
+                    <p-inputSwitch (onChange)="handleChange($event)" [(ngModel)]="_subType" class="flex-vc flex-hc">
+                    </p-inputSwitch>
+                </div>
+                <p> {{'membershipManagement.oneTime'| translate}}</p>
+            </div>
+            <br>
+            <h6 class="p">{{'membershipManagement.pubMember'| translate}}</h6>
+            <div class="row membership-class">
+                <div class="col-lg-3" *ngFor="let item of _memberShipListP">
+                    <div class="membership-card">
+                        <p><b>{{item.title}}</b></p>
+                        <div class="switch mt-2">
+                            <p-inputSwitch (onChange)="publishAndUnpublish($event ,item ,'P')"
+                                [(ngModel)]="item.published"></p-inputSwitch>
+                        </div>
+                        <div class="flex-sb">
+                            <p class="p-small p-links">Publish</p>
+                            <p class="p-small p-links"><a (click)="editMemberShip(item)">Edit</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-hc my-5" *ngIf="_memberShipListP.length==0">
+                    <p class="text-grey">{{'membershipManagement.noMemShow'| translate}}</p>
+                </div>
+            </div>
+            <br>
+            <h6 class="p">{{'membershipManagement.unpubMem'| translate}}</h6>
+            <div class="row membership-class">
+                <div class="col-lg-3" *ngFor="let item of _memberShipListUP">
+                    <div class="membership-card">
+                        <p><b>{{item.title}}</b></p>
+                        <div class="switch mt-2">
+                            <p-inputSwitch (onChange)="publishAndUnpublish($event,item,'UP')"
+                                [(ngModel)]="item.published"></p-inputSwitch>
+                        </div>
+                        <div class="flex-sb">
+                            <p class="p-small p-links">{{'banner.Published'| translate}}</p>
+                            <p class="p-small p-links"><a (click)="editMemberShip(item)">{{'signupmanagement.edit'|
+                                    translate}}</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-hc my-5" *ngIf="_memberShipListUP.length==0">
+                    <p class="text-grey">{{'membershipManagement.noMemShow'| translate}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-e mt-4 addField me-3 mt-3" *ngIf="true">
+        <button class="btn btn_green flex-vc" [disabled]="_isDisabled" (click)="openDialog()"><i
+                class="pi pi-plus me-2"></i>{{'membershipManagement.addNew'| translate}}</button>
+    </div>
+</div>
+<p-dialog [resizable]="false" [(visible)]="_showDialog" [modal]="true" [header]="_currentMemberShip + ' Membership'"
+    [draggable]="false" [style]="{width: '40vw'}" [baseZIndex]="10000" (onHide)="closePopUp()">
+    <app-create-membership-dialog (closePopUp)="closePopUps($event)" [_currentRoleId]="_currentRoleId"
+        [_subType]="_subType"></app-create-membership-dialog>
+</p-dialog>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

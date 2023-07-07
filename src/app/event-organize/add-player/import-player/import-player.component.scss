@@ -1,0 +1,22 @@
+.dialogContainer {
+    .officialTable {
+        thead {
+            background-color: var(--f1-color);
+        }
+        tbody {
+            td {
+                color: var(--main-color);
+            }
+            th{
+                font-weight: lighter;
+            }
+            .remover {
+                color: var(--danger-color);
+            }
+           
+        }
+    }
+    .table > :not(caption) > * > * {
+        border: none;
+    }
+}

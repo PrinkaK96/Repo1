@@ -1,0 +1,78 @@
+.viewer_registration {
+    .col-6 {
+        border: 1px solid #F4F4F4;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+        border-radius: 6px;
+        padding:35px;
+
+        .topbar {
+            .row {
+                .innerContent {
+                    .heading {
+                        font-size: 20px !important;
+                        font-weight: bold;
+                    }
+
+                    .radioBox {
+                        .gap {
+                            gap: 1rem;
+
+                            .field-radiobutton {
+                                ::ng-deep {
+                                    p-radiobutton {
+                                        .p-component {
+                                            display: flex;
+                                            align-items: center;
+
+                                            .p-radiobutton-box {
+                                                width: 12px;
+                                                height: 12px;
+
+                                                .p-radiobutton-icon {
+                                                    width: 6px;
+                                                    height: 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+
+.grays {
+    color: var(--secondary-color);
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+.oranges {
+    color: var(--combinating-color);
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+.showParticipants {
+    padding: 10px 20px;
+    margin-top: 1rem;
+
+    .row {
+        .category_description {
+            p {
+
+                font-size: 14px !important;
+                font-weight: bold;
+
+            }
+        }
+    }
+}

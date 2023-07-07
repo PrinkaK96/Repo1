@@ -1,0 +1,41 @@
+.p-inputtext {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  margin-top: 10px;
+}
+
+.aadharSection {
+  .viewDialog {
+    cursor: pointer;
+    position: absolute;
+    margin-left: 842px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -40px;
+  }
+
+  .aadhar {
+    position: relative;
+  }
+}
+
+
+.box{
+    border: 1px solid #ced4da;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 38px;
+    border-radius: 6px;
+    .viewArea{
+        a{
+            cursor: pointer;
+            &:hover{
+                font-weight: bold;
+               
+            }
+        }
+    }
+}

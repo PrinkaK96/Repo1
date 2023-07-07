@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="header">
+        <div class="upcoming flex-sb flex-vc w-100">
+            <h3 class="title">Upcoming Events</h3>
+            <p  class="p-links title" routerLink="/home/organize" routerLinkActive="active">Back</p>
+        </div>
+        
+    </div>
+
+        <div class="wrapper3">
+            <div class="flexContainer">
+                <div class="row" *ngFor="let content of _sellAllOngoing | paginate:{ itemsPerPage: 5, currentPage: p }">
+                    <div class="col">
+                        <div class="bgImg">
+                            <img class="allOngoing" src={{content.image_url}}>
+                            <div class="innerColor px-4" id="first">
+                                <div class="uppercontent py-3">
+                                    <h4>{{content.event_name}}</h4>
+                                </div>
+                                <div class="centercontent py-3">
+                                    <h6>{{content.reg_start_time}}
+                                    </h6>
+                                </div>
+                                <div class="third-flex py-4 flex-sb flex-vc w-100">
+                                    <div class="date">
+                                        <p>{{content.reg_end_time}}</p>
+                                    </div>
+                                    <div (click)="updateEvent(content)" class="view p-links">{{'home.view'|translate}} <img
+                                            src="../../../assets/icons/white-right-arrow.png" alt="">
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+        <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+    </div>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<!-- <stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader> -->

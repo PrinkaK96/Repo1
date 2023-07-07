@@ -1,0 +1,11 @@
+@import "../../../../../stylesfiles/ngtt-single-elimination-styles.scss";
+@import "../../../../../stylesfiles/ngtt-variables.scss";
+
+@media print {
+    .ngtt-se__container {
+        overflow: visible !important;
+        position: absolute !important;
+        top: 21rem !important;
+        left: 0 !important;
+    }
+}

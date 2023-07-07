@@ -1,0 +1,38 @@
+@import "../../../../../stylesfiles/ngtt-single-elimination-styles.scss";
+@import "../../../../../stylesfiles/ngtt-variables.scss";
+
+.pp {
+    position: relative;
+
+    .cc {
+        position: absolute;
+        top: 50px;
+        left: 149%;
+        transform: translate(-50%,-50%);
+
+        .Tcenter {
+
+            text-align: center;
+        }
+    }
+}
+
+@media print {
+    .ngtt-se__match-component-container {
+        width: 240px !important;
+        height: 120px !important;
+    }
+
+    .ngtt-se__match-wrapper {
+        height: 150px !important;
+        width: 270px !important;
+        padding: 15px !important;
+    }
+
+    .ngtt-se__container {
+        overflow: visible !important;
+        position: absolute !important;
+        top: 21rem !important;
+        left: 0 !important;
+    }
+}

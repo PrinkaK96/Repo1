@@ -1,0 +1,188 @@
+<section class="Singles" *ngIf="false">
+    <div class="topbar">
+        <div class="heading">
+            <h6 class="p-secondary">Generated Matches</h6>
+        </div>
+        <div class="outer-layer">
+            <div class="greyBox">
+                <div class="header py-3 px-3">
+                    <div class="flex-sb flex-vc ">
+                        <h6 class="p-secondary"><b>Group 1</b></h6>
+                        <p class="p-green">Total Players 4</p>
+                    </div>
+                </div>
+                <div class="centerElement">
+                    <div class="lenghty-table">
+                        <p-table responsiveLayout="scroll" [value]="_groups" [reorderableColumns]="true">
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th style="width:3rem"></th>
+                                    <th>Player 1</th>
+                                    <th style="width:3rem"></th>
+                                    <th>Player 2</th>
+                                    <th>Date</th>
+                                    <th>Table</th>
+                                    <th>Time Slot</th>
+                                    <th>Umpire</th>
+                                    <th>Live Stream</th>
+                                    <th>Thumbnail</th>
+                                    <th>View Score</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-rowData let-index="rowIndex">
+                                <tr [pReorderableRow]="index">
+                                    <td>
+                                        <span class="pi pi-bars"></span>
+                                    </td>
+                                    <td> {{rowData.playerA}} </td>
+                                    <td> Vs</td>
+                                    <td> {{rowData.playerB}} </td>
+                                    <td>
+                                        <p-calendar id="date" placeholder="Select date" appendTo="body"
+                                            dateFormat="dd/mm/yy" [(ngModel)]="_selectedDate"></p-calendar>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [options]="_tableNo" optionLabel="name">
+                                        </p-dropdown>
+                                    </td>
+                                    <td>
+                                        <p-calendar [timeOnly]="true" placeholder="Select Time" appendTo="body"
+                                            [(ngModel)]="_selectedDate"></p-calendar>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [autoDisplayFirst]="true" [options]="_umpire"
+                                            optionLabel="name"></p-dropdown>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [autoDisplayFirst]="true" [options]="_toStream"
+                                            optionLabel="name"></p-dropdown>
+                                    </td>
+                                    <td>
+                                        <div class="thumbnail">
+                                            <div class="innerBox">
+
+                                                <p class="p-small text-danger">remove</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="flex-vc">
+                                            <p> 3-2</p>
+                                            <i class="pi pi-pencil i-small p-green ms-3 p-links"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                    <div class="winner my-3">
+                        <div class="flex-vc">
+                            <p class="p-green">Winner-</p>
+                            <p class="ms-2 p-combine"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Teams">
+    <div class="topbar">
+        <div class="heading my-3">
+            <div class="flex-sb flex-vc">
+                <h6 class="p-secondary">Generated Matches</h6>
+                <a class="p-links p-green">Qualifiers</a>
+            </div>
+        </div>
+        <div class="outer-layer">
+            <div class="greyBox">
+                <div class="header py-3 px-3">
+                    <div class="flex-sb flex-vc ">
+                        <h6 class="p-secondary"><b>Group 1</b></h6>
+                        <p class="p-green">Total Players 4</p>
+                    </div>
+                </div>
+                <div class="centerElement">
+                    <div class="lenghty-table">
+                        <p-table responsiveLayout="scroll" [value]="_groups" [reorderableColumns]="true">
+                            <ng-template pTemplate="header" let-columns>
+                                <tr>
+                                    <th style="width:3rem"></th>
+                                    <th>Player 1</th>
+                                    <th style="width:3rem"></th>
+                                    <th>Player 2</th>
+                                    <th>Players</th>
+                                    <th>Date</th>
+                                    <th>Table</th>
+                                    <th>Time Slot</th>
+                                    <th>Umpire</th>
+                                    <th>Live Stream</th>
+                                    <th>Thumbnail</th>
+                                    <th>View Score</th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-rowData let-index="rowIndex">
+                                <tr [pReorderableRow]="index">
+                                    <td>
+                                        <span class="pi pi-bars"></span>
+                                    </td>
+                                    <td> {{rowData.playerA}} </td>
+                                    <td> Vs</td>
+                                    <td> {{rowData.playerB}} </td>
+                                    <td class="p-combine p-links" (click)="openDialog()">Arrange</td>
+                                    <td>
+                                        <p-calendar id="date" placeholder="Select date" appendTo="body"
+                                            dateFormat="dd/mm/yy" [(ngModel)]="_selectedDate"></p-calendar>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [options]="_tableNo" optionLabel="name">
+                                        </p-dropdown>
+                                    </td>
+                                    <td>
+                                        <p-calendar [timeOnly]="true" placeholder="Select Time" appendTo="body"
+                                            [(ngModel)]="_selectedDate"></p-calendar>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [autoDisplayFirst]="true" [options]="_umpire"
+                                            optionLabel="name"></p-dropdown>
+                                    </td>
+                                    <td>
+                                        <p-dropdown appendTo="body" [autoDisplayFirst]="true" [options]="_toStream"
+                                            optionLabel="name"></p-dropdown>
+                                    </td>
+                                    <td>
+                                        <div class="thumbnail">
+                                            <div class="innerBox">
+
+                                                <p class="p-small text-danger">remove</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="flex-vc flex-hc">
+                                            <p> 3-2</p>
+                                            <i class="pi pi-pencil i-small p-green ms-3 p-links"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+
+                    </div>
+                    <div class="qualifires my-3">
+                        <div class="flex-vc">
+                            <p class="p-green">Qualifier-</p>
+                            <p class="ms-2 p-combine"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="withoutHeader">
+        <p-dialog class="common-score" [resizable]="false" [(visible)]="_showDialog" [modal]="true" [draggable]="false"
+            [style]="{width: 'auto',minWidth:'57rem'}" [baseZIndex]="10000">
+            <stupa-arrange-dialog></stupa-arrange-dialog>
+        </p-dialog>
+    </div>
+</section>

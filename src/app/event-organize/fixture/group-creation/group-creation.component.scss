@@ -1,0 +1,418 @@
+.container-xxl {
+  .matchRow {
+    padding: 5px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .matchRow.dialog {
+    font-size: 13px;
+  }
+
+  .dialogHeader {
+    .p-dialog-header {
+      color: var(--main-coalor);
+    }
+  }
+
+  .innerContent.noPlayerCont {
+    height: 100% !important;
+
+    .emptyFlex {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .fullViewBut {
+    background-color: var(--main-bg);
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .heading {
+    font-size: 13px !important;
+    color: var(--secondary-color) !important;
+    margin: 0 0 1rem 0 !important;
+  }
+
+  .topBar,
+  .bottomBar {
+    .greyBox {
+      background-color: var(--box-bg);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 0.5rem;
+      position: relative;
+
+      .innerContent {
+        font-size: 90% !important;
+        height: 166px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        .detail-input {
+          input[type="number"] {
+            font-size: initial !important;
+            font-weight: 200;
+          }
+
+          label {
+            color: var(--secondary-color);
+          }
+
+          input {
+            border-bottom: 1px solid var(--secondary-color) !important;
+            border: none;
+            border-radius: 0 !important;
+            background-color: transparent;
+            // font-size: 18px;
+            color: var(--main-color);
+            font-weight: bold;
+            padding-left: 0;
+          }
+
+          ::ng-deep {
+            .p-multiselect {
+              border: none;
+              border-bottom: 1px solid #5555;
+              border-radius: 0;
+            }
+
+            .p-dropdown {
+              border-bottom: 1px solid var(--secondary-color) !important;
+              border: none;
+              border-radius: 0 !important;
+              background-color: transparent;
+              font-size: 18px;
+              margin: 0 !important;
+
+              .p-dropdown-label {
+                padding-left: 0;
+                color: var(--main-color);
+              }
+
+              .p-dropdown-label.p-placeholder {
+                color: #6c757d !important;
+                font-size: 12px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .noPlayer {
+        position: absolute;
+        top: 61%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #bfbfbf;
+      }
+    }
+  }
+
+  .right-eventHandler {
+    ::ng-deep {
+      .p-speeddial {
+        top: 0;
+        right: 0;
+      }
+
+      .p-speeddial-button.p-button-icon-only {
+        width: 2rem;
+        height: 2rem;
+
+        .p-button-icon {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .iconBox:not(:last-child) {
+      margin-right: 0.2rem;
+    }
+
+    .iconBox {
+      padding: 8px 6px;
+      border-radius: 3px;
+      border: 1px solid var(--secondary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg.merge {
+        rotate: 180deg;
+        width: 12px !important;
+      }
+    }
+  }
+
+  .groups {
+    .accordianHeader {
+      width: 100%;
+    }
+
+    .accordianContent {
+      .p-inputtext {
+        max-height: 32px;
+        color: black;
+        margin: 5px 0;
+      }
+
+      .tableFlex {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        margin-top: 5px;
+
+        .gFlex {
+          font-size: 12px;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border: 1px solid var(--stroke);
+          border-radius: 3px;
+          overflow: auto;
+
+          p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-color);
+            width: 80px;
+          }
+
+          @media only screen and (max-width: 500px) {
+            p {
+              width: auto !important;
+            }
+          }
+        }
+
+        .gFlex2 {
+          display: flex;
+          gap: 5px;
+        }
+      }
+
+      .p-inputtext::placeholder {
+        color: black;
+      }
+    }
+
+    ::ng-deep {
+      .p-button-icon {
+        font-size: 12px !important;
+      }
+
+      .p-dropdown {
+        max-height: 35px !important;
+      }
+    }
+
+    .iconBox {
+      border: 1px solid var(--secondary-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px 6px;
+      border-radius: 3px;
+
+      svg.merge {
+        rotate: 90deg;
+        width: 12px !important;
+      }
+    }
+
+    .header-add {
+      padding: 8px 6px;
+      border-radius: 3px;
+    }
+
+    .p-button:focus {
+      box-shadow: none;
+    }
+
+    .p-button.p-button-icon-only.p-button-rounded {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.2rem;
+    }
+  }
+
+  .bottomBar {
+    ::ng-deep {
+      .p-accordion .p-accordion-header .p-accordion-header-link {
+        padding: 1rem 1.25rem !important;
+      }
+    }
+
+    .greyBox {
+      height: 50vh !important;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  ::ng-deep {
+    .common-table {
+      .p-datatable-table {
+        font-size: 90% !important;
+      }
+
+      .p-datatable-thead>tr>th {
+        border: none;
+        padding: 0.5rem;
+      }
+
+      .p-datatable-tbody>tr>td {
+        padding: 0.5rem;
+        font-size: 90%;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.gridRemove {
+  color: #ff783e;
+}
+
+.bk-color {
+  background-color: red;
+}
+
+.battans {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.groupBox {
+  max-height: 64vh !important;
+}
+
+// full screen button
+
+.fullViewBut {
+  border-radius: 50px !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.grpMatchTable {
+  ::ng-deep {
+    .p-datatable-wrapper {
+      overflow: unset;
+    }
+
+    @media only screen and (max-width:813px) {
+      .p-datatable-wrapper {
+        overflow: auto !important;
+      }
+    }
+
+    .common-table .p-datatable-tbody>tr>td {
+      padding: 0.3rem !important;
+    }
+  }
+}
+
+.commonDialogSpacing {
+  ::ng-deep {
+    .p-dialog-content {
+      border-radius: 6px !important;
+      max-height: 88vh;
+      overflow: hidden;
+      overflow-y: auto;
+
+      .innerContent {
+        .common-table {
+          input[type="checkbox"] {
+            margin-left: 1rem;
+          }
+
+          .p-datatable-thead>tr>th {
+            text-align: start !important;
+          }
+
+          .p-datatable-tbody>tr>td {
+            text-align: start !important;
+          }
+        }
+      }
+    }
+
+    .p-dialog-header {
+      padding: 0 !important;
+
+      .p-dialog-header-icons {
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-xxl {
+    .bottomBar {
+      .greyBox {
+        overflow: auto !important;
+
+        .top-actions {
+          overflow: auto;
+
+          .battans {
+            button {
+              margin-left: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.closeDialog {
+  color: var(--text-color);
+}
+
+// @media print{
+//   .grpMatchTable{
+//     .printSection{
+//       ::ng-deep{
+//         p-table{
+//           .p-datatable-table{
+//             .p-datatable-thead{
+//              tr{
+//               th{
+//                 &:last-child{
+//                   display: none;
+//                 }
+//               }
+//              }
+//             }
+//             .p-datatable-tbody{
+//              tr{
+//               td{
+//                 &:last-child{
+//                   display: none;
+//                 }
+//               }
+//              }
+//             }
+//           }
+          
+//         }
+//       }
+//     }
+//   }
+// }

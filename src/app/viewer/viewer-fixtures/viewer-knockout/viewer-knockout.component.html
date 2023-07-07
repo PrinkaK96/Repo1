@@ -1,0 +1,43 @@
+<!-- <stupa-main-draw [_fixtureScreen]="_fixtureScreen" [isKnockout]="isKnockout" [_currentCategoryId]="_currentCategoryId" [_totalLength]="_totalLength" ></stupa-main-draw> -->
+<div *ngIf="_showTree" class="container-xxl mt-3">
+    <div class="flex-e mr-1 mt-3">
+        <button class="profile_buttons2" ngxPrint printSectionId="demo-print" [useExistingCss]="true"
+            [previewOnly]="false">
+            Print
+        </button>
+    </div>
+    <section id="demo-print" class="secondScreen" *ngIf="_isAllAPIExcecuted &&
+        _showTree">
+        <ng-container *ngIf="true">
+            <!-- <div class="fixture-header" *ngIf="singleEliminationTournament">
+            <div *ngFor="let round of singleEliminationTournament.rounds" class="round-name">
+                <div>
+                    {{ round.roundName }}
+                </div>
+            </div>
+        </div> -->
+            <stupa-viewer-tree [tournament]="singleEliminationTournament" *ngIf="singleEliminationTournament"
+                [matchTemplate]="matchTemplate"></stupa-viewer-tree>
+        </ng-container>
+        <!-- <ng-container *ngIf="renderedTree === 'de'">
+
+        <ngtt-double-elimination-tree [tournament]="doubleEliminationTournament"
+            [matchTemplate]="matchTemplate"></ngtt-double-elimination-tree>
+    </ng-container> -->
+        <ng-template #matchTemplate let-match let-index="i" let-round="winnersBracket">
+            <stupa-match [fillList]="singleEliminationTournament" [viewer]="true" [match]="match" [index]="index"
+                [parentIndex]="index" [_currentParticipantId]="_currentParticipantId" [round]="round"
+                (updatedPullList)="updatedPullList($event)"></stupa-match>
+
+        </ng-template>
+    </section>
+    <!-- <stupa-drag-drop-fixture></stupa-drag-drop-fixture> -->
+
+</div>
+
+<!-- <div *ngIf="!_showTree"  class="empty h-100">
+    <div class="innerContent py-3">
+        <img class=" m-auto flex-vc" src="../../../assets/icons/svg/undraw_in_progress_re_m1l6 1.svg" alt="">
+        <p class="text-center mt-2"><b>Fixtures is in Progress</b></p>
+    </div>
+</div> -->

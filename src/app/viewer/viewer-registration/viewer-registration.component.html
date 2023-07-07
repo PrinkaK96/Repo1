@@ -1,0 +1,52 @@
+<!-- <p>viewer-registration works!</p> -->
+<!-- <div class="viewer_registration_container">
+    <div class="innerContent">
+        <div class="participantType">
+
+        </div>
+    </div>
+</div> -->
+
+<div class="viewer_registration">
+  <div class="col-6">
+    <div class="topbar">
+      <div class="row">
+        <div class="col-lg-7 innerContent">
+          <p class="heading"><b>Participant Type</b></p>
+          <div class="radioBox mt-2">
+            <div class="flex-vc gap ">
+              <div class="flex-vc field-radiobutton" *ngFor="let item of _selectedFixtureFormat">
+                <p-radioButton [value]="item.participant_description" name="participantType"
+                  (click)="showRegistrations(item.participant_description)" [(ngModel)]="_selectedParticipantTypes[0]"
+                  [ngModelOptions]="{standalone: true}">
+                </p-radioButton>
+                <label [for]="item.participant_description">{{item.participant_description}}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="event_id!=null">
+      <div *ngFor="let item of _display; let i=index" class="showParticipants">
+        <div class="row">
+          <div class="col-4 flex-vc category_description">
+            <p>{{item.category_description}}</p>
+          </div>
+          <div class="col-4 flex-vc ">
+            <div *ngIf="item.reg_end_time !=''">
+              {{item.reg_end_time|date: "dd/MM/YYYY"}}
+            </div>
+            <div *ngIf="item.reg_end_time == null">
+              <!-- <p>------</p> -->
+              <p class="grays"></p>
+            </div>
+          </div>
+          <div class="col-4">
+            <p [ngClass]="item.price == 0?'grays':'oranges'"> &#107;&#114; {{item.price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

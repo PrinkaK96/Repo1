@@ -1,0 +1,326 @@
+<!-- <p>viewer-player-list works!</p> -->
+<!-- for singles -->
+<div class="tableContainer">
+  <div class="container-xxl">
+    <div class="topBar">
+      <div class="row flex-vc">
+        <div class="col-lg-2">
+          <div class="innerContent">
+            <p class="heading mb-0"><b>Type</b></p>
+            <p-dropdown class="m-0" [options]="_participantTypesList" [(ngModel)]="_selectedParticipantTypes"
+              optionLabel="participant_description" appendTo="body" (onChange)="setType($event)" placeholder="Type">
+            </p-dropdown>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="innerContent">
+            <p class="heading mb-0"><b>Category</b></p>
+            <p-dropdown class="m-0" [options]="_categoryList" [(ngModel)]="_categoryList.category_description"
+              optionLabel="category_description" [autoDisplayFirst]="true" appendTo="body"
+              (onChange)="getPlayerList(_selectedParticipantTypes.participant_type_id,_categoryList.category_description.category_id)">
+            </p-dropdown>
+
+          </div>
+        </div>
+        <!-- <div class="col-8">
+          <div class="searchBarSection mt-2">
+            <div class="row">
+              <div class="col-4">
+                <div class="top-searchbar mt-3 mb-3">
+                  <div class="flex-vc">
+                    <div class="innerBox-input">
+                      <span class="p-input-icon-left">
+                        <i class="p-green pi pi-search"></i>
+                        <input id="headerInput" [(ngModel)]="_searchByPlayerName" pInputText (keydown)="searchPlayer()"
+                          (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText type="text"
+                          placeholder="Search By Name" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- <div class="tableContainer" *ngIf="_currentParticipantId == 1">
+      <p-table class="common-table text-center" styleClass="p-datatable-sm" [value]="_players"
+        [tableStyle]="{ 'min-width': '50rem' }">
+
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Club</th>
+            <th>Licence</th>
+            <th>Date Of Birth</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-item>
+          <tr>
+            <td class="flex-vc rem1"><p-avatar label="{{ getFirstLettersofTeam(item.name) }}" size="small"
+                shape="circle" [style]="{
+            'background-color': 'rgb(13 211 255 / 41%)',
+            color: '#ffffff'
+          }"></p-avatar>{{ item.name }}</td>
+            <td>{{ item.club }}</td>
+            <td>{{ item.license }}</td>
+            <td>{{ item.dob != null ?item.dob : '----'}}</td>
+          </tr>
+
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="8">No user found.</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div> -->
+    <!-- <div class="tableContainer" *ngIf="_currentParticipantId == 2">
+      <p-table class="common-table" styleClass="p-datatable-sm" #request [value]="_teamList" [rows]="10"
+        [showCurrentPageReport]="true" [paginator]="false">
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="participant_name" style="width: 40%">
+              Team Name
+            </th>
+            <th pSortableColumn="name" style="width: 20%">Club</th>
+            <th pSortableColumn="points" style="width: 20%">Points</th>
+            <th pSortableColumn="payments" style="width: 20%">Payment</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-users>
+          <tr>
+            <td>{{ users.participant_name }}</td>
+            <td>{{ users.club }}</td>
+            <td>{{ users.rating }}</td>
+            <td>{{ "Cash" }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="8">No Team Found.</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div> -->
+
+    <div class="searchingSection">
+      <div class="totalPlayer">
+        <div class="type1 flex-sb flex-vc" *ngIf="_currentParticipantId == 1">
+
+          <h5>Total Player : {{_players.length}}</h5>
+          <div class="innerBox-input">
+            <span class="p-input-icon-left">
+              <i class="p-green pi pi-search"></i>
+              <input id="headerInput" [(ngModel)]="_searchByPlayerName" pInputText (keydown)="searchPlayer()"
+                (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText type="text"
+                placeholder="Search By Name" />
+            </span>
+          </div>
+        </div>
+        <div class="type2 flex-sb flex-vc" *ngIf="_currentParticipantId == 2">
+          <h5>Total Player : {{_teamList.length}}</h5>
+          <div class="innerBox-input">
+            <span class="p-input-icon-left">
+              <i class="p-green pi pi-search"></i>
+              <input id="headerInput" [(ngModel)]="_searchByPlayerName" pInputText (keydown)="searchPlayer()"
+                (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText type="text"
+                placeholder="Search By Team" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- for singles  -->
+    <!-- <div class="flex-e my-2" *ngIf="_teamList.length > 0">
+      <button class="profile_buttons2" ngxPrint printSectionId="print-section" [useExistingCss]="true">
+        Print
+      </button>
+    </div> -->
+    <div *ngIf="_currentParticipantId == 1">
+      <div class="flex-e my-2" *ngIf="_players.length > 0 " style="margin-right:4.5rem ;">
+        <button class="profile_buttons2" ngxPrint printSectionId="print-section" [useExistingCss]="true">
+          Print
+        </button>
+      </div>
+      <div id="print-section">
+        <div class="ViewerPlayerSingles flex-vc">
+          <div class="playerCards" *ngFor="let item of _players">
+            <div class="card-body flex-vc gap-3" id="card-body">
+              <div class="avatar">
+                <p-avatar label="{{ getFirstLettersofTeam(item.name) }}" size="small" shape="circle" [style]="{
+        'background-color': 'var(--avatar-bg)',
+        color: '#ffffff'
+      }"></p-avatar>
+              </div>
+              <div class="lowerSection">
+                <div class="palyerName fbold">{{item.name}}</div>
+                <div class="rating fbold  new-grey">{{item.rating}}</div>
+                <div class="state fbold new-grey" id="state">{{item.club}}</div>
+                <!-- <div class="state fbold new-grey" *ngIf="item.state == ''">Fake State</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- for singles  ends  -->
+    <!-- Viewer player teams  -->
+    <div *ngIf="_currentParticipantId == 2">
+      <div class="flex-e my-2" *ngIf="_teamList.length > 0 " style="margin-right:1.5rem ;">
+        <button class="profile_buttons2" ngxPrint printSectionId="print-section" [useExistingCss]="true">
+          Print
+        </button>
+      </div>
+      <div id="print-section" class="print-section">
+        <div class="ViewerPlayerTeams">
+          <div class="row">
+            <div class="col-lg-4" *ngFor="let item of _teamList">
+              <div class="cardsss">
+                <div class="cardContent">
+                  <div class="upperContent flex-vc flex-sb">
+                    <div class="teamName">
+                      <p>{{ item.participant_name }}</p>
+                    </div>
+                    <div class="teamPoints">
+                      <p>Points : {{ item.rating }}</p>
+                    </div>
+                  </div>
+                  <div class="lowerContent flex-vc" *ngFor="let players of item.event_participant_details">
+                    <div class="avatar">
+                      <p-avatar label="{{ getFirstLettersofTeam(players.name) }}" size="small" shape="circle" [style]="{
+                'background-color': 'var(--main-bg)',
+                color: '#ffffff'
+              }"></p-avatar>
+                    </div>
+                    <div class="playerDetails">
+                      <div class="playerName">
+                        <p>{{ players.name }}</p>
+                      </div>
+                      <div class="playerClub">
+                        <p>{{ players.club_name }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Viewer player end  -->
+    <div class="tableContainer" *ngIf="_currentParticipantId == 3">
+      <div class="flex-e my-2" *ngIf="_doubleList.length > 0">
+        <button class="profile_buttons2" ngxPrint printSectionId="print-section" [useExistingCss]="true">
+          Print
+        </button>
+      </div>
+      <p-table id="print-section" class="common-table" styleClass="p-datatable-sm" #request [value]="_doubleList"
+        [rows]="10" [showCurrentPageReport]="true" [paginator]="false"
+        [globalFilterFields]="['name', 'email', 'country']">
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="participant_name" style="width: 30%">
+              Name
+            </th>
+            <!-- <th pSortableColumn="email" style="width: 20%">Email</th> -->
+            <!-- <th pSortableColumn="state" style="width: 20%">State</th> -->
+            <th pSortableColumn="club" style="width: 30%">Club</th>
+            <th pSortableColumn="points" style="width: 20%">Points</th>
+            <th pSortableColumn="payments" style="width: 20%">Payment</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-users>
+          <tr>
+            <td>{{ users.participant_name }}</td>
+            <!-- <td>{{ users.email }}</td> -->
+            <!-- <td>{{ users.state }}</td> -->
+            <td>{{ users.club }}</td>
+            <td>{{ users.rating }}</td>
+            <!-- <td>{{ users.points == null ? 0 : users.points }}</td> -->
+            <td>{{ "Cash" }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td class="text-center py-4" colspan="8">No Pair Found.</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="tableContainer" *ngIf="_currentParticipantId == 4">
+      <div class="flex-e my-2" *ngIf="_mixDoubleList.length > 0">
+        <button class="profile_buttons2" ngxPrint printSectionId="print-section" [useExistingCss]="true">
+          Print
+        </button>
+      </div>
+      <p-table id="print-section" class="common-table" styleClass="p-datatable-sm" #request [value]="_mixDoubleList"
+        [rows]="10" [showCurrentPageReport]="true" [paginator]="false">
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="participant_name" style="width: 30%">
+              Name
+            </th>
+            <!-- <th pSortableColumn="email" style="width: 20%">Email</th> -->
+            <!-- <th pSortableColumn="state" style="width: 20%">State</th> -->
+            <th pSortableColumn="name" style="width: 30%">Club</th>
+            <th pSortableColumn="points" style="width: 20%">Points</th>
+            <th pSortableColumn="payments" style="width: 20%">Payment</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-users>
+          <tr>
+            <td>{{ users.participant_name }}</td>
+            <!-- <td>{{ users.email }}</td> -->
+            <!-- <td>{{ users.state }}</td> -->
+            <td>{{ users.club }}</td>
+            <td>{{ users.rating }}</td>
+            <!-- <td>{{ users.points == null ? 0 : users.points }}</td> -->
+            <td>{{ "Cash" }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td class="text-center py-4" colspan="8">No Pair Found.</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- <p-table class="common-table text-center" styleClass="p-datatable-sm" [value]="_players" [tableStyle]="{ 'min-width': '50rem' }">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Club</th>
+          <th>Licence</th>
+          <th>Date Of Birth</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-item>
+        <tr>
+         
+          <td class="flex-vc rem1"><p-avatar label="{{ getFirstLettersofTeam(item.name) }}" size="small" shape="circle"
+              [style]="{
+            'background-color': 'rgb(13 211 255 / 41%)',
+            color: '#ffffff'
+          }"></p-avatar>{{ item.name }}</td>
+          <td>{{ item.club }}</td>
+          <td>{{ item.license }}</td>
+          <td>{{ item.dob != null ?item.dob : '----'}}</td>
+        </tr>
+
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8">No user found.</td>
+        </tr>
+      </ng-template>
+    </p-table> -->
+  </div>
+</div>

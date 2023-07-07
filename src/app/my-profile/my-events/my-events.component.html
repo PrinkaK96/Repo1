@@ -1,0 +1,228 @@
+<div *ngIf="allEvents.length>0" class="container-xxl px-4">
+    <!-- UPcoming events html starts  -->
+    <div class="header">
+        <div *ngIf="allEvents.length > 0" class="upcoming">
+            <h3 class="title">My Events</h3>
+        </div>
+    </div>
+   
+    <!-- this section is for club starts  -->
+    <div *ngIf="_role_id == 6" class="mt-2">
+        <p-tabView (onChange)="currentTab($event)" [activeIndex]="_tabIndex">
+            <p-tabPanel header="Pending">
+                <div class="topBar flex-sb mt-3">
+                    <div class="upcoming flex-sb flex-vc w-100">
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" [(ngModel)]="_pending"
+                          (keyup)="getRequestsWithSearch('pending', _pending)" placeholder="Find Events" />
+                        </span>
+                    </div>
+                    <!-- <button class="search btn btn_green flex-sb" (click)="searchMatches()">Search</button> -->
+                </div>
+                <div class="wrapper3 mt-3 mb-5">
+                    <div *ngIf="_getPendingUserList.length > 0" class="flexContainer ">
+                        <div class="row">
+                            <div *ngFor="let item of _getPendingUserList"
+                                class="col-lg-3">
+                                <div (click)="updateEvent(item)" class="bgImg p-links">
+                                    <img class="upcomingBgImg" src={{item.image_url}}>
+                                    <div class="innerColor " id="first">
+                                        <div class="date colorscore">
+                                            <p>{{item.event_start_time| date: 'dd/MM/YYYY'}} -
+                                                {{item.event_end_time| date:
+                                                'dd/MM/YYYY'}}</p>
+                                        </div>
+                                        <div class="uppercontent ">
+                                            <p class="w-100 text-overflow">{{item.event_name}}</p>
+                                        </div>
+                                        <div class="centercontent ">
+                                            <p class="w-100 text-overflow">{{item.address}}
+                                            </p>
+                                        </div>
+                                        <div class="flex-e viewSide">
+                                            <div class="view p-links">{{'home.view'|translate}} <img
+                                                    src="../../../assets/icons/white-right-arrow.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-paginator mt-3" *ngIf="_getPendingUserList.length != 0">
+                        <p-paginator [rows]="10" [totalRecords]="_totalPendingUser"
+                          (onPageChange)="paginate($event, 'pending')"></p-paginator>
+                      </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Accepted">
+                <div class="topBar flex-sb mt-3">
+                    <div class="upcoming flex-sb flex-vc w-100">
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" [(ngModel)]="_accepted"
+                          (keyup)="getRequestsWithSearch('accepted',_accepted)" placeholder="Find Events" />
+                        </span>
+                    </div>
+                    <!-- <button class="search btn btn_green flex-sb" (click)="searchMatches()">Search</button> -->
+                </div>
+                <div class="wrapper3 mt-3 mb-5">
+                    <div *ngIf="_getAcceptedUserList.length > 0" class="flexContainer ">
+                        <div class="row">
+                            <div *ngFor="let item of _getAcceptedUserList"
+                                class="col-lg-3">
+                                <div class="bgImg p-links" (click)="updateEvent(item)">
+                                    <img class="upcomingBgImg" src={{item.image_url}}>
+                                    <div class="innerColor " id="first">
+                                        <div class="date colorscore ">
+                                            <p>{{item.event_start_time| date: 'dd/MM/YYYY'}} -
+                                                {{item.event_end_time| date:
+                                                'dd/MM/YYYY'}}</p>
+                                        </div>
+                                        <div class="uppercontent ">
+                                            <p class="w-100 text-overflow">{{item.event_name}}</p>
+                                        </div>
+                                        <div class="centercontent ">
+                                            <p class="w-100 text-overflow">{{item.address}}
+                                            </p>
+                                        </div>
+                                        <div class="flex-e viewSide">
+                                            <div class="view p-links" >
+                                                {{'home.view'|translate}} <img
+                                                    src="../../../assets/icons/white-right-arrow.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-paginator mt-3" *ngIf="_getAcceptedUserList.length != 0">
+                        <p-paginator [rows]="10" [totalRecords]="_totalAcceptedUser"
+                          (onPageChange)="paginate($event, 'accepted')"></p-paginator>
+                      </div>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="Rejected">
+                <div class="topBar flex-sb mt-3">
+                    <div class="upcoming flex-sb flex-vc w-100">
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input pInputText type="text" [(ngModel)]="_rejected"
+                          (keyup)="getRequestsWithSearch('rejected',_rejected)" placeholder="Find Events" />
+                        </span>
+                    </div>
+                    <!-- <button class="search btn btn_green flex-sb" (click)="searchMatches()">Search</button> -->
+                </div>
+                <div class="wrapper3 mt-3 mb-5">
+                    <div *ngIf="_getRejectedUserList.length > 0" class="flexContainer ">
+                        <div class="row">
+                            <div *ngFor="let item of _getRejectedUserList"
+                                class="col-lg-3">
+                                <div class="bgImg p-links">
+                                    <img class="upcomingBgImg" src={{item.image_url}}>
+                                    <div class="innerColor " id="first">
+                                        <div class="date colorscore flex-sb">
+                                            <p>{{item.event_start_time| date: 'dd/MM/YYYY'}} -
+                                                {{item.event_end_time| date:
+                                                'dd/MM/YYYY'}}</p>
+                                                <div class="rejectedSVG" (click)="openPopUP(item)">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M19 9.5C19 11.3789 18.4428 13.2157 17.399 14.7779C16.3551 16.3402 14.8714 17.5578 13.1355 18.2769C11.3996 18.9959 9.48947 19.184 7.64665 18.8175C5.80383 18.4509 4.11109 17.5461 2.78249 16.2175C1.45389 14.8889 0.549104 13.1962 0.182544 11.3534C-0.184015 9.51054 0.00411622 7.60041 0.723149 5.86451C1.44218 4.12861 2.65982 2.64491 4.22209 1.60104C5.78435 0.557165 7.62108 0 9.5 0C12.0187 0.00272419 14.4335 1.00449 16.2145 2.78549C17.9955 4.5665 18.9973 6.98128 19 9.5ZM10.2917 3.95833H8.70834V11.875H10.2917V3.95833ZM10.2917 13.4583H8.70834V15.0417H10.2917V13.4583Z"
+                                                            fill="#CA0D0D" />
+                                                    </svg>
+    
+                                                </div>
+                                        </div>
+                                        <div class="uppercontent ">
+                                            <p class="w-100 text-overflow">{{item.event_name}}</p>
+                                        </div>
+                                        <div class="centercontent ">
+                                            <p class="w-100 text-overflow">{{item.address}}
+                                            </p>
+                                        </div>
+                                        <div class="flex-e viewSide">
+                                            <div class="view p-links" (click)="updateEvent(item)" >{{'home.view'|translate}} <img
+                                                    src="../../../assets/icons/white-right-arrow.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-paginator mt-3" *ngIf="_getRejectedUserList.length != 0">
+                        <p-paginator [rows]="10" [totalRecords]="_totalAcceptedUser"
+                          (onPageChange)="paginate($event, 'rejected')"></p-paginator>
+                      </div>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+    <!-- this section is for club ends  -->
+
+    <div *ngIf="_role_id != 6">
+        <div class="wrapper3 mt-3 mb-5">
+            <div *ngIf="allEvents.length > 0" class="flexContainer ">
+                <div class="row">
+                    <div *ngFor="let item of allEvents | paginate:{ itemsPerPage: 12, currentPage: p }"
+                        class="col-lg-3">
+                        <div (click)="updateEvent(item)" class="bgImg p-links">
+                            <img class="upcomingBgImg" src={{item.image_url}}>
+                            <div class="innerColor " id="first">
+                                <div class="date colorscore">
+                                    <p>{{item.event_start_time| date: 'dd/MM/YYYY'}} -
+                                        {{item.event_end_time| date:
+                                        'dd/MM/YYYY'}}</p>
+                                </div>
+                                <div class="uppercontent ">
+                                    <p class="w-100 text-overflow">{{item.event_name}}</p>
+                                </div>
+                                <div class="centercontent ">
+                                    <p class="w-100 text-overflow">{{item.address}}
+                                    </p>
+                                </div>
+                                <div class="flex-e viewSide">
+                                    <div class="view p-links">{{'home.view'|translate}} <img
+                                            src="../../../assets/icons/white-right-arrow.png" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomSection" *ngIf="allEvents.length > 0">
+                <pagination-controls (pageChange)="p=$event" class="float-right"></pagination-controls>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- rejection dialog starts -->
+<div class="parent">
+    <p-dialog header="Header" [(visible)]="_visible" [modal]="true" [style]="{ width: '26vw' }" [draggable]="false"
+        [resizable]="false">
+        <p class="flex-hc">Your request has been rejected</p>
+        <p>{{rejectionMessage}} </p>
+    </p-dialog>
+</div>
+<!-- rejection dialog ends -->
+
+<!-- <button (click)="getrole()">get role id</button> -->
+
+
+<!-- <stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader> -->
+
+<stupa-common-svg-msg *ngIf="_getPendingUserList.length==0 && _getAcceptedUserList.length==0 && _getRejectedUserList.length==0 && !_isAPICallingCompleted" [_buttonTitle]="_buttonTitle" [_showButton]="false"
+    [_pageSubTitle]="'You can view your participated events here.'"
+    [_pageMainTitle]="'No Participated Events'"></stupa-common-svg-msg>

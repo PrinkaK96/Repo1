@@ -1,0 +1,110 @@
+.radioBox {
+  ::ng-deep {
+    p-radiobutton {
+      scale: 0.6;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      background: var(--main-color);
+      border-color: var(--main-color);
+    }
+  }
+
+  .field-radiobutton {
+    label {
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.btn_green {
+  width: 15%;
+
+  .btn_green:disabled {
+    background-color: lightgrey !important;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .btn_green {
+    width: 100%;
+  }
+}
+
+.p-inputNumber {
+  color: var(--combinating-color);
+}
+
+.p-tabview-nav-link {
+  color: var(--main-color);
+  position: relative;
+  // border-bottom: 2px solid #f6bb41;
+}
+
+.p-tabview-nav-link::after {
+  position: absolute;
+  content: "";
+  width: 25%;
+  height: 2px;
+  background-color: var(--combinating-color);
+  bottom: 0;
+  left: 0.5rem;
+}
+
+@media only screen and (max-width:550px) {
+  .p-tabview-nav-link::after {
+    width: 100%;
+  }
+}
+.switch{
+  ::ng-deep{
+    .p-inputswitch{
+      margin-top: 0.3rem !important;
+    }
+  }
+}
+
+.right-text {
+  display: flex;
+  align-items: center;
+
+  p {
+    color: var(--combinating-color);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.reg-calendar {
+  ::ng-deep {
+    .p-calendar {
+      height: 38px;
+      border-bottom: 1px solid !important;
+
+      .p-button.p-button-icon-only {
+        width: auto !important;
+        padding-right: 0.5rem;
+        background-color: transparent;
+        color: var(--main-color);
+        border: none;
+      }
+
+      input {
+        border-radius: 0 !important;
+        background: transparent !important;
+      }
+    }
+  }
+}

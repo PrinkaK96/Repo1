@@ -1,0 +1,363 @@
+// @import '../../styles/ngtt-variables';
+@import "../../../../../stylesfiles/ngtt-variables.scss";
+
+.ngtt__match-wrapper {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-direction: column;
+  width: $ngtt-match-wrapper-width;
+  background-color: $ngtt-background-primary;
+  border-radius: 0px;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 90%;
+  border: 1px solid $ngtt-accent-primary;
+  border-top: none;
+
+  .box-siders {
+    position: absolute;
+    color: var(--text-color);
+    width: 100%;
+    font-size: 11px !important;
+  }
+
+  .topbar {
+    top: -1.3rem;
+    left: 0;
+  }
+
+  .bottombar {
+    bottom: -1.3rem;
+    left: 0;
+  }
+
+  .playerIndex {
+    position: absolute;
+    right: 105%;
+    color: var(--text-color);
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .note {
+    position: relative;
+  }
+
+  .note:last-child {
+    border-top: 1px solid $ngtt-accent-primary;
+  }
+}
+
+.common-popup {
+
+  .topBar,
+  .player-list {
+    padding: 10px 5px;
+  }
+}
+
+.ngtt__team-wrapper {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  flex-direction: row;
+  padding: 6px;
+  align-items: center;
+}
+
+.ngtt__team-wrapper:last-child {
+  border-top: 1px solid #bebebe;
+}
+
+.ngtt__team-avatar {
+  margin-left: 12px;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background-color: darkgray;
+  display: inline-block;
+  flex-shrink: 1;
+}
+
+.ngtt__team-title {
+  margin-left: 12px;
+  color: var(--secondary-color);
+  font-weight: lighter;
+  display: inline-block;
+  flex-grow: 1;
+  max-width: 152px;
+}
+
+.ngtt__team-score {
+  // padding is removed for temporary
+  // padding: 0 20px 0 10px;
+  flex-shrink: 1;
+  color: var(--main-color);
+  font-weight: bold;
+  // color: var(--combinating-color);
+  // css is add for the score numbers
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-panel {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: var(--box-bg);
+
+  .innerContent {
+    padding: 0.5rem;
+    position: relative;
+
+    .names {
+      font-size: 13px;
+    }
+
+    .scoreCont {
+      border-right: 0.01em solid var(--secondary-color);
+      line-height: 12px;
+
+      .scores {
+        font-size: 12px !important;
+      }
+    }
+
+    .scoreCont:last-child {
+      border: none !important;
+    }
+
+    .playerRow:not(:first-child) {
+      margin-top: 1rem !important;
+    }
+  }
+
+  .divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 51%;
+    transform: translate(0, -50%);
+    padding: 1rem 0.6rem;
+
+    .vs {
+      padding: 0 0.2rem;
+      font-size: 10px;
+      background-color: #f2f2f2;
+      color: #d9d9d9;
+      border-radius: 4px;
+      margin-left: 1rem;
+    }
+
+    ::ng-deep {
+      p-divider {
+        height: 20px;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .p-divider-right {
+        margin: 0 !important;
+      }
+
+      // .p-avatar-text{
+      //   color: ;
+      // }
+    }
+  }
+}
+
+.parent {
+  ::ng-deep {
+    p-dialog {
+      .p-dialog-header {
+        background-color: var(--main-color);
+
+        button {
+          display: none;
+        }
+      }
+
+      .p-dialog-content {
+        background-color: var(--main-color);
+        padding: 0;
+      }
+    }
+  }
+}
+
+.teamScore {
+  .cross {
+    i {
+      position: absolute;
+      top: 9px;
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  color: var(--primary-color);
+
+  .filterCard {
+    background: rgba(217, 217, 217, 0.35);
+    padding: 0.3rem;
+  }
+
+  .scoreFlex {
+    .vs_small {
+      padding: 0.1rem 0.4rem;
+      background: #d9d9d9;
+      border-radius: 4px;
+    }
+  }
+
+  .flex-100 {
+    flex-basis: 100%;
+  }
+
+  .flex-10 {
+    flex-basis: 10%;
+  }
+
+  .topbar {
+    .filterCard._big {
+      overflow: hidden;
+      padding: 0.6rem;
+      position: relative;
+    }
+
+    .filterCard._big._left {
+      &::after {
+        position: absolute;
+        content: "";
+        width: 108px;
+        height: 50px;
+        top: 1px;
+        background-color: var(--main-color);
+        right: -64px;
+        transform: rotate(134deg);
+      }
+
+      .text-end {
+        margin-right: 40px;
+      }
+    }
+
+    .filterCard._big._right {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 108px;
+        height: 50px;
+        top: 1px;
+        background-color: var(--main-color);
+        left: -65px;
+        transform: rotate(-134deg);
+      }
+    }
+  }
+
+  .centerElement {
+    flex-direction: column;
+
+    .filterCard {
+      .setScoreRow {
+        .setScore {
+          border-right: 1px solid black;
+          line-height: 10px;
+        }
+      }
+    }
+
+    .filterCard._left {
+      margin-right: 3rem;
+    }
+
+    .filterCard._right {
+      margin-left: 3rem;
+    }
+  }
+}
+
+.pName {
+  text-align: end;
+}
+
+.ngtt-se__match-wrapper {
+  cursor: pointer;
+}
+
+.q {
+  ::ng-deep {
+    p-avatar {
+      .p-avatar {
+        .p-avatar-text {
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+}
+
+.parentContainer {
+  position: relative;
+
+  .updateScore {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    z-index: 1;
+    background-color: var(--main-bg);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    i {
+      color: white;
+    }
+  }
+}
+
+.ngtt__team-wrapper {
+  position: relative;
+
+  .crown {
+    position: absolute;
+    right: 10px;
+  }
+
+
+}
+
+.dnone {
+  display: none;
+}
+
+@media print {
+  .ngtt__match-wrapper {
+    width: 240px !important;
+  }
+
+  .ngtt__team-wrapper {
+    .playerIndex {
+      height: 50% !important;
+    }
+  }
+
+  .updateScore {
+    display: none;
+  }
+}
+
+.updateScore {
+  i {
+    color: var(--secondary-color);
+  }
+}

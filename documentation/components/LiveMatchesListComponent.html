@@ -1,0 +1,1048 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  LiveMatchesListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>stupa-live-matches-list</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./live-matches-list.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./live-matches-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_commonOptions" >_commonOptions</a>
+                            </li>
+                            <li>
+                                <a href="#_liveMatchesList" >_liveMatchesList</a>
+                            </li>
+                            <li>
+                                <a href="#_liveMatchesListCopy" >_liveMatchesListCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_showLoader" >_showLoader</a>
+                            </li>
+                            <li>
+                                <a href="#azureLoggerConversion" >azureLoggerConversion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#router" >router</a>
+                            </li>
+                            <li>
+                                <a href="#searchedString" >searchedString</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getLiveMatches" >getLiveMatches</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#searchMatches" >searchMatches</a>
+                            </li>
+                            <li>
+                                <a href="#viewMatches" >viewMatches</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: Router, liveWeb: <a href="../injectables/LiveWebService.html" target="_self">LiveWebService</a>, videosService: <a href="../injectables/VideosService.html" target="_self">VideosService</a>, dateService: <a href="../injectables/DateService.html" target="_self">DateService</a>, azureLoggerService: <a href="../injectables/MyMonitoringService.html" target="_self">MyMonitoringService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>liveWeb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LiveWebService.html" target="_self" >LiveWebService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>videosService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/VideosService.html" target="_self" >VideosService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dateService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DateService.html" target="_self" >DateService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>azureLoggerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyMonitoringService.html" target="_self" >MyMonitoringService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLiveMatches"></a>
+                    <span class="name">
+                        <span ><b>getLiveMatches</b></span>
+                        <a href="#getLiveMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLiveMatches()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchMatches"></a>
+                    <span class="name">
+                        <span ><b>searchMatches</b></span>
+                        <a href="#searchMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchMatches()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewMatches"></a>
+                    <span class="name">
+                        <span ><b>viewMatches</b></span>
+                        <a href="#viewMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewMatches(match_details: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>match_details</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_commonOptions"></a>
+                    <span class="name">
+                        <span ><b>_commonOptions</b></span>
+                        <a href="#_commonOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>OwlOptions</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    loop: false,
+    mouseDrag: true,
+    autoplay: false,
+    touchDrag: false,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    margin: 25,
+    navText: [
+      &#x27;&lt;i class&#x3D;&quot;pi pi-chevron-left&quot;&gt;&lt;/i&gt;&#x27;,
+      &#x27;&lt;i class&#x3D;&quot;pi pi-chevron-right&quot;&gt;&lt;/i&gt;&#x27;,
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 2,
+      },
+      740: {
+        items: 3,
+      },
+      940: {
+        items: 4,
+      },
+    },
+    nav: false,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_liveMatchesList"></a>
+                    <span class="name">
+                        <span ><b>_liveMatchesList</b></span>
+                        <a href="#_liveMatchesList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_liveMatchesListCopy"></a>
+                    <span class="name">
+                        <span ><b>_liveMatchesListCopy</b></span>
+                        <a href="#_liveMatchesListCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showLoader"></a>
+                    <span class="name">
+                        <span ><b>_showLoader</b></span>
+                        <a href="#_showLoader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="azureLoggerConversion"></a>
+                    <span class="name">
+                        <span ><b>azureLoggerConversion</b></span>
+                        <a href="#azureLoggerConversion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Error()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="router"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>router</b></span>
+                        <a href="#router"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Router</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchedString"></a>
+                    <span class="name">
+                        <span ><b>searchedString</b></span>
+                        <a href="#searchedString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/live-matches/live-matches/live-matches-list/live-matches-list.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { OwlOptions } from &#x27;ngx-owl-carousel-o&#x27;;
+import { MyMonitoringService } from &#x27;src/app/services/AzureLogging/logging.service&#x27;;
+import { DateService } from &#x27;src/app/services/DateChange/date.service&#x27;;
+import { VideosService } from &#x27;src/app/services/Videos/videos.service&#x27;;
+import { LiveWebService } from &#x27;src/app/services/liveWeb/live-web.service&#x27;;
+
+@Component({
+  selector: &#x27;stupa-live-matches-list&#x27;,
+  templateUrl: &#x27;./live-matches-list.component.html&#x27;,
+  styleUrls: [&#x27;./live-matches-list.component.scss&#x27;]
+})
+export class LiveMatchesListComponent {
+  //#region Variables
+  _commonOptions: OwlOptions &#x3D; {
+    loop: false,
+    mouseDrag: true,
+    autoplay: false,
+    touchDrag: false,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    margin: 25,
+    navText: [
+      &#x27;&lt;i class&#x3D;&quot;pi pi-chevron-left&quot;&gt;&lt;/i&gt;&#x27;,
+      &#x27;&lt;i class&#x3D;&quot;pi pi-chevron-right&quot;&gt;&lt;/i&gt;&#x27;,
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 2,
+      },
+      740: {
+        items: 3,
+      },
+      940: {
+        items: 4,
+      },
+    },
+    nav: false,
+  };
+  _liveMatchesList: any &#x3D; [];
+  _showLoader: boolean &#x3D; false;
+  azureLoggerConversion: any&#x3D; new Error();
+  _liveMatchesListCopy: any&#x3D;[];
+  searchedString: any&#x3D;&#x27;&#x27;;
+  //#endregion
+  constructor(public router: Router, private liveWeb:LiveWebService,
+    private videosService: VideosService, private dateService: DateService,
+    private azureLoggerService : MyMonitoringService) { }
+
+  ngOnInit(): void {
+    this.getLiveMatches();
+  }
+  //#region This will redirect you for view videos.
+  viewMatches(match_details: any) {
+    this.router.navigate([&#x27;live-matches/live/view/&#x27; + match_details.playback_id])
+  }
+  //#endregion
+  //#region With this method we are able to get live videos
+  getLiveMatches() {
+    this._showLoader &#x3D; true;
+    this.liveWeb.getGlobalAllMatches().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        this._liveMatchesList &#x3D; [];
+        this._liveMatchesList &#x3D;  result.body.live_matches;
+        this._liveMatchesListCopy &#x3D;  result.body.live_matches;
+      },
+      error: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    })
+  }
+  //#endregion
+
+  searchMatches(){
+    this._liveMatchesList &#x3D; this._liveMatchesListCopy.filter((item: any) &#x3D;&gt; {
+      return (
+        item.playerA.toLowerCase().includes(this.searchedString.toLowerCase()) ||
+        item.playerB.toLowerCase().includes(this.searchedString.toLowerCase()) ||
+        item.event_name.toLowerCase().includes(this.searchedString.toLowerCase())
+        );
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-xxl liveMatchModule&quot;&gt;
+    &lt;div class&#x3D;&quot;flex-vc p-links&quot; routerLink&#x3D;&quot;/live-matches&quot;&gt;
+        &lt;i class&#x3D;&quot;pi pi-arrow-left i-small p-green&quot;&gt;&lt;/i&gt;
+        &lt;p class&#x3D;&quot;p-green ms-2&quot;&gt;Back&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;innerContent m-2&quot;&gt;
+        &lt;div class&#x3D;&quot;section section-live-matches&quot;&gt;
+            &lt;div class&#x3D;&quot;topbar&quot;&gt;
+                &lt;div class&#x3D;&quot;flex-sb&quot;&gt;
+                    &lt;div class&#x3D;&quot;flex-vc flex-hc&quot;&gt;
+                        &lt;svg width&#x3D;&quot;18&quot; height&#x3D;&quot;18&quot; viewBox&#x3D;&quot;0 0 24 24&quot; fill&#x3D;&quot;none&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                            &lt;path
+                                d&#x3D;&quot;M11.9688 22C17.4917 22 21.9688 17.523 21.9688 12C21.9688 6.477 17.4917 2 11.9688 2C6.44575 2 1.96875 6.477 1.96875 12C1.96875 17.523 6.44575 22 11.9688 22Z&quot;
+                                stroke&#x3D;&quot;#1B403A&quot; stroke-width&#x3D;&quot;1.5&quot; stroke-linecap&#x3D;&quot;round&quot; stroke-linejoin&#x3D;&quot;round&quot; /&gt;
+                            &lt;path
+                                d&#x3D;&quot;M12.0034 16.2334C13.1253 16.2334 14.2012 15.7878 14.9945 14.9945C15.7878 14.2012 16.2334 13.1253 16.2334 12.0034C16.2334 10.8816 15.7878 9.80566 14.9945 9.01238C14.2012 8.2191 13.1253 7.77344 12.0034 7.77344C10.8816 7.77344 9.80566 8.2191 9.01238 9.01238C8.2191 9.80566 7.77344 10.8816 7.77344 12.0034C7.77344 13.1253 8.2191 14.2012 9.01238 14.9945C9.80566 15.7878 10.8816 16.2334 12.0034 16.2334Z&quot;
+                                stroke&#x3D;&quot;#1B403A&quot; stroke-width&#x3D;&quot;1.5&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-linecap&#x3D;&quot;round&quot;
+                                stroke-linejoin&#x3D;&quot;round&quot; /&gt;
+                        &lt;/svg&gt;
+                        &lt;div class&#x3D;&quot;heading ms-2&quot;&gt;
+                            &lt;h5&gt;&lt;b&gt;Live Matches&lt;/b&gt;&lt;/h5&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+
+                    &lt;div class&#x3D;&quot;ree&quot;&gt;
+                        &lt;div class&#x3D;&quot;top-searchbar&quot;&gt;
+                            &lt;div class&#x3D;&quot;flex-e gap-3&quot;&gt;
+                                &lt;div class&#x3D;&quot;&quot;&gt;
+                                    &lt;div class&#x3D;&quot;innerBox-input&quot;&gt;
+                                        &lt;span class&#x3D;&quot; p-input-icon-left&quot;&gt;
+                                            &lt;i class&#x3D;&quot;pi pi-search&quot;&gt;&lt;/i&gt;
+                                            &lt;input id&#x3D;&quot;headerInput&quot; [(ngModel)]&#x3D;&quot;searchedString&quot; pInputText pInputText
+                                                type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Search Events&quot; (keyup)&#x3D;&quot;searchMatches()&quot;
+                                                (keypress)&#x3D;&quot;searchMatches()&quot; (keydown)&#x3D;&quot;searchMatches()&quot; /&gt;
+                                        &lt;/span&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;centerElement&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-lg-3&quot; *ngFor&#x3D;&quot;let item of _liveMatchesList; let i &#x3D; index&quot;&gt;
+                        &lt;div class&#x3D;&quot;owl-card p-links&quot; (click)&#x3D;&quot;viewMatches(item)&quot;&gt;
+                            &lt;div class&#x3D;&quot;thumbnail&quot;&gt;
+                                &lt;img *ngIf&#x3D;&quot;item.image!&#x3D;null&quot; [src]&#x3D;item.image alt&#x3D;&quot;&quot; /&gt;
+                                &lt;img *ngIf&#x3D;&quot;item.image&#x3D;&#x3D;null&quot; src&#x3D;&quot;../../../assets/landpage/imageSlider/slide1.png&quot;
+                                    alt&#x3D;&quot;&quot; /&gt;
+                                &lt;div class&#x3D;&quot;img-cover&quot;&gt;
+                                    &lt;div class&#x3D;&quot;liveIcon&quot;&gt;
+                                        &lt;svg width&#x3D;&quot;18&quot; height&#x3D;&quot;14&quot; viewBox&#x3D;&quot;0 0 18 14&quot; fill&#x3D;&quot;none&quot;
+                                            xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                            &lt;path
+                                                d&#x3D;&quot;M4.28448 1.11941C4.36196 1.1968 4.42343 1.28871 4.46536 1.38987C4.5073 1.49104 4.52888 1.59948 4.52888 1.70899C4.52888 1.8185 4.5073 1.92694 4.46536 2.02811C4.42343 2.12927 4.36196 2.22118 4.28448 2.29857C3.03401 3.54925 2.33152 5.24541 2.33152 7.01399C2.33152 8.78257 3.03401 10.4787 4.28448 11.7294C4.36185 11.8068 4.42321 11.8987 4.46506 11.9999C4.50692 12.101 4.52844 12.2094 4.5284 12.3189C4.52836 12.4283 4.50676 12.5367 4.46484 12.6378C4.42292 12.7389 4.36149 12.8308 4.28406 12.9082C4.20664 12.9855 4.11473 13.0469 4.01359 13.0887C3.91245 13.1306 3.80406 13.1521 3.6946 13.1521C3.58514 13.152 3.47677 13.1304 3.37566 13.0885C3.27455 13.0466 3.18268 12.9852 3.10531 12.9077C-0.149688 9.65274 -0.149688 4.37441 3.10531 1.11941C3.18271 1.04193 3.27461 0.980459 3.37578 0.938522C3.47694 0.896585 3.58538 0.875 3.6949 0.875C3.80441 0.875 3.91285 0.896585 4.01401 0.938522C4.11518 0.980459 4.20708 1.04193 4.28448 1.11941ZM14.8936 1.11941C18.1486 4.37524 18.1486 9.65274 14.8936 12.9077C14.7365 13.0595 14.526 13.1435 14.3075 13.1416C14.089 13.1397 13.88 13.0521 13.7255 12.8976C13.571 12.7431 13.4833 12.5341 13.4814 12.3156C13.4795 12.0971 13.5635 11.8866 13.7153 11.7294C14.9658 10.4787 15.6683 8.78257 15.6683 7.01399C15.6683 5.24541 14.9658 3.54925 13.7153 2.29857C13.5589 2.14232 13.4711 1.93034 13.471 1.70928C13.4709 1.48822 13.5586 1.27619 13.7149 1.11982C13.8712 0.963455 14.0831 0.875565 14.3042 0.875487C14.5252 0.875409 14.7373 0.963149 14.8936 1.11941ZM6.75698 3.51441C6.91321 3.67068 7.00097 3.8826 7.00097 4.10357C7.00097 4.32454 6.91321 4.53647 6.75698 4.69274C6.45361 4.99608 6.21295 5.35621 6.04877 5.75256C5.88458 6.14891 5.80008 6.57373 5.80008 7.00274C5.80008 7.43175 5.88458 7.85656 6.04877 8.25292C6.21295 8.64927 6.45361 9.0094 6.75698 9.31274C6.83657 9.38961 6.90006 9.48157 6.94373 9.58324C6.9874 9.68491 7.01039 9.79426 7.01135 9.9049C7.01232 10.0156 6.99123 10.1253 6.94933 10.2277C6.90743 10.3301 6.84555 10.4232 6.76731 10.5014C6.68906 10.5796 6.59602 10.6415 6.49361 10.6834C6.39119 10.7253 6.28146 10.7464 6.17081 10.7454C6.06016 10.7445 5.95081 10.7215 5.84914 10.6778C5.74747 10.6342 5.65552 10.5707 5.57865 10.4911C4.6535 9.5659 4.13377 8.31111 4.13377 7.00274C4.13377 5.69437 4.6535 4.43958 5.57865 3.51441C5.73492 3.35818 5.94684 3.27042 6.16781 3.27042C6.38878 3.27042 6.60071 3.35818 6.75698 3.51441ZM12.5561 3.51441C13.4813 4.43958 14.001 5.69437 14.001 7.00274C14.001 8.31111 13.4813 9.5659 12.5561 10.4911C12.4788 10.5685 12.3869 10.6299 12.2858 10.6718C12.1847 10.7138 12.0763 10.7354 11.9669 10.7354C11.8574 10.7354 11.749 10.7139 11.6479 10.6721C11.5467 10.6302 11.4548 10.5689 11.3774 10.4915C11.3 10.4141 11.2385 10.3223 11.1966 10.2211C11.1547 10.12 11.1331 10.0117 11.1331 9.9022C11.133 9.79274 11.1545 9.68435 11.1964 9.58321C11.2382 9.48207 11.2996 9.39016 11.377 9.31274C11.6804 9.0094 11.921 8.64927 12.0852 8.25292C12.2494 7.85656 12.3339 7.43175 12.3339 7.00274C12.3339 6.57373 12.2494 6.14891 12.0852 5.75256C11.921 5.35621 11.6804 4.99608 11.377 4.69274C11.2207 4.53637 11.133 4.32434 11.1331 4.10328C11.1331 3.88222 11.221 3.67025 11.3774 3.51399C11.5338 3.35773 11.7458 3.26999 11.9669 3.27007C12.1879 3.27015 12.3999 3.35804 12.5561 3.51441ZM9.06698 5.82274C9.23113 5.82274 9.39368 5.85507 9.54533 5.91789C9.69699 5.98071 9.83479 6.07278 9.95086 6.18886C10.0669 6.30493 10.159 6.44273 10.2218 6.59438C10.2846 6.74604 10.317 6.90859 10.317 7.07274C10.317 7.23689 10.2846 7.39944 10.2218 7.55109C10.159 7.70275 10.0669 7.84055 9.95086 7.95662C9.83479 8.0727 9.69699 8.16477 9.54533 8.22759C9.39368 8.29041 9.23113 8.32274 9.06698 8.32274C8.73546 8.32274 8.41752 8.19104 8.1831 7.95662C7.94867 7.7222 7.81698 7.40426 7.81698 7.07274C7.81698 6.74122 7.94867 6.42328 8.1831 6.18886C8.41752 5.95443 8.73546 5.82274 9.06698 5.82274Z&quot;
+                                                fill&#x3D;&quot;#F24E1E&quot; /&gt;
+                                        &lt;/svg&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;matchInfo py-2&quot;&gt;
+                                &lt;div class&#x3D;&quot;flex-sb w-100&quot;&gt;
+                                    &lt;div class&#x3D;&quot;flex-vc&quot;&gt;
+                                        &lt;div class&#x3D;&quot;col-4 p-0&quot;&gt;
+                                            &lt;p class&#x3D;&quot;text-overflow&quot; pTooltip&#x3D;&quot;{{item.playerA}}&quot;&gt;{{item.playerA}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-2&quot;&gt;
+                                            &lt;p class&#x3D;&quot;px-2&quot;&gt;vs&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;col-4 p-0&quot;&gt;
+                                            &lt;p class&#x3D;&quot;text-overflow&quot; pTooltip&#x3D;&quot;{{item.playerB}}&quot;&gt;{{item.playerB}}&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;info ms-2&quot;&gt;
+                                            &lt;i class&#x3D;&quot;pi pi-info-circle i-small tooltipBox&quot;
+                                                pTooltip&#x3D;&quot;{{item.round + &#x27;  |  &#x27; + item.category}}&quot;
+                                                tooltipPosition&#x3D;&quot;right&quot;&gt;&lt;/i&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class&#x3D;&quot;flex-vc&quot;&gt;
+                                        &lt;i class&#x3D;&quot;pi pi-eye i-small text-dark&quot;&gt;&lt;/i&gt;
+                                        &lt;p class&#x3D;&quot;p-small&quot;&gt;{{item.view}}&lt;/p&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;event col-lg-8 mt-1&quot;&gt;
+                                    &lt;p class&#x3D;&quot;text-overflow p-secondary&quot; pTooltip&#x3D;&quot;{{item.event_name}}&quot;&gt;
+                                        &lt;b&gt;{{item.event_name}}&lt;/b&gt;&lt;/p&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./live-matches-list.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.centerElement {
+    .owl-card {
+        margin-bottom: 2rem;
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-xxl liveMatchModule">    <div class="flex-vc p-links" routerLink="/live-matches">        <i class="pi pi-arrow-left i-small p-green"></i>        <p class="p-green ms-2">Back</p>    </div>    <div class="innerContent m-2">        <div class="section section-live-matches">            <div class="topbar">                <div class="flex-sb">                    <div class="flex-vc flex-hc">                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">                            <path                                d="M11.9688 22C17.4917 22 21.9688 17.523 21.9688 12C21.9688 6.477 17.4917 2 11.9688 2C6.44575 2 1.96875 6.477 1.96875 12C1.96875 17.523 6.44575 22 11.9688 22Z"                                stroke="#1B403A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />                            <path                                d="M12.0034 16.2334C13.1253 16.2334 14.2012 15.7878 14.9945 14.9945C15.7878 14.2012 16.2334 13.1253 16.2334 12.0034C16.2334 10.8816 15.7878 9.80566 14.9945 9.01238C14.2012 8.2191 13.1253 7.77344 12.0034 7.77344C10.8816 7.77344 9.80566 8.2191 9.01238 9.01238C8.2191 9.80566 7.77344 10.8816 7.77344 12.0034C7.77344 13.1253 8.2191 14.2012 9.01238 14.9945C9.80566 15.7878 10.8816 16.2334 12.0034 16.2334Z"                                stroke="#1B403A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"                                stroke-linejoin="round" />                        </svg>                        <div class="heading ms-2">                            <h5><b>Live Matches</b></h5>                        </div>                    </div>                    <div class="ree">                        <div class="top-searchbar">                            <div class="flex-e gap-3">                                <div class="">                                    <div class="innerBox-input">                                        <span class=" p-input-icon-left">                                            <i class="pi pi-search"></i>                                            <input id="headerInput" [(ngModel)]="searchedString" pInputText pInputText                                                type="text" placeholder="Search Events" (keyup)="searchMatches()"                                                (keypress)="searchMatches()" (keydown)="searchMatches()" />                                        </span>                                    </div>                                </div>                            </div>                        </div>                    </div>                </div>            </div>            <div class="centerElement">                <div class="row">                    <div class="col-lg-3" *ngFor="let item of _liveMatchesList; let i = index">                        <div class="owl-card p-links" (click)="viewMatches(item)">                            <div class="thumbnail">                                <img *ngIf="item.image!=null" [src]=item.image alt="" />                                <img *ngIf="item.image==null" src="../../../assets/landpage/imageSlider/slide1.png"                                    alt="" />                                <div class="img-cover">                                    <div class="liveIcon">                                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none"                                            xmlns="http://www.w3.org/2000/svg">                                            <path                                                d="M4.28448 1.11941C4.36196 1.1968 4.42343 1.28871 4.46536 1.38987C4.5073 1.49104 4.52888 1.59948 4.52888 1.70899C4.52888 1.8185 4.5073 1.92694 4.46536 2.02811C4.42343 2.12927 4.36196 2.22118 4.28448 2.29857C3.03401 3.54925 2.33152 5.24541 2.33152 7.01399C2.33152 8.78257 3.03401 10.4787 4.28448 11.7294C4.36185 11.8068 4.42321 11.8987 4.46506 11.9999C4.50692 12.101 4.52844 12.2094 4.5284 12.3189C4.52836 12.4283 4.50676 12.5367 4.46484 12.6378C4.42292 12.7389 4.36149 12.8308 4.28406 12.9082C4.20664 12.9855 4.11473 13.0469 4.01359 13.0887C3.91245 13.1306 3.80406 13.1521 3.6946 13.1521C3.58514 13.152 3.47677 13.1304 3.37566 13.0885C3.27455 13.0466 3.18268 12.9852 3.10531 12.9077C-0.149688 9.65274 -0.149688 4.37441 3.10531 1.11941C3.18271 1.04193 3.27461 0.980459 3.37578 0.938522C3.47694 0.896585 3.58538 0.875 3.6949 0.875C3.80441 0.875 3.91285 0.896585 4.01401 0.938522C4.11518 0.980459 4.20708 1.04193 4.28448 1.11941ZM14.8936 1.11941C18.1486 4.37524 18.1486 9.65274 14.8936 12.9077C14.7365 13.0595 14.526 13.1435 14.3075 13.1416C14.089 13.1397 13.88 13.0521 13.7255 12.8976C13.571 12.7431 13.4833 12.5341 13.4814 12.3156C13.4795 12.0971 13.5635 11.8866 13.7153 11.7294C14.9658 10.4787 15.6683 8.78257 15.6683 7.01399C15.6683 5.24541 14.9658 3.54925 13.7153 2.29857C13.5589 2.14232 13.4711 1.93034 13.471 1.70928C13.4709 1.48822 13.5586 1.27619 13.7149 1.11982C13.8712 0.963455 14.0831 0.875565 14.3042 0.875487C14.5252 0.875409 14.7373 0.963149 14.8936 1.11941ZM6.75698 3.51441C6.91321 3.67068 7.00097 3.8826 7.00097 4.10357C7.00097 4.32454 6.91321 4.53647 6.75698 4.69274C6.45361 4.99608 6.21295 5.35621 6.04877 5.75256C5.88458 6.14891 5.80008 6.57373 5.80008 7.00274C5.80008 7.43175 5.88458 7.85656 6.04877 8.25292C6.21295 8.64927 6.45361 9.0094 6.75698 9.31274C6.83657 9.38961 6.90006 9.48157 6.94373 9.58324C6.9874 9.68491 7.01039 9.79426 7.01135 9.9049C7.01232 10.0156 6.99123 10.1253 6.94933 10.2277C6.90743 10.3301 6.84555 10.4232 6.76731 10.5014C6.68906 10.5796 6.59602 10.6415 6.49361 10.6834C6.39119 10.7253 6.28146 10.7464 6.17081 10.7454C6.06016 10.7445 5.95081 10.7215 5.84914 10.6778C5.74747 10.6342 5.65552 10.5707 5.57865 10.4911C4.6535 9.5659 4.13377 8.31111 4.13377 7.00274C4.13377 5.69437 4.6535 4.43958 5.57865 3.51441C5.73492 3.35818 5.94684 3.27042 6.16781 3.27042C6.38878 3.27042 6.60071 3.35818 6.75698 3.51441ZM12.5561 3.51441C13.4813 4.43958 14.001 5.69437 14.001 7.00274C14.001 8.31111 13.4813 9.5659 12.5561 10.4911C12.4788 10.5685 12.3869 10.6299 12.2858 10.6718C12.1847 10.7138 12.0763 10.7354 11.9669 10.7354C11.8574 10.7354 11.749 10.7139 11.6479 10.6721C11.5467 10.6302 11.4548 10.5689 11.3774 10.4915C11.3 10.4141 11.2385 10.3223 11.1966 10.2211C11.1547 10.12 11.1331 10.0117 11.1331 9.9022C11.133 9.79274 11.1545 9.68435 11.1964 9.58321C11.2382 9.48207 11.2996 9.39016 11.377 9.31274C11.6804 9.0094 11.921 8.64927 12.0852 8.25292C12.2494 7.85656 12.3339 7.43175 12.3339 7.00274C12.3339 6.57373 12.2494 6.14891 12.0852 5.75256C11.921 5.35621 11.6804 4.99608 11.377 4.69274C11.2207 4.53637 11.133 4.32434 11.1331 4.10328C11.1331 3.88222 11.221 3.67025 11.3774 3.51399C11.5338 3.35773 11.7458 3.26999 11.9669 3.27007C12.1879 3.27015 12.3999 3.35804 12.5561 3.51441ZM9.06698 5.82274C9.23113 5.82274 9.39368 5.85507 9.54533 5.91789C9.69699 5.98071 9.83479 6.07278 9.95086 6.18886C10.0669 6.30493 10.159 6.44273 10.2218 6.59438C10.2846 6.74604 10.317 6.90859 10.317 7.07274C10.317 7.23689 10.2846 7.39944 10.2218 7.55109C10.159 7.70275 10.0669 7.84055 9.95086 7.95662C9.83479 8.0727 9.69699 8.16477 9.54533 8.22759C9.39368 8.29041 9.23113 8.32274 9.06698 8.32274C8.73546 8.32274 8.41752 8.19104 8.1831 7.95662C7.94867 7.7222 7.81698 7.40426 7.81698 7.07274C7.81698 6.74122 7.94867 6.42328 8.1831 6.18886C8.41752 5.95443 8.73546 5.82274 9.06698 5.82274Z"                                                fill="#F24E1E" />                                        </svg>                                    </div>                                </div>                            </div>                            <div class="matchInfo py-2">                                <div class="flex-sb w-100">                                    <div class="flex-vc">                                        <div class="col-4 p-0">                                            <p class="text-overflow" pTooltip="{{item.playerA}}">{{item.playerA}}</p>                                        </div>                                        <div class="col-2">                                            <p class="px-2">vs</p>                                        </div>                                        <div class="col-4 p-0">                                            <p class="text-overflow" pTooltip="{{item.playerB}}">{{item.playerB}}</p>                                        </div>                                        <div class="info ms-2">                                            <i class="pi pi-info-circle i-small tooltipBox"                                                pTooltip="{{item.round + \'  |  \' + item.category}}"                                                tooltipPosition="right"></i>                                        </div>                                    </div>                                    <div class="flex-vc">                                        <i class="pi pi-eye i-small text-dark"></i>                                        <p class="p-small">{{item.view}}</p>                                    </div>                                </div>                                <div class="event col-lg-8 mt-1">                                    <p class="text-overflow p-secondary" pTooltip="{{item.event_name}}">                                        <b>{{item.event_name}}</b></p>                                </div>                            </div>                        </div>                    </div>                </div>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'LiveMatchesListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LiveMatchesListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

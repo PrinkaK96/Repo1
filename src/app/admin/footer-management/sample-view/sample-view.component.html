@@ -1,0 +1,107 @@
+<div class="sampleView-container">
+    <div class="header">
+        <h6>Sample View of Footer Section</h6>
+    </div>
+    <div class="sampleContainer">
+        <div class="footerContent">
+            <div class="row">
+                <div class="col-lg-4 footerColumns">
+                    <div class="innerFlex flex-hc flex-vc">
+                        <div class="imgTop">
+                            <img src="../../../../assets/admin/footerManagement/footerStatic.png" class="w150" alt="">
+                        </div>
+                        <div class="social-icons mt-4">
+                            <div class="icons flex-vc">
+                                <div class="icon" *ngFor="let items of icons">
+                                    <img [src]="items" class="w25" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contacts text-center">
+                            <div class="email contact">
+                                <p>CBTM123@gmail.com</p>
+                            </div>
+                            <div class="phone contact">
+                                <p>xxxxxx9825</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 footerColumns">
+                    <div class="innerFlex flex-hc flex-vc">
+                        <div class="textTop">
+                            <h6>{{'footer.termsCondition' | translate}}</h6>
+                        </div>
+                        <div class="terms mt-4">
+                            <div class="innerContainer">
+                                <div class="policies text-center" *ngFor="let items of 'sampleView.items'|translate">
+                                    <p class="py-2">{{items}}</p>
+                                    <hr class="divider">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footerColumns">
+                    <div class="innerFlex flex-hc flex-vc">
+                        <div class="heading-top">
+                            <div class="text-center">
+                                <h6>{{'header.Mobileapp' | translate}}</h6>
+
+                            </div>
+                        </div>
+                        <div class="downloadApp">
+                            <div class="flex-vc">
+                                <div class="organizer _appType">
+                                    <div class="text-center _relative p-3">
+                                        <div class="imgTop">
+                                            <img src="../../../assets/landpage/footer/stupaorganisers.png" class="w30"
+                                                alt="">
+                                        </div>
+                                        <div class="dowloadButtons">
+                                            <div class="text_tag">
+                                                <p>organisers</p>
+                                            </div>
+                                            <div class="downloadBut">
+                                                <img src="../../../assets/landpage/footer/appStore.png" class="w100"
+                                                    alt="">
+                                            </div>
+                                            <div class="downloadBut">
+                                                <img src="../../../assets/landpage/footer/appStore.png" class="w100"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Players _appType">
+                                    <div class="text-center _relative p-3">
+                                        <div class="imgTop">
+                                            <img src="../../../assets/landpage/footer/stupaPlayers.png" class="w30"
+                                                alt="">
+                                        </div>
+                                        <div class="dowloadButtons">
+                                            <div class="text_tag">
+                                                <p>Players</p>
+                                            </div>
+                                            <div class="downloadBut">
+                                                <img src="../../../assets/landpage/footer/appStore.png" class="w100"
+                                                    alt="">
+                                            </div>
+                                            <div class="downloadBut">
+                                                <img src="../../../assets/landpage/footer/appStore.png" class="w100"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,207 @@
+<!-- <div class="sdf" *ngIf="showSkeletons">
+  <div class="row gap-1">
+    <div class="col-lg-3"  *ngFor="let item of __skeletons">
+      <p-skeleton width="100%" height="9rem"></p-skeleton>
+      <p-skeleton styleClass="mt-2" width="10rem" height="1rem"></p-skeleton>
+      <p-skeleton styleClass="mt-1" width="4rem" height="1rem"></p-skeleton>
+    </div>
+  </div>
+</div> -->
+<div class="container-xxl">
+  <div class=" row" style="margin: 0 10px;" *ngIf="showSkeletons">
+    <div class="col-lg-3 mt-2" *ngFor="let item of __skeletons">
+      <p-skeleton width="100%" height="9rem"></p-skeleton>
+      <p-skeleton styleClass="mt-2" width="10rem" height="1rem"></p-skeleton>
+      <p-skeleton styleClass="mt-1" width="4rem" height="1rem"></p-skeleton>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="container-xxl" *ngIf="!showSkeletons">
+  <div class="ree">
+    <div class="top-searchbar">
+      <div class="flex-e gap-3">
+        <div class="col-lg-4 col-sm-6 col-8">
+          <div class="innerBox-input">
+            <span class=" p-input-icon-left">
+              <i class="pi pi-search" style="z-index: 1;"></i>
+              <input id="headerInput" [(ngModel)]="searchedString" pInputText pInputText type="text"
+                placeholder="Find Events" />
+            </span>
+          </div>
+        </div>
+        <button [disabled]="searchedString==''" class="btn btn_green m-0 w-auto"
+          (click)="searchMatches()">Search</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showSearchedEvents && !_showVideo" class="liveMatchModule" >
+  <div class="container-xxl">
+    <div class="flex-vc p-links btndesign" (click)="backToLiveMatch()">
+      <i class="pi pi-arrow-left i-small p-green"></i>
+      <p class="p-green ms-2">Back</p>
+    </div>
+  </div>
+  <div class="section section-recentVid">
+    <div class="container-xxl">
+      <div class="innerContent m-2">
+
+        <div class="centerElement">
+          <div class="row" #recentVid>
+            <div class="col-lg-3" *ngFor="let item of _searchedEvents; let i = index">
+              <div>
+                <div class="owl-card" (click)="viewVideo(item)">
+                  <div class="thumbnail">
+                    <img *ngIf="item.image!=null" [src]=item.image alt="" />
+                    <img *ngIf="item.image==null" src="../../../assets/landpage/imageSlider/slide1.png" alt="" />
+                    <div class="img-cover"></div>
+                  </div>
+                  <div class="matchInfo py-2">
+                    <div class="flex-vc flex-sb">
+                      <div class="flex-vc">
+                        <div class="p-0" style=" width: 69px;">
+                          <p class="text-overflow">
+                            {{ item.playerA }}
+                          </p>
+                        </div>
+                        <div class="" style="padding: 0 6px;font-weight: bold;">
+                          <p>vs</p>
+                        </div>
+                        <div class="p-0" style=" width: 69px;">
+                          <p class="text-overflow">
+                            {{ item.playerB }}
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-vc">
+                        <div class="info ms-2">
+                          <i class="pi pi-info-circle i-small tooltipBox" style="padding: 0 5px 0 0" pTooltip="{{
+                           
+                              item.round +
+                                '  |  ' +
+                                item.category
+                            }}" tooltipPosition="right"></i>
+                        </div>
+                        <div class="flex-vc">
+                          <i class="pi pi-eye i-small text-dark" style="padding: 0 3px"></i>
+                          <p class="p-small">{{ item.views }}</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="event mt-1">
+                      <p class="p-secondary">
+                        <b>{{ item.event_name }}</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="_searchedEventsLength>0" class="table-paginator mt-3">
+    <p-paginator [rows]="8" [first]="first" [totalRecords]="_searchedEventsLength"
+      (onPageChange)="paginate($event)"></p-paginator>
+  </div>
+</div>
+
+<div *ngIf="!showSearchedEvents" class="liveLayout">
+  <stupa-recent-videos *ngIf="isNoRecent"></stupa-recent-videos>
+  <stupa-live-matches *ngIf="isNoLive"></stupa-live-matches>
+  <stupa-event-videos *ngIf="isNoEvent"></stupa-event-videos>
+  <div *ngIf="!isNoLive && !isNoEvent &&  !isNoRecent && !_isAPICallingCompleted">
+    <stupa-common-svg-msg [_buttonTitle]="_buttonTitle" [_pageMainTitle]="_pageMainTitle" [_showButton]="false"
+      (eventClicked)="eventClicked()" [_pageSubTitle]="_pageSubTitle"></stupa-common-svg-msg>
+  </div>
+</div>
+<div class="fullScreenVideo">
+  <p-dialog [showHeader]="false" [resizable]="false" [(visible)]="_showVideo" [modal]="true" [draggable]="false"
+    [style]="{ width: '90vw' }" [baseZIndex]="10000">
+    <!-- <div class="topVideo" *ngIf="_showVideo"> -->
+    <!-- <br> -->
+    <!-- <div class="flex-vc p-links btndesign mb-2" routerLink="/live-matches">
+          <i class="pi pi-arrow-left i-small p-green"></i>
+          <p class="p-green ms-2"><b>Back</b></p>
+      </div> -->
+    <div class="closeBut p-links" (click)="closeFullScreen()">
+      <i class="pi pi-times-circle text-danger"></i>
+    </div>
+    <div class="videoContainer">
+      <div class="videoPlayer">
+        <mux-player *ngIf="_assetPlayBackId != null && _assetPlayBackId != ''" class="muxPlayer videoM3"
+          stream-type="on-demand" attr.playback-id="{{_assetPlayBackId}}" metadata-video-title="Test VOD"
+          metadata-viewer-user-id="user-24601"></mux-player>
+
+        <video style="height: 100%;" *ngIf="_additionalUrl != null && _additionalUrl != ''" width="100%" controls>
+          <source src={{_additionalUrl}} type="video/mp4">
+        </video>
+        <!-- <mux-player class="videoM3" stream-type="on-demand"
+          attr.playback-id="oYmuAakYAM36QFEjj02XxAZ01Ij3VmYaZ7a800fsB01ldl00" metadata-video-title="Test VOD"
+          metadata-viewer-user-id="user-24601"></mux-player> -->
+        <!-- <video class="videoM3" controls>
+                  <source src="../../../../assets/tms/content/mov_bbb.mp4" type="video/mp4">
+              </video> -->
+      </div>
+      <div class="info p-2">
+        <div class="flex-sb">
+          <div class="flex-vc gap-2">
+            <div class="flex-vc players gap-2">
+              <p class="playerName text-overflow">{{_playerA}}
+              </p>
+              <p>vs</p>
+              <p class="playerName text-overflow">{{_playerB}}
+              </p>
+            </div>
+            <p-divider layout="vertical"></p-divider>
+            <div class="round">
+              <p>{{_round}}</p>
+            </div>
+            <p-divider layout="vertical"></p-divider>
+            <div class="category">
+              <p>{{_category}}</p>
+            </div>
+          </div>
+          <div class="views flex-vc">
+            <p>View Count</p>
+            <p class="ms-1">{{_views === '0' ? 0 : _views}}</p>
+          </div>
+        </div>
+        <div class="flex-sb flex-vc mt-2">
+          <div>
+            <p class="event p-secondary"><b>{{_eventName}}</b></p>
+          </div>
+          <div class="flex-vc eventButtons">
+            <!-- <button class="btn btn-videoBut" disabled>
+              <img class="eye_w15" src="../../../../assets/icons/svg/live matches/trendup.svg" alt="">
+              <p>Analyse</p>
+            </button>
+            <button class="btn btn-videoBut" disabled>
+              <img class="eye_w15" src="../../../../assets/icons/svg/live matches/arrowsquaredown.svg" alt="">
+              <p>Download</p>
+            </button> -->
+            <!-- <button class="btn btn-videoBut" (click)="ShareLink()">
+                          <img class="eye_w15" src="../../../../assets/icons/svg/live matches/arrowforwardsquare.svg"
+                              alt="">
+                          <p>Share</p>
+                      </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <p-divider class="mt-0 video-divider"></p-divider> -->
+    <!-- </div> -->
+  </p-dialog>
+</div>
+
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

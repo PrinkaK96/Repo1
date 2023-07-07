@@ -1,0 +1,117 @@
+<!-- <p>create-category works!</p> -->
+<br>
+<div class="createCategoryComponent">
+  <div class="container-xxl">
+    <div class="innerContent">
+      <h4 class="p-secondary-dark">
+        <b>Add Category/Class</b>
+    </h4>
+      <form [formGroup]="formgroup">
+        <div class="row flex-base">
+          <div class="col-3 flex-vc flex-hc">
+            <div class="className">
+              <input
+                type="text"
+                pInputText
+                formControlName="text"
+                placeholder="Enter Category/Class Name"
+                formControlName="className"
+              />
+              <span
+                class="errror"
+                *ngIf="
+                  formgroup.controls['className'].hasError('required') &&
+                   issValid
+                "
+                >* Required Field</span
+              >
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="participantName">
+              <p-dropdown
+                formControlName="participantType"
+                optionLabel="name"
+                optionValue="id"
+                [filter]="false"
+                [options]="_eventParticipantType"
+                placeholder="Select Participant"
+              ></p-dropdown>
+              <span
+                class="errror"
+                *ngIf="
+                  formgroup.controls['participantType'].hasError('required') &&
+                   issValid
+                "
+                >* Required Field</span
+              >
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="gender">
+              <p-dropdown
+                formControlName="gender"
+                optionLabel="name"
+                optionValue="id"
+                [filter]="false"
+                [options]="_genders"
+                placeholder="Select Gender"
+              ></p-dropdown>
+              <span
+                class="errror"
+                *ngIf="
+                  formgroup.controls['gender'].hasError('required') &&
+             issValid
+                "
+                >* Required Field</span
+              >
+            </div>
+          </div>
+
+          <div class="col-1 flex-vc flex-hc">
+            <!-- <button class="profile_buttons2" (click)="AddData($event)">
+              + Add
+            </button> -->
+            <button *ngIf="!_updateFlag" id="addcategory" class="btn btn_green w-auto flex-e" (click)="AddData($event)">Add</button>
+            <button *ngIf="_updateFlag" class="btn btn_green btn_width" (click)="updateCategory()">Update</button>
+            <button *ngIf="_updateFlag" class="btn btn_green btn-cancel" (click)="formgroup.reset()">Cancel</button>
+          </div>
+        </div>
+      </form>
+      <!-- {{getdata|json}} -->
+     <div class="parent">
+      <p-table  class="common-table text-center" #request  [rows]="7" [value]="creatCategoryAarry"
+          [paginator]="true" [globalFilterFields]="['name', 'email']">
+          <ng-template pTemplate="header">
+              <tr style="font-size: 11px;">
+                  <th pSortableColumn="name" style="width: 15%">Class/Category Name</th>
+                  <th  pSortableColumn="email" style="width: 14%">Participant Type</th>
+                  <th pSortableColumn="email" style="width: 10%">Gender</th>
+                  <th pSortableColumn="details" style="width: 10%">Action</th>
+              </tr>
+          </ng-template>
+  
+          <ng-template pTemplate="body" let-users>
+              <tr>
+                  <td>{{ users.category_description}}</td>
+                  <td class="p-combine">{{ users.participant_name }}</td>
+                  <td class="p-combine">{{ users.gender_name }}</td>
+                  
+                  <td>
+                    <div>
+                      <img (click)="updateCategoryInfo(users)" class="p-links mt-1" style="width:15px; margin-right: 10px;" src="../../../../assets/tms/content/UnionEdit.png" alt="" />
+                      <img (click)="deleteCategory(users.category_id)" class="p-links" style="width:14px; margin-right: 10px " src="../../../../assets/tms/content/delete-icon.png" alt="" />
+                    </div>
+                </td>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+              <tr>
+                  <td colspan="8">No user found.</td>
+              </tr>
+          </ng-template>
+      </p-table>
+  </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="admin-sidebar-container">
+    <div class="sidebar">
+        <!-- <div class="tmsSidebar"(click)="goBackAtFirstScreen()"> -->
+        <div class="tmsSidebar">
+
+            <div (click)="navigateToOrganize()" class="backBtn flex-vc flex-hc p-links">
+                <div class="imgContainer">
+                    <i class="bi bi-arrow-left p-combine"></i>
+                    <!-- <img class="img-fluid" src="../../../assets/tms/arrowLeft-orange.png" width="" alt=""> -->
+                </div>
+            </div>
+
+            <div class="sideBarHeading mt-3">
+                <h4>{{'tms.tournament'|translate}}</h4>
+                <h4>{{'tms.management'|translate}}</h4>
+                <h4>{{'tms.system'|translate}}</h4>
+            </div>
+            <div class="centerText">
+                <p class="p-small">{{'tms.VariouSettings'|translate}}<b class="fst-italic">{{'tms.event'|translate}}</b>
+                </p>
+            </div>
+            <!-- <img src="../../../assets/icons/sidebarIcons/createICON.png" alt="">    -->
+            <!-- <app-event-org-sidebar></app-event-org-sidebar> -->
+        </div>
+        <div class="admin-tabs">
+            <div class="sideTimeline">
+                <!-- <p-timeline [value]="_events" *ngIf="!event_id">
+                    <ng-template pTemplate="marker" let-event>
+                        <div class="circle p-links"
+                            [style.filter]="event.status !='Create Event' ?'contrast(0)':'contrast(1)'">
+                            <span class="custom-marker markerStatic shadow-2">
+                                <i [ngClass]="event.icon"></i> 
+                                <div class="imgContainer" [style.backgroundColor]="event.color">
+                                    <img [src]="event.icon" class="w15" alt="">
+                                </div>
+                            </span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="content" let-event>
+                        <div>
+                            <label class="p-links eventHeading"
+                                [style.filter]="event.status !='Create Event' ?'contrast(0)':'contrast(1)'"
+                                [style.fontSize]="event.path == _showIndicatiorON ? '20px':''">
+                                {{event.status}}</label>
+                            <span class="eventIndicator " *ngIf="event.path == _showIndicatiorON"></span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="opposite" let-event>
+                    </ng-template>
+                </p-timeline> -->
+                <p-timeline [value]="_events">
+                    <ng-template pTemplate="marker" let-event>
+                        <div class="circle p-links" (click)="selectedEvent(event)" [routerLink]="[event.path]">
+                            <span class="custom-marker markerStatic shadow-2">
+                                <!-- <i [ngClass]="event.icon"></i> -->
+                                <div class="imgContainer" [style.backgroundColor]="event.color">
+                                    <img [src]="event.icon" class="w15" alt="">
+                                </div>
+                            </span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="content" let-event>
+                        <div *ngIf="!event.isScheduler" (click)="selectedEvent(event)"
+                            (click)="openSchedule(event.path)">
+                            <label class="p-links eventHeading"
+                                [style.fontSize]="event.path == _showIndicatiorON ? '20px':''">
+                                {{event.status}}</label>
+                            <span class="eventIndicator " *ngIf="event.path == _showIndicatiorON"></span>
+                        </div>
+
+                        <div *ngIf="event.isScheduler" (click)="selectedEvent(event)">
+                            <label (click)="openSchedule('event/fixture')" class="p-links eventHeading"
+                                [style.fontSize]="event.path == _showIndicatiorON ? '20px':''">
+                                {{event.status}}</label>
+                            <span class="eventIndicator " *ngIf="event.path == _showIndicatiorON"></span>
+                            <!-- <div class="side_schedule_icon">
+                                <img (click)="openSchedule('event/schedule')" class="me-2"
+                                    src="../../../../assets/icons/svg/Schedule-icon.svg" id="scheduleIcon"
+                                    class="social_icons_w20 scheduleIcon" alt="" />
+                            </div> -->
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="opposite" let-event>
+                    </ng-template>
+                </p-timeline>
+
+            </div>
+        </div>
+        <!-- <div class="logout">
+            <button class="btn btn_green p-links w-auto m-0 flex-vc flex-hc gap-4" (click)="logOut()">
+                <i class="pi pi-power-off pi-small"></i>
+                Log Out</button>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="row membership-class" *ngIf="event!=null">
+    <div class="col-lg-4" *ngFor="let item of paymentMethods, let i=index">
+        <div class="membership-card">
+            <div class="flex-sb">
+                <!-- <p *ngIf="!item.flag" class="paymentDesDisable"><b>{{item.paymentMethod}}</b></p>
+                <p *ngIf="item.flag" class="paymentDesEnable"><b>{{item.paymentMethod}}</b></p> -->
+                <p class="paymentDesEnable"><b>{{item.paymentMethod}}</b></p>
+                <img [src]="item.paymentIcon" />
+
+            </div>
+            <br>
+            <br>
+            <div class="flex-sb">
+                <!-- <div *ngIf=" !item.flag" class="link">
+                    <p class="links p-links">Link &nbsp;
+                        <img src="../../../../assets/icons/svg/link.svg" />
+                    </p>
+                </div>
+                
+                <div *ngIf="item.flag" class="dlink">
+                    <p class="dlink p-links">Dlink &nbsp;
+                        <img src="../../../../assets/icons/svg/dlinkk.svg" />
+                    </p>
+                </div> -->
+                <div *ngIf="item.flag" class="dlink">
+                    <p class="dlink p-links">Link &nbsp;
+                        <img src="../../../../assets/icons/svg/dlinkk.svg" />
+                    </p>
+                </div>
+                <div  class="switch">
+                    <p-inputSwitch  [(ngModel)]="checked" [disabled]="true" (onChange)="enablePayment($event,i)" class="flex-vc flex-hc"></p-inputSwitch>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<p *ngIf="event!=null"></p>
+<stupa-common-svg-msg *ngIf="event===null" (eventClicked)="eventClicked()"></stupa-common-svg-msg>

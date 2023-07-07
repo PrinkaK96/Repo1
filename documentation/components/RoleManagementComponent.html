@@ -1,0 +1,2429 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  RoleManagementComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/admin/role-management/role-management.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-role-management</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./role-management.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./role-management.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_authentication" >_authentication</a>
+                            </li>
+                            <li>
+                                <a href="#_createRoleBtn" >_createRoleBtn</a>
+                            </li>
+                            <li>
+                                <a href="#_eventLevels" >_eventLevels</a>
+                            </li>
+                            <li>
+                                <a href="#_isPublishOrNot" >_isPublishOrNot</a>
+                            </li>
+                            <li>
+                                <a href="#_isSubmit" >_isSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#_levelsCopy" >_levelsCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_permissionData" >_permissionData</a>
+                            </li>
+                            <li>
+                                <a href="#_permissionDataCopy" >_permissionDataCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_permissionIds" >_permissionIds</a>
+                            </li>
+                            <li>
+                                <a href="#_publishLevels" >_publishLevels</a>
+                            </li>
+                            <li>
+                                <a href="#_roleForm" >_roleForm</a>
+                            </li>
+                            <li>
+                                <a href="#_roleId" >_roleId</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedAuth" >_selectedAuth</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedLevels" >_selectedLevels</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedPermission" >_selectedPermission</a>
+                            </li>
+                            <li>
+                                <a href="#_showLoader" >_showLoader</a>
+                            </li>
+                            <li>
+                                <a href="#azureLoggerConversion" >azureLoggerConversion</a>
+                            </li>
+                            <li>
+                                <a href="#innerWidth" >innerWidth</a>
+                            </li>
+                            <li>
+                                <a href="#roles" >roles</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editRole" >editRole</a>
+                            </li>
+                            <li>
+                                <a href="#getAuthentication" >getAuthentication</a>
+                            </li>
+                            <li>
+                                <a href="#getIsPublishOrNot" >getIsPublishOrNot</a>
+                            </li>
+                            <li>
+                                <a href="#getLevels" >getLevels</a>
+                            </li>
+                            <li>
+                                <a href="#getPermissions" >getPermissions</a>
+                            </li>
+                            <li>
+                                <a href="#getRoles" >getRoles</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onPUblishClick" >onPUblishClick</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#onResize" >onResize</a>
+                            </li>
+                            <li>
+                                <a href="#reset" >reset</a>
+                            </li>
+                            <li>
+                                <a href="#saveRole" >saveRole</a>
+                            </li>
+                            <li>
+                                <a href="#setFormValue" >setFormValue</a>
+                            </li>
+                            <li>
+                                <a href="#updatePublishUnpublish" >updatePublishUnpublish</a>
+                            </li>
+                            <li>
+                                <a href="#updateRole" >updateRole</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize" >window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(roleService: <a href="../injectables/RoleService.html" target="_self">RoleService</a>, jsonDataCallingService: <a href="../injectables/JsonDataCallingService.html" target="_self">JsonDataCallingService</a>, messageService: <a href="../interfaces/Message.html" target="_self">MessageService</a>, formBuilder: FormBuilder, confirmationDialogService: <a href="../injectables/ConfirmationDialogService.html" target="_self">ConfirmationDialogService</a>, azureLoggerService: <a href="../injectables/MyMonitoringService.html" target="_self">MyMonitoringService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>roleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoleService.html" target="_self" >RoleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>jsonDataCallingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/JsonDataCallingService.html" target="_self" >JsonDataCallingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>messageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmationDialogService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>azureLoggerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyMonitoringService.html" target="_self" >MyMonitoringService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+    <section data-compodoc="block-methods">
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <span ><b>window:resize</b></span>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editRole"></a>
+                    <span class="name">
+                        <span ><b>editRole</b></span>
+                        <a href="#editRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editRole(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="172"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:172</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAuthentication"></a>
+                    <span class="name">
+                        <span ><b>getAuthentication</b></span>
+                        <a href="#getAuthentication"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAuthentication()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getIsPublishOrNot"></a>
+                    <span class="name">
+                        <span ><b>getIsPublishOrNot</b></span>
+                        <a href="#getIsPublishOrNot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getIsPublishOrNot()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLevels"></a>
+                    <span class="name">
+                        <span ><b>getLevels</b></span>
+                        <a href="#getLevels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLevels()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPermissions"></a>
+                    <span class="name">
+                        <span ><b>getPermissions</b></span>
+                        <a href="#getPermissions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPermissions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRoles"></a>
+                    <span class="name">
+                        <span ><b>getRoles</b></span>
+                        <a href="#getRoles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRoles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPUblishClick"></a>
+                    <span class="name">
+                        <span ><b>onPUblishClick</b></span>
+                        <a href="#onPUblishClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onPUblishClick(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="240"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:240</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onResize"></a>
+                    <span class="name">
+                        <span class="modifier"></span>
+                        <span ><b>onResize</b></span>
+                        <a href="#onResize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onResize()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reset"></a>
+                    <span class="name">
+                        <span ><b>reset</b></span>
+                        <a href="#reset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reset()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="312"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:312</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveRole"></a>
+                    <span class="name">
+                        <span ><b>saveRole</b></span>
+                        <a href="#saveRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveRole()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFormValue"></a>
+                    <span class="name">
+                        <span ><b>setFormValue</b></span>
+                        <a href="#setFormValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setFormValue(rolesData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="314"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:314</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rolesData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatePublishUnpublish"></a>
+                    <span class="name">
+                        <span ><b>updatePublishUnpublish</b></span>
+                        <a href="#updatePublishUnpublish"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updatePublishUnpublish(args: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:277</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateRole"></a>
+                    <span class="name">
+                        <span ><b>updateRole</b></span>
+                        <a href="#updateRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateRole(args: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/admin/role-management/role-management.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_authentication"></a>
+                    <span class="name">
+                        <span ><b>_authentication</b></span>
+                        <a href="#_authentication"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_createRoleBtn"></a>
+                    <span class="name">
+                        <span ><b>_createRoleBtn</b></span>
+                        <a href="#_createRoleBtn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_eventLevels"></a>
+                    <span class="name">
+                        <span ><b>_eventLevels</b></span>
+                        <a href="#_eventLevels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isPublishOrNot"></a>
+                    <span class="name">
+                        <span ><b>_isPublishOrNot</b></span>
+                        <a href="#_isPublishOrNot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isSubmit"></a>
+                    <span class="name">
+                        <span ><b>_isSubmit</b></span>
+                        <a href="#_isSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_levelsCopy"></a>
+                    <span class="name">
+                        <span ><b>_levelsCopy</b></span>
+                        <a href="#_levelsCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_permissionData"></a>
+                    <span class="name">
+                        <span ><b>_permissionData</b></span>
+                        <a href="#_permissionData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_permissionDataCopy"></a>
+                    <span class="name">
+                        <span ><b>_permissionDataCopy</b></span>
+                        <a href="#_permissionDataCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_permissionIds"></a>
+                    <span class="name">
+                        <span ><b>_permissionIds</b></span>
+                        <a href="#_permissionIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_publishLevels"></a>
+                    <span class="name">
+                        <span ><b>_publishLevels</b></span>
+                        <a href="#_publishLevels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_roleForm"></a>
+                    <span class="name">
+                        <span ><b>_roleForm</b></span>
+                        <a href="#_roleForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_roleId"></a>
+                    <span class="name">
+                        <span ><b>_roleId</b></span>
+                        <a href="#_roleId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedAuth"></a>
+                    <span class="name">
+                        <span ><b>_selectedAuth</b></span>
+                        <a href="#_selectedAuth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedLevels"></a>
+                    <span class="name">
+                        <span ><b>_selectedLevels</b></span>
+                        <a href="#_selectedLevels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedPermission"></a>
+                    <span class="name">
+                        <span ><b>_selectedPermission</b></span>
+                        <a href="#_selectedPermission"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showLoader"></a>
+                    <span class="name">
+                        <span ><b>_showLoader</b></span>
+                        <a href="#_showLoader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="azureLoggerConversion"></a>
+                    <span class="name">
+                        <span ><b>azureLoggerConversion</b></span>
+                        <a href="#azureLoggerConversion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Error</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Error()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="innerWidth"></a>
+                    <span class="name">
+                        <span ><b>innerWidth</b></span>
+                        <a href="#innerWidth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roles"></a>
+                    <span class="name">
+                        <span ><b>roles</b></span>
+                        <a href="#roles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/admin/role-management/role-management.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, HostListener, OnInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MessageService } from &#x27;primeng/api&#x27;;
+import { MyMonitoringService } from &#x27;src/app/services/AzureLogging/logging.service&#x27;;
+import { JsonDataCallingService } from &#x27;src/app/services/LocalDataJsonDataAPI/json-data-calling.service&#x27;;
+import { RoleService } from &#x27;src/app/services/RoleService/role.service&#x27;;
+import { ConfirmationDialogService } from &#x27;src/app/shared/confirmation-dialog/confirmation-dialog.service&#x27;;
+@Component({
+  selector: &#x27;app-role-management&#x27;,
+  templateUrl: &#x27;./role-management.component.html&#x27;,
+  styleUrls: [&#x27;./role-management.component.scss&#x27;],
+  providers: [MessageService, ConfirmationDialogService]
+})
+export class RoleManagementComponent implements OnInit {
+  _permissionData: any &#x3D; [];
+  _eventLevels: any &#x3D; [];
+  _isSubmit: boolean &#x3D; false;
+  _selectedLevels: string[] &#x3D; [];
+  _selectedPermission: any &#x3D; [];
+  _selectedAuth: any &#x3D; [];
+  _isPublishOrNot: any &#x3D; [];
+  _roleForm!: FormGroup;
+  _authentication: any &#x3D; [];
+  _permissionDataCopy: any &#x3D; [];
+  _levelsCopy: any &#x3D; [];
+  _roleId: number &#x3D; 0;
+  _createRoleBtn: boolean &#x3D; true;
+  _publishLevels: any &#x3D; [];
+  _permissionIds: any &#x3D; [];
+  _showLoader: boolean &#x3D; false;
+  azureLoggerConversion: Error&#x3D;new Error();
+  constructor(private roleService: RoleService,
+    private jsonDataCallingService: JsonDataCallingService, private messageService: MessageService, private formBuilder: FormBuilder,
+    private confirmationDialogService: ConfirmationDialogService,private azureLoggerService : MyMonitoringService) {
+    this.innerWidth &#x3D; window.innerWidth;
+    this._roleForm &#x3D; this.formBuilder.group({
+      roleName: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      accessPermission: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      authentication: new FormControl(&#x27;&#x27;),
+      eventLevels: new FormControl(&#x27;&#x27;),
+      isPublish: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required]))
+    });
+    this.getPermissions();
+    this.getIsPublishOrNot();
+    this.getLevels();
+    this.getRoles();
+    this.getAuthentication();
+  }
+  /* Variables */
+  roles: any &#x3D; &#x27;&#x27;;
+  innerWidth: any
+  ngOnInit(): void {
+  }
+  @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
+  onResize() {
+    this.innerWidth &#x3D; window.innerWidth;
+  }
+  getAuthentication() {
+    this.jsonDataCallingService.getAuthentication().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._authentication &#x3D; result;
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+    })
+  }
+  getRoles() {
+    this._showLoader &#x3D; true;
+    this.roleService.getAdminRoles().subscribe(
+      {
+        next: (result: any) &#x3D;&gt; {
+
+          this.roles &#x3D; result.body;
+          this._showLoader &#x3D; false;
+        },
+        error: (result) &#x3D;&gt; {
+          this._showLoader &#x3D; false;
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+        },
+        complete: () &#x3D;&gt; {
+        }
+      }
+    );
+  }
+  getPermissions() {
+    this.jsonDataCallingService.getPermissions().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._permissionData &#x3D; result;
+        this._selectedPermission
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+    })
+  }
+  getLevels() {
+    this.jsonDataCallingService.getLevels().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._eventLevels &#x3D; result;
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+    })
+  }
+  getIsPublishOrNot() {
+    this.jsonDataCallingService.getIsPublishOrNot().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._isPublishOrNot &#x3D; result;
+      },
+      error: (result) &#x3D;&gt; { 
+        this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;),
+    });
+  }
+  saveRole() {
+
+    this._roleForm
+    this._isSubmit &#x3D; true;
+    if (this._roleForm.valid) {
+      this._selectedLevels &#x3D; [];
+      this._selectedPermission &#x3D; [];
+      for (let i &#x3D; 0; i &lt; this._roleForm.controls[&#x27;accessPermission&#x27;].value.length; i++) {
+        this._selectedPermission.push(this._roleForm.controls[&#x27;accessPermission&#x27;].value[i].perm_id)
+      }
+      for (let i &#x3D; 0; i &lt; this._roleForm.controls[&#x27;eventLevels&#x27;].value.length; i++) {
+        this._selectedLevels.push(this._roleForm.controls[&#x27;eventLevels&#x27;].value[i].level_id)
+      }
+
+
+      var data &#x3D; {
+        &quot;title&quot;: this._roleForm.controls[&#x27;roleName&#x27;].value,
+        &quot;description&quot;: &quot;string&quot;,
+        &quot;verified_by&quot;: this._roleForm.controls[&#x27;authentication&#x27;].value,
+        &quot;published&quot;: this._roleForm.controls[&#x27;isPublish&#x27;].value.id &#x3D;&#x3D; 1 ? true : false,
+        &quot;perm_ids&quot;: this._selectedPermission,
+        &quot;level_ids&quot;: this._selectedLevels
+      }
+      this.roleService.createRole(data).subscribe(
+        {
+          next: (result: any) &#x3D;&gt; {
+            this.messageService.add({
+              key: &#x27;bc&#x27;, severity: &#x27;success&#x27;, summary: &#x27;Created&#x27;, detail: result.body.msg, life: 3000,
+            });
+            this._roleForm.reset();
+            //this.reset();
+            this._isSubmit &#x3D; false;
+            this.getRoles();
+          },
+          error: (result: any) &#x3D;&gt; {
+            this.messageService.add({
+              key: &#x27;bc&#x27;, severity: &#x27;error&#x27;, summary: &#x27;Fail&#x27;, detail: result.error.msg, life: 3000,
+            });
+            this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          },
+          complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+        }
+      );
+    }
+  }
+  editRole(data: any) {
+    this._roleForm.reset();
+    this._permissionDataCopy &#x3D; [];
+    this._levelsCopy &#x3D; [];
+    this._createRoleBtn &#x3D; false;
+    this._roleId &#x3D; data.role_id;
+    for (let i &#x3D; 0; i &lt; data.permissions.length; i++) {
+      this._permissionDataCopy.push(this._permissionData.filter((x: any) &#x3D;&gt; x.perm_id &#x3D;&#x3D;&#x3D; data.permissions[i].perm_id)[0]);
+    }
+    if (data.published) {
+      var isPublishParam &#x3D; { &quot;id&quot;: 1, &quot;name&quot;: &quot;Publish&quot; }
+      this._roleForm.controls[&#x27;isPublish&#x27;].setValue(isPublishParam);
+    }
+    else {
+      var isPublishParam &#x3D; { &quot;id&quot;: 2, &quot;name&quot;: &quot;UnPublish&quot; }
+      this._roleForm.controls[&#x27;isPublish&#x27;].setValue(isPublishParam);
+    }
+    for (let i &#x3D; 0; i &lt; data.levels.length; i++) {
+      this._levelsCopy.push(this._eventLevels.filter((x: any) &#x3D;&gt; x.level_id &#x3D;&#x3D;&#x3D; data.levels[i].level_id)[0]);
+    }
+
+    this._roleForm.controls[&#x27;eventLevels&#x27;].setValue(this._levelsCopy)
+    this._roleForm.controls[&#x27;roleName&#x27;].setValue(data.title);
+    this._roleForm.controls[&#x27;accessPermission&#x27;].setValue(this._permissionDataCopy);
+    this._roleForm.controls[&#x27;authentication&#x27;].setValue(data.verified_by);
+
+
+  }
+  updateRole(args: any) {
+    this._createRoleBtn &#x3D; true;
+    if (this._roleForm.valid) {
+      this._selectedLevels &#x3D; [];
+      this._selectedPermission &#x3D; [];
+      for (let i &#x3D; 0; i &lt; this._roleForm.controls[&#x27;accessPermission&#x27;].value.length; i++) {
+        this._selectedPermission.push(this._roleForm.controls[&#x27;accessPermission&#x27;].value[i].perm_id)
+      }
+      var data &#x3D; {
+        &quot;title&quot;: this._roleForm.controls[&#x27;roleName&#x27;].value,
+        &quot;description&quot;: &quot;string&quot;,
+        &quot;verified_by&quot;: this._roleForm.controls[&#x27;authentication&#x27;].value,
+        &quot;published&quot;: this._roleForm.controls[&#x27;isPublish&#x27;].value.id &#x3D;&#x3D; 1 ? true : false,
+        &quot;perm_ids&quot;: this._selectedPermission,
+        &quot;level_ids&quot;: [1],
+        &quot;role_id&quot;: this._roleId
+      }
+
+      this.roleService.updateRole(data).subscribe(
+        {
+          next: (result: any) &#x3D;&gt; {
+            this.messageService.add({
+              key: &#x27;bc&#x27;, severity: &#x27;success&#x27;, summary: &#x27;Created&#x27;, detail: result.body.msg, life: 3000,
+            });
+            this._isSubmit &#x3D; false;
+            this.getRoles();
+          },
+          error: (result: any) &#x3D;&gt; {
+            this.messageService.add({
+              key: &#x27;bc&#x27;, severity: &#x27;error&#x27;, summary: &#x27;Fail&#x27;, detail: result.error.msg, life: 3000,
+            });
+            this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          },
+          complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+        }
+      );
+      this._roleForm.reset();
+    }
+  }
+  onPUblishClick(event: any, data: any) {
+    this._publishLevels &#x3D; [];
+    this._permissionIds &#x3D; [];
+    for (let i &#x3D; 0; i &lt; data.levels.length; i++) {
+      this._publishLevels.push(data.levels[i].level_id)
+    }
+    for (let i &#x3D; 0; i &lt; data.permissions.length; i++) {
+      this._permissionIds.push(data.permissions[i].perm_id)
+    }
+    data.permissions &#x3D; []
+    data.levels &#x3D; []
+    data.permissions &#x3D; this._permissionIds
+    data.levels &#x3D; this._publishLevels
+    this._roleId &#x3D; data.role_id;
+    if (event.checked) {
+      this.confirmationDialogService.confirm(&#x27;&#x27;, &#x27;Are you sure you want to make changes against this role!&#x27;)
+        .then((confirmed) &#x3D;&gt; {
+          if (confirmed) {
+            this.updatePublishUnpublish(data);
+          } else {
+            data.published &#x3D; false;
+          }
+        })
+        .catch(() &#x3D;&gt; { });
+
+    } else {
+      this.confirmationDialogService.confirm(&#x27;&#x27;, &#x27;Are you sure you want to make changes against this role!&#x27;)
+        .then((confirmed) &#x3D;&gt; {
+          if (confirmed) {
+            this.updatePublishUnpublish(data);
+          } else {
+            data.published &#x3D; false;
+          }
+        })
+        .catch(() &#x3D;&gt; { });
+    }
+  }
+  updatePublishUnpublish(args: any) {
+    var data &#x3D; {
+      &quot;title&quot;: args.title,
+      &quot;description&quot;: args.description,
+      &quot;verified_by&quot;: 0,
+      &quot;published&quot;: args.published,
+      &quot;perm_ids&quot;: args.permissions,
+      &quot;level_ids&quot;: args.levels,
+      &quot;role_id&quot;: args.role_id
+    }
+
+    this.roleService.updateRole(data).subscribe(
+      {
+        next: (result: any) &#x3D;&gt; {
+          this.messageService.add({
+            key: &#x27;bc&#x27;, severity: &#x27;success&#x27;, summary: &#x27;Created&#x27;, detail: result.body.msg, life: 3000,
+          });
+
+          //this.reset();
+          this._isSubmit &#x3D; false;
+          this.getRoles();
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.messageService.add({
+            key: &#x27;bc&#x27;, severity: &#x27;error&#x27;, summary: &#x27;Fail&#x27;, detail: result.error.msg, life: 3000,
+          });
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+        },
+        complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+      }
+    );
+    this._roleForm.reset();
+
+  }
+  reset() {
+  }
+  setFormValue(rolesData: any) {
+
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;role-management&quot;&gt;
+    &lt;div class&#x3D;&quot;createRole&quot;&gt;
+        &lt;div class&#x3D;&quot;top-header&quot;&gt;
+            &lt;h4&gt;{{&#x27;signupmanagement.createRole&#x27;| translate}}&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;settingManagement-component mt-3&quot;&gt;
+            &lt;div class&#x3D;&quot;createRole-form&quot;&gt;
+                &lt;form action&#x3D;&quot;&quot; [formGroup]&#x3D;&quot;_roleForm&quot;&gt;
+                    &lt;div class&#x3D;&quot;row flex-base&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+                            &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                                &lt;input type&#x3D;&quot;text&quot; pInputText [formControlName]&#x3D;&quot;&#x27;roleName&#x27;&quot; /&gt;
+                                &lt;label for&#x3D;&quot;pinputtext&quot;&gt;{{&#x27;signupmanagement.roleName&#x27;| translate}}&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;div class&#x3D;&quot;error-txt-msg flex-e&quot;
+                                *ngIf&#x3D;&quot;_isSubmit &amp;&amp; _roleForm.controls[&#x27;roleName&#x27;].hasError(&#x27;required&#x27;)&quot;
+                                style&#x3D;&quot;color: red&quot;&gt;
+
+                                &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;{{&#x27;signupmanagement.req&#x27;|translate}}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-3&quot;&gt;
+                            &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                                &lt;p-multiSelect inputId&#x3D;&quot;multiselect&quot; [options]&#x3D;&quot;_permissionData&quot;
+                                    [formControlName]&#x3D;&quot;&#x27;accessPermission&#x27;&quot; optionLabel&#x3D;&quot;name&quot; [filter]&#x3D;&quot;false&quot;
+                                    [showHeader]&#x3D;&quot;false&quot;&gt;&lt;/p-multiSelect&gt;
+                                &lt;label for&#x3D;&quot;multiselect&quot;&gt;Access Permissions&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;div class&#x3D;&quot;error-txt-msg flex-e&quot;
+                                *ngIf&#x3D;&quot;_isSubmit &amp;&amp; _roleForm.controls[&#x27;accessPermission&#x27;].hasError(&#x27;required&#x27;)&quot;
+                                style&#x3D;&quot;color: red&quot;&gt;
+
+                                &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;{{&#x27;signupmanagement.req&#x27;|translate}}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+                            &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                                &lt;p-dropdown class&#x3D;&quot;m-0&quot; [autoDisplayFirst]&#x3D;&quot;false&quot; inputId&#x3D;&quot;dropdown&quot;
+                                    [options]&#x3D;&quot;_authentication&quot; [formControlName]&#x3D;&quot;&#x27;authentication&#x27;&quot; optionLabel&#x3D;&quot;name&quot;
+                                    optionValue&#x3D;&quot;id&quot; appendTo&#x3D;&quot;body&quot;&gt;
+                                &lt;/p-dropdown&gt;
+
+                                &lt;label for&#x3D;&quot;dropdown&quot;&gt;{{&#x27;signupmanagement.authentication&#x27;| translate}}&lt;/label&gt;
+                            &lt;/span&gt;
+
+                            &lt;div class&#x3D;&quot;error-txt-msg flex-e&quot;
+                                *ngIf&#x3D;&quot;_isSubmit &amp;&amp; _roleForm.controls[&#x27;authentication&#x27;].hasError(&#x27;required&#x27;)&quot;
+                                style&#x3D;&quot;color: red&quot;&gt;
+
+                                &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;{{&#x27;signupmanagement.req&#x27;|translate}}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+                            &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                                &lt;p-multiSelect inputId&#x3D;&quot;multiselect&quot; [options]&#x3D;&quot;_eventLevels&quot;
+                                    [formControlName]&#x3D;&quot;&#x27;eventLevels&#x27;&quot; optionLabel&#x3D;&quot;name&quot; [filter]&#x3D;&quot;false&quot;
+                                    [showHeader]&#x3D;&quot;false&quot;&gt;&lt;/p-multiSelect&gt;
+
+                                &lt;label for&#x3D;&quot;multiselect&quot;&gt;{{&#x27;signupmanagement.levels&#x27;|translate}}&lt;/label&gt;
+                            &lt;/span&gt;
+                            &lt;div class&#x3D;&quot;error-txt-msg flex-e&quot;
+                                *ngIf&#x3D;&quot;_isSubmit  &amp;&amp; _roleForm.controls[&#x27;eventLevels&#x27;].hasError(&#x27;required&#x27;)&quot;
+                                style&#x3D;&quot;color: red&quot;&gt;
+
+                                &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;{{&#x27;signupmanagement.req&#x27;|translate}}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-2 &quot;&gt;
+                            &lt;span class&#x3D;&quot;p-float-label&quot;&gt;
+                                &lt;p-dropdown class&#x3D;&quot;m-0&quot; [autoDisplayFirst]&#x3D;&quot;false&quot; inputId&#x3D;&quot;dropdown&quot;
+                                    [options]&#x3D;&quot;_isPublishOrNot&quot; [formControlName]&#x3D;&quot;&#x27;isPublish&#x27;&quot; optionLabel&#x3D;&quot;name&quot;
+                                    appendTo&#x3D;&quot;body&quot;&gt;
+                                &lt;/p-dropdown&gt;
+
+                                &lt;label for&#x3D;&quot;dropdown&quot;&gt;{{&#x27;signupmanagement.pubUnpub&#x27;| translate}}&lt;/label&gt;
+                            &lt;/span&gt;
+
+                            &lt;div class&#x3D;&quot;error-txt-msg flex-e&quot;
+                                *ngIf&#x3D;&quot;_isSubmit  &amp;&amp; _roleForm.controls[&#x27;isPublish&#x27;].hasError(&#x27;required&#x27;)&quot;
+                                style&#x3D;&quot;color: red&quot;&gt;
+
+                                &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;{{&#x27;signupmanagement.req&#x27;|translate}}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-1&quot;&gt;
+                            &lt;button *ngIf&#x3D;&quot;_createRoleBtn&quot; class&#x3D;&quot;btn btn_green mt-1&quot;
+                                (click)&#x3D;&quot;saveRole()&quot;&gt;{{&#x27;signupmanagement.create&#x27;| translate}}&lt;/button&gt;
+                            &lt;button *ngIf&#x3D;&quot;!_createRoleBtn&quot; class&#x3D;&quot;btn btn_green mt-1&quot;
+                                (click)&#x3D;&quot;updateRole(_roleForm)&quot;&gt;{{&#x27;footer.update&#x27;| translate}}&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;myRoles mt-5&quot;&gt;
+        &lt;div class&#x3D;&quot;top-header&quot;&gt;
+            &lt;h4&gt;{{&#x27;signupmanagement.myRoles&#x27;| translate}}&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;myRoleTabs mt-3&quot;&gt;
+            &lt;div class&#x3D;&quot; row myRoleTab-class &quot;&gt;
+                &lt;div class&#x3D;&quot;col-lg-3 col-md-6&quot; *ngFor&#x3D;&quot;let item of roles&quot;&gt;
+                    &lt;div class&#x3D;&quot;myRoleTab-card&quot;&gt;
+                        &lt;div class&#x3D;&quot;avatar&quot;&gt;
+                            &lt;img src&#x3D;&quot;../../../assets/icons/profile-icon.png&quot; class&#x3D;&quot;w25&quot; alt&#x3D;&quot;&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;h6&gt;&lt;b&gt;{{item.title}}&lt;/b&gt;&lt;/h6&gt;
+                        &lt;div class&#x3D;&quot;switch mt-3&quot;&gt;
+                            &lt;p-inputSwitch (onChange)&#x3D;&quot;onPUblishClick($event,item)&quot;
+                                [(ngModel)]&#x3D;&quot;item.published&quot;&gt;&lt;/p-inputSwitch&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;flex-sb&quot;&gt;
+                            &lt;p class&#x3D;&quot;p-small p-links&quot;&gt;{{&#x27;banner.Published&#x27;| translate}}&lt;/p&gt;
+                            &lt;p class&#x3D;&quot;p-small p-links&quot;&gt;&lt;a (click)&#x3D;&quot;editRole(item)&quot;&gt;{{&#x27;signupmanagement.edit&#x27;|
+                                    translate}}&lt;/a&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p-toast position&#x3D;&quot;bottom-right&quot; key&#x3D;&quot;bc&quot;&gt;&lt;/p-toast&gt;
+&lt;stupa-gif-loader *ngIf&#x3D;&quot;_showLoader&quot;&gt;&lt;/stupa-gif-loader&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./role-management.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">$green-color: #01534d;
+$green-container: #1b403a;
+$white-container: #f5f5f5;
+
+.role-management {
+    padding: 2rem 0.5rem;
+
+    ::ng-deep {
+        .p-multiselect {
+            margin: 0 !important;
+        }
+
+        .p-dropdown {
+            margin: 0 !important;
+        }
+
+        p-button button {
+            font-size: 12px;
+            background: $green-color !important;
+            padding: 0.8rem 2rem !important;
+            width: 100%;
+            color: white !important;
+            border: none;
+            white-space: nowrap !important;
+        }
+    }
+
+    .createRole {
+        .settingManagement-component {
+            padding: 2rem;
+            min-height: 1vh !important;
+
+            .searchmanagement {
+                input {
+                    max-height: 35px;
+                }
+
+                ::ng-deep {
+                    .p-button {
+                        border: none !important;
+                        background: white;
+                        padding: 13px !important;
+
+                        span {
+                            color: black !important;
+                        }
+                    }
+
+                    .p-togglebutton.p-button.p-highlight {
+                        border: none !important;
+                    }
+                }
+            }
+
+            .centerElement {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+                .imgContainer {
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.5rem;
+                    background: white;
+                    border-radius: 50px;
+                }
+            }
+
+            .created-roleTabs {
+                padding: 0.5rem 1rem;
+                margin: 0.5rem 0;
+                border-radius: 5px;
+                background: white;
+            }
+
+            ._listview {
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+
+                .created-roleTabs {
+                    width: 20vw;
+                    margin: 0.5rem 1.4rem;
+                    height: 13vh !important;
+                }
+
+                .name {
+                    margin-right: 3rem;
+                }
+            }
+
+            .createrole_button {
+                display: flex;
+                justify-content: flex-end;
+                position: absolute;
+                bottom: -3rem;
+                right: 1rem;
+                width: auto !important;
+            }
+        }
+    }
+
+    .myRoles {
+        .myRoleTabs {
+            .myRoleTab-class {
+                width: 100%;
+
+                .myRoleTab-card {
+                    padding: 1rem;
+                    margin: 0.5rem;
+                    border: 1px solid #e9e9e9;
+                    width: 100%;
+                    border-radius: 4px;
+
+                    .switch {
+                        ::ng-deep {
+                            .p-inputswitch {
+                                margin-left: -13px;
+                                scale: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .flex-base {
+        gap: 1.3rem;
+    }
+}
+
+// #f2f4f8</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="role-management">    <div class="createRole">        <div class="top-header">            <h4>{{\'signupmanagement.createRole\'| translate}}</h4>        </div>        <div class="settingManagement-component mt-3">            <div class="createRole-form">                <form action="" [formGroup]="_roleForm">                    <div class="row flex-base">                        <div class="col-lg-2">                            <span class="p-float-label">                                <input type="text" pInputText [formControlName]="\'roleName\'" />                                <label for="pinputtext">{{\'signupmanagement.roleName\'| translate}}</label>                            </span>                            <div class="error-txt-msg flex-e"                                *ngIf="_isSubmit && _roleForm.controls[\'roleName\'].hasError(\'required\')"                                style="color: red">                                <span style="color: red">*</span>{{\'signupmanagement.req\'|translate}}                            </div>                        </div>                        <div class="col-lg-3">                            <span class="p-float-label">                                <p-multiSelect inputId="multiselect" [options]="_permissionData"                                    [formControlName]="\'accessPermission\'" optionLabel="name" [filter]="false"                                    [showHeader]="false"></p-multiSelect>                                <label for="multiselect">Access Permissions</label>                            </span>                            <div class="error-txt-msg flex-e"                                *ngIf="_isSubmit && _roleForm.controls[\'accessPermission\'].hasError(\'required\')"                                style="color: red">                                <span style="color: red">*</span>{{\'signupmanagement.req\'|translate}}                            </div>                        </div>                        <div class="col-lg-2">                            <span class="p-float-label">                                <p-dropdown class="m-0" [autoDisplayFirst]="false" inputId="dropdown"                                    [options]="_authentication" [formControlName]="\'authentication\'" optionLabel="name"                                    optionValue="id" appendTo="body">                                </p-dropdown>                                <label for="dropdown">{{\'signupmanagement.authentication\'| translate}}</label>                            </span>                            <div class="error-txt-msg flex-e"                                *ngIf="_isSubmit && _roleForm.controls[\'authentication\'].hasError(\'required\')"                                style="color: red">                                <span style="color: red">*</span>{{\'signupmanagement.req\'|translate}}                            </div>                        </div>                        <div class="col-lg-2">                            <span class="p-float-label">                                <p-multiSelect inputId="multiselect" [options]="_eventLevels"                                    [formControlName]="\'eventLevels\'" optionLabel="name" [filter]="false"                                    [showHeader]="false"></p-multiSelect>                                <label for="multiselect">{{\'signupmanagement.levels\'|translate}}</label>                            </span>                            <div class="error-txt-msg flex-e"                                *ngIf="_isSubmit  && _roleForm.controls[\'eventLevels\'].hasError(\'required\')"                                style="color: red">                                <span style="color: red">*</span>{{\'signupmanagement.req\'|translate}}                            </div>                        </div>                        <div class="col-lg-2 ">                            <span class="p-float-label">                                <p-dropdown class="m-0" [autoDisplayFirst]="false" inputId="dropdown"                                    [options]="_isPublishOrNot" [formControlName]="\'isPublish\'" optionLabel="name"                                    appendTo="body">                                </p-dropdown>                                <label for="dropdown">{{\'signupmanagement.pubUnpub\'| translate}}</label>                            </span>                            <div class="error-txt-msg flex-e"                                *ngIf="_isSubmit  && _roleForm.controls[\'isPublish\'].hasError(\'required\')"                                style="color: red">                                <span style="color: red">*</span>{{\'signupmanagement.req\'|translate}}                            </div>                        </div>                        <div class="col-lg-1">                            <button *ngIf="_createRoleBtn" class="btn btn_green mt-1"                                (click)="saveRole()">{{\'signupmanagement.create\'| translate}}</button>                            <button *ngIf="!_createRoleBtn" class="btn btn_green mt-1"                                (click)="updateRole(_roleForm)">{{\'footer.update\'| translate}}</button>                        </div>                    </div>                </form>            </div>        </div>    </div>    <div class="myRoles mt-5">        <div class="top-header">            <h4>{{\'signupmanagement.myRoles\'| translate}}</h4>        </div>        <div class="myRoleTabs mt-3">            <div class=" row myRoleTab-class ">                <div class="col-lg-3 col-md-6" *ngFor="let item of roles">                    <div class="myRoleTab-card">                        <div class="avatar">                            <img src="../../../assets/icons/profile-icon.png" class="w25" alt="">                        </div>                        <h6><b>{{item.title}}</b></h6>                        <div class="switch mt-3">                            <p-inputSwitch (onChange)="onPUblishClick($event,item)"                                [(ngModel)]="item.published"></p-inputSwitch>                        </div>                        <div class="flex-sb">                            <p class="p-small p-links">{{\'banner.Published\'| translate}}</p>                            <p class="p-small p-links"><a (click)="editRole(item)">{{\'signupmanagement.edit\'|                                    translate}}</a></p>                        </div>                    </div>                </div>            </div>        </div>    </div></div><p-toast position="bottom-right" key="bc"></p-toast><stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'RoleManagementComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RoleManagementComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

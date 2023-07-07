@@ -1,0 +1,60 @@
+<div class="common-svg-msg">
+  <!-- <div class="outer-layer w-100"> -->
+  <div class="container-xxl maxW">
+    <div class="innerContent">
+      <div class="heading">
+        <h4 class="p-green text-nowrap w-100">
+          <b>{{ _pageMainTitle }}</b>
+        </h4>
+      </div>
+      <div class="sub-heading mt-3">
+        <p class="p-green">{{ _pageSubTitle }}</p>
+      </div>
+      <div class="centerImage">
+        <img src="../../../assets/icons/svg/createEvent-svg.svg" alt="" />
+      </div>
+      <div class="flex-vc flex-hc">
+        <div *ngIf="!isSigned" class="flex-s fullHeight" (click)="login()">
+          <div class="flex-ve" *ngIf="_showButton">
+            <button class="btn btn_green btnMain m-0 flex-sb flex-vc">
+              <h6 class="fw-lighter p-links">Login</h6>
+              <i class="ms-3 fs-6 pi pi-arrow-right p-green i-small" style="margin-top: 2px;"></i>
+            </button>
+          </div>
+        </div>
+        <div *ngIf="isSigned" class="flex-s fullHeight mt-4" (click)="eventClick()">
+          <div class="flex-ve" *ngIf="_showButton">
+            <button class="btn btn_green btnMain m-0 flex-sb flex-vc">
+              <p class="fw-bold p-links">{{ _buttonTitle }}</p>
+              <i class="ms-3 fs-6 pi pi-arrow-right i-small" style="margin-top: 2px;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+          <div class="col-8">
+            <div *ngIf="!isSigned" class="flex-s fullHeight" (click)="login()">
+              <div class="flex-ve">
+                <button class="btn btn_green btnMain m-0 flex-sb flex-vc">
+                  <h6 class="fw-lighter p-links">Login</h6>
+                  <i class="ms-3 fs-6 pi pi-arrow-right p-green i-small"></i>
+                </button>
+              </div>
+            </div>
+            <div *ngIf="isSigned" class="flex-s fullHeight" (click)="eventClick()">
+              <div class="flex-ve">
+                <button class="btn btn_green btnMain m-0 flex-sb flex-vc">
+                  <h6 class="fw-lighter p-links">{{ _buttonTitle }}</h6>
+                  <i class="ms-3 fs-6 pi pi-arrow-right p-green i-small"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <img src="../../../assets/icons/svg/undraw_faq_re_31cw.svg" alt="" />
+          </div>
+        </div> -->
+    </div>
+  </div>
+  <!-- </div> -->
+</div>

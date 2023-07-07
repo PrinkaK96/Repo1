@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Knockout"
+    },
+    {
+        "id": 2,
+        "name": "Group Play-Off"
+    },
+    {
+        "id": 3,
+        "name": "Round-Robin"
+    },
+    {
+        "id": 6,
+        "name": "Special"
+    },
+    {
+        "id": 7,
+        "name": "Group Play-Off + Consolation"
+    }
+]

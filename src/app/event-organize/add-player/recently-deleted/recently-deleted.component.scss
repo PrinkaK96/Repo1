@@ -1,0 +1,75 @@
+.backBtn {
+  background: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: absolute;
+  margin-left: 1rem;
+  height: 25px;
+  width: 25px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fu {
+  display: flex;
+  justify-content: center;
+}
+// skelton css starts
+.skeletonlayout {
+  .partic{
+    display: flex;
+    gap: 20px;
+  }
+
+  .heading {
+    ::ng-deep {
+      p-skeleton {
+        .p-skeleton {
+          // z-index: 99999;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  .cards {
+    .mt-2 {
+      .col-lg-6 {
+        &:nth-child(2) {
+          ::ng-deep {
+            p-skeleton {
+              float: right;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.id{
+  display: flex;
+  gap: 5px;
+  div{
+    display: flex;
+    gap: 5px;
+  }
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  tr{
+    th{
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+    td{
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+}
+// skeleton css end

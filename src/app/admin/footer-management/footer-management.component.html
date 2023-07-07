@@ -1,0 +1,32 @@
+<div class="footer-management">
+    <button class="backbtn" (click)="goback()">
+        <img class="me-2 w10"  src="../../../assets/icons/angle-left.png" alt="">
+        {{'sidebar.back' | translate}}
+    </button>
+
+
+    <div class="footer-tabView my-3">
+        <p-tabView>
+            <p-tabPanel header="{{'footer.mainfooter' | translate}}">
+                <div class="tabContainer">
+                    <app-main-footer></app-main-footer>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="{{'footer.termsCondition' | translate}}">
+                <div class="tabContainer">
+                    <app-terms-condition></app-terms-condition>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="{{'footer.mobiledetails' | translate}}">
+                <div class="tabContainer">
+                    <app-mobileapp-details></app-mobileapp-details>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel header="{{'footer.sampleview' | translate}}">
+                <div class="tabContainer">
+                    <app-sample-view></app-sample-view>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+</div>

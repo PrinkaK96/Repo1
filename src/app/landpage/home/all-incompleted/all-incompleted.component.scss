@@ -1,0 +1,648 @@
+// create an event css starts
+
+$mediaQueries: (
+  mobile: 576px,
+  tab: 991px,
+);
+
+@mixin query($screen) {
+  @each $key, $value in $mediaQueries {
+    @if ($screen ==$key) {
+      @media only screen and (max-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+.section-top-image-slider {
+  .topImageSlider {
+    overflow: hidden;
+    z-index: 1;
+    img {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+      z-index: -1;
+    }
+  }
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 23.5%);
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 20px;
+  margin-top: 40px;
+  color: var(--main-color);
+}
+
+.title {
+  color: var(--main-color);
+}
+// h1,h2,h3,h4,h5,h6{
+//     color: #1B403A;
+//     // font-weight: 700;
+// }
+
+.wrapper > div:nth-child(odd) {
+  background-color: #ffffff;
+}
+.wrapper > div:nth-child(even) {
+  background-color: #ffffff;
+}
+
+// giving flex to the upper content
+.box {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+.flexItems {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.03em;
+  background: #ffffff;
+}
+
+.flexItems img {
+  width: 10px;
+  height: 12px;
+}
+.lowerSideImage img {
+  width: 20px;
+  height: auto;
+}
+.lowerSideImage {
+  position: absolute;
+  right: 5px;
+  bottom: 9px;
+  svg {
+    path {
+      fill: var(--main-color);
+    }
+  }
+}
+
+// media queries  for mobile
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ongoingFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seeAll {
+  margin-right: 0;
+}
+.sideColumn {
+  padding-right: 2rem;
+}
+.wrapper2 {
+  .eventCard {
+    color: var(--primary-color);
+    //background-image: url("../../../assets/icons/badmintonImage.jpg");
+    border-radius: var(--common-border-radius);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    .innerColor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.504);
+      border-radius: var(--common-border-radius);
+      padding: 2rem;
+      .view {
+        height: 100%;
+      }
+      .eventinfo {
+        .venue {
+          color: var(--success-color);
+        }
+      }
+    }
+  }
+  .section-top-image-slider {
+    .topImageSlider {
+      overflow: hidden;
+      z-index: 1;
+      video {
+        position: relative;
+        width: 300px;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        z-index: -1;
+      }
+    }
+  }
+  @include query(tab) {
+    .eventCard {
+      height: 350px;
+    }
+  }
+}
+.videoWidth {
+  width: 300px;
+}
+.flexItems p {
+  font-size: 16px;
+}
+.upper-right-slider {
+  max-height: 282px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.parent::ng-deep ::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.parent::ng-deep ::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+.parent::ng-deep ::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 50px;
+}
+.arrow-icon img {
+  width: 25px;
+}
+.flexItems2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px 15px;
+}
+.box2 {
+  display: grid;
+  box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+.arrow-icon {
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+}
+.center-text {
+  border-bottom: 1px solid grey;
+}
+@media (max-width: 500px) {
+  .wrapper2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+  .wrapper2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.videoSlider {
+  .common-carousel {
+    ::ng-deep {
+      [class^="owl-"] {
+        i {
+          color: var(--main-color);
+        }
+      }
+      .owl-prev {
+        left: -40px;
+      }
+      .owl-next {
+        right: -40px;
+      }
+    }
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view img {
+  width: 10px;
+}
+// media query
+@media (max-width: 500px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    // grid-column-gap:10px ;
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 500px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+.innerColor {
+  color: white;
+}
+.header {
+  margin-top: 8vh;
+  margin: 4vh 0;
+}
+.bt {
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  color: #ffffff;
+  background-color: grey;
+  border: none;
+}
+.wrapper3 {
+  color: white;
+  .flexContainer {
+    .long-card {
+      margin: 4vh 0;
+      height: 250px;
+    }
+    .bgImg {
+      //background-image: url("../../../assets/icons/badmintonImage.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: var(--common-border-radius);
+      position: relative;
+      .allOngoing {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        z-index: -1;
+        border-radius: 7px;
+      }
+
+      .innerColor {
+        background-color: rgba(0, 0, 0, 0.657);
+        border-radius: var(--common-border-radius);
+        .centerContent {
+          h6 {
+            line-height: 25px;
+            font-weight: 500;
+          }
+        }
+        .bottomSection {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          .system {
+            background: rgba(255, 255, 255, 0.41);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+.date {
+  color: var(--success-color);
+}
+
+.searchbar .icon {
+  background-color: #f1f1f1;
+  padding: 4px;
+  width: 20px;
+  height: 20px;
+  img {
+    display: flex;
+  }
+}
+
+.inputfield input {
+  background-color: #f1f1f1;
+  width: 100%;
+  border: none;
+}
+.inputfield {
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper4 {
+  .innerContent {
+    .recentEvent-slider {
+      ::ng-deep {
+        .owl-theme .owl-nav [class^="owl-"] {
+          background-color: var(--primary-color) !important;
+          border-radius: 50px;
+          padding: 8px 14px !important;
+          i {
+            color: var(--combinating-color);
+            font-size: 10px;
+          }
+        }
+
+        .owl-prev {
+          position: absolute;
+          left: -24px;
+        }
+
+        .owl-next {
+          position: absolute;
+          right: -24px;
+        }
+      }
+      .eventCard {
+        position: relative;
+        height: 220px;
+        .imgCover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+        .innerColor {
+          position: absolute;
+          border-radius: var(--common-border-radius);
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          background-color: rgba(0, 0, 0, 0.54);
+        }
+      }
+    }
+    .flexElement:not(:last-child) {
+      margin-right: 1rem;
+    }
+    .searchBar {
+      flex-basis: 100%;
+      input {
+        background-color: var(--f1-color);
+        border-radius: var(--common-border-radius);
+        height: 32px;
+        border: none;
+      }
+    }
+    .filterBut {
+      flex-basis: 8%;
+      .imgContainer {
+        height: 32px;
+        background-color: var(--f1-color);
+        border-radius: var(--common-border-radius);
+        padding: 8px;
+      }
+    }
+  }
+}
+.right-content-slider {
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+}
+.Sideslider {
+  grid-auto-rows: minmax(300px, auto);
+  grid-column: 1/3;
+  grid-row: 2/8;
+  background-color: lightgray;
+}
+.eventContent {
+  border-bottom: 1px solid #bebebe;
+}
+
+.right-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-icon {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-players {
+  display: flex;
+  justify-content: space-between;
+}
+.removeBorder {
+  border: none;
+}
+
+.color {
+  color: #1b403a;
+}
+.color2 p {
+  color: #929292;
+}
+.color2 {
+  color: #929292;
+}
+.colorscore {
+  color: var(--combinating-color);
+}
+
+// RECENT ENDS
+.wrap5Columns {
+  margin: 1rem 0;
+  .card2 {
+    //background-image: url("../../../assets/icons/badmintonblack.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .innerColor {
+      background-color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+.colorscore p {
+  color: var(--combinating-color);
+}
+.center {
+  text-align: end;
+}
+
+.h4 {
+  color: white;
+}
+.search {
+  width: 12%;
+}
+.backBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+}
+.mb-3 {
+  margin-top: 1rem !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.cards {
+  .row {
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media screen and (width >=319px) and (width <=425px) {
+  .innerColor {
+    .position-relative {
+      .uppercontent {
+        .flex-vc {
+          flex-direction: column;
+          align-items: start;
+          .text-end {
+            text-align: start !important;
+          }
+        }
+      }
+      .row {
+        .col-5 {
+          width: 100% !important;
+          .centerContent {
+            h5 {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              font-size: 100%;
+            }
+          }
+          .py-3 {
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  .wrapper3 {
+    .flexContainer {
+      .long-card {
+        .bgImg {
+          img {
+            height: 75% !important;
+          }
+          .innerColor {
+            height: 75% !important;
+            .position-relative {
+              margin: 0 !important;
+              .uppercontent {
+                padding: 0 !important;
+                .flex-vc {
+                  padding: 10px !important;
+                  .heading {
+                    h3 {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      width: 260px;
+                      b {
+                        font-size: 15px !important;
+                      }
+                    }
+                  }
+                  .info {
+                    .p-success{
+                      font-size: 11px;
+                    }
+                    font-size: 13px !important;
+                  }
+                }
+              }
+              .row {
+                padding: 0 0 0 10px !important;
+              }
+              .bottomSection {
+                .flex-sb {
+                  padding: 10px !important;
+                  .third-flex {
+                    padding: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:not(:first-child){
+          margin-top: -70px !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width >= 426px) and (width <=767px) {
+  .innerColor {
+    .position-relative {
+      .uppercontent {
+        .flex-vc {
+          flex-direction: column;
+          align-items: start;
+          .heading {
+            h3 {
+              b {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 100px;
+              }
+            }
+          }
+          .text-end {
+            text-align: start !important;
+          }
+        }
+      }
+      .row {
+        .col-5 {
+          width: 100% !important;
+          .centerContent {
+            h5 {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              font-size: 100%;
+            }
+          }
+          .py-3 {
+            padding-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (width >= 768px) {
+}

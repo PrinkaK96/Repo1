@@ -1,0 +1,500 @@
+<div class="eventDetail-container">
+    <div class="detail-content">
+        <form [formGroup]="_eventDetailForm" action="">
+            <div class="topHeading">
+                <div class="flex-sb">
+                    <h4 class="p-green">
+                        <!-- <b>{{ "tms.eventDetails" | translate }}</b> -->
+                    </h4>
+                
+                </div>
+            </div>
+
+            <p-accordion [multiple]="true" [activeIndex]="[0]">
+                <p-accordionTab header="Event Details">
+                    <div class="centerElement">
+                        <div class="row mt-3">
+                            <div class="col-lg-12">
+                                <div class="detail-input">
+                                    <label for="detailInput">{{
+                                        "eventDetails.eventName" | translate
+                                        }}</label>
+                                    <input type="text" [formControlName]="'eventName'" pInputText
+                                        placeholder="Enter Your Event Name" readonly/>
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                        _isSubmitEventDetail &&
+                        _eventDetailForm.controls['eventName'].hasError('required')
+                      " style="color: red">
+                                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6">
+                                <div class="detail-input">
+                                    <label for="detailInput">Championship Type</label>
+                                    <p-dropdown [options]="championShipTypes" formControlName="championship_type"
+                                        placeholder="Select a City" [group]="true">
+                                        <ng-template let-group pTemplate="group">
+                                            <div class="flex align-items-center">
+                                                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png"
+                                                    [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
+                                                <span>{{ group.label }}</span>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                        _isSubmitEventDetail &&
+                        _eventDetailForm.controls['championship_type'].hasError('required')
+                      " style="color: red">
+                                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="detail-input">
+                                    <label for="detailInput">Event Type </label>
+                                    <p-dropdown [formControlName]="'event_type'" [options]="_eventTypes"
+                                        optionLabel="event_type" optionValue="event_type_id" [filter]="true"
+                                        placeholder="Event Type" [disabled]="true">
+                                    </p-dropdown>
+                                    <div class="error-txt-msg mb-2" *ngIf="
+                        _isSubmitEventDetail &&
+                        _eventDetailForm.controls['event_type'].hasError('required')
+                      " style="color: red">
+                                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="dateSection">
+                            <div class="row mt-3">
+                                <div class="col-lg-6 ">
+                                    <div class="detail-input calendarIcon">
+                                        <label for="dropdown">Start Date</label>
+                                        <p-calendar [showIcon]="true" #startDate1 inputId="basic" dateFormat="dd/mm/yy"
+                                            placeholder="{{ 'eventDetails.selectDate' | translate }}"
+                                            [minDate]="_currentDate" [formControlName]="'event_start_time'"
+                                           >
+                                        </p-calendar>
+                                        <div class="error-txt-msg mb-2"
+                                            *ngIf=" _isSubmitEventDetail &&_eventDetailForm.controls['event_start_time'].hasError('required')"
+                                            style="color: red">
+                                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="detail-input calendarIcon">
+                                        <label for="dropdown">End Date</label>
+                                        <p-calendar [showIcon]="true" #startDate1 inputId="basic"
+                                            placeholder="{{ 'eventDetails.selectDate' | translate }}" [disabled]="
+                              _eventDetailForm.controls['event_start_time'].value == ''
+                            " dateFormat="dd/mm/yy" #endDate1 [minDate]="
+                              _eventDetailForm.controls['event_start_time'].value ||
+                              _currentDate
+                            " [formControlName]="'event_end_time'">
+                                        </p-calendar>
+                                        <div class="error-txt-msg mb-2"
+                                            *ngIf=" _isSubmitEventDetail &&_eventDetailForm.controls['event_end_time'].hasError('required')"
+                                            style="color: red">
+                                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="dateSection">
+                            <div class="row mt-3">
+                                <div class="col-lg-6">
+                                    <div class="detail-input calendarIcon">
+                                        <label for="dropdown">Reg Start Date</label>
+                                        <p-calendar [showIcon]="true" #startDate2 placeholder="Select" inputId="basic"
+                                            [minDate]="_currentDate" [maxDate]="startDate1.value" dateFormat="dd/mm/yy"
+                                            [formControlName]="'reg_start_time'"></p-calendar>
+                                        <div class="error-txt-msg mb-2"
+                                            *ngIf=" _isSubmitEventDetail &&_eventDetailForm.controls['reg_start_time'].hasError('required')"
+                                            style="color: red">
+                                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="detail-input calendarIcon">
+                                        <label for="dropdown">Reg End Date</label>
+                                        <p-calendar [showIcon]="true" inputId="basic"
+                                            placeholder="{{ 'eventDetails.selectDate' | translate }}"
+                                            dateFormat="dd/mm/yy" #endDate1 [maxDate]="startDate1.value"
+                                            [formControlName]="'reg_end_time'" 
+                                            [minDate]="
+                        _eventDetailForm.controls['reg_start_time']
+                          .value || _currentDate
+                      " [formControlName]="'reg_end_time'">
+                                        </p-calendar>
+                                        <div class="error-txt-msg mb-2"
+                                            *ngIf=" _isSubmitEventDetail &&_eventDetailForm.controls['reg_end_time'].hasError('required')"
+                                            style="color: red">
+                                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bannerSection mt-5">
+                            <div class="bannerFlex">
+                                <div class="flexBox1">
+                                    <div class="heading mb-2">
+                                        <p class="p-secondary">
+                                            <b>{{ "eventDetails.bannerImg" | translate }}</b>
+                                        </p>
+                                    </div>
+                                    <div class="bannerBox">
+                                        <img class="img-fluid" [src]="_eventDetailForm.controls['image_url'].value"
+                                            alt="">
+                                    </div>
+                                    <div class="error-txt-msg mb-2" *ngIf="_isImageFlag && !_selectedBanner"
+                                        style="color: red">
+                                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p-accordionTab>
+                <p-accordionTab header="Venue Details" *ngIf="data.venue_details != null">
+            <form [formGroup]="_venueDetailForm" action="">
+              <div class="centerElement">
+                <div class="row mt-3">
+                  <div class="col-lg-6">
+                    <div class="detail-input">
+                      <label for="detailInput">Venue Type</label>
+                      <input type="text" [formControlName]="'venue_type'" pInputText placeholder="Venue Type" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isVenueSubmited &&
+                          _venueDetailForm.controls['venue_type'].hasError('required')
+                        " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="detail-input">
+                      <label for="detailInput">Address</label>
+                      <input type="text" [formControlName]="'address'" pInputText placeholder="Address" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isVenueSubmited &&
+                          _venueDetailForm.controls['address'].hasError('required')
+                        " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div formArrayName="hallInfo">
+                  <div class="venueDetails mt-4" *ngFor="let hallInf of hallInfo().controls; let i=index">
+                    <div class="heading mb-3">
+                      <h4 class="p-green"><b>{{generateAlphabets(i)+'-Hall'}}</b></h4>
+                    </div>
+                    <div class="venueList venueBlock" [formGroupName]="i">
+                      <div class="venueBox">
+                        <div class="detail-input">
+                          <label for="detailInput">Length</label>
+                          <input type="number" min="0" [formControlName]="'length'"
+                            pInputText placeholder="Enter Length" readonly/>
+                          <div class="error-txt-msg mb-2"
+                            *ngIf="hallInfo().controls[i].get('length')?.errors?.['required'] && _isVenueSubmited"
+                            style="color: red">
+                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="venueBox">
+                        <div class="detail-input">
+                          <label for="detailInput">Width</label>
+                          <input type="number" min="0" [formControlName]="'width'"
+                            pInputText placeholder="Enter Width" readonly/>
+                          <div class="error-txt-msg mb-2"
+                            *ngIf="hallInfo().controls[i].get('width')?.errors?.['required'] && _isVenueSubmited"
+                            style="color: red">
+                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="venueBox">
+                        <div class="detail-input">
+                          <label for="detailInput">Height</label>
+                          <input type="number" min="0" [formControlName]="'heigth'"
+                            pInputText placeholder="Enter Height" readonly/>
+                          <div class="error-txt-msg mb-2"
+                            *ngIf="hallInfo().controls[i].get('heigth')?.errors?.['required'] && _isVenueSubmited"
+                            style="color: red">
+                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="venueBox">
+                        <div class="detail-input">
+                          <label for="detailInput">Light</label>
+
+                          <input type="number" min="0" [formControlName]="'light'"
+                            pInputText placeholder="Enter Light" readonly/>
+
+                          <div class="error-txt-msg mb-2"
+                            *ngIf="hallInfo().controls[i].get('light')?.errors?.['required'] && _isVenueSubmited"
+                            style="color: red">
+                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                          </div>
+                        </div>
+                      </div>
+                      <div class="venueBox">
+                        <div class="detail-input">
+                          <label for="detailInput">No Of Table</label>
+                          <input type="number" min="0" [formControlName]="'no_of_table'"
+                            pInputText placeholder="No Of Table" readonly/>
+                          <div class="error-txt-msg mb-2"
+                            *ngIf="hallInfo().controls[i].get('no_of_table')?.errors?.['required'] && _isVenueSubmited"
+                            style="color: red">
+                            <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                          </div>
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+  
+          </p-accordionTab> 
+                
+          <p-accordionTab header="Event Management" *ngIf="data.event_management_details != null">
+            <form [formGroup]="_eventManagementDetailForm" action="">
+              <div class="innerContent">
+                <div class="infoRow row">
+                  <div class="col-lg-6">
+                    <div class="detail-input">
+                      <label for="detailInput">Competition Leader</label>
+                      <input type="text" [formControlName]="'competition_leader'" pInputText
+                        placeholder="Competition Leader" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="_saveEventManagementSubmit && _eventManagementDetailForm.controls['competition_leader'].hasError('required')" style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="detail-input">
+                      <label for="detailInput">Mobile No</label>
+                      <input type="number" min="0"  [formControlName]="'mobile_no'"
+                        pInputText placeholder="Enter Your Mobile No" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _saveEventManagementSubmit &&
+                    _eventManagementDetailForm.controls['mobile_no'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="infoFlex mt-3">
+                  <div class=" flex-sb resp-align">
+                    <p><b>Passed SBTF’s competition leader training</b></p>
+                    <div class="flex-vc gap-3">
+                      <div class="yes">
+                        <label for="yes">Yes</label>
+                        <p-radioButton [value]="true" formControlName="sbtf_competition_training" class="ms-2"
+                          inputId="yes" ></p-radioButton>
+                      </div>
+                      <div class="no">
+                        <label for="no">No</label>
+                        <p-radioButton [value]="false" formControlName="sbtf_competition_training" class="ms-2"
+                          inputId="no" ></p-radioButton>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div>
+               
+              </div>
+            </form>
+  
+          </p-accordionTab>
+                <p-accordionTab header="Organiser Details" *ngIf="data.organiser_details != null">
+            <form [formGroup]="_organiserDetailForm" action="">
+              <div class="innerContent">
+                <div class="row">
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Organising Association</label>
+                      <input type="text" [formControlName]="'organising_association'" pInputText
+                        placeholder="Enter Your Organising Association" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['organising_association'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Contact Person</label>
+                      <input type="text" [formControlName]="'contact_person'" pInputText
+                        placeholder="Enter Contact Person" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['contact_person'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Telephone No</label>
+                      <input type="text" [formControlName]="'telephone_no'" pInputText
+                        placeholder="Enter Your Telephone No" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['telephone_no'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Address</label>
+                      <input type="text" [formControlName]="'address'" pInputText placeholder="Enter Your Address" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['address'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Zip Code</label>
+                      <input type="text" [formControlName]="'zip_code'" pInputText placeholder="Enter Your Zip Code" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['zip_code'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Location</label>
+                      <input type="text" [formControlName]="'location'" pInputText placeholder="Enter Your Location" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['location'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Organiser Email</label>
+                      <input type="text" [formControlName]="'organiser_email'" pInputText
+                        placeholder="Enter Your Organiser Email" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['organiser_email'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-3">
+                    <div class="detail-input">
+                      <label for="detailInput">Competition DirectorEmail</label>
+                      <input type="text" [formControlName]="'competition_director_email'" pInputText
+                        placeholder="Enter Your Competition DirectorEmail" readonly/>
+                      <div class="error-txt-msg mb-2" *ngIf="
+                      _isOrganiserSubmited &&
+                    _organiserDetailForm.controls['competition_director_email'].hasError('required')
+                  " style="color: red">
+                        <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="detail-input">
+                    <label for="detailInput">Internet Address To The Organiser Website</label>
+                    <input type="text" [formControlName]="'internet_address'" pInputText
+                      placeholder="Enter Your Website Name" readonly/>
+                    <div class="error-txt-msg mb-2" *ngIf="
+                    _isOrganiserSubmited &&
+                  _organiserDetailForm.controls['internet_address'].hasError('required')
+                " style="color: red">
+                      <span style="color: red">*</span>{{ "signupmanagement.req" | translate }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+  
+  
+          </p-accordionTab>
+                <p-accordionTab header="Add Class" *ngIf="data.categories.length > 0">
+            <div class="parent mt-4">
+              <p-table class="common-table text-center" #request [rows]="7" [value]="_categoriesList" [paginator]="true"
+                [globalFilterFields]="['name', 'email']">
+                <ng-template pTemplate="header">
+                  <tr style="font-size: 11px;">
+                    <th pSortableColumn="name" style="width: 15%">Category Name</th>
+                    <th pSortableColumn="email" style="width: 14%">Participant Type</th>
+                    <th pSortableColumn="email" style="width: 10%">Gender</th>
+  
+                    <th pSortableColumn="state" style="width: 10%">Born After</th>
+                    <th pSortableColumn="club" style="width: 10%">Rank</th>
+                    <th pSortableColumn="playerType" style="width: 15%">Max No of
+                      Registrations</th>
+                  </tr>
+                </ng-template>
+  
+                <ng-template pTemplate="body" let-users>
+                  <tr>
+                    <td>{{ users.category.category_description}}</td>
+                    <td class="p-combine">{{ users.category.participant_type_info.participant_description }}</td>
+                    <td class="p-combine">{{users.category.gender_id === 1 ? 'Male' : users.category.gender_id === 2 ? 'Female' : 'Mix'}}</td>
+                    <td>{{ users.dob_cap | date : "dd/MM/YYYY" }}</td>
+                    <td>{{ users.rank }}</td>
+                    <td>{{ users.max_no }}</td>
+                  
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                  <tr>
+                    <td colspan="8">No user found.</td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </p-accordionTab>
+            </p-accordion>
+            </form>
+        <div class="bottomElement">
+            <div class="">
+            </div>
+
+            <div class="newbottom">
+                <div class="left_section">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>
+<p-toast position="bottom-right" key="bc"></p-toast>

@@ -1,0 +1,143 @@
+<div class="viewMatches">
+    <div class="topVideo">
+        <div class="videoContainer">
+            <div class="videoPlayer">
+                <mux-player class="muxPlayer videoM3" stream-type="on-demand" attr.playback-id="{{_assetPlaybackId}}"
+                    metadata-video-title="Test VOD" metadata-viewer-user-id="user-24601"></mux-player>
+            </div>
+            <div class="info p-2">
+                <div class="flex-sb">
+                    <div class="flex-vc gap-2">
+                        <div class="flex-vc players gap-2">
+                            <p class="playerName text-overflow">{{_playerAName}}</p>
+                            <p>vs</p>
+                            <p class="playerName text-overflow">{{_playerBName}}</p>
+                        </div>
+                        <p-divider layout="vertical"></p-divider>
+                        <div class="round">
+                            <p>{{_recentMatchesList[0]?.round_description}}</p>
+                        </div>
+                        <p-divider layout="vertical"></p-divider>
+                        <div class="category">
+                            <p>{{_recentMatchesList[0]?.category_description}}</p>
+                        </div>
+                    </div>
+                    <div class="views flex-vc">
+                        <p>{{_viewCount}}</p>
+                        <p class="ms-1">Views</p>
+                    </div>
+                </div>
+                <div class="flex-sb flex-vc mt-2">
+                    <div>
+                        <p class="event p-secondary"><b>{{_recentMatchesList[0]?.event_name}}</b></p>
+                    </div>
+                    <div class="flex-vc eventButtons">
+                        <button class="btn btn-videoBut" disabled>
+                            <img class="eye_w15" src="../../../../assets/icons/svg/live matches/trendup.svg" alt="">
+                            <p>Analyse</p>
+                        </button>
+                        <button class="btn btn-videoBut" (click)="downloadVideo()" disabled>
+                            <img class="eye_w15" src="../../../../assets/icons/svg/live matches/arrowsquaredown.svg"
+                                alt="">
+                            <p>Download</p>
+                        </button>
+                        <button class="btn btn-videoBut" (click)="ShareLink()" disabled>
+                            <img class="eye_w15" src="../../../../assets/icons/svg/live matches/arrowforwardsquare.svg"
+                                alt="">
+                            <p>Share</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p-divider class="mt-0 video-divider"></p-divider>
+    </div>
+    <div class="container-xxl liveMatchModule" *ngIf="_recentRelatedMatchesList.length>0">
+        <div class="innerContent m-2">
+            <div class="section section-live-matches">
+                <div class="topbar">
+
+                    <div class="flex-vc">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.0802 8.58V15.42C21.0802 16.54 20.4802 17.58 19.5102 18.15L13.5702 21.58C12.6002 22.14 11.4002 22.14 10.4202 21.58L4.48016 18.15C4.00193 17.8727 3.60509 17.4745 3.32951 16.9953C3.05392 16.5161 2.9093 15.9728 2.91016 15.42V8.58C2.91016 7.46 3.51016 6.42 4.48016 5.85L10.4202 2.42C11.3902 1.86 12.5902 1.86 13.5702 2.42L19.5102 5.85C20.4802 6.42 21.0802 7.45 21.0802 8.58Z"
+                                stroke="#1B403A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9.75 11.9999V10.7999C9.75 9.25992 10.84 8.62992 12.17 9.39992L13.21 9.99992L14.25 10.5999C15.58 11.3699 15.58 12.6299 14.25 13.3999L13.21 13.9999L12.17 14.5999C10.84 15.3699 9.75 14.7399 9.75 13.1999V11.9999Z"
+                                stroke="#1B403A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <div class="heading ms-2">
+                            <h5><b>Related Videos</b></h5>
+                        </div>
+
+                    </div>
+                    <!-- <div class="flex-vc p-links" routerLink="/live-matches">
+                        <i class="pi pi-arrow-left i-small p-green"></i>
+                        <p class="p-green ms-2">Back</p>
+                    </div> -->
+                </div>
+                <div class="centerElement">
+                    <div class="row">
+                        <div class="col-lg-3" *ngFor="let item of _recentRelatedMatchesList; let i = index">
+                            <div class="owl-card p-links" (click)="viewMatches(item)">
+                                <div class="thumbnail">
+                                    <img [src]="item.thumbnail" alt="">
+                                    <div class="img-cover">
+                                        <div class="liveIcon" *ngIf="item.isLive">
+                                            <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M4.28448 1.11941C4.36196 1.1968 4.42343 1.28871 4.46536 1.38987C4.5073 1.49104 4.52888 1.59948 4.52888 1.70899C4.52888 1.8185 4.5073 1.92694 4.46536 2.02811C4.42343 2.12927 4.36196 2.22118 4.28448 2.29857C3.03401 3.54925 2.33152 5.24541 2.33152 7.01399C2.33152 8.78257 3.03401 10.4787 4.28448 11.7294C4.36185 11.8068 4.42321 11.8987 4.46506 11.9999C4.50692 12.101 4.52844 12.2094 4.5284 12.3189C4.52836 12.4283 4.50676 12.5367 4.46484 12.6378C4.42292 12.7389 4.36149 12.8308 4.28406 12.9082C4.20664 12.9855 4.11473 13.0469 4.01359 13.0887C3.91245 13.1306 3.80406 13.1521 3.6946 13.1521C3.58514 13.152 3.47677 13.1304 3.37566 13.0885C3.27455 13.0466 3.18268 12.9852 3.10531 12.9077C-0.149688 9.65274 -0.149688 4.37441 3.10531 1.11941C3.18271 1.04193 3.27461 0.980459 3.37578 0.938522C3.47694 0.896585 3.58538 0.875 3.6949 0.875C3.80441 0.875 3.91285 0.896585 4.01401 0.938522C4.11518 0.980459 4.20708 1.04193 4.28448 1.11941ZM14.8936 1.11941C18.1486 4.37524 18.1486 9.65274 14.8936 12.9077C14.7365 13.0595 14.526 13.1435 14.3075 13.1416C14.089 13.1397 13.88 13.0521 13.7255 12.8976C13.571 12.7431 13.4833 12.5341 13.4814 12.3156C13.4795 12.0971 13.5635 11.8866 13.7153 11.7294C14.9658 10.4787 15.6683 8.78257 15.6683 7.01399C15.6683 5.24541 14.9658 3.54925 13.7153 2.29857C13.5589 2.14232 13.4711 1.93034 13.471 1.70928C13.4709 1.48822 13.5586 1.27619 13.7149 1.11982C13.8712 0.963455 14.0831 0.875565 14.3042 0.875487C14.5252 0.875409 14.7373 0.963149 14.8936 1.11941ZM6.75698 3.51441C6.91321 3.67068 7.00097 3.8826 7.00097 4.10357C7.00097 4.32454 6.91321 4.53647 6.75698 4.69274C6.45361 4.99608 6.21295 5.35621 6.04877 5.75256C5.88458 6.14891 5.80008 6.57373 5.80008 7.00274C5.80008 7.43175 5.88458 7.85656 6.04877 8.25292C6.21295 8.64927 6.45361 9.0094 6.75698 9.31274C6.83657 9.38961 6.90006 9.48157 6.94373 9.58324C6.9874 9.68491 7.01039 9.79426 7.01135 9.9049C7.01232 10.0156 6.99123 10.1253 6.94933 10.2277C6.90743 10.3301 6.84555 10.4232 6.76731 10.5014C6.68906 10.5796 6.59602 10.6415 6.49361 10.6834C6.39119 10.7253 6.28146 10.7464 6.17081 10.7454C6.06016 10.7445 5.95081 10.7215 5.84914 10.6778C5.74747 10.6342 5.65552 10.5707 5.57865 10.4911C4.6535 9.5659 4.13377 8.31111 4.13377 7.00274C4.13377 5.69437 4.6535 4.43958 5.57865 3.51441C5.73492 3.35818 5.94684 3.27042 6.16781 3.27042C6.38878 3.27042 6.60071 3.35818 6.75698 3.51441ZM12.5561 3.51441C13.4813 4.43958 14.001 5.69437 14.001 7.00274C14.001 8.31111 13.4813 9.5659 12.5561 10.4911C12.4788 10.5685 12.3869 10.6299 12.2858 10.6718C12.1847 10.7138 12.0763 10.7354 11.9669 10.7354C11.8574 10.7354 11.749 10.7139 11.6479 10.6721C11.5467 10.6302 11.4548 10.5689 11.3774 10.4915C11.3 10.4141 11.2385 10.3223 11.1966 10.2211C11.1547 10.12 11.1331 10.0117 11.1331 9.9022C11.133 9.79274 11.1545 9.68435 11.1964 9.58321C11.2382 9.48207 11.2996 9.39016 11.377 9.31274C11.6804 9.0094 11.921 8.64927 12.0852 8.25292C12.2494 7.85656 12.3339 7.43175 12.3339 7.00274C12.3339 6.57373 12.2494 6.14891 12.0852 5.75256C11.921 5.35621 11.6804 4.99608 11.377 4.69274C11.2207 4.53637 11.133 4.32434 11.1331 4.10328C11.1331 3.88222 11.221 3.67025 11.3774 3.51399C11.5338 3.35773 11.7458 3.26999 11.9669 3.27007C12.1879 3.27015 12.3999 3.35804 12.5561 3.51441ZM9.06698 5.82274C9.23113 5.82274 9.39368 5.85507 9.54533 5.91789C9.69699 5.98071 9.83479 6.07278 9.95086 6.18886C10.0669 6.30493 10.159 6.44273 10.2218 6.59438C10.2846 6.74604 10.317 6.90859 10.317 7.07274C10.317 7.23689 10.2846 7.39944 10.2218 7.55109C10.159 7.70275 10.0669 7.84055 9.95086 7.95662C9.83479 8.0727 9.69699 8.16477 9.54533 8.22759C9.39368 8.29041 9.23113 8.32274 9.06698 8.32274C8.73546 8.32274 8.41752 8.19104 8.1831 7.95662C7.94867 7.7222 7.81698 7.40426 7.81698 7.07274C7.81698 6.74122 7.94867 6.42328 8.1831 6.18886C8.41752 5.95443 8.73546 5.82274 9.06698 5.82274Z"
+                                                    fill="#F24E1E" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="matchInfo py-2">
+                                    <div class="flex-sb w-100">
+                                        <div class="flex-vc">
+                                            <div class="col-4 p-0">
+                                                <p class="text-overflow">{{item.match_details[0]?.participant_name}}</p>
+                                            </div>
+                                            <div class="col-2">
+                                                <p class="px-2">vs</p>
+                                            </div>
+                                            <div class="col-4 p-0">
+                                                <p class="text-overflow">{{item.match_details[1]?.participant_name}}</p>
+                                            </div>
+                                            <div class="info ms-2">
+                                                <i class="pi pi-info-circle i-small tooltipBox"
+                                                    pTooltip="{{item.round_description + '  |  ' + item.category_description}}"
+                                                    tooltipPosition="right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-vc">
+                                            <p class="p-small">{{item.views}}</p>
+                                            <i class="pi pi-eye i-small text-dark"></i>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="event mt-1">
+                                        <p class="p-secondary"><b>{{item.event_name}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-e">
+            <p-paginator [rows]="8" [totalRecords]="_totalLiveMatches" (onPageChange)="paginate($event)"></p-paginator>
+        </div>
+    </div>
+</div>
+<!-- <stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader> -->
+
+<div class="op">
+    <p-dialog [resizable]="false" [(visible)]="isShareLink" [closable]="true" [showHeader]="true" [modal]="true"
+        [draggable]="false" [style]="{width: '31vw'}" [baseZIndex]="10000" header="Share">
+        <stupa-social-share></stupa-social-share>
+    </p-dialog>
+</div>

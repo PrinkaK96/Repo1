@@ -1,0 +1,36 @@
+<div class="common-toast" *ngIf="!closeToast">
+
+    <div [ngClass]="setClass()">
+        <div class="closeBut p-links" (click)="closeToastBox()">
+            <i class="i-small pi pi-times text-white"></i>
+        </div>
+        <div class="flex-vc flex-nowrap w-100">
+            <div class="">
+                <div class="innerContent">
+                    <div class="toast-inner-circle">
+                        <svg viewBox="0 0 45 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M22.4995 43.12C34.4067 43.12 44.0595 33.4673 44.0595 21.56C44.0595 9.65274 34.4067 0 22.4995 0C10.5922 0 0.939453 9.65274 0.939453 21.56C0.939453 28.2646 3.99981 34.2544 8.79982 38.2087C8.80737 38.2149 8.80064 38.227 8.79138 38.2239V38.2239C8.78567 38.2219 8.77975 38.2262 8.77975 38.2322V44.9192C8.77975 46.7908 10.7524 48.0055 12.4237 47.163L19.9691 43.3594C20.3859 43.1493 20.8528 43.0631 21.3188 43.0882C21.7097 43.1093 22.1033 43.12 22.4995 43.12Z"
+                                fill="" />
+                        </svg>
+                        <div class="msg-icon">
+                            <i [ngClass]="setIcon()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" flex-grow-1">
+                <div class="flex-vc flex-hc text-center">
+                    <div class="toast-body">
+                        <div class="toast-header flex-hc">
+                            <h5 class="text-center">{{mainHeading}}</h5>
+                        </div>
+                        <div class="toast-content">
+                            <p>{{subHeading}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

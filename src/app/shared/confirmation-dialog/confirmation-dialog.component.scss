@@ -1,0 +1,44 @@
+.modal-header {
+    border-bottom: 0 !important;
+
+}
+
+.modal-footer {
+    border-top: 0 !important;
+}
+
+.modal-content {
+    width: 390px;
+    height: 200px;
+    background-color: var(--box-bg);
+}
+
+@media only screen and (max-width:600px) {
+    .modal-content {
+        width: auto !important;
+    }
+}
+
+.btn1 {
+    width: 72px !important;
+    height: 32px !important;
+    font-size: 13px !important;
+}
+
+.modal-body {
+    height: 20px !important;
+}
+
+.close:hover {
+    background-color: #00000057;
+}
+
+.close {
+    padding: 0px 9px;
+    border-radius: 50px;
+
+    span {
+        display: block;
+        font-size: 20px;
+    }
+}

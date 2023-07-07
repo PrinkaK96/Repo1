@@ -1,0 +1,109 @@
+.footer-management {
+  .backbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+  }
+
+  .footer-tabView {
+    .common-tabView {
+      ::ng-deep {
+        p-tabView {
+          .p-tabview-nav-container {
+            left: 40px;
+          }
+
+          .p-tabview .p-tabview-nav-btn.p-link {
+            box-shadow: none;
+          }
+
+          .p-tabview-scrollable .p-tabview-nav-container {
+            padding: 0 30px;
+          }
+        }
+      }
+
+      .tabContainer {
+        position: relative;
+        margin: 0 !important;
+
+        .arrowTop {
+          position: fixed;
+          cursor: pointer;
+          bottom: 10vh;
+          right: 1.5vw;
+
+          .box {
+            width: 2vw;
+            height: 8vh;
+            border: 1px solid var(--combinating-color);
+            border-radius: 3px;
+            position: relative;
+            left: 12px;
+            bottom: 9px;
+
+            .flexTop {
+              i {
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                color: var(--combinating-color);
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .arrowTop:hover {
+          i {
+            animation: _bouncingArrow 0.7s linear;
+          }
+        }
+      }
+    }
+
+    ::ng-deep {
+      .header {
+        margin: 1.5rem 0;
+        color: var(--secondary-color);
+      }
+
+      hr.divider {
+        width: 100%;
+        margin: 0;
+      }
+
+      input {
+        border: none;
+        padding-left: 0s;
+      }
+
+      input:focus {
+        box-shadow: 0 000 !important;
+      }
+    }
+  }
+}
+
+@keyframes _bouncingArrow {
+  0% {
+    top: 15%;
+  }
+
+  50% {
+    top: 60%;
+  }
+
+  100% {
+    top: 15%;
+  }
+}
+
+@media only screen and (max-width:1000px) {
+  .arrowTop {
+    display: none !important;
+  }
+}

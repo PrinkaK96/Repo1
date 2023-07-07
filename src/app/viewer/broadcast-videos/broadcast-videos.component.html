@@ -1,0 +1,241 @@
+<!-- skelton layout starts  -->
+<div class="skeletonlayout" *ngIf="_skeleton ">
+  <div class="row" style="margin-top: 1rem;">
+    <div class="col-lg-3" *ngFor="let item of id ">
+      <p-skeleton shape="rectangle" width="100%" height="150px" animation="wave"></p-skeleton>
+    </div>
+  </div>
+</div>
+<!-- skelton layout ends  -->
+
+
+<div class="container-xxl" *ngIf="!_skeleton">
+  <div *ngIf="_liveMatchesList?.length>0" class="liveViewerSection">
+    <div class="upperSection flex-vc">
+      <div class="dot"></div>
+      <div class="textb">Live</div>
+    </div>
+    <div class="videoSectionsss">
+      <div class="row">
+        <div class="col-lg-3 col-md-3 mb-3" *ngFor="let item of _liveMatchesList">
+          <mux-player stream-type="live" attr.playback-id="{{item.playback_id}}" metadata-video-title="Test VOD"
+            metadata-viewer-user-id="user-24601"></mux-player>
+          <div class="playersInfo flex-vc my-2">
+            <p class="pname text-overflow" pTooltip="{{item.participants[0].participant_name}}">{{
+              item.participants[0].participant_name }}</p>
+            <p class="mx-2">VS</p>
+            <p class="pname text-overflow" pTooltip="{{item.participants[1].participant_name}}">{{
+              item.participants[1].participant_name }}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="recentlyFinishedMatches ">
+    <div *ngIf="_liveMatchesList?.length>0" class="upperSection">
+      <p>Recently Finished Matches</p>
+    </div>
+    <p *ngIf="_showSection" class="my-3">Streamed Videos</p>
+    <div *ngIf="_showSection" class="col-lg-6 ree">
+      <div class="top-searchbar">
+        <div class="flex-vc">
+          <div class="innerBox-input">
+            <span class="p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input id="headerInput" [(ngModel)]="_searchByPlayerName" pInputText (keydown)="searchPlayer()"
+                (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText type="text" placeholder="Find Player" />
+            </span>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <!-- <div class="topBar">
+        <div class="row">
+          <div class="col-lg-2">
+            <div class="innerContent">
+              <p class="heading mb-0"><b class="">Type </b></p>
+              <p-dropdown class="m-0" [options]="_participantTypesList" [(ngModel)]="_selectedParticipantTypes"
+                optionLabel="participant_description" appendTo="body" (onChange)="setType($event)" placeholder="Type">
+              </p-dropdown>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="innerContent">
+              <p class="heading mb-0"><b>Category</b></p>
+              <p-dropdown class="m-0" [options]="_categoryList" [(ngModel)]="_categoryList.category_description"
+                optionLabel="category_description" [autoDisplayFirst]="true" appendTo="body"
+                (onChange)="tabSelection($event)">
+              </p-dropdown>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="innerContent">
+              <p class="heading mb-0"><b>Fixture Format</b></p>
+              <div *ngIf="_showFixtureFormat" class="centerElement">
+                <div class="category">
+                  <div class="radioBox mt-2">
+                    <div class="flex-vc gap-4">
+                      <div class="flex-vc field-radiobutton" *ngFor="let item of _fixtureFormat">
+                        <p-radioButton name="participantType" [value]="item" [(ngModel)]="_fixtureFormat[0]"
+                          [inputId]="item.key"></p-radioButton>
+                        <label for="city1">{{ item.name }}</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <div class="col-lg-6 ree">
+            <div class="top-searchbar">
+              <div class="flex-vc">
+                <div class="innerBox-input">
+                  <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input id="headerInput" [(ngModel)]="_searchByPlayerName" pInputText (keydown)="searchPlayer()"
+                      (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText type="text"
+                      placeholder="Find Player" />
+                  </span>
+  
+                </div>
+  
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <div *ngIf="_showSection" class="class">
+      <div class="container">
+        <div class="row my-3">
+          <div class="col-sm-3 mb-3 gap-4" *ngFor="let item of _streamedVideos">
+            <div class="imageCover">
+              <img class="fitImage p-links"
+                [src]="'https://image.mux.com/' + item.asset_playback_id + '/thumbnail.png?width=214&height=121&fit_mode=pad'"
+                alt="" (click)="getImageURL(item)">
+            </div>
+
+            <!-- <mux-player *ngIf="item.asset_playback_id!=null" stream-type="on-demand"
+              attr.playback-id="{{item.asset_playback_id}}" metadata-video-title="Test VOD"
+              metadata-viewer-user-id="user-24601"></mux-player>
+            <video *ngIf="item.additional_url!=null" width="100%" controls>
+              <source src={{item.additional_url}} type="video/mp4">
+            </video> -->
+            <!-- <mux-player
+  stream-type="on-demand"
+  playback-id="nxCl301eDJFFhDQe8XXdvJyMyEIxBPlMZmVabNIUxP02Q"
+  metadata-video-title="Placeholder (optional)"
+  metadata-viewer-user-id="Placeholder (optional)"
+  primary-color="#FFFFFF"
+  secondary-color="#000000"
+></mux-player> -->
+            <div class="playersInfo flex-vc my-2">
+              <p class="pname text-overflow" pTooltip="{{item.participants[0].participant_name}}">{{
+                item.participants[0].participant_name}}</p>
+              <p class="mx-2">VS</p>
+              <p class="pname text-overflow" pTooltip="{{item.participants[1].participant_name}}">{{
+                item.participants[1].participant_name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row my-3" *ngIf="_showFixtureFormat && _streamedVideos.length == 0">
+          <div class="innerContent py-3">
+            <img class="m-auto flex-vc" src="../../../assets/icons/svg/undraw_in_progress_re_m1l6 1.svg" alt="" />
+            <p class="text-center mt-2"><b>Live Videos yet to be uploaded </b></p>
+          </div>
+        </div> -->
+    </div>
+    <div class="videoDialog">
+      <div *ngIf="_showVideoOnFullScreen" class="muxOverflow">
+        <div class="topHeader">
+          <div class="flex-sb px-3 py-2">
+            <div class="flex-vc">
+              <p class="pname text-overflow" pTooltip="{{_playerAName}}">{{ _playerAName }}</p>
+              <p class="px-2">vs</p>
+              <p class="pname text-overflow" pTooltip="{{_playerBName}}">{{ _playerBName }}</p>
+            </div>
+            <div class="flex-vc gap-4">
+              <p class="type">{{ _participantTypeName }}</p>
+              <p class="category">{{ _categoryName }}</p>
+              <i (click)="closePopUp()" class="pi pi-times-circle text-white p-links"></i>
+            </div>
+          </div>
+        </div>
+        <mux-player class="muxPlayer" stream-type="on-demand" attr.playback-id="{{ _currentAssetId }}"
+          metadata-video-title="Test VOD" metadata-viewer-user-id="user-24601"></mux-player>
+      </div>
+      <!-- </p-dialog> -->
+    </div>
+  </div>
+
+
+
+  <!-- line no 140 code is old code  -->
+
+  <!-- <div class="topBar">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="innerContent">
+                <p class="heading mb-0"><b class="">Type</b></p>
+                <p-dropdown class="m-0" [options]="_participantTypesList" [(ngModel)]="_selectedParticipantTypes"
+                    optionLabel="participant_description" appendTo="body" (onChange)="setType($event)"
+                    placeholder="Type">
+                </p-dropdown>
+            </div>
+        </div>
+        <div  class="col-lg-2">
+            <div class="innerContent">
+                <p class="heading mb-0"><b>Category</b></p>
+                <p-dropdown class="m-0" [options]="_categoryList" [(ngModel)]="_categoryList.category_description"
+                    optionLabel="category_description" [autoDisplayFirst]="true" appendTo="body"
+                    (onChange)="tabSelection($event)">
+                </p-dropdown>
+            </div>
+        </div>
+    </div>
+  </div>
+    <p-divider></p-divider>
+    <div  *ngIf="_showFixtureFormat" class="centerElement">
+      <div class="category">
+          <div class="radioBox mt-2">
+              <div class="flex-vc gap-4">
+                  <div class="flex-vc field-radiobutton" *ngFor="let item of _fixtureFormat">
+                      <p-radioButton name="participantType" [value]="item" [(ngModel)]="_fixtureFormat[0]"
+                          [inputId]="item.key"></p-radioButton>
+                      <label for="city1">{{item.name}}</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+
+  <!-- another code  -->
+
+</div>
+
+<div>
+  <div *ngIf="!_showSection && !_liveFlag && !_showFixtureFormat" class="empty h-100">
+    <div class="innerContent py-3">
+      <img class="m-auto flex-vc" src="../../../assets/icons/svg/undraw_in_progress_re_m1l6 1.svg" alt="" />
+      <p class="text-center mt-2"><b>No Videos uploaded</b></p>
+    </div>
+  </div>
+</div>
+
+
+<p-dialog class="common-score" *ngIf="this._matchDetails!==undefined" [resizable]="false" [(visible)]="_viewMatch"
+  [modal]="true" [draggable]="false" [style]="{ width: '35vw' }" [baseZIndex]="10000">
+  <mux-player class="muxPlayer" stream-type="on-demand" attr.playback-id="{{ this._matchDetails.asset_playback_id }}"
+    metadata-video-title="Test VOD" metadata-viewer-user-id="user-24601"></mux-player>
+  <div class="flex-vc gap-2 my-2">
+    <p>{{this._matchDetails.participants[0].participant_name}}</p>
+    <p>vs</p>
+    <p>{{this._matchDetails.participants[1].participant_name}}</p>
+  </div>
+</p-dialog>

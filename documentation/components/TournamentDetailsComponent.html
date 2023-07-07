@@ -1,0 +1,2099 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  TournamentDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/broadcast-only/tournament-details/tournament-details.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>stupa-tournament-details</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tournament-details.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tournament-details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_countryList" >_countryList</a>
+                            </li>
+                            <li>
+                                <a href="#_currentDate" >_currentDate</a>
+                            </li>
+                            <li>
+                                <a href="#_eventDetailForm" >_eventDetailForm</a>
+                            </li>
+                            <li>
+                                <a href="#_eventUpdatedData" >_eventUpdatedData</a>
+                            </li>
+                            <li>
+                                <a href="#_isPublish" >_isPublish</a>
+                            </li>
+                            <li>
+                                <a href="#_isSubmitEvent" >_isSubmitEvent</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedBanner" >_selectedBanner</a>
+                            </li>
+                            <li>
+                                <a href="#_updateEventFlag" >_updateEventFlag</a>
+                            </li>
+                            <li>
+                                <a href="#_uploadImage" >_uploadImage</a>
+                            </li>
+                            <li>
+                                <a href="#azureLoggerConversion" >azureLoggerConversion</a>
+                            </li>
+                            <li>
+                                <a href="#event_id" >event_id</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#createTournament" >createTournament</a>
+                            </li>
+                            <li>
+                                <a href="#deleteTournament" >deleteTournament</a>
+                            </li>
+                            <li>
+                                <a href="#fileDetail" >fileDetail</a>
+                            </li>
+                            <li>
+                                <a href="#getCountryList" >getCountryList</a>
+                            </li>
+                            <li>
+                                <a href="#getDetailsByEventId" >getDetailsByEventId</a>
+                            </li>
+                            <li>
+                                <a href="#getUpdatedData" >getUpdatedData</a>
+                            </li>
+                            <li>
+                                <a href="#isPublish" >isPublish</a>
+                            </li>
+                            <li>
+                                <a href="#loadTournamentDetails" >loadTournamentDetails</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#updateTournament" >updateTournament</a>
+                            </li>
+                            <li>
+                                <a href="#uploadBanner" >uploadBanner</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#matchIndex" >matchIndex</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(messageService: <a href="../interfaces/Message.html" target="_self">MessageService</a>, confirmationDialogService: <a href="../injectables/ConfirmationDialogService.html" target="_self">ConfirmationDialogService</a>, commonApiService: <a href="../injectables/CommonApiService.html" target="_self">CommonApiService</a>, formBuilder: FormBuilder, broadcastService: <a href="../injectables/BroadcastOnlyService.html" target="_self">BroadcastOnlyService</a>, eventsService: <a href="../injectables/EventsService.html" target="_self">EventsService</a>, encyptDecryptService: <a href="../injectables/EncyptDecryptService.html" target="_self">EncyptDecryptService</a>, jsonDataCallingService: <a href="../injectables/JsonDataCallingService.html" target="_self">JsonDataCallingService</a>, azureLoggerService: <a href="../injectables/MyMonitoringService.html" target="_self">MyMonitoringService</a>, router: Router)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>messageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmationDialogService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonApiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonApiService.html" target="_self" >CommonApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>broadcastService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BroadcastOnlyService.html" target="_self" >BroadcastOnlyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>encyptDecryptService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EncyptDecryptService.html" target="_self" >EncyptDecryptService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>jsonDataCallingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/JsonDataCallingService.html" target="_self" >JsonDataCallingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>azureLoggerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyMonitoringService.html" target="_self" >MyMonitoringService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="matchIndex"></a>
+                        <b>matchIndex</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:27</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTournament"></a>
+                    <span class="name">
+                        <span ><b>createTournament</b></span>
+                        <a href="#createTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createTournament()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTournament"></a>
+                    <span class="name">
+                        <span ><b>deleteTournament</b></span>
+                        <a href="#deleteTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteTournament()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="301"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:301</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileDetail"></a>
+                    <span class="name">
+                        <span ><b>fileDetail</b></span>
+                        <a href="#fileDetail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileDetail(file: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCountryList"></a>
+                    <span class="name">
+                        <span ><b>getCountryList</b></span>
+                        <a href="#getCountryList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCountryList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDetailsByEventId"></a>
+                    <span class="name">
+                        <span ><b>getDetailsByEventId</b></span>
+                        <a href="#getDetailsByEventId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getDetailsByEventId()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="267"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:267</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getUpdatedData"></a>
+                    <span class="name">
+                        <span ><b>getUpdatedData</b></span>
+                        <a href="#getUpdatedData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getUpdatedData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="286"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:286</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isPublish"></a>
+                    <span class="name">
+                        <span ><b>isPublish</b></span>
+                        <a href="#isPublish"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isPublish()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:130</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTournamentDetails"></a>
+                    <span class="name">
+                        <span ><b>loadTournamentDetails</b></span>
+                        <a href="#loadTournamentDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTournamentDetails()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateTournament"></a>
+                    <span class="name">
+                        <span ><b>updateTournament</b></span>
+                        <a href="#updateTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateTournament()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadBanner"></a>
+                    <span class="name">
+                        <span ><b>uploadBanner</b></span>
+                        <a href="#uploadBanner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadBanner()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="244"
+                            class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:244</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_countryList"></a>
+                    <span class="name">
+                        <span ><b>_countryList</b></span>
+                        <a href="#_countryList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_currentDate"></a>
+                    <span class="name">
+                        <span ><b>_currentDate</b></span>
+                        <a href="#_currentDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Date()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_eventDetailForm"></a>
+                    <span class="name">
+                        <span ><b>_eventDetailForm</b></span>
+                        <a href="#_eventDetailForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_eventUpdatedData"></a>
+                    <span class="name">
+                        <span ><b>_eventUpdatedData</b></span>
+                        <a href="#_eventUpdatedData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isPublish"></a>
+                    <span class="name">
+                        <span ><b>_isPublish</b></span>
+                        <a href="#_isPublish"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isSubmitEvent"></a>
+                    <span class="name">
+                        <span ><b>_isSubmitEvent</b></span>
+                        <a href="#_isSubmitEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedBanner"></a>
+                    <span class="name">
+                        <span ><b>_selectedBanner</b></span>
+                        <a href="#_selectedBanner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_updateEventFlag"></a>
+                    <span class="name">
+                        <span ><b>_updateEventFlag</b></span>
+                        <a href="#_updateEventFlag"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_uploadImage"></a>
+                    <span class="name">
+                        <span ><b>_uploadImage</b></span>
+                        <a href="#_uploadImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="azureLoggerConversion"></a>
+                    <span class="name">
+                        <span ><b>azureLoggerConversion</b></span>
+                        <a href="#azureLoggerConversion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Error()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="event_id"></a>
+                    <span class="name">
+                        <span ><b>event_id</b></span>
+                        <a href="#event_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/broadcast-only/tournament-details/tournament-details.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Output } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import * as moment from &#x27;moment&#x27;;
+import { MessageService } from &#x27;primeng/api&#x27;;
+import { MyMonitoringService } from &#x27;src/app/services/AzureLogging/logging.service&#x27;;
+import { CommonApiService } from &#x27;src/app/services/Common/common-api.service&#x27;;
+import { EncyptDecryptService } from &#x27;src/app/services/EncryptDecrypt/encypt-decrypt.service&#x27;;
+import { JsonDataCallingService } from &#x27;src/app/services/LocalDataJsonDataAPI/json-data-calling.service&#x27;;
+import { EventsService } from &#x27;src/app/services/WebEventService/events.service&#x27;;
+import { BroadcastOnlyService } from &#x27;src/app/services/broadcastOnly/broadcast-only.service&#x27;;
+import { ConfirmationDialogService } from &#x27;src/app/shared/confirmation-dialog/confirmation-dialog.service&#x27;;
+
+@Component({
+  selector: &#x27;stupa-tournament-details&#x27;,
+  templateUrl: &#x27;./tournament-details.component.html&#x27;,
+  styleUrls: [&#x27;./tournament-details.component.scss&#x27;],
+  providers: [MessageService, ConfirmationDialogService]
+})
+export class TournamentDetailsComponent {
+  _selectedBanner: any &#x3D; &#x27;&#x27;;
+  _countryList: any;
+  azureLoggerConversion: any &#x3D; new Error();
+  _isPublish: any &#x3D; [];
+  _eventDetailForm!: FormGroup;
+  _currentDate: any &#x3D; new Date();
+  @Output() matchIndex &#x3D; new EventEmitter&lt;any&gt;();
+  _uploadImage: any;
+  _eventUpdatedData: any;
+  _updateEventFlag: boolean &#x3D; false;
+  event_id: any;
+  _isSubmitEvent:boolean &#x3D; false;
+  constructor(private messageService: MessageService, private confirmationDialogService: ConfirmationDialogService,
+    private commonApiService: CommonApiService, private formBuilder: FormBuilder, private broadcastService: BroadcastOnlyService,
+    private eventsService: EventsService, private encyptDecryptService: EncyptDecryptService,
+    private jsonDataCallingService: JsonDataCallingService, private azureLoggerService: MyMonitoringService, private router: Router) {
+    this.getCountryList();
+    this.isPublish();
+    this.loadTournamentDetails();
+    
+  }
+  ngOnInit(): void {
+    if (localStorage.getItem(&#x27;event_id&#x27;)) {
+      this.event_id &#x3D; this.encyptDecryptService.decryptUsingAES256(
+        localStorage.getItem(&#x27;event_id&#x27;)
+      );
+      this.getDetailsByEventId();
+    }
+  }
+
+  //#region FormControl for Event details
+  loadTournamentDetails() {
+    this._eventDetailForm &#x3D; this.formBuilder.group({
+      isPublish: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      eventStartDate: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      eventEndDate: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      eventName: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      address: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      eventCountry: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      description: new FormControl(&#x27;&#x27;),
+
+
+    });
+  }
+  //#endregion FormControl for Event details
+
+
+  //#region Here we are checking image size and format on upload and uploading it 
+  fileDetail(file: any) {
+    // this._showBanner &#x3D; true
+    //this.showImage &#x3D; false;
+
+    const maxSize &#x3D; 800 * 1024; //800KB
+    const minSize &#x3D; 50 * 1024; //50KB
+    if (file) {
+      const extension &#x3D; file.item(0).name.split(&#x27;.&#x27;)[1];
+      if (extension !&#x3D;&#x3D; &#x27;jpg&#x27; &amp;&amp; extension !&#x3D;&#x3D; &#x27;jpeg&#x27; &amp;&amp; extension !&#x3D;&#x3D; &#x27;png&#x27;) {
+        // File format not allowed
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;info&#x27;,
+          summary: &#x27;Info&#x27;,
+          detail: &#x27;Only the jpg/jpeg/png file types are supported&#x27;,
+          life: 3000,
+        });
+      }
+      else {
+        if (file[0].size &gt; maxSize || file[0].size &lt; minSize) {
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;info&#x27;,
+            summary: &#x27;Info&#x27;,
+            detail: &#x27;File size must be between 50KB-800KB range&#x27;,
+            life: 3000,
+          });
+        }
+        else {
+          // this._showBanner &#x3D; true;
+          this._selectedBanner &#x3D; file.item(0);
+          // this._uploadImage &#x3D; this._selectedBanner
+          // this._selectedUpdateBanner &#x3D; this._selectedBanner
+          let reader &#x3D; new FileReader();
+          reader.onload &#x3D; (event: any) &#x3D;&gt; {
+            this._selectedBanner &#x3D; event.target.result;
+          };
+          reader.readAsDataURL(this._selectedBanner);
+          this.uploadBanner()
+        }
+      }
+    }
+  }
+  //#endregion Here we are checking image size and format on upload and uploading it 
+
+  //#region API call to get-Countries
+  getCountryList() {
+    this.commonApiService.getCountriesList().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._countryList &#x3D; result.body;
+      },
+      error: (result:any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion API call to get-Countries
+
+  //#region fetching jsonData to get to get enum of isPublishorNot
+  isPublish() {
+    this.jsonDataCallingService.getIsPublishOrNot().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._isPublish &#x3D; result;
+      },
+      error: (result:any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion fetching jsonData to get to get enum of isPublishorNot
+
+  createTournament() {
+    if(this._eventDetailForm.valid &amp;&amp; this._selectedBanner!&#x3D;&#x27;&#x27;){ 
+      this._isSubmitEvent &#x3D; false;
+    var data &#x3D;
+    {
+      event_name: this._eventDetailForm.controls[&#x27;eventName&#x27;].value,
+      country_id: this._eventDetailForm.controls[&#x27;eventCountry&#x27;].value,
+      address: this._eventDetailForm.controls[&#x27;address&#x27;].value,
+      published: this._eventDetailForm.controls[&#x27;isPublish&#x27;].value&#x3D;&#x3D;&#x3D; &#x27;Publish&#x27; ? true:false,
+      image_url: this._uploadImage,
+      description: this._eventDetailForm.controls[&#x27;description&#x27;].value,
+      event_start_time:  moment(this._eventDetailForm.controls[&#x27;eventStartDate&#x27;].value).format(&#x27;YYYY-MM-DD&#x27;) + &#x27;T00:30:00&#x27;,
+      event_end_time: moment(this._eventDetailForm.controls[&#x27;eventEndDate&#x27;].value).format(&#x27;YYYY-MM-DD&#x27;) + &#x27;T23:59:00&#x27;,
+    }
+    this.broadcastService.createTournament(data)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          var eventId &#x3D; this.encyptDecryptService.encryptUsingAES256(result.body.event_id.toString());
+          localStorage.setItem(&#x27;event_id&#x27;, eventId);
+          localStorage.setItem(&#x27;data&#x27;, JSON.stringify(data));
+          //this.getDetailsByEventId();
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;success&#x27;,
+            summary: &#x27;Success&#x27;,
+            detail: result.body.msg,
+            life: 1000,
+          });
+          setTimeout(() &#x3D;&gt; {
+            this.matchIndex.emit(0);
+          }, 2000);
+          
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+    }
+    else{
+      this._isSubmitEvent &#x3D; true;
+      this.messageService.add({
+        key: &#x27;bc&#x27;,
+        severity: &#x27;error&#x27;,
+        summary: &#x27;Error&#x27;,
+        detail: &#x27;Please fill all required details&#x27;,
+        life: 3000,
+      });
+    }
+  }
+  updateTournament() {
+    var data &#x3D;
+    {
+      event_name: this._eventDetailForm.controls[&#x27;eventName&#x27;].value,
+      country_id: this._eventDetailForm.controls[&#x27;eventCountry&#x27;].value,
+      address: this._eventDetailForm.controls[&#x27;address&#x27;].value,
+      published: this._eventDetailForm.controls[&#x27;isPublish&#x27;].value&#x3D;&#x3D;&#x3D; &#x27;Publish&#x27; ? true:false,
+      image_url: this._uploadImage,
+      description: this._eventDetailForm.controls[&#x27;description&#x27;].value,
+      event_start_time:  moment(this._eventDetailForm.controls[&#x27;eventStartDate&#x27;].value).format(&#x27;YYYY-MM-DD&#x27;) + &#x27;T00:30:00&#x27;,
+      event_end_time: moment(this._eventDetailForm.controls[&#x27;eventEndDate&#x27;].value).format(&#x27;YYYY-MM-DD&#x27;) + &#x27;T23:59:00&#x27;,
+      event_id: parseInt(this.event_id),
+      is_active: true
+
+    }
+    this.broadcastService.updateTournament(data)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this.getDetailsByEventId();
+          //this.matchIndex.emit(0);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;success&#x27;,
+            summary: &#x27;Success&#x27;,
+            detail: result.body.msg,
+            life: 3000,
+          });
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+  }
+  uploadBanner() {
+    const formData &#x3D; new FormData();
+    formData.append(&#x27;file&#x27;, this._selectedBanner)
+    this.broadcastService.updateEventImage(formData).subscribe({
+      next: (data: any) &#x3D;&gt; {
+        this._uploadImage &#x3D; data.body.url;
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;info&#x27;,
+          summary: &#x27;Info&#x27;,
+          detail: result.error.msg,
+          life: 3000,
+        });
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+    })
+
+  }
+  //#region Here we are fetching details by event_ID
+  getDetailsByEventId() {
+    this.eventsService.getDetailsByEventId(this.event_id).subscribe({
+      next: (data: any) &#x3D;&gt; {
+        var currentData &#x3D; data.body.filter((x: any) &#x3D;&gt; x.event_id &#x3D;&#x3D; this.event_id)[0];
+        this._eventUpdatedData &#x3D; currentData;
+        this.getUpdatedData();
+      },
+      error: (data: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; data.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; {
+
+      },
+    })
+  }
+  //#endregion Here we are fetching details by event_ID
+
+  //#region Here we are setting values in the formControl on update and after create
+  getUpdatedData() {
+    this._updateEventFlag &#x3D; true;
+    this._eventDetailForm.controls[&#x27;eventName&#x27;].setValue(this._eventUpdatedData.event_name);
+    this._eventDetailForm.controls[&#x27;eventStartDate&#x27;].setValue(new Date(this._eventUpdatedData.event_start_time));
+    this._eventDetailForm.controls[&#x27;eventEndDate&#x27;].setValue(new Date(this._eventUpdatedData.event_end_time));
+    this._eventDetailForm.controls[&#x27;eventCountry&#x27;].setValue(this._eventUpdatedData.country_id);
+    this._eventUpdatedData.published&#x3D;&#x3D;&#x3D;true ?  this._eventDetailForm.controls[&#x27;isPublish&#x27;].setValue(&#x27;Publish&#x27;) : this._eventDetailForm.controls[&#x27;isPublish&#x27;].setValue(&#x27;Unpublish&#x27;);
+    this._eventDetailForm.controls[&#x27;description&#x27;].setValue(this._eventUpdatedData.description);
+    this._eventDetailForm.controls[&#x27;address&#x27;].setValue(this._eventUpdatedData.address);
+    this._selectedBanner &#x3D; this._eventUpdatedData.image_url;
+    localStorage.setItem(&#x27;data&#x27;, JSON.stringify(this._eventUpdatedData));
+  }
+  //#endregion Here we are setting values in the formControl on update and after create
+
+
+  deleteTournament() {
+    this.confirmationDialogService
+      .confirm(
+        &#x27;Please confirm..&#x27;,
+        &#x27;Are you sure , you want to delete this event?&#x27;
+      )
+      .then((confirmed) &#x3D;&gt; {
+        if (confirmed) {
+          var data &#x3D;
+          {
+            event_name: this._eventDetailForm.controls[&#x27;eventName&#x27;].value,
+            country_id: this._eventDetailForm.controls[&#x27;eventCountry&#x27;].value,
+            address: this._eventDetailForm.controls[&#x27;address&#x27;].value,
+            published: true,
+            image_url: this._selectedBanner,
+            description: this._eventDetailForm.controls[&#x27;description&#x27;].value,
+            event_start_time: this._eventDetailForm.controls[&#x27;eventStartDate&#x27;].value,
+            event_end_time: this._eventDetailForm.controls[&#x27;eventEndDate&#x27;].value,
+            event_id: this.event_id,
+            is_active: 0
+
+          }
+          this.broadcastService.updateTournament(data)
+            .subscribe({
+              next: (result: any) &#x3D;&gt; {
+                this.messageService.add({
+                  key: &#x27;bc&#x27;,
+                  severity: &#x27;success&#x27;,
+                  summary: &#x27;Success&#x27;,
+                  detail: &#x27;Event deleted successfully.&#x27;,
+                  life: 3000,
+                });
+                setTimeout(() &#x3D;&gt; {
+                  this.router.navigate([&#x27;/home/organize&#x27;]);
+                }, 1000);
+              },
+              error: (result: any) &#x3D;&gt; {
+                this.azureLoggerConversion &#x3D; result.error.msg
+                this.azureLoggerService.logException(this.azureLoggerConversion)
+              },
+              complete: () &#x3D;&gt; { },
+            });
+        }
+        else {
+        }
+      })
+      .catch(() &#x3D;&gt; { });
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form [formGroup]&#x3D;&quot;_eventDetailForm&quot; action&#x3D;&quot;&quot;&gt;
+  &lt;div class&#x3D;&quot;bannerSection mt-3&quot;&gt;
+    &lt;div class&#x3D;&quot;bannerFlex&quot; *ngIf&#x3D;&quot;_selectedBanner &#x3D;&#x3D;&#x3D; &#x27;&#x27;&quot;&gt;
+      &lt;div class&#x3D;&quot;bannerBox _dashed&quot;&gt;
+        &lt;input type&#x3D;&quot;file&quot; (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot; class&#x3D;&quot;fileUploader&quot;
+          accept&#x3D;&quot;image/x-png, image/jpg, image/jpeg&quot; /&gt;
+
+        &lt;div class&#x3D;&quot;overlap&quot;&gt;
+          &lt;div class&#x3D;&quot;flex-hc mb-3&quot;&gt;
+            &lt;div class&#x3D;&quot;info&quot;&gt;
+              &lt;!-- &lt;p class&#x3D;&quot;p-secondary-dark&quot;&gt;
+                                Drag&lt;b class&#x3D;&quot;p-green&quot;&gt;Drop&lt;/b&gt;
+                            &lt;/p&gt; --&gt;
+              &lt;div class&#x3D;&quot;choose&quot;&gt;
+                &lt;p class&#x3D;&quot;p-secondary-dark&quot;&gt;
+                  &lt;!-- {{ &quot;eventDetails.preselected&quot; | translate }} --&gt;
+                &lt;/p&gt;
+              &lt;/div&gt;
+              &lt;p class&#x3D;&quot;p-secondary&quot;&gt;
+                &lt;b&gt;&lt;/b&gt;
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;imgContainer&quot;&gt;
+              &lt;svg width&#x3D;&quot;64&quot; height&#x3D;&quot;64&quot; viewBox&#x3D;&quot;0 0 64 64&quot; fill&#x3D;&quot;none&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                &lt;circle cx&#x3D;&quot;31.5981&quot; cy&#x3D;&quot;32.3867&quot; r&#x3D;&quot;31.5&quot; fill&#x3D;&quot;white&quot; /&gt;
+                &lt;path
+                  d&#x3D;&quot;M30.5629 44.0704V35.1972H21.6897V32.2394H30.5629V23.3662H33.5207V32.2394H42.3939V35.1972H33.5207V44.0704H30.5629Z&quot;
+                  fill&#x3D;&quot;#4E4E4E&quot; /&gt;
+              &lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;box&quot;&gt;
+            &lt;p&gt;Drag &amp; Drop your image here. or &lt;span&gt;Browse&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;Or choose a preselected one&lt;/p&gt;
+            &lt;p&gt;Format : Jpeg, png size : 50KB-800KB&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; _selectedBanner &#x3D;&#x3D;&#x3D; &#x27;&#x27; &quot; style&#x3D;&quot;color: red&quot;&gt;
+      &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+  &lt;/div&gt;
+    &lt;div class&#x3D;&quot;bannerBox&quot; *ngIf&#x3D;&quot;_selectedBanner !&#x3D; &#x27;&#x27;&quot;&gt;
+      &lt;div class&#x3D;&quot;relativeBody&quot;&gt;
+        &lt;input type&#x3D;&quot;image&quot; class&#x3D;&quot;imgCover img-fluid&quot; [src]&#x3D;&quot;_selectedBanner&quot; alt&#x3D;&quot;&quot; /&gt;
+
+        &lt;!-- &lt;img class&#x3D;&quot;imgCover img-fluid&quot; [src]&#x3D;&quot;_selectedBanner&quot; alt&#x3D;&quot;&quot;&gt; --&gt;
+        &lt;div class&#x3D;&quot;innerColor&quot;&gt;
+          &lt;p&gt;This will be the sample image of your event banner&lt;/p&gt;
+          &lt;!-- &lt;div class&#x3D;&quot;reupload p-links flex-e&quot;&gt; --&gt;
+          &lt;!-- &lt;div class&#x3D;&quot;flex-vc reuploadBox&quot;&gt;
+                                      &lt;p (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot;&gt;{{&#x27;eventDetails.reupload&#x27; |translate}}&lt;/p&gt;
+                                      &lt;i class&#x3D;&quot;pi pi-upload ms-2&quot;&gt;&lt;/i&gt;
+                                  &lt;/div&gt; --&gt;
+
+          &lt;div class&#x3D;&quot;reuploadBoxie&quot;&gt;
+            &lt;input style&#x3D;&quot;cursor: pointer&quot; type&#x3D;&quot;file&quot; id&#x3D;&quot;option-1&quot; (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot;
+              accept&#x3D;&quot;image/x-png, image/jpg, image/jpeg&quot; /&gt;
+            &lt;label for&#x3D;&quot;option-1&quot;&gt;
+              &lt;div class&#x3D;&quot;uploadbtn&quot;&gt;Reupload&lt;/div&gt;
+              &lt;!-- &lt;img src&#x3D;&quot;https://img.icons8.com/material-outlined/48/000000/upload-to-cloud.png&quot;/&gt; --&gt;
+              &lt;img src&#x3D;&quot;../../../../assets/icons/admin_dropdown_icons/reuploadtoevent.png&quot; class&#x3D;&quot;w1717&quot; alt&#x3D;&quot;&quot; /&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;inputSection&quot;&gt;
+      &lt;div class&#x3D;&quot;row mt-3 grow&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+          &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Enter Tournament Name&quot; [formControlName]&#x3D;&quot;&#x27;eventName&#x27;&quot; /&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;eventName&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+          &lt;p-calendar #startDate1 inputId&#x3D;&quot;basic&quot; dateFormat&#x3D;&quot;dd/mm/yy&quot; placeholder&#x3D;&quot;Select Start Date&quot; [minDate]&#x3D;&quot;_currentDate&quot;
+            [formControlName]&#x3D;&quot;&#x27;eventStartDate&#x27;&quot;&gt;
+          &lt;/p-calendar&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;eventStartDate&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+          &lt;p-calendar #startDate1 inputId&#x3D;&quot;basic&quot; dateFormat&#x3D;&quot;dd/mm/yy&quot; placeholder&#x3D;&quot;Select End Date&quot; [minDate]&#x3D;&quot;_currentDate&quot; 
+            [formControlName]&#x3D;&quot;&#x27;eventEndDate&#x27;&quot;&gt;
+          &lt;/p-calendar&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;eventEndDate&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row mt-3 drow&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+          &lt;p-dropdown [formControlName]&#x3D;&quot;&#x27;eventCountry&#x27;&quot; [options]&#x3D;&quot;_countryList&quot; optionLabel&#x3D;&quot;name&quot;
+            optionValue&#x3D;&quot;country_id&quot; [filter]&#x3D;&quot;true&quot; placeholder&#x3D;&quot;Select Country&quot;&gt;
+          &lt;/p-dropdown&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;eventCountry&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+          &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Address&quot; [formControlName]&#x3D;&quot;&#x27;address&#x27;&quot; /&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;address&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+          &lt;p-dropdown class&#x3D;&quot;custom-dropdown&quot; placeholder&#x3D;&quot;Publish/Unpublish&quot; [options]&#x3D;&quot;_isPublish&quot;
+            [formControlName]&#x3D;&quot;&#x27;isPublish&#x27;&quot; optionLabel&#x3D;&quot;name&quot; optionValue&#x3D;&quot;name&quot; [autoDisplayFirst]&#x3D;&quot;true&quot;&gt;
+          &lt;/p-dropdown&gt;
+          &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot; *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._eventDetailForm.controls[&#x27;isPublish&#x27;].hasError(&#x27;required&#x27;)&quot; style&#x3D;&quot;color: red&quot;&gt;
+            &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+        &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+        &lt;textarea rows&#x3D;&quot;5&quot; cols&#x3D;&quot;30&quot; pInputTextarea  placeholder&#x3D;&quot;Description&quot; [formControlName]&#x3D;&quot;&#x27;description&#x27;&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+        &lt;!-- &lt;input class&#x3D;&quot;description&quot; pInputText placeholder&#x3D;&quot;Description&quot; [formControlName]&#x3D;&quot;&#x27;description&#x27;&quot; /&gt;
+          &lt;/div&gt; --&gt;
+      &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;row mt-3 brow&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+        &lt;button *ngIf&#x3D;&quot;!_updateEventFlag&quot; (click)&#x3D;&quot;createTournament()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;
+          Create
+        &lt;/button&gt;
+        &lt;button *ngIf&#x3D;&quot;_updateEventFlag&quot; (click)&#x3D;&quot;updateTournament()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;
+          Update
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;_updateEventFlag&quot; class&#x3D;&quot;col-lg-2&quot;&gt;
+        &lt;button (click)&#x3D;&quot;deleteTournament()&quot; class&#x3D;&quot;btn btn-danger w-100 mt-4&quot;&gt;Delete&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+&lt;p-toast position&#x3D;&quot;bottom-right&quot; key&#x3D;&quot;bc&quot;&gt;&lt;/p-toast&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./tournament-details.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.bannerSection {
+  .bannerFlex {
+    height: 180px;
+  }
+
+  .flexBox1 {
+    flex-basis: 100%;
+    height: 100%;
+
+    .choose {
+      margin: 5vh 0;
+    }
+  }
+
+  .flex-line {
+    flex-basis: 75px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 47px;
+
+    .divider {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      transform: translate(-50%, -50%);
+      background: var(--secondary-color);
+      height: 67%;
+    }
+  }
+
+  .bannerBox {
+    height: 100%;
+    border-radius: var(--common-border-radius);
+    position: relative;
+
+    .fileUploader {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    .overlap {
+      position: absolute;
+      top: 0;
+      padding: 1rem;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--box-bg);
+    }
+
+    .relativeBody {
+      position: relative;
+      color: white;
+      height: 180px;
+
+      input[type&#x3D;&quot;image&quot;] {
+        border-radius: 7px;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .innerColor {
+        border-radius: 7px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background-color: rgba(75, 75, 75, 0.555);
+
+        .reuploadBoxie {
+          input[type&#x3D;&quot;file&quot;] {
+            display: none;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--secondary-color);
+            width: max-content;
+            border-radius: 7px;
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            cursor: pointer;
+          }
+        }
+
+        .uploadbtn {
+          letter-spacing: 1px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .setCheck {
+      position: relative;
+
+      .checkImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  ._dashed {
+    border: 1px dashed var(--secondary-color) !important;
+    padding: 1rem;
+  }
+
+  ._solid {
+    padding: 1rem;
+    border: 1px solid var(--secondary-color) !important;
+  }
+
+  .col-lg-12 {
+    ::ng-deep {
+      .p-inputtext {
+        max-height: 21vh;
+        width: 100%;
+      }
+
+      .p-inputnumber {
+        max-height: 21vh;
+        width: 100%;
+      }
+    }
+  }
+
+  .description {
+    height: 400px;
+  }
+
+  #frgtEmail {
+    max-height: 150px;
+  }
+
+  .inputSection {
+    ::ng-deep {
+      .p-inputtext {
+        max-height: 150px;
+      }
+
+      .p-dropdown {
+        max-height: 150px;
+      }
+    }
+  }
+}
+
+.box {
+  font-size: 80%;
+  letter-spacing: 0.2px;
+
+  span {
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+  p {
+    text-align: center;
+
+    &amp;:not(:nth-child(3)) {
+      color: var(--main-color);
+    }
+
+    &amp;:nth-child(3) {
+      // background-color: red;
+      color: var(--In--vs);
+    }
+  }
+}
+
+@media screen and (width &gt;&#x3D;319px) and (width &lt;&#x3D;425px) {
+  .bannerSection {
+    .bannerBox {
+      .relativeBody {
+        input {
+          height: 70% !important;
+        }
+
+        .innerColor {
+          height: 70% !important;
+        }
+      }
+    }
+
+    .inputSection {
+      margin-top: -40px !important;
+
+      .grow {
+        .col-lg-4 {
+          &amp;:not(:first-child) {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+
+      .drow {
+        margin-top: 0 !important;
+      }
+    }
+
+    .brow {
+      .col-lg-2 {
+        &amp;:not(:first-child) {
+          button {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width &gt;&#x3D;426px) and (width &lt;&#x3D;768px) {
+  .bannerSection {
+    .bannerBox {
+      .relativeBody {
+        input {
+          height: 70% !important;
+        }
+
+        .innerColor {
+          height: 70% !important;
+        }
+      }
+    }
+
+    .inputSection {
+      margin-top: -40px !important;
+
+      .grow {
+        .col-lg-4 {
+          &amp;:not(:first-child) {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+
+      .drow {
+        margin-top: 0 !important;
+      }
+    }
+
+    .brow {
+      .col-lg-2 {
+        &amp;:not(:first-child) {
+          button {
+            margin: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (width &gt;&#x3D;769px) {}
+
+.card {
+  background: var(--surface-card);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form [formGroup]="_eventDetailForm" action="">  <div class="bannerSection mt-3">    <div class="bannerFlex" *ngIf="_selectedBanner === \'\'">      <div class="bannerBox _dashed">        <input type="file" (change)="fileDetail($any($event.target).files)" class="fileUploader"          accept="image/x-png, image/jpg, image/jpeg" />        <div class="overlap">          <div class="flex-hc mb-3">            <div class="info">              <!-- <p class="p-secondary-dark">                                Drag<b class="p-green">Drop</b>                            </p> -->              <div class="choose">                <p class="p-secondary-dark">                  <!-- {{ "eventDetails.preselected" | translate }} -->                </p>              </div>              <p class="p-secondary">                <b></b>              </p>            </div>            <div class="imgContainer">              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">                <circle cx="31.5981" cy="32.3867" r="31.5" fill="white" />                <path                  d="M30.5629 44.0704V35.1972H21.6897V32.2394H30.5629V23.3662H33.5207V32.2394H42.3939V35.1972H33.5207V44.0704H30.5629Z"                  fill="#4E4E4E" />              </svg>            </div>          </div>          <div class="box">            <p>Drag & Drop your image here. or <span>Browse</span></p>            <p>Or choose a preselected one</p>            <p>Format : Jpeg, png size : 50KB-800KB</p>          </div>        </div>      </div>    </div>    <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && _selectedBanner === \'\' " style="color: red">      <span style="color: red">*</span>Required  </div>    <div class="bannerBox" *ngIf="_selectedBanner != \'\'">      <div class="relativeBody">        <input type="image" class="imgCover img-fluid" [src]="_selectedBanner" alt="" />        <!-- <img class="imgCover img-fluid" [src]="_selectedBanner" alt=""> -->        <div class="innerColor">          <p>This will be the sample image of your event banner</p>          <!-- <div class="reupload p-links flex-e"> -->          <!-- <div class="flex-vc reuploadBox">                                      <p (change)="fileDetail($any($event.target).files)">{{\'eventDetails.reupload\' |translate}}</p>                                      <i class="pi pi-upload ms-2"></i>                                  </div> -->          <div class="reuploadBoxie">            <input style="cursor: pointer" type="file" id="option-1" (change)="fileDetail($any($event.target).files)"              accept="image/x-png, image/jpg, image/jpeg" />            <label for="option-1">              <div class="uploadbtn">Reupload</div>              <!-- <img src="https://img.icons8.com/material-outlined/48/000000/upload-to-cloud.png"/> -->              <img src="../../../../assets/icons/admin_dropdown_icons/reuploadtoevent.png" class="w1717" alt="" />            </label>          </div>        </div>      </div>    </div>    <div class="inputSection">      <div class="row mt-3 grow">        <div class="col-lg-4">          <input id="frgtEmail" pInputText placeholder="Enter Tournament Name" [formControlName]="\'eventName\'" />          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'eventName\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>        <div class="col-lg-4">          <p-calendar #startDate1 inputId="basic" dateFormat="dd/mm/yy" placeholder="Select Start Date" [minDate]="_currentDate"            [formControlName]="\'eventStartDate\'">          </p-calendar>          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'eventStartDate\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>        <div class="col-lg-4">          <p-calendar #startDate1 inputId="basic" dateFormat="dd/mm/yy" placeholder="Select End Date" [minDate]="_currentDate"             [formControlName]="\'eventEndDate\'">          </p-calendar>          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'eventEndDate\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>      </div>      <div class="row mt-3 drow">        <div class="col-lg-4">          <p-dropdown [formControlName]="\'eventCountry\'" [options]="_countryList" optionLabel="name"            optionValue="country_id" [filter]="true" placeholder="Select Country">          </p-dropdown>          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'eventCountry\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>        <div class="col-lg-4 mt-2">          <input id="frgtEmail" pInputText placeholder="Address" [formControlName]="\'address\'" />          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'address\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>        <div class="col-md-4">          <p-dropdown class="custom-dropdown" placeholder="Publish/Unpublish" [options]="_isPublish"            [formControlName]="\'isPublish\'" optionLabel="name" optionValue="name" [autoDisplayFirst]="true">          </p-dropdown>          <div class="p-small error-txt-msg mb-2" *ngIf="_isSubmitEvent && this._eventDetailForm.controls[\'isPublish\'].hasError(\'required\')" style="color: red">            <span style="color: red">*</span>Required        </div>        </div>      </div>    </div>    <div class="row mt-3">      <div class="col-lg-12">        <textarea rows="5" cols="30" pInputTextarea  placeholder="Description" [formControlName]="\'description\'"></textarea>    </div>        <!-- <input class="description" pInputText placeholder="Description" [formControlName]="\'description\'" />          </div> -->      </div>    <div class="row mt-3 brow">      <div class="col-lg-2">        <button *ngIf="!_updateEventFlag" (click)="createTournament()" class="btn btn_green mt-4">          Create        </button>        <button *ngIf="_updateEventFlag" (click)="updateTournament()" class="btn btn_green mt-4">          Update        </button>      </div>      <div *ngIf="_updateEventFlag" class="col-lg-2">        <button (click)="deleteTournament()" class="btn btn-danger w-100 mt-4">Delete</button>      </div>    </div>  </div></form><p-toast position="bottom-right" key="bc"></p-toast></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'TournamentDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TournamentDetailsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,345 @@
+<div class="container-xxl mt-3">
+  <section class="firsScreen">
+    <div class="topBar" *ngIf="_isAllAPIExcecuted && !isKnockout">
+      <div class="flex-e my-2">
+        <a class="p-green p-links" (click)="_showFull = true" *ngIf="!_showFull">Hide</a>
+        <a class="p-green p-links" (click)="_showFull = false" *ngIf="_showFull">Show Controller</a>
+      </div>
+      <div class="row row-gap-3" *ngIf="!_showFull">
+        <div class="col-lg-6">
+          <div class="greyBox">
+            <div class="empty h-100">
+              <div class="row flex-vc h-100">
+                <div class="col-5">
+                  <img class="w150" src="../../../../assets/icons/svg/empty.svg" alt="" />
+                </div>
+                <div class="col-7">
+                  <p class="p-small p-secondary lineSpace">
+                    If you have any problem in creating fixture you can contact
+                    our support. Reach out to us at support@stupaanalytics.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="greyBox">
+            <div class="header mb-2">
+              <div class="flex-sb flex-vc">
+                <div class="leftSection">
+                  <div class="flex-vc">
+                    <p *ngIf="_currentParticipantId == 1">
+                      Total Number of players in this category are
+                    </p>
+                    <p *ngIf="_currentParticipantId == 2">
+                      Total Number of Teams in this category are
+                    </p>
+                    <p *ngIf="
+                        _currentParticipantId == 4 || _currentParticipantId == 3
+                      ">
+                      Total Number of pairs in this category are
+                    </p>
+                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 1">
+                      {{ _topPlayers.length }}
+                    </p>
+                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 2">
+                      {{ _teamList.length }}
+                    </p>
+                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 3">
+                      {{ _doubleList.length }}
+                    </p>
+                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 4">
+                      {{ _mixDoubleList.length }}
+                    </p>
+                  </div>
+                </div>
+                <div class="right-eventHandler flex-vc" (click)="viewPlayer()">
+                  <div class="iconBox">
+                    <i class="i-small p-green pi pi-eye"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="divider m-0" />
+            <div class="innerContent">
+              <div class="detail-input mt-4">
+                <!-- <p-dropdown appendTo="body" [options]="_fixture" [optionLabel]="'name'"
+                                    placeholder="Fixture Number" [readonly]="true">
+                                </p-dropdown> -->
+              </div>
+              <div class="mt-4" (click)="deleteFixture()">
+                <button class="btn btn-danger m-0 w-100" [disabled]="!_showTree">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-e mr-1 mt-3" *ngIf="_showTree">
+      <button class="profile_buttons2" ngxPrint printSectionId="demo-print" [useExistingCss]="true" [previewOnly]="false">
+        Print
+      </button>
+    </div>
+    <div *ngIf="_isAllAPIExcecuted && !isKnockout && !_showTree" class="centerElement mt-4">
+      <div class="row row-gap-3">
+        <div class="col-lg-6 centerBox">
+          <div class="flex-vc gap-4 mt-3">
+            <button class="btn btn_green btnDone m-0" (click)="generateCustomeKO()">
+              Save
+            </button>
+            <!-- <button class="btn btn_green btnDone m-0" (click)="saveAsBefore()">
+              Save As Before
+            </button> -->
+          </div>
+          <div class="parentContainer">
+            <div class="note flex-sb flex-vc" *ngFor="let item of _arrangePlayer; let i = index" appDragDropSwap
+              [elemPosition]="i" [list]="_arrangePlayer" (returnUpdatedList)="returnUpdatedList($event)">
+              <div class="col-1 absolute">
+                <div class="flex-vc flex-hc h-100">
+                  <p>
+                    <b>{{ i + 1 }}</b>
+                  </p>
+                </div>
+              </div>
+              <div class="flex-vc spec">
+                <p-avatar class="avatar-small me-2" label="{{ getFirstLetters(item.participant_name) }}"
+                  shape="circle"></p-avatar>
+                <p style="
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 6rem;
+                  ">
+                  {{ item.participant_name }}
+                </p>
+              </div>
+              <div class="flex-e dropdownIcon me-2" *ngIf="!hideBye(item)">
+                <p class="p-combine _points">
+                  Points: {{ item.rating == null ? 0 : item.rating }}
+                </p>
+                <i pTooltip="{{ item.state }}" class="pi pi-info-circle p-secondary ms-2 p-links"
+                  tooltipPosition="right"></i>
+              </div>
+              <div class="flex-e dropdownIcon me-2" *ngIf="hideBye(item)">
+                <p class="p-combine">{{ "-" }}</p>
+                <!-- <i pTooltip={{item.state}} class="pi pi-info-circle p-secondary ms-2 p-links"
+                                    tooltipPosition="right"></i> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" >
+          <div class="bottomBox greyBox">
+            <div *ngIf="_arrangePlayer.length !== 0; else emptyBox2">
+              <p-table class="common-table text-center" [value]="_arrangePlayer">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Point</th>
+                    <th *ngIf="_currentParticipantId == 1">Email</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-player>
+                  <!-- <tr>
+                                        <td>{{ player.participant_name }}</td>
+                                        <td>{{player.state}}</td>
+                                        <td>{{player.club}}</td>
+                                        <td>{{player.points==null?0:player.points}}</td>
+                                        <td>{{player.email}}</td>
+                                    </tr> -->
+                  <tr *ngIf="hideBye(player)">
+                    <td class="flex-s">{{ player.participant_name }}</td>
+                    <td>{{ "-" }}</td>
+                    <td>{{ "-" }}</td>
+                    <td *ngIf="_currentParticipantId == 1">{{ "-" }}</td>
+                  </tr>
+                  <tr *ngIf="!hideBye(player)">
+                    <td class="flex-s">{{ player.participant_name }}</td>
+                    <td>{{ player.club }}</td>
+                    <td>{{ player.rating == null ? 0 : player.rating }}</td>
+                    <td *ngIf="_currentParticipantId == 1">
+                      {{ player.email }}
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+          <ng-template #emptyBox2>
+            <div class="player-empty greyBox">
+              <div class="innerContent h-100 flex-hc flex-vc">
+                <div class="m-3">
+                  <img src="../../../../assets/icons/svg/fixure_noPlayer.svg" class="w200" alt="" />
+                </div>
+                <p class="text-center p-secondary">No player left!</p>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="demo-print" class="secondScreen mt-3" *ngIf="_isAllAPIExcecuted && _showTree">
+    <ng-container *ngIf="true">
+      <!-- <div class="fixture-header" *ngIf="singleEliminationTournament">
+            <div *ngFor="let round of singleEliminationTournament.rounds" class="round-name">
+                <div>
+                    {{ round.roundName }}
+                </div>
+            </div>
+        </div> -->
+      <stupa-fix-single-tree [tournament]="singleEliminationTournament" *ngIf="singleEliminationTournament"
+        [matchTemplate]="matchTemplate"></stupa-fix-single-tree>
+    </ng-container>
+    <!-- <ng-container *ngIf="renderedTree === 'de'">
+
+        <ngtt-double-elimination-tree [tournament]="doubleEliminationTournament"
+            [matchTemplate]="matchTemplate"></ngtt-double-elimination-tree>
+    </ng-container> -->
+    <ng-template #matchTemplate let-match let-index="i" let-round="winnersBracket">
+      <stupa-match (refreshTree)="refreshTree()" [fillList]="singleEliminationTournament" [match]="match"
+        [index]="index" [parentIndex]="index" [_currentParticipantId]="_currentParticipantId" [round]="round"
+        [groupType]="2" [selectedCategoryId]="_currentCategoryId"
+        (updatedPullList)="updatedPullList($event)"></stupa-match>
+    </ng-template>
+  </section>
+  <!-- <stupa-drag-drop-fixture></stupa-drag-drop-fixture> -->
+</div>
+<p-dialog [resizable]="false" #pDialog [(visible)]="_isViewPlayerGrid" [style]="_dialogStyle" [draggable]="false"
+  [style]="{ width: '50vw' }" [modal]="true" (onHide)="closePopUpIsViewPlayerGrid()">
+  <div class="innerContent" *ngIf="_currentParticipantId == 1">
+    <div class="row mb-2">
+      <div class="col-md-3">
+        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="
+            'Search Player'
+          " />
+      </div>
+    </div>
+    <p-table class="common-table text-center" [value]="_topPlayers">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>Name</th>
+
+          <th>Club</th>
+          <th>Point</th>
+          <th>Email</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-player let-columns="columns">
+        <tr>
+          <td>{{ player.name }}</td>
+
+          <td>{{ player.club }}</td>
+          <td>{{ player.rating == null ? 0 : player.rating }}</td>
+          <td>{{ player.email }}</td>
+          <!-- <td>
+                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                    </td> -->
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="innerContent" *ngIf="_currentParticipantId == 2">
+    <div class="row mb-2">
+      <div class="col-md-3">
+        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="
+            'Search Player'
+          " />
+      </div>
+    </div>
+    <p-table class="common-table text-center" [value]="_teamList">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>Name</th>
+
+          <th>Club</th>
+          <th>Point</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-player let-columns="columns">
+        <tr>
+          <td>{{ player.participant_name }}</td>
+          <td>{{ player.name }}</td>
+          <td>{{ player.rating == null ? 0 : player.rating }}</td>
+          <!-- <td>
+                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                    </td> -->
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="innerContent" *ngIf="_currentParticipantId == 3">
+    <div class="row mb-2">
+      <div class="col-md-3">
+        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="
+            'Search Player'
+          " />
+      </div>
+    </div>
+    <p-table class="common-table text-center" [value]="_doubleList">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>Name</th>
+
+          <th>Club</th>
+          <th>Point</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-player let-columns="columns">
+        <tr>
+          <td>{{ player.participant_name }}</td>
+
+          <td>{{ player.name }}</td>
+          <td>{{ player.rating == null ? 0 : player.rating }}</td>
+          <!-- <td>
+                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                    </td> -->
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="innerContent" *ngIf="_currentParticipantId == 4">
+    <div class="row mb-2">
+      <div class="col-md-3">
+        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="
+            'Search Player'
+          " />
+      </div>
+    </div>
+    <p-table class="common-table text-center" [value]="_mixDoubleList">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>Name</th>
+
+          <th>Club</th>
+          <th>Point</th>
+          <!-- <th>Action</th> -->
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-player let-columns="columns">
+        <tr>
+          <td>{{ player.participant_name }}</td>
+
+          <td>{{ player.name }}</td>
+          <td>{{ player.rating == null ? 0 : player.rating }}</td>
+          <!-- <td>
+                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                    </td> -->
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</p-dialog>
+<p-toast position="bottom-right" key="bc"></p-toast>

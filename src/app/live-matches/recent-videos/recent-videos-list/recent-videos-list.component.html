@@ -1,0 +1,85 @@
+<div class="container-xxl liveMatchModule">
+
+  <div class="innerContent m-2">
+    <div class="section">
+      <div class="topbar">
+        <div class="flex-sb">
+          <div class="flex-vc flex-hc">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.53 20.4181H6.21C3.05 20.4181 2 18.3181 2 16.2081V7.78813C2 4.62812 3.05 3.57812 6.21 3.57812H12.53C15.69 3.57812 16.74 4.62812 16.74 7.78813V16.2081C16.74 19.3681 15.68 20.4181 12.53 20.4181Z"
+                stroke="#1B403A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M19.52 17.0962L16.74 15.1462V8.83623L19.52 6.88623C20.88 5.93623 22 6.51623 22 8.18623V15.8062C22 17.4762 20.88 18.0562 19.52 17.0962ZM11.5 10.9962C11.8978 10.9962 12.2794 10.8382 12.5607 10.5569C12.842 10.2756 13 9.89405 13 9.49623C13 9.0984 12.842 8.71687 12.5607 8.43556C12.2794 8.15426 11.8978 7.99623 11.5 7.99623C11.1022 7.99623 10.7206 8.15426 10.4393 8.43556C10.158 8.71687 10 9.0984 10 9.49623C10 9.89405 10.158 10.2756 10.4393 10.5569C10.7206 10.8382 11.1022 10.9962 11.5 10.9962Z"
+                stroke="#1B403A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <div class="heading ms-2">
+              <h5><b>Trending Videos</b></h5>
+            </div>
+          </div>
+          <div class="flex-vc p-links btndesign" routerLink="/live-matches">
+            <i class="pi pi-arrow-left i-small p-green"></i>
+            <p class="p-green ms-2">Back</p>
+          </div>
+        </div>
+      </div>
+      <div class="centerElement">
+        <div class="row">
+          <div class="col-lg-3" *ngFor="let item of _recentRelatedMatchesList; let i = index">
+            <div class="owl-card p-links" (click)="viewMatches(item)">
+              <div class="thumbnail">
+                <img *ngIf="item.image!=null" [src]=item.image alt="" />
+                <img *ngIf="item.image==null" src="../../../assets/landpage/imageSlider/slide1.png" alt="" />
+                <!-- <img style="border-radius: 10px;" *ngIf="item.asset_playback_id==null"  src="../../../../assets/landpage/imageSlider/slide1.png" alt=""> -->
+                <div class="img-cover" style="border-radius: 10px;">
+                </div>
+              </div>
+              <div class="matchInfo py-2">
+                <div class="flex-vc flex-sb">
+                  <div class="flex-vc">
+                    <div class="p-0" style=" width: 69px;">
+                      <p class="text-overflow" pTooltip="{{item.playerA}}">
+                        {{ item.playerA }}
+                      </p>
+                    </div>
+                    <div class="" style="padding: 0 6px;font-weight: bold;">
+                      <p>vs</p>
+                    </div>
+                    <div class="p-0" style=" width: 69px;">
+                      <p class="text-overflow" pTooltip="{{item.playerB}}">
+                        {{ item.playerB }}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-vc">
+                    <div class="info ms-2">
+                      <i class="pi pi-info-circle i-small tooltipBox" style="padding: 0 5px 0 0" pTooltip="{{
+                                     
+                                        item.round +
+                                          '  |  ' +
+                                          item.category
+                                      }}" tooltipPosition="right"></i>
+                    </div>
+                    <div class="flex-vc">
+                      <i class="pi pi-eye i-small text-dark" style="padding: 0 3px"></i>
+                      <p class="p-small">{{ item.views }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="event col-lg-8  mt-1">
+                  <p class="text-overflow p-secondary" pTooltip="{{item.event_name}}"><b>{{item.event_name}}</b></p>
+                </div>
+                <div class="flex-vc">
+                  <i class="pi pi-eye i-small text-dark" style="padding: 0 3px"></i>
+                  <p class="p-small">{{ item.views }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

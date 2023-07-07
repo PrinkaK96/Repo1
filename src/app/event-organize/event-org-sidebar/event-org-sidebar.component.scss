@@ -1,0 +1,184 @@
+$green-color: #01534d;
+$green-container: #1b403a;
+$white-container: #f5f5f5;
+
+$mediaQueries: (
+  mobile: 800px,
+  tab: 1000px,
+);
+
+@mixin query($screen) {
+
+  @each $key,
+  $value in $mediaQueries {
+    @if ($screen ==$key) {
+      @media only screen and (max-width: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+.sideTimeline {
+  margin-left: 1.5rem;
+  position: relative;
+
+
+  .markerStatic {
+    .imgContainer {
+      border-radius: 50px;
+      border: 1px solid white;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+  }
+
+  .eventHeading {
+    transition: all 0.2s ease;
+    color: var(--primary-color);
+  }
+
+  .eventIndicator {
+    position: relative;
+    height: 2.5px;
+    width: 40px;
+    display: block;
+    margin-top: 2px;
+    background: var(--combinating-color);
+    border-radius: 50px;
+    transition: all 0.2s ease;
+  }
+
+  ::ng-deep {
+    .p-timeline-event {
+      min-height: 9vh !important;
+    }
+
+    .p-timeline-event-content {
+      color: var(--primary-color);
+    }
+
+    .p-timeline-left .p-timeline-event-opposite {
+      display: none !important;
+    }
+
+    .p-timeline.p-timeline-vertical .p-timeline-event-connector {
+      width: 1px;
+    }
+  }
+}
+
+.admin-sidebar-container {
+  .sidebar {
+    position: relative;
+
+    .tmsSidebar {
+      .backBtn {
+        top: 20%;
+        right: 5%;
+      }
+
+      .centerText {
+        margin-top: 4vh;
+      }
+    }
+  }
+}
+
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 1rem;
+
+  button {
+    font-size: 14px;
+  }
+}
+
+
+#scheduleIcon {
+  cursor: pointer;
+}
+
+// label.p-links.eventHeading::after {
+//   position: absolute;
+//   content: "";
+//   left: 0;
+//   bottom: -5px;
+//   width: 80%;
+//   height: 3px;
+//   border-radius: 7px;
+//   background: #ff783e;
+// }
+
+// #menu {
+//   width: 35px;
+//   height: 35px;
+//   // background-color: white;
+//   margin: 30px 0 20px 20px;
+//   cursor: pointer;
+//   z-index: 100;
+// }
+
+// .bar {
+//   height: 5px;
+//   width: 100%;
+//   background-color: white;
+//   display: block;
+//   border-radius: 5px;
+//   transform: 0.3s ease;
+// //   display: none;
+// }
+
+// #bar1 {
+//   transform: translateY(-4px);
+// }
+// #bar3 {
+//   transform: translateY(4px);
+// }
+
+// @media screen and (min-width: 301px) {
+//   #menu {
+//     display: none;
+//     position: fixed;
+//   }
+// }
+
+// @media screen and (max-width: 400px) {
+//   .sidebar {
+//     display: none;
+//     position: fixed;
+//   }
+// }
+
+// @media screen and (min-width:500px)  {
+
+//     .bar{
+//         position: fixed;
+//         display: none;
+//         // background-color: red;
+//     }
+
+// }
+
+// @media screen and (max-width:500px) {
+//     .sidebar{
+//         display: none;
+//     }
+// }
+
+.increase_width {
+  min-width: 0 !important;
+  display: none;
+}

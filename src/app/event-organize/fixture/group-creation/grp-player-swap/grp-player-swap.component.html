@@ -1,0 +1,68 @@
+<div class="common-dialog">
+    <div class="innerContent">
+        <div class="topbar">
+            <div class="player-info">
+                <div class="flex-vc">
+                    <p>{{_playerSwapDataList[0]?.participant_name}} ( {{_currentGroupName}}
+                        )</p>
+                    <p class="p-green ms-2"><b>Swap With..</b></p>
+
+                </div>
+            </div>
+            <p-divider></p-divider>
+            <div class="centerElement">
+                <div class="top-searchbar mt-3 mb-3">
+                    <div class="flex-vc">
+                        <div class="innerBox-input">
+                            <span class="p-input-icon-left">
+                                <i class="pi pi-search"></i>
+                                <input type="text" [(ngModel)]="_searchByPlayerNameSwap" (keydown)="searchPlayer()"
+                                    (keypress)="searchPlayer()" (keyup)="searchPlayer()" pInputText
+                                    placeholder="Find Player" />
+                            </span>
+                        </div>
+                        <!-- <div class="innerBox p-links">
+                            <i class="pi pi-filter-fill i-small p-secondary-dark"></i>
+                        </div>
+                        <div class="innerBox p-links">
+                            <i class="pi pi-align-right i-small p-secondary-dark"></i>
+                        </div> -->
+                    </div>
+                </div>
+                <p-table class="common-table text-center" *ngIf="_playerListWithGroupName.length>0;else notPlayer"
+                    [value]="_playerListWithGroupName">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th *ngIf="_currentParticipantId==1">Email</th>
+                            <th>Group</th>
+                            <th *ngIf="_currentParticipantId==1">State</th>
+                            <th>Club</th>
+                            <th>Points</th>
+                            <th></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-player>
+                        <tr>
+                            <td> {{player.index}}</td>
+                            <td>{{player.playerName}}</td>
+                            <td *ngIf="_currentParticipantId==1">{{player.playerEmail}}</td>
+                            <td>{{player.playerGroupName}}</td>
+                            <td *ngIf="_currentParticipantId==1">{{player.playerStateName}}</td>
+                            <td>{{player.playerClubName}}</td>
+                            <td>{{player.playerRating}}</td>
+                            <td (click)="swapPlayer(player)" class="p-combine p-links"><b>Swap</b></td>
+                        </tr>
+                    </ng-template>
+
+                </p-table>
+                <ng-template #notPlayer pTemplate="body" let-player>
+                    <div>
+                        <p> No Player Found</p>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

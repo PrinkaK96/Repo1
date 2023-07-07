@@ -1,0 +1,2486 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CreateTieComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/utt/create-tie/create-tie.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                            <code>DatePipe</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-tie</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./create-tie.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-tie.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_createMatchForm" >_createMatchForm</a>
+                            </li>
+                            <li>
+                                <a href="#_createTie" >_createTie</a>
+                            </li>
+                            <li>
+                                <a href="#_fieldList" >_fieldList</a>
+                            </li>
+                            <li>
+                                <a href="#_matchesList" >_matchesList</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedTie" >_selectedTie</a>
+                            </li>
+                            <li>
+                                <a href="#_showDoubles" >_showDoubles</a>
+                            </li>
+                            <li>
+                                <a href="#addMatches" >addMatches</a>
+                            </li>
+                            <li>
+                                <a href="#currentDate" >currentDate</a>
+                            </li>
+                            <li>
+                                <a href="#dateTime" >dateTime</a>
+                            </li>
+                            <li>
+                                <a href="#grp_type" >grp_type</a>
+                            </li>
+                            <li>
+                                <a href="#selectedGrpType" >selectedGrpType</a>
+                            </li>
+                            <li>
+                                <a href="#selectedTeam1" >selectedTeam1</a>
+                            </li>
+                            <li>
+                                <a href="#selectedTeam2" >selectedTeam2</a>
+                            </li>
+                            <li>
+                                <a href="#squadList" >squadList</a>
+                            </li>
+                            <li>
+                                <a href="#squadListCopy" >squadListCopy</a>
+                            </li>
+                            <li>
+                                <a href="#teamACombo" >teamACombo</a>
+                            </li>
+                            <li>
+                                <a href="#teamADropVal" >teamADropVal</a>
+                            </li>
+                            <li>
+                                <a href="#teamAid" >teamAid</a>
+                            </li>
+                            <li>
+                                <a href="#teamAList" >teamAList</a>
+                            </li>
+                            <li>
+                                <a href="#teamASingle" >teamASingle</a>
+                            </li>
+                            <li>
+                                <a href="#teamAVal" >teamAVal</a>
+                            </li>
+                            <li>
+                                <a href="#teamBCombo" >teamBCombo</a>
+                            </li>
+                            <li>
+                                <a href="#teamBDropVal" >teamBDropVal</a>
+                            </li>
+                            <li>
+                                <a href="#teamBid" >teamBid</a>
+                            </li>
+                            <li>
+                                <a href="#teamBList" >teamBList</a>
+                            </li>
+                            <li>
+                                <a href="#teamBSingle" >teamBSingle</a>
+                            </li>
+                            <li>
+                                <a href="#teamBVal" >teamBVal</a>
+                            </li>
+                            <li>
+                                <a href="#tieList" >tieList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addField" >addField</a>
+                            </li>
+                            <li>
+                                <a href="#closeDialog" >closeDialog</a>
+                            </li>
+                            <li>
+                                <a href="#createMatch" >createMatch</a>
+                            </li>
+                            <li>
+                                <a href="#createTie" >createTie</a>
+                            </li>
+                            <li>
+                                <a href="#getSelectedPlayer" >getSelectedPlayer</a>
+                            </li>
+                            <li>
+                                <a href="#getSelectedTeam" >getSelectedTeam</a>
+                            </li>
+                            <li>
+                                <a href="#getSquads" >getSquads</a>
+                            </li>
+                            <li>
+                                <a href="#getTies" >getTies</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#setDateTime" >setDateTime</a>
+                            </li>
+                            <li>
+                                <a href="#showAddMatches" >showAddMatches</a>
+                            </li>
+                            <li>
+                                <a href="#showTie" >showTie</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(commonService: <a href="../injectables/CommonService.html" target="_self">CommonService</a>, datePipe: DatePipe)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>commonService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonService.html" target="_self" >CommonService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datePipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>DatePipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addField"></a>
+                    <span class="name">
+                        <span ><b>addField</b></span>
+                        <a href="#addField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addField(isSingle: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:145</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>isSingle</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeDialog"></a>
+                    <span class="name">
+                        <span ><b>closeDialog</b></span>
+                        <a href="#closeDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeDialog(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createMatch"></a>
+                    <span class="name">
+                        <span ><b>createMatch</b></span>
+                        <a href="#createMatch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createMatch()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="162"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:162</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTie"></a>
+                    <span class="name">
+                        <span ><b>createTie</b></span>
+                        <a href="#createTie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createTie()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelectedPlayer"></a>
+                    <span class="name">
+                        <span ><b>getSelectedPlayer</b></span>
+                        <a href="#getSelectedPlayer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSelectedPlayer(index: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSelectedTeam"></a>
+                    <span class="name">
+                        <span ><b>getSelectedTeam</b></span>
+                        <a href="#getSelectedTeam"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSelectedTeam(index: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, teamName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>teamName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSquads"></a>
+                    <span class="name">
+                        <span ><b>getSquads</b></span>
+                        <a href="#getSquads"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSquads()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTies"></a>
+                    <span class="name">
+                        <span ><b>getTies</b></span>
+                        <a href="#getTies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDateTime"></a>
+                    <span class="name">
+                        <span ><b>setDateTime</b></span>
+                        <a href="#setDateTime"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setDateTime(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showAddMatches"></a>
+                    <span class="name">
+                        <span ><b>showAddMatches</b></span>
+                        <a href="#showAddMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showAddMatches(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showTie"></a>
+                    <span class="name">
+                        <span ><b>showTie</b></span>
+                        <a href="#showTie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showTie()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_createMatchForm"></a>
+                    <span class="name">
+                        <span ><b>_createMatchForm</b></span>
+                        <a href="#_createMatchForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_createTie"></a>
+                    <span class="name">
+                        <span ><b>_createTie</b></span>
+                        <a href="#_createTie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fieldList"></a>
+                    <span class="name">
+                        <span ><b>_fieldList</b></span>
+                        <a href="#_fieldList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_matchesList"></a>
+                    <span class="name">
+                        <span ><b>_matchesList</b></span>
+                        <a href="#_matchesList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedTie"></a>
+                    <span class="name">
+                        <span ><b>_selectedTie</b></span>
+                        <a href="#_selectedTie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showDoubles"></a>
+                    <span class="name">
+                        <span ><b>_showDoubles</b></span>
+                        <a href="#_showDoubles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addMatches"></a>
+                    <span class="name">
+                        <span ><b>addMatches</b></span>
+                        <a href="#addMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentDate"></a>
+                    <span class="name">
+                        <span ><b>currentDate</b></span>
+                        <a href="#currentDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dateTime"></a>
+                    <span class="name">
+                        <span ><b>dateTime</b></span>
+                        <a href="#dateTime"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="grp_type"></a>
+                    <span class="name">
+                        <span ><b>grp_type</b></span>
+                        <a href="#grp_type"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { name: &#x27;GP&#x27; },
+    { name: &#x27;KO&#x27; },
+
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedGrpType"></a>
+                    <span class="name">
+                        <span ><b>selectedGrpType</b></span>
+                        <a href="#selectedGrpType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedTeam1"></a>
+                    <span class="name">
+                        <span ><b>selectedTeam1</b></span>
+                        <a href="#selectedTeam1"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedTeam2"></a>
+                    <span class="name">
+                        <span ><b>selectedTeam2</b></span>
+                        <a href="#selectedTeam2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="squadList"></a>
+                    <span class="name">
+                        <span ><b>squadList</b></span>
+                        <a href="#squadList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="squadListCopy"></a>
+                    <span class="name">
+                        <span ><b>squadListCopy</b></span>
+                        <a href="#squadListCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamACombo"></a>
+                    <span class="name">
+                        <span ><b>teamACombo</b></span>
+                        <a href="#teamACombo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamADropVal"></a>
+                    <span class="name">
+                        <span ><b>teamADropVal</b></span>
+                        <a href="#teamADropVal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamAid"></a>
+                    <span class="name">
+                        <span ><b>teamAid</b></span>
+                        <a href="#teamAid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamAList"></a>
+                    <span class="name">
+                        <span ><b>teamAList</b></span>
+                        <a href="#teamAList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamASingle"></a>
+                    <span class="name">
+                        <span ><b>teamASingle</b></span>
+                        <a href="#teamASingle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamAVal"></a>
+                    <span class="name">
+                        <span ><b>teamAVal</b></span>
+                        <a href="#teamAVal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBCombo"></a>
+                    <span class="name">
+                        <span ><b>teamBCombo</b></span>
+                        <a href="#teamBCombo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBDropVal"></a>
+                    <span class="name">
+                        <span ><b>teamBDropVal</b></span>
+                        <a href="#teamBDropVal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBid"></a>
+                    <span class="name">
+                        <span ><b>teamBid</b></span>
+                        <a href="#teamBid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBList"></a>
+                    <span class="name">
+                        <span ><b>teamBList</b></span>
+                        <a href="#teamBList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBSingle"></a>
+                    <span class="name">
+                        <span ><b>teamBSingle</b></span>
+                        <a href="#teamBSingle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="teamBVal"></a>
+                    <span class="name">
+                        <span ><b>teamBVal</b></span>
+                        <a href="#teamBVal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tieList"></a>
+                    <span class="name">
+                        <span ><b>tieList</b></span>
+                        <a href="#tieList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/utt/create-tie/create-tie.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { CommonService } from &#x27;../common.service&#x27;;
+import { DatePipe } from &#x27;@angular/common&#x27;;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+@Component({
+  selector: &#x27;app-create-tie&#x27;,
+  templateUrl: &#x27;./create-tie.component.html&#x27;,
+  styleUrls: [&#x27;./create-tie.component.scss&#x27;],
+  providers: [
+    DatePipe
+  ]
+})
+export class CreateTieComponent {
+  tieList: any &#x3D; []
+  squadList: any &#x3D; []
+  squadListCopy: any &#x3D; []
+  _createTie: boolean &#x3D; false
+  teamAVal: any
+  teamBVal: any
+  selectedTeam1: any;
+  selectedTeam2: any;
+  teamAid: any
+  teamBid: any
+  dateTime: any
+  currentDate: any
+  addMatches: boolean &#x3D; false
+  _selectedTie: any
+  _matchesList: any &#x3D; []
+  _createMatchForm: any
+  teamAList: any
+  teamBList: any
+  _showDoubles: boolean &#x3D; false
+  teamACombo: any &#x3D; []
+  teamBCombo: any &#x3D; []
+  _fieldList: any &#x3D; [];
+  teamASingle: any
+  teamBSingle: any
+  grp_type: any &#x3D; [
+    { name: &#x27;GP&#x27; },
+    { name: &#x27;KO&#x27; },
+
+  ]
+  selectedGrpType: any
+  teamADropVal:any
+  teamBDropVal:any
+  constructor(private commonService: CommonService, private datePipe: DatePipe) {
+    this._createMatchForm &#x3D; new FormGroup({
+      table: new FormControl(Number),
+      umpire: new FormControl(&quot;&quot;),
+      match_name: new FormControl(&quot;&quot;),
+      category_name: new FormControl(&quot;&quot;),
+      day: new FormControl(Number),
+      datetime: new FormControl(&quot;&quot;),
+    })
+  }
+
+  ngOnInit() {
+    this._fieldList &#x3D; [
+    ];
+    this.getTies()
+    this.getSquads()
+    this.currentDate &#x3D; new Date()
+    this.selectedGrpType &#x3D; &#x27;GP&#x27;
+  }
+  setDateTime(data: any) {
+    this.dateTime &#x3D; data.value
+  }
+  getTies() {
+    this.tieList &#x3D; []
+    this.commonService.getTie().subscribe((res) &#x3D;&gt; {
+      this.tieList.push(res)
+      this.tieList
+    })
+  }
+  getSquads() {
+    this.squadList &#x3D; []
+    this.squadListCopy &#x3D; []
+    this.commonService.getSquads().subscribe((res) &#x3D;&gt; {
+      this.squadList &#x3D; res
+      this.selectedTeam1 &#x3D; this.squadList[0].name
+    })
+  }
+  showTie() {
+    this._createTie &#x3D; true
+  }
+  getSelectedTeam(index: any, teamName: string, data:any) {
+    const finalData &#x3D; this.squadList[index];
+
+    if (teamName &#x3D;&#x3D;&#x3D; &#x27;teamA&#x27;) {
+      this.teamAVal &#x3D; finalData.name;
+      this.teamAid &#x3D; finalData.team_id
+      this.teamADropVal &#x3D; data.value
+    }
+    else {
+      this.teamBVal &#x3D; finalData.name
+      this.teamBid &#x3D; finalData.team_id
+      this.teamBDropVal &#x3D; data.value
+
+    }
+  }
+  createTie() {
+    const body &#x3D; {
+      &#x27;datetime&#x27;: this.dateTime,
+      &#x27;name&#x27;: this.teamAVal + &#x27; &#x27; + &#x27;vs&#x27; + &#x27; &#x27; + this.teamBVal,
+      &quot;tie_number&quot;: 0,
+      &quot;day&quot;: 0,
+      &quot;team_A_id&quot;: this.teamAid,
+      &quot;team_B_id&quot;: this.teamBid,
+      &quot;group_type&quot;: this.selectedGrpType
+    }
+    this.commonService.createTie(body).subscribe((res) &#x3D;&gt; {
+      this.getTies()
+    })
+    this._createTie &#x3D; false
+    this.dateTime &#x3D; &#x27;&#x27;
+    this.teamADropVal &#x3D; &#x27;&#x27;
+    this.teamBDropVal &#x3D; &#x27;&#x27;
+    this.teamAid &#x3D; &#x27;&#x27;
+    this.teamBid &#x3D; &#x27;&#x27;
+    this.selectedGrpType &#x3D; &#x27;&#x27;
+
+  }
+  closeDialog(data: any) {
+    if (data &#x3D;&#x3D;&#x3D; &#x27;createTie&#x27;) {
+      this._createTie &#x3D; false
+    }
+    else {
+      this.addMatches &#x3D; false
+    }
+  }
+
+  showAddMatches(data: any) {
+    this._fieldList &#x3D; [];
+    this._selectedTie &#x3D; data
+    const teamADetails &#x3D; this._selectedTie.tie_participants[0].team_id
+    const teamBDetails &#x3D; this._selectedTie.tie_participants[1].team_id
+    this.teamAList &#x3D; this.squadList.filter((x: any) &#x3D;&gt; x.team_id &#x3D;&#x3D; teamADetails)
+    this.teamBList &#x3D; this.squadList.filter((x: any) &#x3D;&gt; x.team_id &#x3D;&#x3D; teamBDetails)
+    this.addMatches &#x3D; true
+
+  }
+  getSelectedPlayer(index: any) {
+
+  }
+  addField(isSingle: any) {
+    if (isSingle) {
+      this._fieldList.push({
+        &quot;isSingle&quot;: true,
+        &quot;player_teamA&quot;: &#x27;&#x27;,
+        &quot;player_teamB&quot;: &#x27;&#x27;,
+      })
+    } else {
+      this._fieldList.push({
+        &quot;isSingle&quot;: isSingle,
+        &quot;dropValuePlayerAOne&quot;: [],
+        &quot;dropValuePlayerBOne&quot;: [],
+        &quot;dropValuePlayerATwo&quot;: [],
+        &quot;dropValuePlayerBTwo&quot;: []
+      })
+    }
+  }
+  createMatch() {
+    this._fieldList
+    if (this._fieldList[0].isSingle) {
+
+      const playerTeamA &#x3D; this._fieldList[0].player_teamA.split(&#x27;*&#x27;)
+      const playerTeamB &#x3D; this._fieldList[0].player_teamB.split(&#x27;*&#x27;)
+      playerTeamA[1]
+      const body &#x3D; {
+        &quot;tie_id&quot;: this._selectedTie.tie_id,
+        &quot;datetime&quot;: this._createMatchForm.controls[&#x27;datetime&#x27;].value,
+        &quot;table&quot;: this._createMatchForm.controls[&#x27;table&#x27;].value,
+        &quot;umpire_id&quot;: 1,
+        &quot;umpire_name&quot;: this._createMatchForm.controls[&#x27;umpire&#x27;].value,
+        &quot;name&quot;: this._createMatchForm.controls[&#x27;match_name&#x27;].value,
+        &quot;match_number&quot;: 1,
+        &quot;day&quot;: this._createMatchForm.controls[&#x27;day&#x27;].value,
+        &quot;category_name&quot;: this._createMatchForm.controls[&#x27;category_name&#x27;].value,
+        &quot;player_A_id&quot;: parseInt(playerTeamA[1]),
+        &quot;player_B_id&quot;: parseInt(playerTeamB[1]),
+        &quot;name_A&quot;: playerTeamA[0],
+        &quot;name_B&quot;: playerTeamB[0],
+
+      }
+      this.commonService.createMatch(body).subscribe((res) &#x3D;&gt; {
+      })
+      this.getTies()
+    } else {
+      const dropValuePlayerAOne &#x3D; this._fieldList[0].dropValuePlayerAOne.split(&#x27;*&#x27;)
+      const dropValuePlayerBOne &#x3D; this._fieldList[0].dropValuePlayerBOne.split(&#x27;*&#x27;)
+      const dropValuePlayerATwo &#x3D; this._fieldList[0].dropValuePlayerATwo.split(&#x27;*&#x27;)
+      const dropValuePlayerBTwo &#x3D; this._fieldList[0].dropValuePlayerBTwo.split(&#x27;*&#x27;)
+      const body &#x3D; {
+        &quot;tie_id&quot;: this._selectedTie.tie_id,
+        &quot;datetime&quot;: this._createMatchForm.controls[&#x27;datetime&#x27;].value,
+        &quot;table&quot;: this._createMatchForm.controls[&#x27;table&#x27;].value,
+        &quot;umpire_id&quot;: 1,
+        &quot;umpire_name&quot;: this._createMatchForm.controls[&#x27;umpire&#x27;].value,
+        &quot;name&quot;: this._createMatchForm.controls[&#x27;match_name&#x27;].value,
+        &quot;match_number&quot;: 1,
+        &quot;day&quot;: this._createMatchForm.controls[&#x27;day&#x27;].value,
+        &quot;category_name&quot;: this._createMatchForm.controls[&#x27;category_name&#x27;].value,
+        &quot;name_A&quot;: dropValuePlayerAOne[0] + &#x27;/&#x27; + dropValuePlayerBOne[0],
+        &quot;name_B&quot;: dropValuePlayerATwo[0] + &#x27;/&#x27; + dropValuePlayerBTwo[0],
+        &quot;combo_A&quot;: {
+          &quot;name&quot;: dropValuePlayerAOne[0] + &#x27;/&#x27; + dropValuePlayerBOne[0],
+          &quot;team_id&quot;: this.teamAList[0].team_id,
+          &quot;doubles_1_id&quot;: parseInt(dropValuePlayerAOne[1]),
+          &quot;doubles_2_id&quot;: parseInt(dropValuePlayerBOne[1])
+        },
+        &quot;combo_B&quot;: {
+          &quot;name&quot;: dropValuePlayerATwo[0] + &#x27;/&#x27; + dropValuePlayerBTwo[0],
+          &quot;team_id&quot;: this.teamBList[0].team_id,
+          &quot;doubles_1_id&quot;: parseInt(dropValuePlayerATwo[1]),
+          &quot;doubles_2_id&quot;: parseInt(dropValuePlayerBTwo[1])
+        },
+
+      }
+      this.commonService.createMatch(body).subscribe((res) &#x3D;&gt; {
+        this.getTies();
+        this.addMatches &#x3D; false
+
+
+      })
+
+    }
+
+  }
+}
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;tie&quot;&gt;
+    &lt;div class&#x3D;&quot;flex-e&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;showTie()&quot;&gt;Create Tie&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;card-list row&quot;&gt;
+        &lt;div class&#x3D;&quot; col-lg-4 mt-3&quot; *ngFor&#x3D;&quot;let item of tieList[0]&quot;&gt;
+            &lt;div class&#x3D;&quot;utt-card card&quot;&gt;
+                &lt;div class&#x3D;&quot;card-heading flex-sb w-100 px-3&quot;&gt;
+                    &lt;h6 class&#x3D;&quot;text-center&quot;&gt;
+                        {{item.name}}
+                    &lt;/h6&gt;
+                    &lt;h6&gt;
+                        {{item.tie_participants[0].games_won + &#x27;-&#x27; + item.tie_participants[1].games_won}}
+                    &lt;/h6&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;card-body&quot;&gt;
+                    &lt;div class&#x3D;&quot;py-2&quot; *ngIf&#x3D;&quot;item.matches.length&gt; 0&quot;&gt;
+                        &lt;h6&gt;Matches&lt;/h6&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;player&quot; *ngFor&#x3D;&quot;let player of item.matches;let i&#x3D;index&quot;&gt;
+                        &lt;div class&#x3D;&quot;&quot;&gt;
+                            &lt;div class&#x3D;&quot;flex-vc gap-2&quot;&gt;
+                                &lt;div class&#x3D;&quot;flex-vc gap-2 flex-grow-1&quot;&gt;
+                                    &lt;p class&#x3D;&quot;pOverflow&quot;&gt;{{player.match_participants[0].name}}&lt;/p&gt;
+                                    &lt;p&gt;vs&lt;/p&gt;
+                                    &lt;p class&#x3D;&quot;pOverflow&quot;&gt;{{player.match_participants[1].name}}&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;gameScore px-2&quot;&gt;
+                                    {{player.match_participants[0].games_won + &#x27;-&#x27; +
+                                    player.match_participants[1].games_won}}
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;!-- &lt;p class&#x3D;&quot;player-sno&quot;&gt;{{i+1}}.&lt;/p&gt; --&gt;
+                            &lt;!-- &lt;p&gt;{{player.name}}&lt;/p&gt; --&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;flex-e&quot;&gt;
+                        &lt;div class&#x3D;&quot;py-2&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;showAddMatches(item)&quot;&gt;Add Matches&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;p-dialog header&#x3D;&quot;Header&quot; [(visible)]&#x3D;&quot;_createTie&quot; [style]&#x3D;&quot;{width: &#x27;auto&#x27;}&quot;&gt;
+   
+&lt;/p-dialog&gt; --&gt;
+&lt;div class&#x3D;&quot;dialogModal &quot; *ngIf&#x3D;&quot;_createTie&quot;&gt;
+    &lt;dialog open class&#x3D;&quot;_createTieDialog&quot;&gt;
+        &lt;div class&#x3D;&quot;closeDialog mb-2&quot;&gt;
+            &lt;div class&#x3D;&quot;flex-e&quot;&gt;
+                &lt;div class&#x3D;&quot;p-links&quot; (click)&#x3D;&quot;closeDialog(&#x27;createTie&#x27;)&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; fill&#x3D;&quot;currentColor&quot;
+                        class&#x3D;&quot;bi bi-x-circle-fill&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path
+                            d&#x3D;&quot;M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;innerContent&quot;&gt;
+            &lt;div class&#x3D;&quot;teamSelection&quot;&gt;
+                &lt;div class&#x3D;&quot;row&quot;&gt;
+                    &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+                        &lt;div class&#x3D;&quot;heading&quot;&gt;
+                            &lt;h5&gt;Team A&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;!-- &lt;p-dropdown [options]&#x3D;&quot;squadList&quot; [autoDisplayFirst]&#x3D;&quot;true&quot; optionLabel&#x3D;&quot;name&quot;&gt;&lt;/p-dropdown&gt; --&gt;
+                        &lt;select id&#x3D;&quot;teamA&quot; #teamA [(ngModel)]&#x3D;&quot;selectedTeam1&quot; class&#x3D;&quot;mt-2&quot; name&#x3D;&quot;teamA&quot;
+                            (ngModelChange)&#x3D;&quot;getSelectedTeam($event,&#x27;teamA&#x27;,teamA)&quot;&gt;
+                            &lt;option value&#x3D;&quot;{{i}}&quot; *ngFor&#x3D;&quot; let item of squadList;let i &#x3D; index&quot;&gt;{{item.name}}&lt;/option&gt;
+
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+                        &lt;div class&#x3D;&quot;heading&quot;&gt;
+                            &lt;h5&gt;Team B&lt;/h5&gt;
+                        &lt;/div&gt;
+                        &lt;!-- &lt;p-dropdown [options]&#x3D;&quot;squadList&quot; [autoDisplayFirst]&#x3D;&quot;true&quot; optionLabel&#x3D;&quot;name&quot;&gt;&lt;/p-dropdown&gt; --&gt;
+                        &lt;select id&#x3D;&quot;teamB&quot; #teamB [(ngModel)]&#x3D;&quot;selectedTeam2&quot;
+                            (ngModelChange)&#x3D;&quot;getSelectedTeam($event,&#x27;teamB&#x27;,teamA)&quot; class&#x3D;&quot;mt-2&quot; name&#x3D;&quot;teamB&quot;&gt;
+                            &lt;option value&#x3D;&quot;{{i}}&quot; *ngFor&#x3D;&quot; let item of squadList;let i &#x3D; index&quot;&gt;{{item.name}}&lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+                        &lt;div class&#x3D;&quot;heading&quot;&gt;
+                            &lt;p&gt;Select Date&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- &lt;p-dropdown [options]&#x3D;&quot;squadList&quot; [autoDisplayFirst]&#x3D;&quot;true&quot; optionLabel&#x3D;&quot;name&quot;&gt;&lt;/p-dropdown&gt; --&gt;
+                        &lt;input class&#x3D;&quot;dateTime mt-2&quot; type&#x3D;&quot;datetime-local&quot; placeholder&#x3D;&quot;Date&quot; #dateTime id&#x3D;&quot;dateTime&quot;
+                            (change)&#x3D;&quot;setDateTime(dateTime)&quot;&gt;
+
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+                        &lt;div class&#x3D;&quot;heading&quot;&gt;
+                            &lt;p&gt;Group Type&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- &lt;p-dropdown [options]&#x3D;&quot;squadList&quot; [autoDisplayFirst]&#x3D;&quot;true&quot; optionLabel&#x3D;&quot;name&quot;&gt;&lt;/p-dropdown&gt; --&gt;
+                        &lt;select id&#x3D;&quot;teamB&quot; [(ngModel)]&#x3D;&quot;selectedGrpType&quot; class&#x3D;&quot;mt-2&quot; name&#x3D;&quot;teamB&quot; id&#x3D;&quot;teamB&quot;&gt;
+                            &lt;option value&#x3D;&quot;{{item.name}}&quot; *ngFor&#x3D;&quot; let item of grp_type;let i &#x3D; index&quot;&gt;{{item.name}}
+                            &lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;flex-e mt-3&quot;&gt;
+                    &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;createTie()&quot;&gt;Create Tie&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/dialog&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;dialogModal&quot; *ngIf&#x3D;&quot;addMatches&quot;&gt;
+    &lt;dialog open&gt;
+        &lt;div class&#x3D;&quot;closeDialog mb-2&quot;&gt;
+            &lt;div class&#x3D;&quot;flex-e&quot;&gt;
+                &lt;div class&#x3D;&quot;p-links&quot; (click)&#x3D;&quot;closeDialog(&#x27;addMember&#x27;)&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; fill&#x3D;&quot;currentColor&quot;
+                        class&#x3D;&quot;bi bi-x-circle-fill&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path
+                            d&#x3D;&quot;M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z&quot; /&gt;
+                    &lt;/svg&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;innerContent&quot;&gt;
+            &lt;div class&#x3D;&quot;heading&quot;&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;createMatchBody&quot;&gt;
+                &lt;form [formGroup]&#x3D;&quot;_createMatchForm&quot;&gt;
+                    &lt;div class&#x3D;&quot;row flex-hc flex-vc row-gap-2&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Table no.&quot; formControlName&#x3D;&quot;table&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Umpire Name&quot; formControlName&#x3D;&quot;umpire&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Match Name&quot; formControlName&#x3D;&quot;match_name&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Category Name&quot; formControlName&#x3D;&quot;category_name&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Day&quot; formControlName&#x3D;&quot;day&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-lg-4&quot;&gt;
+                            &lt;input type&#x3D;&quot;datetime-local&quot; placeholder&#x3D;&quot;Date&quot; formControlName&#x3D;&quot;datetime&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-12 my-1&quot; *ngFor&#x3D;&quot;let tt of _fieldList&quot;&gt;
+                            &lt;div class&#x3D;&quot;row flex-vc flex-hc&quot; *ngIf&#x3D;&quot;tt.isSingle&quot;&gt;
+                                &lt;div class&#x3D;&quot;col-lg-5&quot;&gt;
+                                    &lt;label for&#x3D;&quot;playerA&quot;&gt;Team A&lt;/label&gt;
+                                    &lt;select id&#x3D;&quot;playerA&quot; [(ngModel)]&#x3D;&quot;tt.player_teamA&quot; class&#x3D;&quot;mt-2&quot;
+                                        (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                        [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                        &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                            *ngFor&#x3D;&quot; let item of teamAList[0].users;let i &#x3D; index&quot;&gt;
+                                            {{item.name}}
+                                        &lt;/option&gt;
+
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+                                    &lt;p class&#x3D;&quot;text-center&quot;&gt;vs&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;div class&#x3D;&quot;col-lg-5&quot;&gt;
+                                    &lt;label for&#x3D;&quot;playerB&quot;&gt;Team B&lt;/label&gt;
+
+                                    &lt;select id&#x3D;&quot;playerB&quot; [(ngModel)]&#x3D;&quot;tt.player_teamB&quot; class&#x3D;&quot;mt-2&quot;
+                                        (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                        [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                        &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                            *ngFor&#x3D;&quot; let item of teamBList[0].users;let i &#x3D; index&quot;&gt;
+                                            {{item.name}}
+                                        &lt;/option&gt;
+
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;forDoubles&quot; *ngIf&#x3D;&quot;!tt.isSingle&quot;&gt;
+                                &lt;div class&#x3D;&quot;row flex-vc flex-hc&quot;&gt;
+                                    &lt;div class&#x3D;&quot;col-lg-5&quot;&gt;
+                                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                                            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;tt.dropValuePlayerAOne&quot; class&#x3D;&quot;mt-2&quot;
+                                                    (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                                    [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                                    &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                                        *ngFor&#x3D;&quot; let item of teamAList[0].users;let i &#x3D; index&quot;&gt;
+                                                        {{item.name}}
+                                                    &lt;/option&gt;
+
+                                                &lt;/select&gt;
+
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;tt.dropValuePlayerBOne&quot; class&#x3D;&quot;mt-2&quot;
+                                                    (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                                    [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                                    &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                                        *ngFor&#x3D;&quot; let item of teamAList[0].users;let i &#x3D; index&quot;&gt;
+                                                        {{item.name}}
+                                                    &lt;/option&gt;
+                                                &lt;/select&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class&#x3D;&quot;col-lg-2&quot;&gt;
+                                        &lt;p class&#x3D;&quot;text-center&quot;&gt;vs&lt;/p&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class&#x3D;&quot;col-lg-5&quot;&gt;
+                                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                                            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;tt.dropValuePlayerATwo&quot; class&#x3D;&quot;mt-2&quot;
+                                                    (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                                    [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                                    &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                                        *ngFor&#x3D;&quot; let item of teamBList[0].users;let i &#x3D; index&quot;&gt;
+                                                        {{item.name}}
+                                                    &lt;/option&gt;
+
+                                                &lt;/select&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class&#x3D;&quot;col-6&quot;&gt;
+                                                &lt;select [(ngModel)]&#x3D;&quot;tt.dropValuePlayerBTwo&quot; class&#x3D;&quot;mt-2&quot;
+                                                    (ngModelChange)&#x3D;&quot;getSelectedPlayer($event)&quot;
+                                                    [ngModelOptions]&#x3D;&quot;{standalone: true}&quot;&gt;
+                                                    &lt;option [value]&#x3D;&quot;item.name +&#x27;*&#x27;+item.user_id&quot;
+                                                        *ngFor&#x3D;&quot; let item of teamBList[0].users;let i &#x3D; index&quot;&gt;
+                                                        {{item.name}}
+                                                    &lt;/option&gt;
+
+                                                &lt;/select&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;action-buttons mt-4&quot;&gt;
+                        &lt;div class&#x3D;&quot;flex-vc gap-2 flex-hc&quot;&gt;
+                            &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;addField(true)&quot;
+                                [disabled]&#x3D;&quot;_fieldList.length &#x3D;&#x3D; 1&quot;&gt;Add Single&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;addField(false)&quot;
+                                [disabled]&#x3D;&quot;_fieldList.length &#x3D;&#x3D; 1&quot;&gt;Add Double&lt;/button&gt;
+                            &lt;button class&#x3D;&quot;btn btn-common&quot; (click)&#x3D;&quot;createMatch()&quot;&gt;Save&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/dialog&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./create-tie.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.dialogModal {
+    position: absolute;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.359);
+    top: 0;
+    left: 0;
+    transition: all .2s ease-in-out;
+
+    dialog {
+        .forDoubles {
+            select {
+                min-width: auto !important;
+                width: 100%;
+            }
+        }
+
+        transition: all .2s ease-in-out;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 9999999;
+        border: none;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        padding: 1rem;
+        width: auto;
+
+        &amp;._createTieDialog {
+            width: 32rem !important;
+        }
+
+        select {
+            padding: 5px;
+            border-radius: 7px;
+            min-width: 14rem;
+            width: 100%;
+        }
+
+        .createMatchBody {
+            input {
+                width: 14rem;
+                padding: 5px;
+                border-radius: 7px;
+                border: 1px solid rgb(118, 118, 118);
+            }
+        }
+    }
+}
+.pOverflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 165px;
+}
+.dateTime{
+    padding: 5px;
+    border-radius: 7px;
+    min-width: 14rem;
+    width: 100%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="tie">    <div class="flex-e">        <button class="btn btn-common" (click)="showTie()">Create Tie</button>    </div>    <div class="card-list row">        <div class=" col-lg-4 mt-3" *ngFor="let item of tieList[0]">            <div class="utt-card card">                <div class="card-heading flex-sb w-100 px-3">                    <h6 class="text-center">                        {{item.name}}                    </h6>                    <h6>                        {{item.tie_participants[0].games_won + \'-\' + item.tie_participants[1].games_won}}                    </h6>                </div>                <div class="card-body">                    <div class="py-2" *ngIf="item.matches.length> 0">                        <h6>Matches</h6>                    </div>                    <div class="player" *ngFor="let player of item.matches;let i=index">                        <div class="">                            <div class="flex-vc gap-2">                                <div class="flex-vc gap-2 flex-grow-1">                                    <p class="pOverflow">{{player.match_participants[0].name}}</p>                                    <p>vs</p>                                    <p class="pOverflow">{{player.match_participants[1].name}}</p>                                </div>                                <div class="gameScore px-2">                                    {{player.match_participants[0].games_won + \'-\' +                                    player.match_participants[1].games_won}}                                </div>                            </div>                            <!-- <p class="player-sno">{{i+1}}.</p> -->                            <!-- <p>{{player.name}}</p> -->                        </div>                    </div>                    <div class="flex-e">                        <div class="py-2">                            <button class="btn btn-common" (click)="showAddMatches(item)">Add Matches</button>                        </div>                    </div>                </div>            </div>        </div>    </div></div><!-- <p-dialog header="Header" [(visible)]="_createTie" [style]="{width: \'auto\'}">   </p-dialog> --><div class="dialogModal " *ngIf="_createTie">    <dialog open class="_createTieDialog">        <div class="closeDialog mb-2">            <div class="flex-e">                <div class="p-links" (click)="closeDialog(\'createTie\')">                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"                        class="bi bi-x-circle-fill" viewBox="0 0 16 16">                        <path                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />                    </svg>                </div>            </div>        </div>        <div class="innerContent">            <div class="teamSelection">                <div class="row">                    <div class="col-lg-6">                        <div class="heading">                            <h5>Team A</h5>                        </div>                        <!-- <p-dropdown [options]="squadList" [autoDisplayFirst]="true" optionLabel="name"></p-dropdown> -->                        <select id="teamA" #teamA [(ngModel)]="selectedTeam1" class="mt-2" name="teamA"                            (ngModelChange)="getSelectedTeam($event,\'teamA\',teamA)">                            <option value="{{i}}" *ngFor=" let item of squadList;let i = index">{{item.name}}</option>                        </select>                    </div>                    <div class="col-lg-6">                        <div class="heading">                            <h5>Team B</h5>                        </div>                        <!-- <p-dropdown [options]="squadList" [autoDisplayFirst]="true" optionLabel="name"></p-dropdown> -->                        <select id="teamB" #teamB [(ngModel)]="selectedTeam2"                            (ngModelChange)="getSelectedTeam($event,\'teamB\',teamA)" class="mt-2" name="teamB">                            <option value="{{i}}" *ngFor=" let item of squadList;let i = index">{{item.name}}</option>                        </select>                    </div>                    <div class="col-lg-6">                        <div class="heading">                            <p>Select Date</p>                        </div>                        <!-- <p-dropdown [options]="squadList" [autoDisplayFirst]="true" optionLabel="name"></p-dropdown> -->                        <input class="dateTime mt-2" type="datetime-local" placeholder="Date" #dateTime id="dateTime"                            (change)="setDateTime(dateTime)">                    </div>                    <div class="col-lg-6">                        <div class="heading">                            <p>Group Type</p>                        </div>                        <!-- <p-dropdown [options]="squadList" [autoDisplayFirst]="true" optionLabel="name"></p-dropdown> -->                        <select id="teamB" [(ngModel)]="selectedGrpType" class="mt-2" name="teamB" id="teamB">                            <option value="{{item.name}}" *ngFor=" let item of grp_type;let i = index">{{item.name}}                            </option>                        </select>                    </div>                </div>                <div class="flex-e mt-3">                    <button class="btn btn-common" (click)="createTie()">Create Tie</button>                </div>            </div>        </div>    </dialog></div><div class="dialogModal" *ngIf="addMatches">    <dialog open>        <div class="closeDialog mb-2">            <div class="flex-e">                <div class="p-links" (click)="closeDialog(\'addMember\')">                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"                        class="bi bi-x-circle-fill" viewBox="0 0 16 16">                        <path                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />                    </svg>                </div>            </div>        </div>        <div class="innerContent">            <div class="heading">            </div>            <div class="createMatchBody">                <form [formGroup]="_createMatchForm">                    <div class="row flex-hc flex-vc row-gap-2">                        <div class="col-lg-4">                            <input type="number" placeholder="Table no." formControlName="table">                        </div>                        <div class="col-lg-4">                            <input type="text" placeholder="Umpire Name" formControlName="umpire">                        </div>                        <div class="col-lg-4">                            <input type="text" placeholder="Match Name" formControlName="match_name">                        </div>                        <div class="col-lg-4">                            <input type="text" placeholder="Category Name" formControlName="category_name">                        </div>                        <div class="col-lg-4">                            <input type="number" placeholder="Day" formControlName="day">                        </div>                        <div class="col-lg-4">                            <input type="datetime-local" placeholder="Date" formControlName="datetime">                        </div>                        <div class="col-12 my-1" *ngFor="let tt of _fieldList">                            <div class="row flex-vc flex-hc" *ngIf="tt.isSingle">                                <div class="col-lg-5">                                    <label for="playerA">Team A</label>                                    <select id="playerA" [(ngModel)]="tt.player_teamA" class="mt-2"                                        (ngModelChange)="getSelectedPlayer($event)"                                        [ngModelOptions]="{standalone: true}">                                        <option [value]="item.name +\'*\'+item.user_id"                                            *ngFor=" let item of teamAList[0].users;let i = index">                                            {{item.name}}                                        </option>                                    </select>                                </div>                                <div class="col-lg-2">                                    <p class="text-center">vs</p>                                </div>                                <div class="col-lg-5">                                    <label for="playerB">Team B</label>                                    <select id="playerB" [(ngModel)]="tt.player_teamB" class="mt-2"                                        (ngModelChange)="getSelectedPlayer($event)"                                        [ngModelOptions]="{standalone: true}">                                        <option [value]="item.name +\'*\'+item.user_id"                                            *ngFor=" let item of teamBList[0].users;let i = index">                                            {{item.name}}                                        </option>                                    </select>                                </div>                            </div>                            <div class="forDoubles" *ngIf="!tt.isSingle">                                <div class="row flex-vc flex-hc">                                    <div class="col-lg-5">                                        <div class="row">                                            <div class="col-6">                                                <select [(ngModel)]="tt.dropValuePlayerAOne" class="mt-2"                                                    (ngModelChange)="getSelectedPlayer($event)"                                                    [ngModelOptions]="{standalone: true}">                                                    <option [value]="item.name +\'*\'+item.user_id"                                                        *ngFor=" let item of teamAList[0].users;let i = index">                                                        {{item.name}}                                                    </option>                                                </select>                                            </div>                                            <div class="col-6">                                                <select [(ngModel)]="tt.dropValuePlayerBOne" class="mt-2"                                                    (ngModelChange)="getSelectedPlayer($event)"                                                    [ngModelOptions]="{standalone: true}">                                                    <option [value]="item.name +\'*\'+item.user_id"                                                        *ngFor=" let item of teamAList[0].users;let i = index">                                                        {{item.name}}                                                    </option>                                                </select>                                            </div>                                        </div>                                    </div>                                    <div class="col-lg-2">                                        <p class="text-center">vs</p>                                    </div>                                    <div class="col-lg-5">                                        <div class="row">                                            <div class="col-6">                                                <select [(ngModel)]="tt.dropValuePlayerATwo" class="mt-2"                                                    (ngModelChange)="getSelectedPlayer($event)"                                                    [ngModelOptions]="{standalone: true}">                                                    <option [value]="item.name +\'*\'+item.user_id"                                                        *ngFor=" let item of teamBList[0].users;let i = index">                                                        {{item.name}}                                                    </option>                                                </select>                                            </div>                                            <div class="col-6">                                                <select [(ngModel)]="tt.dropValuePlayerBTwo" class="mt-2"                                                    (ngModelChange)="getSelectedPlayer($event)"                                                    [ngModelOptions]="{standalone: true}">                                                    <option [value]="item.name +\'*\'+item.user_id"                                                        *ngFor=" let item of teamBList[0].users;let i = index">                                                        {{item.name}}                                                    </option>                                                </select>                                            </div>                                        </div>                                    </div>                                </div>                            </div>                        </div>                    </div>                    <div class="action-buttons mt-4">                        <div class="flex-vc gap-2 flex-hc">                            <button class="btn btn-common" (click)="addField(true)"                                [disabled]="_fieldList.length == 1">Add Single</button>                            <button class="btn btn-common" (click)="addField(false)"                                [disabled]="_fieldList.length == 1">Add Double</button>                            <button class="btn btn-common" (click)="createMatch()">Save</button>                        </div>                    </div>                </form>            </div>        </div>    </dialog></div></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'CreateTieComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateTieComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

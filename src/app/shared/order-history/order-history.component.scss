@@ -1,0 +1,153 @@
+.container-xxl {
+    ::ng-deep {
+        .p-dialog {
+            overflow-y: auto;
+        }
+    }
+
+    .common-table {
+        .p-datatable-thead>tr>th {
+            text-align: start;
+        }
+
+        .p-datatable-tbody>tr>td {
+            text-align: start;
+        }
+    }
+}
+
+
+
+@mixin flux($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+.g{
+    gap: .3rem;
+}
+
+.f{
+    padding-left: 30px !important;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+}
+
+
+// skelton css starts
+.skeletonlayout {
+    .row{
+      .col-lg-6{
+        display: flex;
+        gap: 5px;
+      }
+    }
+    
+      .heading {
+        ::ng-deep {
+          p-skeleton {
+            .p-skeleton {
+              // z-index: 99999;
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+      .cards {
+        .mt-2 {
+          .col-lg-6 {
+            &:nth-child(2) {
+              ::ng-deep {
+                p-skeleton {
+                  float: right;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .id{
+      display: flex;
+      gap: 5px;
+      div{
+        display: flex;
+        gap: 5px;
+      }
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      tr{
+        th{
+          background-color: #f8f8f8;
+          padding: 10px;
+        }
+        td{
+          padding: 10px;
+          border-bottom: 1px solid #dee2e6;
+        }
+      }
+    }
+    // skeleton css end
+    @media screen and (width >=319px) and (width <=425px) {
+      .skeletonlayout {
+        margin-top: 9px !important;
+        overflow: hidden !important;
+    }
+  }
+  
+  @media screen and (width >=426px) and (width <=424px) {
+      .skeletonlayout {
+        margin-top: 9px !important;
+        overflow: hidden !important;
+    }
+  }
+  
+
+  .container{
+    .invoiceContainer{
+      .bigger{
+        font-size: 16px;
+        font-weight: bold;
+      }
+     .headingInvoice{
+      display:inline;
+      // font-weight: bold;
+      font-size: 24px;
+      color: red;
+      border-bottom: 2px  solid red;
+     }
+    }
+  }
+
+
+  @media print {
+    .container{
+      margin: 0 50px !important;
+      .invoiceContainer{
+        
+       .headingInvoice{
+        display:inline;
+        // font-weight: bold;
+        font-size: 24px;
+        color: red;
+        border-bottom: 2px  solid red;
+       }
+      }
+    }
+  
+  }
+  

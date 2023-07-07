@@ -1,0 +1,286 @@
+<div class="signup-container" *ngIf="!_iSVerfy">
+    <section class="section-signup">
+        <div class="signup-row ">
+            <div class="centeredLogo">
+                <img src="../../../assets/icons/stupalogo/stupalogobiginsize.png" class="cbtm_img_w300" alt="">
+            </div>
+
+            <div class="welcome step2" *ngIf="!_isFirstPage">
+                <div (click)="back()" style="
+                    display: inline-block;">
+                    <i class="bi bi-arrow-left-circle p-links" style="font-size: 20px;color: var(--main-color);"></i>
+                    <!-- <button class=" borderBackground_None"><img src="../../../assets/icons/backbtn/boldbackBTN.png"
+                            class="backButton_w33 ml1rem " alt=""> </button> -->
+                </div>
+                <div class="welcome-top text-center my-2">
+                    <p class="steps"><b>Step 2 of 2</b></p>
+                    <!-- <h3 class="heading-welcome my-2">{{'signUp.personalDetails' |translate}}</h3> -->
+                    <h3 class="heading-welcome my-2">{{_currentName +" Details"}}</h3>
+                    <p class="subheading">{{'signUp.alreadyHaveAccnt' |translate}}<a routerLink="/account/login"
+                            class="signInUrl" style="margin-left: 0.5rem;"><b>{{'login.signIn' |translate}}</b></a>
+                    </p>
+                </div>
+                <form [formGroup]="_formGroupDynamic" class="signup-form">
+                    <div *ngIf="true">
+                        <div *ngFor="let field of _signUpFields;let i=index">
+                            <div [ngSwitch]="true">
+                                <div *ngSwitchCase="field.data_type==='text'" class="my-2">
+                                    <label for="">{{field.title}} </label>
+                                    <input id="signUpField" type="text" [formControlName]="field.id" pInputText
+                                        placeholder={{field.title}}>
+
+                                </div>
+                                <div *ngSwitchCase="field.data_type=== 'number'" class="my-2">
+                                    <label for=""> {{field.title}} </label>
+                                    <input (keydown)="numberValueSet($event)" id="signUpNumber" type="number"
+                                        pattern="[0-9]*" [formControlName]="field.id" pInputText
+                                        placeholder={{field.title}} />
+                                </div>
+                                <div *ngSwitchCase="field.data_type=== 'phone'" class="my-2">
+                                    <label for=""> {{field.title}} </label>
+                                    <!-- <div class="main">
+                                        <div class="left">
+                                            <input id="phonenumber" type="text" #gap readonly
+                                                [ngModelOptions]="{standalone: true}" pInputText
+                                                [(ngModel)]="_currentCountryCode" />
+                                        </div>
+                                        <div class="right">
+                                            <input id="phonenumber" type="number" (keydown)="numberValueSet($event)"
+                                                [formControlName]="field.id" pInputText placeholder={{field.title}} />
+                                        </div>
+                                    </div> -->
+                                    <input id="phonenumber" type="number" (keydown)="numberValueSet($event)"
+                                        [formControlName]="field.id" pInputText placeholder={{field.title}} />
+                                    <!-- <div class="row gapping">
+                                        <div class="col-lg-2"> <input id="phonenumber" type="text" #gap
+                                               readonly [ngModelOptions]="{standalone: true}" pInputText
+=======
+                                    <label for=""> {{field.title}} </label>
+                                    <div class="row gapping">
+                                        <div class="col-lg-2"> <input id="phonenumber" type="text" #gap readonly
+                                                [ngModelOptions]="{standalone: true}" pInputText
+>>>>>>> d74c96a355d5b348bf9b7179e617be2dd93c704c
+                                                [(ngModel)]="_currentCountryCode" />
+                                        </div>
+                                        <div class="col-lg-10"> <input id="phonenumber" type="number"
+                                                (keydown)="numberValueSet($event)" [formControlName]="field.id"
+                                                pInputText placeholder={{field.title}} />
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                                <div *ngSwitchCase="field.data_type=== 'file'" class="my-2">
+                                    <span class="p-input-icon-right">
+                                        <!-- <i class="pi pi-cloud-upload"></i> -->
+                                        <label for=""> {{field.title}} </label>
+                                        <div class="rel" style="position: relative; cursor:pointer ;">
+                                            <!-- <input id="inputFilecss" style="cursor:pointer;height:38px" id="signUpFile"
+                                                type="file" [formControlName]="field.id" pInputText
+                                                placeholder={{field.title}} /> -->
+                                            <input id="inputFilecss" style="cursor:pointer;height:38px" id="signUpFile"
+                                                type="file" [formControlName]="field.id" pInputText
+                                                (change)="onFileDropped($any($event.target).files,field.id)"
+                                                accept="application/pdf" placeholder={{field.title}} />
+                                            <img class="p_absolute social_icons_w20"
+                                                src="../../../assets/icons/upload-icon.png" alt="">
+                                        </div>
+                                    </span>
+
+                                </div>
+                                <div *ngSwitchCase="field.data_type=== 'email'" class="my-2">
+                                    <label for=""> {{field.title}} </label>
+                                    <input id="signUpEmail" type="email" [formControlName]="field.id" pInputText
+                                        placeholder={{field.title}} />
+                                </div>
+                                <div #password *ngSwitchCase="field.data_type=== 'password'" class="my-2">
+                                    <label for=""> {{field.title}} </label>
+                                    <!-- <div class="eyeIconContainer">
+                                        <img [src]=__change_image width="15" height="15" alt="" (click)="showPassword(field.data_type)">
+                                    </div> -->
+                                    <!-- <input id="signUpPwd" type="password" [formControlName]="field.id" pInputText
+                                        placeholder={{field.title}} /> -->
+                                    <p-password [formControlName]="field.id" [toggleMask]="true" #password
+                                        appendTo="body" placeholder={{field.title}}>
+                                        <!-- [toggleMask]="true" this was removed from the p-password field -->
+
+                                        <ng-template pTemplate="footer">
+                                            <p-divider></p-divider>
+                                            <p class="mt-2">Suggestions</p>
+                                            <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                                                <li>At least one lowercase</li>
+                                                <li>At least one uppercase</li>
+                                                <li>At least one numeric</li>
+                                                <li>Minimum 8 characters</li>
+                                            </ul>
+                                        </ng-template>
+                                    </p-password>
+                                    <!-- <i id="eye" class="pi pi-eye-slash"></i> -->
+                                </div>
+
+
+                                <div class="my-2" *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='country'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_countryList" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body"
+                                        (onChange)="getState()">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2" *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='state'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_stateList" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body"
+                                        (onChange)="getCityList()">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2" *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='gender'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_genderList"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2" *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='city'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_cityList" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body"
+                                        optionValue="name">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2"
+                                    *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='parent_id' && !isDynamicClub()">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_clubList" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body"
+                                        optionValue="user_id">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2"
+                                    *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='parent_id' && isDynamicClub()">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="field.options" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="value" appendTo="body"
+                                        optionValue="id">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2"
+                                    *ngSwitchCase="field.data_type=== 'dropdown' && field.id=='statefederation'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="_federationList" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="name" appendTo="body"
+                                        (onChange)="getClub()" optionValue="user_id">
+                                    </p-dropdown>
+                                </div>
+
+                                <div class="my-2"
+                                    *ngSwitchCase="field.data_type=== 'dropdown' && field.id!=='state' && field.id!=='gender' && field.id!=='country'&& field.id!=='city' && field.id!=='statefederation' && field.id!=='parent_id'">
+                                    <label for=""> {{field.title}} </label>
+                                    <p-dropdown [formControlName]="field.id" [options]="field.options" [filter]="true"
+                                        placeholder={{field.title}} optionLabel="value" appendTo="body">
+                                    </p-dropdown>
+                                </div>
+                                <div class="my-2" *ngSwitchCase="field.data_type=== 'date'">
+                                    <!-- <input type="date" [formControlName]="field.id" pInputText
+                                        placeholder={{field.placeholder}} /> -->
+                                    <label for=""> {{field.title}} </label>
+                                    <p-calendar inputId="basic" placeholder={{field.title}} appendTo="body"
+                                        [maxDate]="_currentDate" dateFormat="yy/mm/dd" [formControlName]="field.id">
+                                    </p-calendar>
+                                </div>
+                                <!-- <div class="error-txt-msg mb-2"
+                                    *ngIf=" _isSubmit && _formGroupDynamic.controls[field.id].hasError('required')"
+                                    style="color: red;">{{field.title}} Is Required Field.</div> -->
+                                <div class="error-txt-msg mb-2"
+                                    *ngIf=" _isSubmit && _formGroupDynamic.controls[field.id].hasError('required')"
+                                    style="color: red;
+                                    font-size: 0.7rem;
+                                    margin-top:-1rem;"> <span
+                                        style="color: red">*</span>{{'signupmanagement.req'|translate}}
+                                </div>
+                                <div class="error-txt-msg mb-2"
+                                    *ngIf="_isSubmit && _formGroupDynamic.controls[field.id].hasError('pattern')"
+                                    style="color: red; font-size: 0.7rem;">
+                                    Incorrect Format.</div>
+                                <div class="error-txt-msg mb-2"
+                                    *ngIf="_isSubmit && _formGroupDynamic.controls[field.id].hasError('maxlength')"
+                                    style="color: red; font-size: 0.7rem;
+                                     margin-top:-1rem;">
+                                    Max Length Is 70.</div>
+
+
+                                <!-- <div *ngSwitchCase="field.type=== 'date'">
+                                    <input type="date" [formControlName]="field.name" pInputText placeholder={{field.placeholder}} />
+                                </div> -->
+                                <!-- <input type="text" pInputText placeholder={{field.title}} /> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="agreetoCBTM flex-vc mt-3">
+                        <p-checkbox [ngModelOptions]="{standalone: true}" [(ngModel)]="termCondition" id="signUpVal"
+                            class="me-2" name="groupname" [binary]="true"></p-checkbox>
+
+                        <div class="right flex-vc">
+                            {{'signUp.agreeTo' |translate}}
+                            <a href="http://stupaevents.com/#/term-con" target="_blank" class=" bilack ">
+                                Terms and Conditions
+
+                            </a>
+                            <!-- <div class="allp"> -->
+                            <span *ngFor="let item of __getLinks">
+                                <a class="signInUrl" [href]='item.url' target="_Blank">{{item.title +","}}</a>
+                            </span>
+                            <!-- </div> -->
+                        </div>
+                        <!-- <p>{{'signUp.agreeTo' |translate}} <a href="https://www.google.com/" class="signInUrl">{{'signUp.tnc' |translate}}</a>,<a
+                            href="https://www.youtube.com/" class="signInUrl">{{'signUp.privacyPolicy' |translate}}</a>
+                            and <a href="https://www.facebook.com/" class="signInUrl">{{'signUp.contentPolicy' |translate}}</a>
+                        </p> -->
+                    </div>
+                    <div class="text-center">
+                        <button id="signUpBtn" class="btn btn_green" style="padding: 7px 20px !important;
+                        width: 100% !important;" (click)="SignUpSubmit()">SIGN UP</button>
+                    </div>
+                </form>
+            </div>
+            <div class="welcome-card" *ngIf="_isFirstPage">
+                <div class="welcome step1">
+                    <div class="welcome-top text-center my-2">
+                        <p class="steps"><b>Step 1 of 2</b></p>
+                        <h3 class="heading-welcome my-2">{{'signUp.describeYourself' |translate}}</h3>
+                        <p class="subheading">{{'signUp.alreadyHaveAccnt' |translate}}<a routerLink="/account/login"
+                                class="signInUrl"><b>{{'login.signIn' |translate}}
+                                </b></a>
+                        </p>
+                    </div>
+                    <form class="signup-form">
+                        <div class="flex-vc checkbox-row" *ngFor="let items of _userRoles">
+                            <!-- <p-checkbox (onChange)="currentRole($event)" [(ngModel)]="items.checked" [binary]="true"  class="me-2" name="groupname" value={{items.roleName}}></p-checkbox> -->
+                            <!-- <p>{{items.roleName}}</p> -->
+                            <input id="signUprole" (click)="currentRole($event)" type="checkbox"
+                                class="htmlCheckbox me-2" name={{items.roleName}} value={{items.roleName}}
+                                [checked]="items.checked">
+                            <label for="items.roleName">{{items.roleName}}</label><br>
+                        </div>
+                    </form>
+                    <div class="text-center">
+                        <button id="signUpBtnNext" [disabled]="_nextDisabled" (click)="nextPage()"
+                            class="btn btn_green">{{'signUp.next' |translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="poweredBy">
+            <img src="../../../assets/icons/poweredBy.png" class="powered_logo_w130" alt="">
+        </div> -->
+        <!-- <div class="imagi flex-vc flex-hc">
+            <div class="text">Powered by</div>
+            <img src="../../../assets/logos/stupalogobiginsize.png" alt="">
+        </div> -->
+    </section>
+</div>
+
+<p-toast position="bottom-center" key="bc"></p-toast>
+<div *ngIf="_iSVerfy">
+    <app-verify [_currentRoleId]="_currentRoleId" [_userGender]="_userGender" [_userEmail]="_userEmail"
+        [_userPassword]="_userPassword" [_signUpFormData]="_finalSignUpFormData" [_stateId]="_stateId"
+        [_countryId]="_countryId" [_fullName]="_fullName" [_parentId]="_parentId">
+    </app-verify>
+</div>

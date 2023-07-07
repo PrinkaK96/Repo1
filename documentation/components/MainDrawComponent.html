@@ -1,0 +1,3709 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  MainDrawComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/event-organize/fixture/main-draw/main-draw.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>stupa-main-draw</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./main-draw.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./main-draw.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_arrangePlayer" >_arrangePlayer</a>
+                            </li>
+                            <li>
+                                <a href="#_controller" >_controller</a>
+                            </li>
+                            <li>
+                                <a href="#_dialogStyle" >_dialogStyle</a>
+                            </li>
+                            <li>
+                                <a href="#_doubleList" >_doubleList</a>
+                            </li>
+                            <li>
+                                <a href="#_doubleListCopy" >_doubleListCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_eventId" >_eventId</a>
+                            </li>
+                            <li>
+                                <a href="#_fixture" >_fixture</a>
+                            </li>
+                            <li>
+                                <a href="#_fixtureTreeData" >_fixtureTreeData</a>
+                            </li>
+                            <li>
+                                <a href="#_isAllAPIExcecuted" >_isAllAPIExcecuted</a>
+                            </li>
+                            <li>
+                                <a href="#_isViewPlayerGrid" >_isViewPlayerGrid</a>
+                            </li>
+                            <li>
+                                <a href="#_matchDetailsList" >_matchDetailsList</a>
+                            </li>
+                            <li>
+                                <a href="#_mathesList" >_mathesList</a>
+                            </li>
+                            <li>
+                                <a href="#_mixDoubleList" >_mixDoubleList</a>
+                            </li>
+                            <li>
+                                <a href="#_mixDoubleListCopy" >_mixDoubleListCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_participantIdList" >_participantIdList</a>
+                            </li>
+                            <li>
+                                <a href="#_searchByPlayerNameView" >_searchByPlayerNameView</a>
+                            </li>
+                            <li>
+                                <a href="#_showFull" >_showFull</a>
+                            </li>
+                            <li>
+                                <a href="#_showLoader" >_showLoader</a>
+                            </li>
+                            <li>
+                                <a href="#_showTree" >_showTree</a>
+                            </li>
+                            <li>
+                                <a href="#_teamList" >_teamList</a>
+                            </li>
+                            <li>
+                                <a href="#_teamListCopy" >_teamListCopy</a>
+                            </li>
+                            <li>
+                                <a href="#_topPlayers" >_topPlayers</a>
+                            </li>
+                            <li>
+                                <a href="#_topPlayersCopy" >_topPlayersCopy</a>
+                            </li>
+                            <li>
+                                <a href="#azureLoggerConversion" >azureLoggerConversion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doubleEliminationTournament" >doubleEliminationTournament</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#renderedTree" >renderedTree</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#singleEliminationTournament" >singleEliminationTournament</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closePopUpIsViewPlayerGrid" >closePopUpIsViewPlayerGrid</a>
+                            </li>
+                            <li>
+                                <a href="#deleteFixture" >deleteFixture</a>
+                            </li>
+                            <li>
+                                <a href="#generateCustomeKO" >generateCustomeKO</a>
+                            </li>
+                            <li>
+                                <a href="#generateFixtures" >generateFixtures</a>
+                            </li>
+                            <li>
+                                <a href="#getFirstLetters" >getFirstLetters</a>
+                            </li>
+                            <li>
+                                <a href="#getFirstRoundKnockout" >getFirstRoundKnockout</a>
+                            </li>
+                            <li>
+                                <a href="#getKnockoutTournament" >getKnockoutTournament</a>
+                            </li>
+                            <li>
+                                <a href="#getPlayerList" >getPlayerList</a>
+                            </li>
+                            <li>
+                                <a href="#hideBye" >hideBye</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#refreshTree" >refreshTree</a>
+                            </li>
+                            <li>
+                                <a href="#regenerateKoFirstRoundTournament" >regenerateKoFirstRoundTournament</a>
+                            </li>
+                            <li>
+                                <a href="#returnUpdatedList" >returnUpdatedList</a>
+                            </li>
+                            <li>
+                                <a href="#saveAsBefore" >saveAsBefore</a>
+                            </li>
+                            <li>
+                                <a href="#searchPlayerInView" >searchPlayerInView</a>
+                            </li>
+                            <li>
+                                <a href="#showFixture" >showFixture</a>
+                            </li>
+                            <li>
+                                <a href="#updatedPullList" >updatedPullList</a>
+                            </li>
+                            <li>
+                                <a href="#viewPlayer" >viewPlayer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_currentCategoryId" >_currentCategoryId</a>
+                            </li>
+                            <li>
+                                <a href="#_currentParticipantId" >_currentParticipantId</a>
+                            </li>
+                            <li>
+                                <a href="#_fixtureScreen" >_fixtureScreen</a>
+                            </li>
+                            <li>
+                                <a href="#isKnockout" >isKnockout</a>
+                            </li>
+                            <li>
+                                <a href="#isRefreshData" >isRefreshData</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fixtureService: <a href="../injectables/FixtureServiceService.html" target="_self">FixtureServiceService</a>, messageService: <a href="../interfaces/Message.html" target="_self">MessageService</a>, confirmationDialogService: <a href="../injectables/ConfirmationDialogService.html" target="_self">ConfirmationDialogService</a>, encyptDecryptService: <a href="../injectables/EncyptDecryptService.html" target="_self">EncyptDecryptService</a>, eventsService: <a href="../injectables/EventsService.html" target="_self">EventsService</a>, azureLoggerService: <a href="../injectables/MyMonitoringService.html" target="_self">MyMonitoringService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fixtureService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FixtureServiceService.html" target="_self" >FixtureServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>messageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>confirmationDialogService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ConfirmationDialogService.html" target="_self" >ConfirmationDialogService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>encyptDecryptService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EncyptDecryptService.html" target="_self" >EncyptDecryptService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>eventsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EventsService.html" target="_self" >EventsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>azureLoggerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyMonitoringService.html" target="_self" >MyMonitoringService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section data-compodoc="block-inputs">
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_currentCategoryId"></a>
+                        <b>_currentCategoryId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:35</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_currentParticipantId"></a>
+                        <b>_currentParticipantId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_fixtureScreen"></a>
+                        <b>_fixtureScreen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isKnockout"></a>
+                        <b>isKnockout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:38</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isRefreshData"></a>
+                        <b>isRefreshData</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closePopUpIsViewPlayerGrid"></a>
+                    <span class="name">
+                        <span ><b>closePopUpIsViewPlayerGrid</b></span>
+                        <a href="#closePopUpIsViewPlayerGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closePopUpIsViewPlayerGrid()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="586"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:586</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFixture"></a>
+                    <span class="name">
+                        <span ><b>deleteFixture</b></span>
+                        <a href="#deleteFixture"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteFixture()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="375"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:375</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateCustomeKO"></a>
+                    <span class="name">
+                        <span ><b>generateCustomeKO</b></span>
+                        <a href="#generateCustomeKO"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateCustomeKO()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="143"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:143</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateFixtures"></a>
+                    <span class="name">
+                        <span ><b>generateFixtures</b></span>
+                        <a href="#generateFixtures"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateFixtures()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="334"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:334</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFirstLetters"></a>
+                    <span class="name">
+                        <span ><b>getFirstLetters</b></span>
+                        <a href="#getFirstLetters"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFirstLetters(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="518"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:518</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFirstRoundKnockout"></a>
+                    <span class="name">
+                        <span ><b>getFirstRoundKnockout</b></span>
+                        <a href="#getFirstRoundKnockout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFirstRoundKnockout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getKnockoutTournament"></a>
+                    <span class="name">
+                        <span ><b>getKnockoutTournament</b></span>
+                        <a href="#getKnockoutTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getKnockoutTournament()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPlayerList"></a>
+                    <span class="name">
+                        <span ><b>getPlayerList</b></span>
+                        <a href="#getPlayerList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPlayerList()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="449"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:449</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hideBye"></a>
+                    <span class="name">
+                        <span ><b>hideBye</b></span>
+                        <a href="#hideBye"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hideBye(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="600"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:600</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: SimpleChanges)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                            <code>SimpleChanges</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshTree"></a>
+                    <span class="name">
+                        <span ><b>refreshTree</b></span>
+                        <a href="#refreshTree"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>refreshTree()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="609"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:609</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="regenerateKoFirstRoundTournament"></a>
+                    <span class="name">
+                        <span ><b>regenerateKoFirstRoundTournament</b></span>
+                        <a href="#regenerateKoFirstRoundTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>regenerateKoFirstRoundTournament()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="430"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:430</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="returnUpdatedList"></a>
+                    <span class="name">
+                        <span ><b>returnUpdatedList</b></span>
+                        <a href="#returnUpdatedList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>returnUpdatedList(detailsAfterSwap: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>detailsAfterSwap</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAsBefore"></a>
+                    <span class="name">
+                        <span ><b>saveAsBefore</b></span>
+                        <a href="#saveAsBefore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveAsBefore()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchPlayerInView"></a>
+                    <span class="name">
+                        <span ><b>searchPlayerInView</b></span>
+                        <a href="#searchPlayerInView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchPlayerInView()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="530"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:530</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showFixture"></a>
+                    <span class="name">
+                        <span ><b>showFixture</b></span>
+                        <a href="#showFixture"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showFixture()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedPullList"></a>
+                    <span class="name">
+                        <span ><b>updatedPullList</b></span>
+                        <a href="#updatedPullList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updatedPullList(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewPlayer"></a>
+                    <span class="name">
+                        <span ><b>viewPlayer</b></span>
+                        <a href="#viewPlayer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewPlayer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="423"
+                            class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:423</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_arrangePlayer"></a>
+                    <span class="name">
+                        <span ><b>_arrangePlayer</b></span>
+                        <a href="#_arrangePlayer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_controller"></a>
+                    <span class="name">
+                        <span ><b>_controller</b></span>
+                        <a href="#_controller"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_dialogStyle"></a>
+                    <span class="name">
+                        <span ><b>_dialogStyle</b></span>
+                        <a href="#_dialogStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ width: &#x27;95vw&#x27; }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_doubleList"></a>
+                    <span class="name">
+                        <span ><b>_doubleList</b></span>
+                        <a href="#_doubleList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_doubleListCopy"></a>
+                    <span class="name">
+                        <span ><b>_doubleListCopy</b></span>
+                        <a href="#_doubleListCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_eventId"></a>
+                    <span class="name">
+                        <span ><b>_eventId</b></span>
+                        <a href="#_eventId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fixture"></a>
+                    <span class="name">
+                        <span ><b>_fixture</b></span>
+                        <a href="#_fixture"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fixtureTreeData"></a>
+                    <span class="name">
+                        <span ><b>_fixtureTreeData</b></span>
+                        <a href="#_fixtureTreeData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isAllAPIExcecuted"></a>
+                    <span class="name">
+                        <span ><b>_isAllAPIExcecuted</b></span>
+                        <a href="#_isAllAPIExcecuted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isViewPlayerGrid"></a>
+                    <span class="name">
+                        <span ><b>_isViewPlayerGrid</b></span>
+                        <a href="#_isViewPlayerGrid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_matchDetailsList"></a>
+                    <span class="name">
+                        <span ><b>_matchDetailsList</b></span>
+                        <a href="#_matchDetailsList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_mathesList"></a>
+                    <span class="name">
+                        <span ><b>_mathesList</b></span>
+                        <a href="#_mathesList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_mixDoubleList"></a>
+                    <span class="name">
+                        <span ><b>_mixDoubleList</b></span>
+                        <a href="#_mixDoubleList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_mixDoubleListCopy"></a>
+                    <span class="name">
+                        <span ><b>_mixDoubleListCopy</b></span>
+                        <a href="#_mixDoubleListCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_participantIdList"></a>
+                    <span class="name">
+                        <span ><b>_participantIdList</b></span>
+                        <a href="#_participantIdList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_searchByPlayerNameView"></a>
+                    <span class="name">
+                        <span ><b>_searchByPlayerNameView</b></span>
+                        <a href="#_searchByPlayerNameView"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showFull"></a>
+                    <span class="name">
+                        <span ><b>_showFull</b></span>
+                        <a href="#_showFull"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showLoader"></a>
+                    <span class="name">
+                        <span ><b>_showLoader</b></span>
+                        <a href="#_showLoader"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showTree"></a>
+                    <span class="name">
+                        <span ><b>_showTree</b></span>
+                        <a href="#_showTree"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_teamList"></a>
+                    <span class="name">
+                        <span ><b>_teamList</b></span>
+                        <a href="#_teamList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_teamListCopy"></a>
+                    <span class="name">
+                        <span ><b>_teamListCopy</b></span>
+                        <a href="#_teamListCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_topPlayers"></a>
+                    <span class="name">
+                        <span ><b>_topPlayers</b></span>
+                        <a href="#_topPlayers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_topPlayersCopy"></a>
+                    <span class="name">
+                        <span ><b>_topPlayersCopy</b></span>
+                        <a href="#_topPlayersCopy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="azureLoggerConversion"></a>
+                    <span class="name">
+                        <span ><b>azureLoggerConversion</b></span>
+                        <a href="#azureLoggerConversion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Error()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doubleEliminationTournament"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>doubleEliminationTournament</b></span>
+                        <a href="#doubleEliminationTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NgttTournament.html" target="_self" >NgttTournament</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="renderedTree"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>renderedTree</b></span>
+                        <a href="#renderedTree"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>&quot;se&quot; | &quot;de&quot;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;de&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="singleEliminationTournament"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>singleEliminationTournament</b></span>
+                        <a href="#singleEliminationTournament"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NgttTournament.html" target="_self" >NgttTournament</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/event-organize/fixture/main-draw/main-draw.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, SimpleChanges } from &#x27;@angular/core&#x27;;
+import { MessageService } from &#x27;primeng/api&#x27;;
+import { MyMonitoringService } from &#x27;src/app/services/AzureLogging/logging.service&#x27;;
+import { EncyptDecryptService } from &#x27;src/app/services/EncryptDecrypt/encypt-decrypt.service&#x27;;
+import { FixtureServiceService } from &#x27;src/app/services/fixtures/fixture-service.service&#x27;;
+import { EventsService } from &#x27;src/app/services/WebEventService/events.service&#x27;;
+import { ConfirmationDialogService } from &#x27;src/app/shared/confirmation-dialog/confirmation-dialog.service&#x27;;
+import { NgttTournament } from &#x27;../fixture-tree/interfaces&#x27;;
+
+@Component({
+  selector: &#x27;stupa-main-draw&#x27;,
+  templateUrl: &#x27;./main-draw.component.html&#x27;,
+  styleUrls: [&#x27;./main-draw.component.scss&#x27;],
+  providers: [MessageService, ConfirmationDialogService],
+})
+export class MainDrawComponent implements OnInit {
+  //#region Variable Declarations
+  public singleEliminationTournament!: NgttTournament;
+  public doubleEliminationTournament!: NgttTournament;
+  public renderedTree: &#x27;se&#x27; | &#x27;de&#x27; &#x3D; &#x27;de&#x27;;
+  _controller: boolean &#x3D; true;
+  _showLoader: boolean &#x3D; false;
+  _isAllAPIExcecuted: boolean &#x3D; false;
+  _isViewPlayerGrid: boolean &#x3D; false;
+  _showTree: boolean &#x3D; false;
+  _fixture: any &#x3D; [];
+  _topPlayersCopy: any &#x3D; [];
+  _topPlayers: any &#x3D; [];
+  _arrangePlayer: any &#x3D; [];
+  _matchDetailsList: any &#x3D; [];
+  _participantIdList: any &#x3D; [];
+  _mathesList: any &#x3D; [];
+  _fixtureTreeData: any &#x3D; [];
+  @Input() _fixtureScreen: boolean &#x3D; false;
+  @Input() _currentCategoryId: any;
+  @Input() _currentParticipantId: any;
+  @Input() isRefreshData: boolean &#x3D; false;
+  @Input() isKnockout: boolean &#x3D; false;
+  _showFull: boolean &#x3D; false;
+  _dialogStyle &#x3D; { width: &#x27;95vw&#x27; };
+  _teamList: any &#x3D; [];
+  _teamListCopy: any &#x3D; [];
+  _doubleList: any &#x3D; [];
+  _doubleListCopy: any &#x3D; [];
+  _mixDoubleList: any &#x3D; [];
+  _mixDoubleListCopy: any &#x3D; [];
+  _searchByPlayerNameView: any &#x3D; &#x27;&#x27;;
+  _eventId: any;
+  azureLoggerConversion: any &#x3D; new Error();
+  //#endregion Variable Declarations
+  constructor(
+    private fixtureService: FixtureServiceService,
+    private messageService: MessageService,
+    private confirmationDialogService: ConfirmationDialogService,
+    private encyptDecryptService: EncyptDecryptService,
+    private eventsService: EventsService,
+    private azureLoggerService: MyMonitoringService
+  ) { }
+
+  ngOnInit(): void {
+    // this._eventId &#x3D; this.encyptDecryptService.decryptUsingAES256(
+    //   localStorage.getItem(&#x27;event_id&#x27;)
+
+    // );
+    // this._currentParticipantId;
+    // this.getFirstRoundKnockout();
+    // this.getKnockoutTournament();
+    // this.singleEliminationTournament &#x3D; {
+    //   rounds: [
+    //   ],
+    // };
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    this._eventId &#x3D; this.encyptDecryptService.decryptUsingAES256(
+      localStorage.getItem(&#x27;event_id&#x27;)
+
+    );
+    this._currentParticipantId;
+    this.getFirstRoundKnockout();
+    this.getKnockoutTournament();
+    this.singleEliminationTournament &#x3D; {
+      rounds: [
+      ],
+    };
+  }
+  //#region get Updated list for first round
+  updatedPullList(data: any) {
+    this.singleEliminationTournament.rounds[0] &#x3D; data;
+  }
+  //#endregion get Updated list for first round
+  //#region method used for show hide controller
+  showFixture() {
+    this._fixtureScreen &#x3D; true;
+    this._controller &#x3D; false;
+  }
+  //#endregion  method used for show hide controller
+  //#region method is used for generate First Round of Knockout with Match Details
+  getFirstRoundKnockout() {
+    this._isAllAPIExcecuted &#x3D; false;
+    if (
+      this._eventId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._eventId !&#x3D;&#x3D; null &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; null
+    ) {
+      this.fixtureService
+        .generateFirstRoundKnockout(this._eventId, this._currentCategoryId)
+        .subscribe({
+          next: (result: any) &#x3D;&gt; {
+            this._isAllAPIExcecuted &#x3D; true;
+            this._showLoader &#x3D; false;
+            this._arrangePlayer &#x3D; [];
+            this._matchDetailsList &#x3D; result.body;
+            this._arrangePlayer &#x3D; result.body
+              .map((md: any) &#x3D;&gt; md.match_details)
+              .flat();
+
+          },
+          error: (result: any) &#x3D;&gt; {
+            this._isAllAPIExcecuted &#x3D; true;
+            this._showLoader &#x3D; false;
+            this.azureLoggerConversion &#x3D; result.error.msg
+            this.azureLoggerService.logException(this.azureLoggerConversion)
+            this.messageService.add({
+              key: &#x27;bc&#x27;,
+              severity: &#x27;error&#x27;,
+              summary: &#x27;Error&#x27;,
+              detail: result.error.msg,
+              life: 3000,
+            });
+          },
+          complete: () &#x3D;&gt; { },
+        });
+    }
+  }
+  //#endregion method is used for generate First Round of Knockout with Match Details
+  //#region method is used for get latest updated list after drag drop
+  returnUpdatedList(detailsAfterSwap: any) {
+    this._arrangePlayer &#x3D; detailsAfterSwap;
+  }
+  //#endregion method is used for get latest updated list after drag drop
+  //#region method is used for generate Customized Knockout on Button click
+  generateCustomeKO() {
+    this._participantIdList &#x3D; this._arrangePlayer.map(
+      (id: any) &#x3D;&gt; id.participant_id
+    );
+    this._mathesList &#x3D; [];
+    for (let i &#x3D; 0; i &lt; this._participantIdList.length; i +&#x3D; 2) {
+      const matches &#x3D; {
+        participant_id_A: this._participantIdList[i],
+        participant_id_B: this._participantIdList[i + 1],
+      };
+      this._mathesList.push(matches);
+    }
+
+    const data &#x3D; {
+
+      event_id: parseInt(this._eventId),
+      category_id: this._currentCategoryId,
+      round: this._mathesList.length * 2,
+      matches: this._mathesList,
+    };
+    this.fixtureService.generateCustomizedKnockout(data).subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        this.getKnockoutTournament();
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;success&#x27;,
+          summary: &#x27;Success&#x27;,
+          detail: result.body.msg,
+          life: 3000,
+        });
+      },
+      error: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;error&#x27;,
+          summary: &#x27;Error&#x27;,
+          detail: result.error.msg,
+          life: 3000,
+        });
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion method is used for generate Customized Knockout on Button click
+  //#region  method will called after used for  generate Customized Knockout on Button click
+  getKnockoutTournament() {
+    this._isAllAPIExcecuted &#x3D; false;
+    if (
+      this._eventId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._eventId !&#x3D;&#x3D; null &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; null
+    ) {
+      this.fixtureService
+        .getKnockoutTournament(this._eventId, this._currentCategoryId)
+        .subscribe({
+          next: (result: any) &#x3D;&gt; {
+
+            this.getPlayerList();
+            if (result.body.length &gt; 0) {
+              if (this.singleEliminationTournament &#x3D;&#x3D; undefined) {
+                this.singleEliminationTournament &#x3D; {
+                  rounds: [
+                  ],
+                };
+                this.singleEliminationTournament.rounds &#x3D; [];
+              } else {
+                this.singleEliminationTournament.rounds &#x3D; [];
+              }
+              if (result.body.length &#x3D;&#x3D; 1) {
+                for (let i &#x3D; 0; i &lt; result.body.length; i++) {
+                  if (result.body[i].round &#x3D;&#x3D; &#x27;Final&#x27;) {
+                    this._showTree &#x3D; true;
+                    const dd &#x3D; {
+                      umpire_name: result.body[i].umpire_name,
+                      start_time: result.body[i].start_time,
+                      table: result.body[i].table,
+                      roundName: &#x27;Final&#x27;,
+                      type: &#x27;Final&#x27;,
+                      matches: result.body[i].matches,
+                      match_id: result.body[i].match_id
+                    };
+                    this.singleEliminationTournament.rounds.push(dd);
+                  } else {
+                    this._showTree &#x3D; false;
+                  }
+                }
+              } else {
+                this._showTree &#x3D; true;
+                for (let i &#x3D; 0; i &lt; result.body.length; i++) {
+                  if (result.body[i].round &#x3D;&#x3D; &#x27;Final&#x27;) {
+                    this._showTree &#x3D; true;
+                    const dd &#x3D; {
+                      roundName: &#x27;Final&#x27;,
+                      type: &#x27;Final&#x27;,
+                      umpire_name: result.body[i].umpire_name,
+                      start_time: result.body[i].start_time,
+                      table: result.body[i].table,
+                      matches: result.body[i].matches,
+                      match_id: result.body[i].match_id
+                    };
+                    this.singleEliminationTournament.rounds.push(dd);
+                  } else {
+                    const dd &#x3D; {
+                      umpire_name: result.body[i].umpire_name,
+                      start_time: result.body[i].start_time,
+                      table: result.body[i].table,
+                      roundName: result.body[i].round,
+                      type: &#x27;Winnerbracket&#x27;,
+                      matches: result.body[i].matches,
+                      match_id: result.body[i].match_id
+                    };
+                    this.singleEliminationTournament.rounds.push(dd);
+                  }
+                }
+              }
+              // this.messageService.add({
+              //   key: &#x27;bc&#x27;,
+              //   severity: &#x27;success&#x27;,
+              //   summary: &#x27;Success&#x27;,
+              //   detail: result.body.msg,
+              //   life: 3000,
+              // });
+            } else {
+              this._showTree &#x3D; false;
+              // this._fixtureScreen &#x3D; false;
+            }
+            this._isAllAPIExcecuted &#x3D; true;
+            // this._showTree &#x3D; this._fixtureScreen
+          },
+          error: (result: any) &#x3D;&gt; {
+            this._showLoader &#x3D; false;
+            this.azureLoggerConversion &#x3D; result.error.msg
+            this.azureLoggerService.logException(this.azureLoggerConversion)
+            this.messageService.add({
+              key: &#x27;bc&#x27;,
+              severity: &#x27;error&#x27;,
+              summary: &#x27;Error&#x27;,
+              detail: result.error.msg,
+              life: 3000,
+            });
+          },
+          complete: () &#x3D;&gt; { },
+        });
+    }
+  }
+  //#endregion method will called after used for  generate Customized Knockout on Button click
+  //#region method is used for Save System Generated Group
+  saveAsBefore() {
+    if (
+      this._eventId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._eventId !&#x3D;&#x3D; null &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; null
+    ) {
+      this.eventsService
+        .createMatches(this._eventId, this._currentCategoryId, 2)
+        .subscribe({
+          next: (result: any) &#x3D;&gt; {
+            this._showLoader &#x3D; false;
+            this.getKnockoutTournament();
+            this.messageService.add({
+              key: &#x27;bc&#x27;,
+              severity: &#x27;success&#x27;,
+              summary: &#x27;Success&#x27;,
+              detail: result.body.msg,
+              life: 3000,
+            });
+          },
+          error: (result: any) &#x3D;&gt; {
+            this._showLoader &#x3D; false;
+            this.azureLoggerConversion &#x3D; result.error.msg
+            this.azureLoggerService.logException(this.azureLoggerConversion)
+            this.messageService.add({
+              key: &#x27;bc&#x27;,
+              severity: &#x27;info&#x27;,
+              summary: &#x27;Info&#x27;,
+              detail: result.error.msg,
+              life: 3000,
+            });
+          },
+          complete: () &#x3D;&gt; { },
+        });
+    }
+  }
+  //#endregion method is used for Save System Generated Group
+  //#region This method is used for Generate Fixture On Button Click
+  generateFixtures() {
+    const body &#x3D; {
+      event_id: this._eventId,
+      category_id: this._currentCategoryId,
+      participant_type_id: this._currentParticipantId,
+      max_winners: 1,
+      main_draw_participants: [],
+      min_no_participant: 1,
+    };
+    this.eventsService.generateFixtures(body).subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        // this._showTree &#x3D; false;
+        // this._fixtureScreen &#x3D; false;
+        this.getFirstRoundKnockout();
+        ///this._winnerCount &#x3D; &#x27;&#x27;;
+        // this.messageService.add({
+        //   key: &#x27;bc&#x27;,
+        //   severity: &#x27;success&#x27;,
+        //   summary: &#x27;Success&#x27;,
+        //   detail: result.body.msg,
+        //   life: 3000,
+        // });
+      },
+      error: (result: any) &#x3D;&gt; {
+        this._showLoader &#x3D; false;
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;error&#x27;,
+          summary: &#x27;Error&#x27;,
+          detail: result.error.msg,
+          life: 3000,
+        });
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion
+  //#region method is used for  delete fixture
+  deleteFixture() {
+    if (this._showTree) {
+      this.confirmationDialogService
+        .confirm(
+          &#x27;Please confirm..&#x27;,
+          &#x27;Are you sure ,you want to delete this fixture? Once you delete the fixture all the changes, result and videos will be lost.&#x27;
+        )
+        .then((confirmed) &#x3D;&gt; {
+          if (confirmed) {
+            this._showLoader &#x3D; true;
+            this.fixtureService
+              .deleteKnockout(this._eventId, this._currentCategoryId, 2)
+              .subscribe({
+                next: (result: any) &#x3D;&gt; {
+
+                  this.messageService.add({
+                    key: &#x27;bc&#x27;,
+                    severity: &#x27;success&#x27;,
+                    summary: &#x27;Success&#x27;,
+                    detail: result.body.message,
+                    life: 3000,
+                  });
+                  this.regenerateKoFirstRoundTournament();
+                  //this._showValues &#x3D; false;
+                },
+                error: (result: any) &#x3D;&gt; {
+                  this._showLoader &#x3D; false;
+
+                  this.messageService.add({
+                    key: &#x27;bc&#x27;,
+                    severity: &#x27;error&#x27;,
+                    summary: &#x27;Error&#x27;,
+                    detail: result.error.msg,
+                    life: 3000,
+                  });
+                  this.azureLoggerConversion &#x3D; result.error.msg
+                  this.azureLoggerService.logException(this.azureLoggerConversion)
+                },
+                complete: () &#x3D;&gt; { },
+              });
+          } else {
+          }
+        })
+        .catch(() &#x3D;&gt; { });
+    }
+  }
+  //#endregion
+  //#region  method will open popup for View list
+  viewPlayer() {
+    if (this._topPlayers.length &gt; 0) {
+      this._isViewPlayerGrid &#x3D; true;
+    }
+  }
+  //#endregion method will open popup for View list
+  //#region method will re-generate knockout first round tournament after delete fixure on button click
+  regenerateKoFirstRoundTournament() {
+    this.fixtureService
+      .regenerateKoFirstRoundTournament(this._eventId, this._currentCategoryId)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this.getKnockoutTournament();
+
+          //this._showValues &#x3D; false;
+        },
+        error: (result: any) &#x3D;&gt; {
+          this._showLoader &#x3D; false;
+          this.azureLoggerConversion &#x3D; result.error.msg
+          this.azureLoggerService.logException(this.azureLoggerConversion)
+        },
+        complete: () &#x3D;&gt; { },
+      });
+  }
+  //#endregion method will re-generate knockout first round tournament after delete fixure on button click
+  //#region method is used for get Event Registed Players List
+  getPlayerList() {
+    this._showLoader &#x3D; true;
+    if (
+      this._eventId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._currentParticipantId !&#x3D;&#x3D; undefined &amp;&amp;
+      this._currentCategoryId !&#x3D;&#x3D; undefined
+    ) {
+      this.eventsService
+        .getEventRegistedPlayers(
+          this._eventId,
+          this._currentParticipantId,
+          this._currentCategoryId
+        )
+        .subscribe({
+          next: (result: any) &#x3D;&gt; {
+            this._showLoader &#x3D; false;
+            if (this._currentParticipantId &#x3D;&#x3D; 1) {
+              this._topPlayers &#x3D; [];
+              this._topPlayersCopy &#x3D; [];
+              this._showLoader &#x3D; false;
+              for (let i &#x3D; 0; i &lt; result.body.length; i++) {
+                const data &#x3D; {
+                  &quot;user_id&quot;: result.body[i].event_participant_details[0].user_id,
+                  &quot;name&quot;: result.body[i].participant_name,
+                  &quot;email&quot;: result.body[i].event_participant_details[0].email,
+                  &quot;gender_id&quot;: result.body[i].event_participant_details[0].gender_id,
+                  &quot;isSelected&quot;: false,
+                  &quot;club&quot;: result.body[i].club,
+                  &quot;rating&quot;: result.body[i].rating,
+                  &quot;points&quot;: result.body[i].points &#x3D;&#x3D; null ? 0 : result.body[i].points,
+                  &quot;state&quot;: result.body[i].event_participant_details[0].state,
+                  &quot;participant_id&quot;: result.body[i].participant_id
+                }
+                this._topPlayers.push(data);
+                this._topPlayersCopy.push(data);
+              }
+            } else if (this._currentParticipantId &#x3D;&#x3D; 2) {
+              this._showLoader &#x3D; false;
+              this._teamList &#x3D; []
+              this._teamListCopy &#x3D; [];
+              this._teamList &#x3D; result.body;
+              this._teamListCopy &#x3D; result.body;
+            } else if (this._currentParticipantId &#x3D;&#x3D; 3) {
+              this._showLoader &#x3D; false;
+              this._doubleList &#x3D; []
+              this._doubleListCopy &#x3D; [];
+              this._doubleList &#x3D; result.body;
+              this._doubleListCopy &#x3D; result.body;
+            } else if (this._currentParticipantId &#x3D;&#x3D; 4) {
+              this._showLoader &#x3D; false;
+              this._mixDoubleList &#x3D; []
+              this._mixDoubleListCopy &#x3D; [];
+              this._mixDoubleList &#x3D; result.body;
+              this._mixDoubleListCopy &#x3D; result.body;
+            }
+          },
+          error: (result: any) &#x3D;&gt; {
+            this._showLoader &#x3D; false;
+            this.azureLoggerConversion &#x3D; result.error.msg
+            this.azureLoggerService.logException(this.azureLoggerConversion)
+            this._topPlayers &#x3D; [];
+            this._topPlayersCopy &#x3D; [];
+          },
+          complete: () &#x3D;&gt; { },
+        });
+    }
+  }
+  //#endregion method is used for get Event Registed Players List
+  //#region method is used for get first letter into uppercase
+  getFirstLetters(data: any) {
+    if (data.split(&#x27; &#x27;).length &gt; 1) {
+      return (
+        data.split(&#x27; &#x27;)[0].charAt(0).toUpperCase() +
+        data.split(&#x27; &#x27;)[1].charAt(0).toUpperCase()
+      );
+    } else {
+      return data.split(&#x27; &#x27;)[0].charAt(0).toUpperCase();
+    }
+  }
+  //#endregion method is used for get first letter into uppercase
+  //#region method is used for Search Player/team/pair after open popup
+  searchPlayerInView() {
+    if (this._currentParticipantId &#x3D;&#x3D; 1) {
+      this._topPlayers &#x3D; [];
+      this._topPlayers &#x3D; this._topPlayersCopy.filter((item: any) &#x3D;&gt; {
+        return (
+          item.name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase()) ||
+          item.email
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase())
+        );
+      });
+    } else if (this._currentParticipantId &#x3D;&#x3D; 2) {
+      this._teamList &#x3D; [];
+      this._teamList &#x3D; this._teamListCopy.filter((item: any) &#x3D;&gt; {
+        return (
+          item.name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase()) ||
+          item.participant_name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase())
+        );
+      });
+    }
+    else if (this._currentParticipantId &#x3D;&#x3D; 3) {
+      this._doubleList &#x3D; [];
+      this._doubleList &#x3D; this._doubleListCopy.filter((item: any) &#x3D;&gt; {
+        return (
+          item.name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase()) ||
+          item.participant_name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase())
+        );
+      });
+    }
+    else if (this._currentParticipantId &#x3D;&#x3D; 4) {
+      this._mixDoubleList &#x3D; [];
+      this._mixDoubleList &#x3D; this._mixDoubleListCopy.filter((item: any) &#x3D;&gt; {
+        return (
+          item.name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase()) ||
+          item.participant_name
+            .toLowerCase()
+            .includes(this._searchByPlayerNameView.toLowerCase())
+        );
+      });
+    }
+
+  }
+  //#endregion method is used for Search Player/team/pair after open popup
+  //#region method is used for close popup
+  closePopUpIsViewPlayerGrid() {
+    this._searchByPlayerNameView &#x3D; &#x27;&#x27;;
+    if (this._currentParticipantId &#x3D;&#x3D; 1) {
+      this._topPlayers &#x3D; this._topPlayersCopy;
+    } else if (this._currentParticipantId &#x3D;&#x3D; 2) {
+      this._teamList &#x3D; this._teamListCopy;
+    } else if (this._currentParticipantId &#x3D;&#x3D; 3) {
+      this._doubleList &#x3D; this._doubleListCopy;
+    } else if (this._currentParticipantId &#x3D;&#x3D; 4) {
+      this._mixDoubleList &#x3D; this._mixDoubleListCopy;
+    }
+  }
+  //#endregion method is used for close popup
+  //#region method is used for hide(--) row in case of bye
+  hideBye(data: any) {
+    if (data.club &#x3D;&#x3D; &#x27;&#x27; || data.club &#x3D;&#x3D; &#x27;BYE&#x27;) {
+      return true
+    } else {
+      return false
+    }
+  }
+  //#endregion method is used for hide(--) row in case of bye
+
+  refreshTree() {
+    this.getKnockoutTournament()
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container-xxl mt-3&quot;&gt;
+  &lt;section class&#x3D;&quot;firsScreen&quot;&gt;
+    &lt;div class&#x3D;&quot;topBar&quot; *ngIf&#x3D;&quot;_isAllAPIExcecuted &amp;&amp; !isKnockout&quot;&gt;
+      &lt;div class&#x3D;&quot;flex-e my-2&quot;&gt;
+        &lt;a class&#x3D;&quot;p-green p-links&quot; (click)&#x3D;&quot;_showFull &#x3D; true&quot; *ngIf&#x3D;&quot;!_showFull&quot;&gt;Hide&lt;/a&gt;
+        &lt;a class&#x3D;&quot;p-green p-links&quot; (click)&#x3D;&quot;_showFull &#x3D; false&quot; *ngIf&#x3D;&quot;_showFull&quot;&gt;Show Controller&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;row row-gap-3&quot; *ngIf&#x3D;&quot;!_showFull&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+          &lt;div class&#x3D;&quot;greyBox&quot;&gt;
+            &lt;div class&#x3D;&quot;empty h-100&quot;&gt;
+              &lt;div class&#x3D;&quot;row flex-vc h-100&quot;&gt;
+                &lt;div class&#x3D;&quot;col-5&quot;&gt;
+                  &lt;img class&#x3D;&quot;w150&quot; src&#x3D;&quot;../../../../assets/icons/svg/empty.svg&quot; alt&#x3D;&quot;&quot; /&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-7&quot;&gt;
+                  &lt;p class&#x3D;&quot;p-small p-secondary lineSpace&quot;&gt;
+                    If you have any problem in creating fixture you can contact
+                    our support. Reach out to us at support@stupaanalytics.com
+                  &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+          &lt;div class&#x3D;&quot;greyBox&quot;&gt;
+            &lt;div class&#x3D;&quot;header mb-2&quot;&gt;
+              &lt;div class&#x3D;&quot;flex-sb flex-vc&quot;&gt;
+                &lt;div class&#x3D;&quot;leftSection&quot;&gt;
+                  &lt;div class&#x3D;&quot;flex-vc&quot;&gt;
+                    &lt;p *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;
+                      Total Number of players in this category are
+                    &lt;/p&gt;
+                    &lt;p *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 2&quot;&gt;
+                      Total Number of Teams in this category are
+                    &lt;/p&gt;
+                    &lt;p *ngIf&#x3D;&quot;
+                        _currentParticipantId &#x3D;&#x3D; 4 || _currentParticipantId &#x3D;&#x3D; 3
+                      &quot;&gt;
+                      Total Number of pairs in this category are
+                    &lt;/p&gt;
+                    &lt;p class&#x3D;&quot;p-combine ms-2&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;
+                      {{ _topPlayers.length }}
+                    &lt;/p&gt;
+                    &lt;p class&#x3D;&quot;p-combine ms-2&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 2&quot;&gt;
+                      {{ _teamList.length }}
+                    &lt;/p&gt;
+                    &lt;p class&#x3D;&quot;p-combine ms-2&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 3&quot;&gt;
+                      {{ _doubleList.length }}
+                    &lt;/p&gt;
+                    &lt;p class&#x3D;&quot;p-combine ms-2&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 4&quot;&gt;
+                      {{ _mixDoubleList.length }}
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;right-eventHandler flex-vc&quot; (click)&#x3D;&quot;viewPlayer()&quot;&gt;
+                  &lt;div class&#x3D;&quot;iconBox&quot;&gt;
+                    &lt;i class&#x3D;&quot;i-small p-green pi pi-eye&quot;&gt;&lt;/i&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr class&#x3D;&quot;divider m-0&quot; /&gt;
+            &lt;div class&#x3D;&quot;innerContent&quot;&gt;
+              &lt;div class&#x3D;&quot;detail-input mt-4&quot;&gt;
+                &lt;!-- &lt;p-dropdown appendTo&#x3D;&quot;body&quot; [options]&#x3D;&quot;_fixture&quot; [optionLabel]&#x3D;&quot;&#x27;name&#x27;&quot;
+                                    placeholder&#x3D;&quot;Fixture Number&quot; [readonly]&#x3D;&quot;true&quot;&gt;
+                                &lt;/p-dropdown&gt; --&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;mt-4&quot; (click)&#x3D;&quot;deleteFixture()&quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-danger m-0 w-100&quot; [disabled]&#x3D;&quot;!_showTree&quot;&gt;
+                  Delete
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;_isAllAPIExcecuted &amp;&amp; !isKnockout &amp;&amp; !_showTree&quot; class&#x3D;&quot;centerElement mt-4&quot;&gt;
+      &lt;div class&#x3D;&quot;row row-gap-3&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-6 centerBox&quot;&gt;
+          &lt;div class&#x3D;&quot;flex-vc gap-4 mt-3&quot;&gt;
+            &lt;button class&#x3D;&quot;btn btn_green btnDone m-0&quot; (click)&#x3D;&quot;generateCustomeKO()&quot;&gt;
+              Save
+            &lt;/button&gt;
+            &lt;!-- &lt;button class&#x3D;&quot;btn btn_green btnDone m-0&quot; (click)&#x3D;&quot;saveAsBefore()&quot;&gt;
+              Save As Before
+            &lt;/button&gt; --&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;parentContainer&quot;&gt;
+            &lt;div class&#x3D;&quot;note flex-sb flex-vc&quot; *ngFor&#x3D;&quot;let item of _arrangePlayer; let i &#x3D; index&quot; appDragDropSwap
+              [elemPosition]&#x3D;&quot;i&quot; [list]&#x3D;&quot;_arrangePlayer&quot; (returnUpdatedList)&#x3D;&quot;returnUpdatedList($event)&quot;&gt;
+              &lt;div class&#x3D;&quot;col-1 absolute&quot;&gt;
+                &lt;div class&#x3D;&quot;flex-vc flex-hc h-100&quot;&gt;
+                  &lt;p&gt;
+                    &lt;b&gt;{{ i + 1 }}&lt;/b&gt;
+                  &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;flex-vc spec&quot;&gt;
+                &lt;p-avatar class&#x3D;&quot;avatar-small me-2&quot; label&#x3D;&quot;{{ getFirstLetters(item.participant_name) }}&quot;
+                  shape&#x3D;&quot;circle&quot;&gt;&lt;/p-avatar&gt;
+                &lt;p style&#x3D;&quot;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 6rem;
+                  &quot;&gt;
+                  {{ item.participant_name }}
+                &lt;/p&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;flex-e dropdownIcon me-2&quot; *ngIf&#x3D;&quot;!hideBye(item)&quot;&gt;
+                &lt;p class&#x3D;&quot;p-combine _points&quot;&gt;
+                  Points: {{ item.rating &#x3D;&#x3D; null ? 0 : item.rating }}
+                &lt;/p&gt;
+                &lt;i pTooltip&#x3D;&quot;{{ item.state }}&quot; class&#x3D;&quot;pi pi-info-circle p-secondary ms-2 p-links&quot;
+                  tooltipPosition&#x3D;&quot;right&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;flex-e dropdownIcon me-2&quot; *ngIf&#x3D;&quot;hideBye(item)&quot;&gt;
+                &lt;p class&#x3D;&quot;p-combine&quot;&gt;{{ &quot;-&quot; }}&lt;/p&gt;
+                &lt;!-- &lt;i pTooltip&#x3D;{{item.state}} class&#x3D;&quot;pi pi-info-circle p-secondary ms-2 p-links&quot;
+                                    tooltipPosition&#x3D;&quot;right&quot;&gt;&lt;/i&gt; --&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-lg-6&quot;&gt;
+          &lt;div class&#x3D;&quot;bottomBox greyBox&quot;&gt;
+            &lt;div *ngIf&#x3D;&quot;_arrangePlayer.length !&#x3D;&#x3D; 0; else emptyBox2&quot;&gt;
+              &lt;p-table class&#x3D;&quot;common-table text-center&quot; [value]&#x3D;&quot;_arrangePlayer&quot;&gt;
+                &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+                  &lt;tr&gt;
+                    &lt;th&gt;Name&lt;/th&gt;
+                    &lt;th&gt;Club&lt;/th&gt;
+                    &lt;th&gt;Point&lt;/th&gt;
+                    &lt;th *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;Email&lt;/th&gt;
+                  &lt;/tr&gt;
+                &lt;/ng-template&gt;
+                &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-player&gt;
+                  &lt;!-- &lt;tr&gt;
+                                        &lt;td&gt;{{ player.participant_name }}&lt;/td&gt;
+                                        &lt;td&gt;{{player.state}}&lt;/td&gt;
+                                        &lt;td&gt;{{player.club}}&lt;/td&gt;
+                                        &lt;td&gt;{{player.points&#x3D;&#x3D;null?0:player.points}}&lt;/td&gt;
+                                        &lt;td&gt;{{player.email}}&lt;/td&gt;
+                                    &lt;/tr&gt; --&gt;
+                  &lt;tr *ngIf&#x3D;&quot;hideBye(player)&quot;&gt;
+                    &lt;td class&#x3D;&quot;flex-s&quot;&gt;{{ player.participant_name }}&lt;/td&gt;
+                    &lt;td&gt;{{ &quot;-&quot; }}&lt;/td&gt;
+                    &lt;td&gt;{{ &quot;-&quot; }}&lt;/td&gt;
+                    &lt;td *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;{{ &quot;-&quot; }}&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr *ngIf&#x3D;&quot;!hideBye(player)&quot;&gt;
+                    &lt;td class&#x3D;&quot;flex-s&quot;&gt;{{ player.participant_name }}&lt;/td&gt;
+                    &lt;td&gt;{{ player.club }}&lt;/td&gt;
+                    &lt;td&gt;{{ player.rating &#x3D;&#x3D; null ? 0 : player.rating }}&lt;/td&gt;
+                    &lt;td *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;
+                      {{ player.email }}
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/ng-template&gt;
+              &lt;/p-table&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;ng-template #emptyBox2&gt;
+            &lt;div class&#x3D;&quot;player-empty greyBox&quot;&gt;
+              &lt;div class&#x3D;&quot;innerContent h-100 flex-hc flex-vc&quot;&gt;
+                &lt;div class&#x3D;&quot;m-3&quot;&gt;
+                  &lt;img src&#x3D;&quot;../../../../assets/icons/svg/fixure_noPlayer.svg&quot; class&#x3D;&quot;w200&quot; alt&#x3D;&quot;&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p class&#x3D;&quot;text-center p-secondary&quot;&gt;No player left!&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;div class&#x3D;&quot;flex-e mr-1 mt-3&quot; *ngIf&#x3D;&quot;_matchDetailsList.length &gt; 0&quot;&gt;
+    &lt;button class&#x3D;&quot;profile_buttons2&quot; ngxPrint printSectionId&#x3D;&quot;demo-print&quot; [useExistingCss]&#x3D;&quot;true&quot; [previewOnly]&#x3D;&quot;false&quot;&gt;
+      Print
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;section id&#x3D;&quot;demo-print&quot; class&#x3D;&quot;secondScreen mt-3&quot; *ngIf&#x3D;&quot;_isAllAPIExcecuted &amp;&amp; _showTree&quot;&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;true&quot;&gt;
+      &lt;!-- &lt;div class&#x3D;&quot;fixture-header&quot; *ngIf&#x3D;&quot;singleEliminationTournament&quot;&gt;
+            &lt;div *ngFor&#x3D;&quot;let round of singleEliminationTournament.rounds&quot; class&#x3D;&quot;round-name&quot;&gt;
+                &lt;div&gt;
+                    {{ round.roundName }}
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt; --&gt;
+      &lt;stupa-fix-single-tree [tournament]&#x3D;&quot;singleEliminationTournament&quot; *ngIf&#x3D;&quot;singleEliminationTournament&quot;
+        [matchTemplate]&#x3D;&quot;matchTemplate&quot;&gt;&lt;/stupa-fix-single-tree&gt;
+    &lt;/ng-container&gt;
+    &lt;!-- &lt;ng-container *ngIf&#x3D;&quot;renderedTree &#x3D;&#x3D;&#x3D; &#x27;de&#x27;&quot;&gt;
+
+        &lt;ngtt-double-elimination-tree [tournament]&#x3D;&quot;doubleEliminationTournament&quot;
+            [matchTemplate]&#x3D;&quot;matchTemplate&quot;&gt;&lt;/ngtt-double-elimination-tree&gt;
+    &lt;/ng-container&gt; --&gt;
+    &lt;ng-template #matchTemplate let-match let-index&#x3D;&quot;i&quot; let-round&#x3D;&quot;winnersBracket&quot;&gt;
+      &lt;stupa-match (refreshTree)&#x3D;&quot;refreshTree()&quot; [fillList]&#x3D;&quot;singleEliminationTournament&quot; [match]&#x3D;&quot;match&quot;
+        [index]&#x3D;&quot;index&quot; [parentIndex]&#x3D;&quot;index&quot; [_currentParticipantId]&#x3D;&quot;_currentParticipantId&quot; [round]&#x3D;&quot;round&quot;
+        [groupType]&#x3D;&quot;2&quot; [selectedCategoryId]&#x3D;&quot;_currentCategoryId&quot;
+        (updatedPullList)&#x3D;&quot;updatedPullList($event)&quot;&gt;&lt;/stupa-match&gt;
+    &lt;/ng-template&gt;
+  &lt;/section&gt;
+  &lt;!-- &lt;stupa-drag-drop-fixture&gt;&lt;/stupa-drag-drop-fixture&gt; --&gt;
+&lt;/div&gt;
+&lt;p-dialog [resizable]&#x3D;&quot;false&quot; #pDialog [(visible)]&#x3D;&quot;_isViewPlayerGrid&quot; [style]&#x3D;&quot;_dialogStyle&quot; [draggable]&#x3D;&quot;false&quot;
+  [style]&#x3D;&quot;{ width: &#x27;50vw&#x27; }&quot; [modal]&#x3D;&quot;true&quot; (onHide)&#x3D;&quot;closePopUpIsViewPlayerGrid()&quot;&gt;
+  &lt;div class&#x3D;&quot;innerContent&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 1&quot;&gt;
+    &lt;div class&#x3D;&quot;row mb-2&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;_searchByPlayerNameView&quot; type&#x3D;&quot;text&quot; pInputText (keydown)&#x3D;&quot;searchPlayerInView()&quot;
+          (keypress)&#x3D;&quot;searchPlayerInView()&quot; (keyup)&#x3D;&quot;searchPlayerInView()&quot; [placeholder]&#x3D;&quot;
+            &#x27;Search Player&#x27;
+          &quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p-table class&#x3D;&quot;common-table text-center&quot; [value]&#x3D;&quot;_topPlayers&quot;&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;header&quot; let-columns&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+
+          &lt;th&gt;Club&lt;/th&gt;
+          &lt;th&gt;Point&lt;/th&gt;
+          &lt;th&gt;Email&lt;/th&gt;
+          &lt;!-- &lt;th&gt;Action&lt;/th&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-player let-columns&#x3D;&quot;columns&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;{{ player.name }}&lt;/td&gt;
+
+          &lt;td&gt;{{ player.club }}&lt;/td&gt;
+          &lt;td&gt;{{ player.rating &#x3D;&#x3D; null ? 0 : player.rating }}&lt;/td&gt;
+          &lt;td&gt;{{ player.email }}&lt;/td&gt;
+          &lt;!-- &lt;td&gt;
+                        &lt;input type&#x3D;&quot;checkbox&quot; (click)&#x3D;&quot;playerForMainDraw($event, player)&quot; [ngModel]&#x3D;&quot;player.isSelected&quot; /&gt;
+                    &lt;/td&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;innerContent&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 2&quot;&gt;
+    &lt;div class&#x3D;&quot;row mb-2&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;_searchByPlayerNameView&quot; type&#x3D;&quot;text&quot; pInputText (keydown)&#x3D;&quot;searchPlayerInView()&quot;
+          (keypress)&#x3D;&quot;searchPlayerInView()&quot; (keyup)&#x3D;&quot;searchPlayerInView()&quot; [placeholder]&#x3D;&quot;
+            &#x27;Search Player&#x27;
+          &quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p-table class&#x3D;&quot;common-table text-center&quot; [value]&#x3D;&quot;_teamList&quot;&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;header&quot; let-columns&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+
+          &lt;th&gt;Club&lt;/th&gt;
+          &lt;th&gt;Point&lt;/th&gt;
+          &lt;!-- &lt;th&gt;Action&lt;/th&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-player let-columns&#x3D;&quot;columns&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;{{ player.participant_name }}&lt;/td&gt;
+          &lt;td&gt;{{ player.name }}&lt;/td&gt;
+          &lt;td&gt;{{ player.rating &#x3D;&#x3D; null ? 0 : player.rating }}&lt;/td&gt;
+          &lt;!-- &lt;td&gt;
+                        &lt;input type&#x3D;&quot;checkbox&quot; (click)&#x3D;&quot;playerForMainDraw($event, player)&quot; [ngModel]&#x3D;&quot;player.isSelected&quot; /&gt;
+                    &lt;/td&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;innerContent&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 3&quot;&gt;
+    &lt;div class&#x3D;&quot;row mb-2&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;_searchByPlayerNameView&quot; type&#x3D;&quot;text&quot; pInputText (keydown)&#x3D;&quot;searchPlayerInView()&quot;
+          (keypress)&#x3D;&quot;searchPlayerInView()&quot; (keyup)&#x3D;&quot;searchPlayerInView()&quot; [placeholder]&#x3D;&quot;
+            &#x27;Search Player&#x27;
+          &quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p-table class&#x3D;&quot;common-table text-center&quot; [value]&#x3D;&quot;_doubleList&quot;&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;header&quot; let-columns&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+
+          &lt;th&gt;Club&lt;/th&gt;
+          &lt;th&gt;Point&lt;/th&gt;
+          &lt;!-- &lt;th&gt;Action&lt;/th&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-player let-columns&#x3D;&quot;columns&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;{{ player.participant_name }}&lt;/td&gt;
+
+          &lt;td&gt;{{ player.name }}&lt;/td&gt;
+          &lt;td&gt;{{ player.rating &#x3D;&#x3D; null ? 0 : player.rating }}&lt;/td&gt;
+          &lt;!-- &lt;td&gt;
+                        &lt;input type&#x3D;&quot;checkbox&quot; (click)&#x3D;&quot;playerForMainDraw($event, player)&quot; [ngModel]&#x3D;&quot;player.isSelected&quot; /&gt;
+                    &lt;/td&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;innerContent&quot; *ngIf&#x3D;&quot;_currentParticipantId &#x3D;&#x3D; 4&quot;&gt;
+    &lt;div class&#x3D;&quot;row mb-2&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-3&quot;&gt;
+        &lt;input [(ngModel)]&#x3D;&quot;_searchByPlayerNameView&quot; type&#x3D;&quot;text&quot; pInputText (keydown)&#x3D;&quot;searchPlayerInView()&quot;
+          (keypress)&#x3D;&quot;searchPlayerInView()&quot; (keyup)&#x3D;&quot;searchPlayerInView()&quot; [placeholder]&#x3D;&quot;
+            &#x27;Search Player&#x27;
+          &quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p-table class&#x3D;&quot;common-table text-center&quot; [value]&#x3D;&quot;_mixDoubleList&quot;&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;header&quot; let-columns&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+
+          &lt;th&gt;Club&lt;/th&gt;
+          &lt;th&gt;Point&lt;/th&gt;
+          &lt;!-- &lt;th&gt;Action&lt;/th&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+      &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-player let-columns&#x3D;&quot;columns&quot;&gt;
+        &lt;tr&gt;
+          &lt;td&gt;{{ player.participant_name }}&lt;/td&gt;
+
+          &lt;td&gt;{{ player.name }}&lt;/td&gt;
+          &lt;td&gt;{{ player.rating &#x3D;&#x3D; null ? 0 : player.rating }}&lt;/td&gt;
+          &lt;!-- &lt;td&gt;
+                        &lt;input type&#x3D;&quot;checkbox&quot; (click)&#x3D;&quot;playerForMainDraw($event, player)&quot; [ngModel]&#x3D;&quot;player.isSelected&quot; /&gt;
+                    &lt;/td&gt; --&gt;
+        &lt;/tr&gt;
+      &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+  &lt;/div&gt;
+&lt;/p-dialog&gt;
+&lt;p-toast position&#x3D;&quot;bottom-right&quot; key&#x3D;&quot;bc&quot;&gt;&lt;/p-toast&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./main-draw.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../stylesfiles/ngtt-single-elimination-styles.scss&quot;;
+@import &quot;../../../../stylesfiles/ngtt-variables.scss&quot;;
+@import &quot;../../fixture/fixture-tree/match/match.component.scss&quot;;
+
+.container-xxl {
+    .fullViewBut {
+        background-color: var(--main-bg);
+        padding: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .heading {
+        font-size: 13px !important;
+        color: var(--secondary-color) !important;
+        margin: 1rem 0 !important;
+    }
+
+    .topBar {
+        .greyBox {
+            background-color: var(--box-bg);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+            position: relative;
+            height: 190px;
+
+            .innerContent {
+                font-size: 90% !important;
+                height: 100%;
+                overflow: hidden;
+                overflow-y: auto;
+
+                .detail-input {
+                    label {
+                        color: var(--secondary-color);
+                    }
+
+                    input {
+                        border-bottom: 1px solid var(--secondary-color) !important;
+                        border: none;
+                        border-radius: 0 !important;
+                        background-color: transparent;
+                        font-size: 18px;
+                        color: var(--main-color);
+                        font-weight: bold;
+                        padding-left: 0;
+                    }
+
+                    ::ng-deep {
+                        .p-multiselect {
+                            border: none;
+                            border-bottom: 1px solid #5555;
+                            border-radius: 0;
+                        }
+
+                        .p-dropdown {
+                            border-bottom: 1px solid var(--secondary-color) !important;
+                            border: none;
+                            border-radius: 0 !important;
+                            background-color: transparent;
+                            font-size: 18px;
+                            margin: 0 !important;
+
+                            .p-dropdown-label {
+                                padding-left: 0;
+                                color: var(--main-color);
+                            }
+
+                            .p-dropdown-label.p-placeholder {
+                                color: #6c757d !important;
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .noPlayer {
+                position: absolute;
+                top: 61%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #bfbfbf;
+            }
+        }
+    }
+
+    .right-eventHandler {
+        .iconBox:not(:last-child) {
+            margin-right: 0.2rem;
+        }
+
+        .iconBox {
+            padding: 8px 6px;
+            border-radius: 3px;
+            border: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            svg.merge {
+                rotate: 180deg;
+                width: 12px !important;
+            }
+        }
+    }
+
+    .groups {
+        .accordianHeader {
+            width: 100%;
+        }
+
+        .accordianContent {
+            .p-inputtext {
+                max-height: 32px;
+                color: black;
+                margin: 5px 0;
+            }
+
+            .p-inputtext::placeholder {
+                color: black;
+            }
+        }
+
+        ::ng-deep {
+            .p-accordion .p-accordion-content {
+                padding: 0.4rem;
+            }
+
+            // .p-datatable .p-datatable-tbody &gt; tr &gt; td {
+            //     padding: 0 !important;
+            // }
+            .p-button-icon {
+                font-size: 12px !important;
+            }
+
+            .p-dropdown {
+                max-height: 35px !important;
+            }
+        }
+
+        .iconBox {
+            border: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 6px;
+            height: 32px;
+            border-radius: 3px;
+
+            svg.merge {
+                rotate: 90deg;
+                width: 12px !important;
+            }
+        }
+
+        .header-add {
+            padding: 8px 6px;
+        }
+
+        .p-button:focus {
+            box-shadow: none;
+        }
+
+        .p-button.p-button-icon-only.p-button-rounded {
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.2rem;
+        }
+    }
+
+    .dialog {
+        .greyBox {
+            height: 620px !important;
+            max-height: 620px !important;
+        }
+    }
+
+    .bottomBar {
+        .greyBox {
+            height: auto !important;
+            max-height: 350px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+
+    ::ng-deep {
+        .common-table {
+            .p-datatable-table {
+                font-size: 90% !important;
+            }
+
+            .p-datatable-thead&gt;tr&gt;th {
+                border: none;
+                padding: 0.5rem 1rem;
+            }
+
+            .p-datatable-tbody&gt;tr&gt;td {
+                padding: 0.5rem 1rem;
+                font-size: 90%;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.gridRemove {
+    color: #ff783e;
+}
+
+.fixture-header {
+    display: flex;
+
+    .round-name {
+        width: 230px;
+        color: turquoise;
+        text-align: center;
+        padding: 15px 25px;
+        font-weight: bold;
+
+        div {
+            width: 200px;
+        }
+    }
+}
+
+.common-popup {
+    .rest-players {
+        max-height: 40vh;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .topBar,
+    .player-list {
+        padding: 10px 5px;
+    }
+}
+
+.parentContainer {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+
+    .note {
+        background-color: var(--box-bg);
+        width: 60%;
+        border: 1px solid #bebebe;
+        border-radius: 4px;
+        padding: 6px;
+        margin: 1rem 0;
+        cursor: move;
+        position: relative;
+        margin-left: 1.5rem;
+
+        .absolute {
+            position: absolute;
+            content: &quot;&quot;;
+            left: -2rem;
+        }
+
+        ._points {
+            min-width: 6vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    // display: grid;
+    .tooltip-container {
+        position: relative;
+
+        .tooltipInfo {
+            position: absolute;
+            width: 200px;
+            left: 100%;
+            bottom: 0;
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            z-index: 99999;
+            background: white;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+
+    .nodes {
+        display: flex;
+        cursor: move;
+    }
+
+    .knockoutButton {
+        height: 50px;
+    }
+
+    .dropdownIcon {
+        align-items: center;
+        max-width: 9vw !important;
+    }
+
+    .spec {
+        min-width: 10vw;
+
+        ::ng-deep {
+            .p-avatar-text {
+                font-size: 11.4px !important;
+            }
+        }
+    }
+}
+
+.dropdownIcon {
+    ::ng-deep {
+        .p-button.p-button-text.p-button-plain:enabled:hover {
+            background: #0000000d;
+        }
+
+        .p-button:focus {
+            box-shadow: none !important;
+        }
+    }
+}
+
+.player-empty.greyBox {
+    background-color: #fbfbfb;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 500px;
+
+    .innerContent {
+        flex-direction: column;
+    }
+}
+
+.btnDone {
+    width: 260px !important;
+}
+
+@media print {
+    .ngtt-se__match-wrapper {
+        height: 150px !important;
+    }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container-xxl mt-3">  <section class="firsScreen">    <div class="topBar" *ngIf="_isAllAPIExcecuted && !isKnockout">      <div class="flex-e my-2">        <a class="p-green p-links" (click)="_showFull = true" *ngIf="!_showFull">Hide</a>        <a class="p-green p-links" (click)="_showFull = false" *ngIf="_showFull">Show Controller</a>      </div>      <div class="row row-gap-3" *ngIf="!_showFull">        <div class="col-lg-6">          <div class="greyBox">            <div class="empty h-100">              <div class="row flex-vc h-100">                <div class="col-5">                  <img class="w150" src="../../../../assets/icons/svg/empty.svg" alt="" />                </div>                <div class="col-7">                  <p class="p-small p-secondary lineSpace">                    If you have any problem in creating fixture you can contact                    our support. Reach out to us at support@stupaanalytics.com                  </p>                </div>              </div>            </div>          </div>        </div>        <div class="col-lg-6">          <div class="greyBox">            <div class="header mb-2">              <div class="flex-sb flex-vc">                <div class="leftSection">                  <div class="flex-vc">                    <p *ngIf="_currentParticipantId == 1">                      Total Number of players in this category are                    </p>                    <p *ngIf="_currentParticipantId == 2">                      Total Number of Teams in this category are                    </p>                    <p *ngIf="                        _currentParticipantId == 4 || _currentParticipantId == 3                      ">                      Total Number of pairs in this category are                    </p>                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 1">                      {{ _topPlayers.length }}                    </p>                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 2">                      {{ _teamList.length }}                    </p>                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 3">                      {{ _doubleList.length }}                    </p>                    <p class="p-combine ms-2" *ngIf="_currentParticipantId == 4">                      {{ _mixDoubleList.length }}                    </p>                  </div>                </div>                <div class="right-eventHandler flex-vc" (click)="viewPlayer()">                  <div class="iconBox">                    <i class="i-small p-green pi pi-eye"></i>                  </div>                </div>              </div>            </div>            <hr class="divider m-0" />            <div class="innerContent">              <div class="detail-input mt-4">                <!-- <p-dropdown appendTo="body" [options]="_fixture" [optionLabel]="\'name\'"                                    placeholder="Fixture Number" [readonly]="true">                                </p-dropdown> -->              </div>              <div class="mt-4" (click)="deleteFixture()">                <button class="btn btn-danger m-0 w-100" [disabled]="!_showTree">                  Delete                </button>              </div>            </div>          </div>        </div>      </div>    </div>    <div *ngIf="_isAllAPIExcecuted && !isKnockout && !_showTree" class="centerElement mt-4">      <div class="row row-gap-3">        <div class="col-lg-6 centerBox">          <div class="flex-vc gap-4 mt-3">            <button class="btn btn_green btnDone m-0" (click)="generateCustomeKO()">              Save            </button>            <!-- <button class="btn btn_green btnDone m-0" (click)="saveAsBefore()">              Save As Before            </button> -->          </div>          <div class="parentContainer">            <div class="note flex-sb flex-vc" *ngFor="let item of _arrangePlayer; let i = index" appDragDropSwap              [elemPosition]="i" [list]="_arrangePlayer" (returnUpdatedList)="returnUpdatedList($event)">              <div class="col-1 absolute">                <div class="flex-vc flex-hc h-100">                  <p>                    <b>{{ i + 1 }}</b>                  </p>                </div>              </div>              <div class="flex-vc spec">                <p-avatar class="avatar-small me-2" label="{{ getFirstLetters(item.participant_name) }}"                  shape="circle"></p-avatar>                <p style="                    overflow: hidden;                    text-overflow: ellipsis;                    white-space: nowrap;                    max-width: 6rem;                  ">                  {{ item.participant_name }}                </p>              </div>              <div class="flex-e dropdownIcon me-2" *ngIf="!hideBye(item)">                <p class="p-combine _points">                  Points: {{ item.rating == null ? 0 : item.rating }}                </p>                <i pTooltip="{{ item.state }}" class="pi pi-info-circle p-secondary ms-2 p-links"                  tooltipPosition="right"></i>              </div>              <div class="flex-e dropdownIcon me-2" *ngIf="hideBye(item)">                <p class="p-combine">{{ "-" }}</p>                <!-- <i pTooltip={{item.state}} class="pi pi-info-circle p-secondary ms-2 p-links"                                    tooltipPosition="right"></i> -->              </div>            </div>          </div>        </div>        <div class="col-lg-6">          <div class="bottomBox greyBox">            <div *ngIf="_arrangePlayer.length !== 0; else emptyBox2">              <p-table class="common-table text-center" [value]="_arrangePlayer">                <ng-template pTemplate="header">                  <tr>                    <th>Name</th>                    <th>Club</th>                    <th>Point</th>                    <th *ngIf="_currentParticipantId == 1">Email</th>                  </tr>                </ng-template>                <ng-template pTemplate="body" let-player>                  <!-- <tr>                                        <td>{{ player.participant_name }}</td>                                        <td>{{player.state}}</td>                                        <td>{{player.club}}</td>                                        <td>{{player.points==null?0:player.points}}</td>                                        <td>{{player.email}}</td>                                    </tr> -->                  <tr *ngIf="hideBye(player)">                    <td class="flex-s">{{ player.participant_name }}</td>                    <td>{{ "-" }}</td>                    <td>{{ "-" }}</td>                    <td *ngIf="_currentParticipantId == 1">{{ "-" }}</td>                  </tr>                  <tr *ngIf="!hideBye(player)">                    <td class="flex-s">{{ player.participant_name }}</td>                    <td>{{ player.club }}</td>                    <td>{{ player.rating == null ? 0 : player.rating }}</td>                    <td *ngIf="_currentParticipantId == 1">                      {{ player.email }}                    </td>                  </tr>                </ng-template>              </p-table>            </div>          </div>          <ng-template #emptyBox2>            <div class="player-empty greyBox">              <div class="innerContent h-100 flex-hc flex-vc">                <div class="m-3">                  <img src="../../../../assets/icons/svg/fixure_noPlayer.svg" class="w200" alt="" />                </div>                <p class="text-center p-secondary">No player left!</p>              </div>            </div>          </ng-template>        </div>      </div>    </div>  </section>  <div class="flex-e mr-1 mt-3" *ngIf="_matchDetailsList.length > 0">    <button class="profile_buttons2" ngxPrint printSectionId="demo-print" [useExistingCss]="true" [previewOnly]="false">      Print    </button>  </div>  <section id="demo-print" class="secondScreen mt-3" *ngIf="_isAllAPIExcecuted && _showTree">    <ng-container *ngIf="true">      <!-- <div class="fixture-header" *ngIf="singleEliminationTournament">            <div *ngFor="let round of singleEliminationTournament.rounds" class="round-name">                <div>                    {{ round.roundName }}                </div>            </div>        </div> -->      <stupa-fix-single-tree [tournament]="singleEliminationTournament" *ngIf="singleEliminationTournament"        [matchTemplate]="matchTemplate"></stupa-fix-single-tree>    </ng-container>    <!-- <ng-container *ngIf="renderedTree === \'de\'">        <ngtt-double-elimination-tree [tournament]="doubleEliminationTournament"            [matchTemplate]="matchTemplate"></ngtt-double-elimination-tree>    </ng-container> -->    <ng-template #matchTemplate let-match let-index="i" let-round="winnersBracket">      <stupa-match (refreshTree)="refreshTree()" [fillList]="singleEliminationTournament" [match]="match"        [index]="index" [parentIndex]="index" [_currentParticipantId]="_currentParticipantId" [round]="round"        [groupType]="2" [selectedCategoryId]="_currentCategoryId"        (updatedPullList)="updatedPullList($event)"></stupa-match>    </ng-template>  </section>  <!-- <stupa-drag-drop-fixture></stupa-drag-drop-fixture> --></div><p-dialog [resizable]="false" #pDialog [(visible)]="_isViewPlayerGrid" [style]="_dialogStyle" [draggable]="false"  [style]="{ width: \'50vw\' }" [modal]="true" (onHide)="closePopUpIsViewPlayerGrid()">  <div class="innerContent" *ngIf="_currentParticipantId == 1">    <div class="row mb-2">      <div class="col-md-3">        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="            \'Search Player\'          " />      </div>    </div>    <p-table class="common-table text-center" [value]="_topPlayers">      <ng-template pTemplate="header" let-columns>        <tr>          <th>Name</th>          <th>Club</th>          <th>Point</th>          <th>Email</th>          <!-- <th>Action</th> -->        </tr>      </ng-template>      <ng-template pTemplate="body" let-player let-columns="columns">        <tr>          <td>{{ player.name }}</td>          <td>{{ player.club }}</td>          <td>{{ player.rating == null ? 0 : player.rating }}</td>          <td>{{ player.email }}</td>          <!-- <td>                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />                    </td> -->        </tr>      </ng-template>    </p-table>  </div>  <div class="innerContent" *ngIf="_currentParticipantId == 2">    <div class="row mb-2">      <div class="col-md-3">        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="            \'Search Player\'          " />      </div>    </div>    <p-table class="common-table text-center" [value]="_teamList">      <ng-template pTemplate="header" let-columns>        <tr>          <th>Name</th>          <th>Club</th>          <th>Point</th>          <!-- <th>Action</th> -->        </tr>      </ng-template>      <ng-template pTemplate="body" let-player let-columns="columns">        <tr>          <td>{{ player.participant_name }}</td>          <td>{{ player.name }}</td>          <td>{{ player.rating == null ? 0 : player.rating }}</td>          <!-- <td>                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />                    </td> -->        </tr>      </ng-template>    </p-table>  </div>  <div class="innerContent" *ngIf="_currentParticipantId == 3">    <div class="row mb-2">      <div class="col-md-3">        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="            \'Search Player\'          " />      </div>    </div>    <p-table class="common-table text-center" [value]="_doubleList">      <ng-template pTemplate="header" let-columns>        <tr>          <th>Name</th>          <th>Club</th>          <th>Point</th>          <!-- <th>Action</th> -->        </tr>      </ng-template>      <ng-template pTemplate="body" let-player let-columns="columns">        <tr>          <td>{{ player.participant_name }}</td>          <td>{{ player.name }}</td>          <td>{{ player.rating == null ? 0 : player.rating }}</td>          <!-- <td>                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />                    </td> -->        </tr>      </ng-template>    </p-table>  </div>  <div class="innerContent" *ngIf="_currentParticipantId == 4">    <div class="row mb-2">      <div class="col-md-3">        <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"          (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="            \'Search Player\'          " />      </div>    </div>    <p-table class="common-table text-center" [value]="_mixDoubleList">      <ng-template pTemplate="header" let-columns>        <tr>          <th>Name</th>          <th>Club</th>          <th>Point</th>          <!-- <th>Action</th> -->        </tr>      </ng-template>      <ng-template pTemplate="body" let-player let-columns="columns">        <tr>          <td>{{ player.participant_name }}</td>          <td>{{ player.name }}</td>          <td>{{ player.rating == null ? 0 : player.rating }}</td>          <!-- <td>                        <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />                    </td> -->        </tr>      </ng-template>    </p-table>  </div></p-dialog><p-toast position="bottom-right" key="bc"></p-toast></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'MainDrawComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MainDrawComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

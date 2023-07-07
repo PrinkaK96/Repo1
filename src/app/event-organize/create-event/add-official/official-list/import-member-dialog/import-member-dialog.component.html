@@ -1,0 +1,52 @@
+<div class="dialogContainer">
+  <p class="p-small p-green">
+    Import member for adding them to list of officials
+  </p>
+
+  <div class="top-searchbar mt-3 mb-3">
+    <div class="flex-vc">
+      <div class="innerBox-input">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText placeholder="Search..." [(ngModel)]="_searchTeams" (keyup)="findTeams()"
+            (keypress)="findTeams()" (keydown)="findTeams()" />
+        </span>
+      </div>
+    </div>
+  </div>
+  <table class="officialTable table table-responsive mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Verification</th>
+        <th scope="col" class="flex-hc">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of _importOfficialList">
+        <td scope="row">
+          {{ data.name }}
+        </td>
+        <td>{{ data.email }}</td>
+        <td [style.color]="
+            data.verified === false || data.verified == null
+              ? 'var(--danger-color)'
+              : 'var(--success-color)'
+          ">
+          {{ data.verified ? "Verified" : "Not Verified" }}
+        </td>
+        <td class="" style="text-align:center;">
+          <i class="p-links p-combine i-small pi pi-download" (click)="addEventOfficial(data)"></i>
+        </td>
+      </tr>
+      <tr *ngIf="_importOfficialList.length == 0">
+        <td colspan="8">No record found.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<div class="common-toast" *ngIf="_showToast">
+  <stupa-toast [mainHeading]="_toastHeading" [subHeading]="_toastSubHeading" [severity]="_toastSeverity"></stupa-toast>
+</div>

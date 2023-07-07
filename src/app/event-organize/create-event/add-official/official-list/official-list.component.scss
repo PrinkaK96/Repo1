@@ -1,0 +1,187 @@
+.centerElement {
+  ::ng-deep {
+    p-tabView {
+      .p-tabview-nav-container {
+        left: 0 !important;
+
+      }
+
+      .p-tabview-panels {
+        padding: 0;
+      }
+
+    }
+  }
+
+  .innerContent {
+    margin-top: 1rem;
+
+    .officialTable {
+      tbody {
+        .remover {
+          color: var(--danger-color);
+        }
+      }
+    }
+
+    .table> :not(caption)>*>* {
+      border: none;
+    }
+  }
+}
+
+.tabContainer {
+  ::ng-deep {
+    .p-dialog {
+      font-size: 90%;
+    }
+
+    .p-dialog .p-dialog-header .p-dialog-title {
+      color: var(--main-color);
+    }
+  }
+}
+
+.t {
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 650px) {
+  .flex-sb {
+    flex-direction: column;
+
+    .innerClass {
+      margin-top: 1rem;
+    }
+  }
+}
+
+// skelton css starts
+.skeletonlayout {
+  .partic {
+    display: flex;
+    gap: 20px;
+  }
+
+  .heading {
+    ::ng-deep {
+      p-skeleton {
+        .p-skeleton {
+          // z-index: 99999;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .cards {
+    .mt-2 {
+      .col-lg-6 {
+        &:nth-child(2) {
+          ::ng-deep {
+            p-skeleton {
+              float: right;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .id {
+    display: flex;
+    gap: 5px;
+
+    div {
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+      th {
+        background-color: #f8f8f8;
+        padding: 10px;
+      }
+
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+  }
+}
+
+// skeleton css end
+
+@media screen and (width >=319px) and (width <=425px) {
+  .skeletonlayout {
+    margin: 0 !important;
+    overflow: hidden !important;
+
+    .d-flex {
+      margin: 3px 0 0 0;
+    }
+
+    table {
+      margin: 14px 0 0 0;
+    }
+  }
+}
+
+@media screen and (width >=426px) and (width <=767px) {
+  .skeletonlayout {
+    margin: 0 !important;
+    overflow: hidden !important;
+
+    table {
+      margin: 14px 0 0 0;
+    }
+  }
+}
+
+@media screen and (width >=768px) and (width <=1023px) {
+  .skeletonlayout {
+    margin: 0 !important;
+    overflow: hidden !important;
+
+    table {
+      margin: 14px 0 0 0;
+    }
+  }
+}
+
+@media screen and (width >=1024px) {
+  .skeletonlayout {
+    margin: 0 !important;
+    overflow: hidden !important;
+
+    table {
+      margin: 14px 0 0 0 !important;
+    }
+  }
+}
+
+.addMember {
+  .butCol {
+    height: 70px;
+
+    button {
+      padding: 9px 20px !important;
+    }
+  }
+
+  .p-inputtext {
+    border: 1px solid #ced4da !important;
+  }
+}
+
+.textb {
+  color: #8B8B8B;
+}

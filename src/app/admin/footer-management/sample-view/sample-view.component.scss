@@ -1,0 +1,46 @@
+$mediaQueries: (
+    mobile: 576px,
+    tab: 991px,
+);
+
+@mixin query($screen) {
+    @each $key, $value in $mediaQueries {
+        @if ($screen ==$key) {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+.footerContent {
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--common-border-radius);
+    padding: 1rem;
+    .footerColumns:not(:last-child) {
+        border-right: 1px solid var(--secondary_dark-color);
+    }
+    @include query(tab) {
+        .footerColumns:not(:last-child) {
+            border-bottom: 1px solid var(--secondary_dark-color);
+            border-right: none;
+            padding-bottom: 1rem;
+        }
+        .footerColumns:not(:first-child) {
+            padding-top: 1rem;
+        }
+    }
+    .footerColumns {
+        .innerFlex {
+            flex-direction: column;
+            color: var(--secondary_dark-color) !important;
+            font-weight: 600 !important;
+            .icon:not(:last-child) {
+                margin-right: 2rem;
+            }
+            .contact {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

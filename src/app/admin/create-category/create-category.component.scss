@@ -1,0 +1,39 @@
+.createCategoryComponent {
+    .container-xxl {
+        .innerContent {
+            .heading {
+                p {
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                }
+            }
+
+            form {
+                .row {
+                    .className {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .profile_buttons2 {
+                height: 64%;
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+
+.errror {
+    color: red;
+}
+
+.btn_width {
+    margin-left: 140%;
+}
+
+.btn-cancel {
+    margin-left: 20%;
+}

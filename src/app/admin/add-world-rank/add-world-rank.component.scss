@@ -1,0 +1,102 @@
+.add_world_rank_component {
+  padding: 10px 20px;
+
+  .bodySection {
+    .heading {
+      p {
+        display: inline;
+        font-size: 18px;
+        font-weight: bold;
+        color: #1e2c53;
+      }
+    }
+
+    .searchBarSection {
+      .row {
+        .col-2 {
+          button {
+            border: none;
+            padding: 8px;
+            border-radius: 7px;
+            background: #1e2c53;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// dialog css starts
+.parent {
+  ::ng-deep {
+    p-dialog {
+      .p-dialog {
+        .p-dialog-header {
+          display: none;
+        }
+
+        .p-dialog-content {
+          border-top-right-radius: 6px;
+          border-top-left-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+.Section {
+  .svg {
+
+    // display: inline;
+    &:hover {
+      svg {
+        background-color: #d3d3d3;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 1px;
+      }
+    }
+
+    svg {
+      width: 17px;
+      height: 17px;
+      position: relative;
+
+    }
+  }
+
+  .row {
+    .col-2 {
+      button {
+        border: none;
+        padding: 8px;
+        border-radius: 7px;
+        background: #1e2c53;
+        color: white;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// dialog css ends
+
+
+.flex-grow1 {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.Mleft_right {
+  margin: 0 20px;
+}
+
+.input {
+  gap: 1rem;
+  ::ng-deep {
+    .p-element {
+      width: 70%;
+    }
+  }
+}

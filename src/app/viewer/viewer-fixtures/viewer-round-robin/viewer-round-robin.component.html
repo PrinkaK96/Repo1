@@ -1,0 +1,324 @@
+<div class="flex-e mr-1 mt-3" *ngIf="_groupList.length > 0" style="margin-right: 1rem;">
+  <button class="profile_buttons2" ngxPrint printSectionId="demo-print" [useExistingCss]="true" [previewOnly]="false">
+    Print
+  </button>
+</div>
+<div id="demo-print">
+    <section class="bottom mt-3 mb-3">
+      <div class="row" *ngIf="_groupList.length > 0">
+        <div *ngIf="!_isLocked" class="col-lg-4 position-relative">
+          <div class="saveButs flex-vc gap-4" *ngIf="!_isLocked && _groupList.length > 0">
+            <button class="btn btn_green btnDone m-0" (click)="createCustomGroup()">
+              Save Changes
+            </button>
+            <!-- <button class="btn btn_green btnDone m-0" (click)="saveAsBefore()">
+              Save As Before
+            </button> -->
+          </div>
+          <div class="groupBox gb2">
+            <div class="headding">
+              <div class="row kill">
+                <div class="col-1">#</div>
+                <div class="col-3" *ngIf="_currentParticipantId == 1">
+                  Players
+                </div>
+                <div class="col-3" *ngIf="_currentParticipantId == 2">Teams</div>
+                <div class="col-3" *ngIf="_currentParticipantId == 3 || _currentParticipantId == 4">
+                  Pairs
+                </div>
+  
+                <div class="col-2">Club</div>
+                <div class="col-2">Positions</div>
+  
+              </div>
+            </div>
+            <div class="greyBox mt-2">
+              <div class="card-row" *ngFor="let matches of _groupList; let i = index">
+                <div class="cardflex w-100">
+                  <div class="innerBox matchRow row">
+                    <div class="col-1">
+                      <p>{{ i + 1 }}.</p>
+                    </div>
+                    <div class="col-3 leftSide">
+                      <p class="text-overflow">
+                        {{ matches.participant_name }}
+                      </p>
+                    </div>
+                    <div class="col-2 leftSide">
+                      <p class="text-overflow">
+                        {{ matches.club }}
+                      </p>
+                    </div>
+                    <div class="col-2 leftSide">
+                      <p class="text-overflow">
+                        {{ matches.position == null ? 0 : matches.position }}
+                      </p>
+                    </div>
+  
+                  </div>
+                </div>
+                <div class="innerBox mergeBox p-links" *ngIf="false">
+                  <div class="mergeIcon">
+                    <svg width="100%" viewBox="0 0 29 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.22381V4.4559L2.7413 4.47683C5.76858 4.51171 5.82438 4.51868 6.82883 4.993C7.61006 5.36269 8.16111 5.78121 9.34691 6.93911C9.93981 7.51806 10.6583 8.20164 10.9443 8.45973L11.4535 8.92708L10.9443 9.39442C10.6583 9.65251 9.93981 10.3361 9.34691 10.915C8.16111 12.0729 7.61006 12.4915 6.82883 12.8611C5.82438 13.3355 5.76858 13.3424 2.7413 13.3773L0 13.3982V15.6303V17.8555H2.51111C3.8992 17.8555 5.32914 17.8206 5.7058 17.7857C7.12179 17.6323 8.46802 17.1928 9.59105 16.5023C10.456 15.9791 11.1744 15.3792 12.6951 13.9005C14.1669 12.4775 14.69 12.066 15.4922 11.6893C16.4617 11.2289 16.6152 11.208 19.0426 11.1801L21.2398 11.1522L19.9564 12.4426C18.8194 13.5796 18.6729 13.754 18.6729 13.9563C18.6729 14.1167 18.7287 14.2283 18.8612 14.3469L19.0565 14.5143L20.9189 14.4934C22.7116 14.4724 22.7883 14.4655 23.0952 14.305C23.3185 14.1934 24.1555 13.4052 25.7598 11.7939C28.0407 9.50603 28.1035 9.44325 28.1454 9.12238C28.2291 8.55041 28.1035 8.38998 25.6831 5.97652C23.7928 4.10016 23.4022 3.73745 23.0464 3.57702C22.6349 3.38171 22.6279 3.38171 20.8492 3.36078L19.0635 3.33288L18.8682 3.50029C18.7287 3.62584 18.6729 3.73745 18.6729 3.89788C18.6729 4.10016 18.8194 4.27455 19.9564 5.41152L21.2398 6.70195L19.0426 6.67405C16.6152 6.64615 16.4617 6.62522 15.4922 6.16485C14.69 5.78819 14.1669 5.37664 12.6951 3.95368C11.1744 2.47492 10.456 1.87504 9.59105 1.35189C8.46802 0.661337 7.12179 0.221892 5.7058 0.0684356C5.32914 0.033559 3.8992 -0.0013175 2.51111 -0.0013175H0V2.22381Z"
+                        fill="#555555" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        <div *ngIf="_isLocked" class="col-lg-4 position-relative">
+          <p-scrollPanel [style]="{width: '100%', height: '300px'}">
+            <p-table styleClass="p-datatable-gridlines p-datatable-sm" class="common-table text-center" #request
+              [rows]="7" [value]="_groupList" [paginator]="false" [tableStyle]="{ 'min-width': '20rem'}"
+              [globalFilterFields]="['name', 'email']">
+  
+              <ng-template pTemplate="header">
+                <tr style="font-size: 11px;">
+                  <th pSortableColumn="name" style="width: 3%">S.No</th>
+                  <th pSortableColumn="email" style="width: 5%">Player</th>
+                  <th pSortableColumn="email" style="width: 3%">Position</th>
+                </tr>
+              </ng-template>
+  
+              <ng-template pTemplate="body" let-users>
+                <tr>
+                  <td><b>{{ users.position}}</b></td>
+                  <td class="text-overflow"><b>{{ users.participant_name}}</b></td>
+                  <td><b>{{ users.rank}}</b></td>
+                  <!-- <td><b>{{ users.position}}</b></td> -->
+  
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="emptymessage">
+                <tr>
+                  <td colspan="8">No user found.</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </p-scrollPanel>
+        </div>
+        <div class="col-lg-8">
+          <p-scrollPanel [style]="{width: '100%', height: '300px'}">
+            <p-table styleClass="p-datatable-gridlines p-datatable-sm" class="common-table text-center" #request
+              [rows]="7" [value]="_topPlayersList" [paginator]="false" [tableStyle]="{ 'min-width': '25rem' }"
+              [globalFilterFields]="['name', 'email']">
+              <ng-template pTemplate="header">
+                <tr style="font-size: 11px;">
+                  <th pSortableColumn="name" style="width: 3%">Match</th>
+                  <th pSortableColumn="email" style="width: 5%">Date</th>
+                  <th pSortableColumn="email" style="width: 3%">Time</th>
+                  <th pSortableColumn="state" style="width: 3%">Table</th>
+                  <th pSortableColumn="club" style="width: 5%">Umpire</th>
+                  <th pSortableColumn="state" style="width: 3%">Players</th>
+                  <th pSortableColumn="club" style="width: 5%">Score</th>
+                </tr>
+              </ng-template>
+  
+              <ng-template pTemplate="body" let-users>
+                <tr>
+                  <td><b>{{ users.match}}</b></td>
+                  <td class="text-overflow"><b>{{ users.start_time | date:'yyyy-MM-dd'}}</b></td>
+                  <td><b>{{ users.start_time | date:'HH:mm'}}</b></td>
+                  <td><b>{{ users.table}}</b></td>
+                  <td><b>{{ users.umpire_name}}</b></td>
+                  <td class="text-overflow"><b>{{ users.match_details[0].participant_name +' ' + 'vs' + ' ' +
+                      users.match_details[1].participant_name}}</b></td>
+                  <td>
+                    <div class="flex-vc gap-3">
+                      <div class="col-2" *ngIf="!isWinner(users)">
+                        <p class="p-green">
+                          {{getSetScore(users.match_details) }}
+                        </p>
+                      </div>
+                  
+  
+  
+                    </div>
+                  </td>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="emptymessage">
+                <tr>
+                  <td colspan="8">No user found.</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </p-scrollPanel>
+  
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <p-dialog [resizable]="false" [(visible)]="_openSchedule" [closable]="true" [showHeader]="true" [modal]="true"
+    [draggable]="false" [style]="{ width: '98vw', height: '98vh' }" [baseZIndex]="10000" (onHide)="refreshAllData()">
+    <!-- <stupa-match-scheduler [_matchDetailsList]="_matchDetailsList"
+      (getLeftMathesForSlots)="getGroupMatchsForSchedule($event)" [_matchDetailsListCopy]="_matchDetailsListCopy"
+      (getListWithCategoryId)="getGroupMatchsForSchedule($event)" [_fixtureFormat]="_fixtureFormat"
+      [_tabIndex]="_tabIndex" [selectedParticipantId]="_currentParticipantId" [selectedCategoryId]="_currentCategoryId"
+      [isKnockout]="false"></stupa-match-scheduler> -->
+  </p-dialog>
+  
+  <div class="MatchS-popup">
+    <p-dialog [resizable]="false" #pDialog [(visible)]="_isViewPlayerGrid" [style]="_dialogStyle" [draggable]="false"
+      [modal]="true" (onHide)="closePopUpIsViewPlayerGrid()">
+      <div class="innerContent" *ngIf="_currentParticipantId == 1">
+        <div class="row mb-2">
+          <div class="col-9">
+            <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+              (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="'Search Player'" />
+          </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_topPlayers">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th>Name</th>
+              <th>State</th>
+              <th>Club</th>
+              <th>Point</th>
+              <th>Email</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-player let-columns="columns">
+            <tr>
+              <td>{{ player.name }}</td>
+              <td>{{ player.state }}</td>
+              <td>{{ player.club }}</td>
+              <td>{{ player.rating }}</td>
+  
+              <!-- <td>{{ player.points == null ? 0 : player.points }}</td> -->
+              <td>{{ player.email }}</td>
+              <!-- <td>
+                          <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                      </td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="innerContent" *ngIf="_currentParticipantId == 2">
+        <div class="row mb-2">
+          <div class="col-9">
+            <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+              (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="'Search Player'" />
+          </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_teamList">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th>Name</th>
+              <th>State</th>
+              <th>Club</th>
+              <th>Point</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-player let-columns="columns">
+            <tr>
+              <td>{{ player.participant_name }}</td>
+              <td>{{ player.state }}</td>
+              <td>{{ player.name }}</td>
+              <td>{{ player.rating }}</td>
+              <!-- <td>{{ player.points == null ? 0 : player.points }}</td> -->
+              <!-- <td>
+                          <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                      </td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="innerContent" *ngIf="_currentParticipantId == 3">
+        <div class="row mb-2">
+          <div class="col-9">
+            <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+              (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="'Search Player'" />
+          </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_doubleList">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th>Name asdf</th>
+              <th>State</th>
+              <th>Club</th>
+              <th>Point</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-player let-columns="columns">
+            <tr>
+              <td>{{ player.participant_name }}</td>
+              <td>{{ player.state }}</td>
+              <td>{{ player.name }}</td>
+              <td>{{ player.rating }}</td>
+              <!-- <td>{{ player.points == null ? 0 : player.points }}</td> -->
+              <!-- <td>
+                          <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                      </td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+      <div class="innerContent" *ngIf="_currentParticipantId == 4">
+        <div class="row mb-2">
+          <div class="col-9">
+            <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+              (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="'Search Player'" />
+          </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_mixDoubleList">
+          <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th>Name</th>
+              <th>State</th>
+              <th>Club</th>
+              <th>Point</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-player let-columns="columns">
+            <tr>
+              <td>{{ player.participant_name }}</td>
+              <td>{{ player.state }}</td>
+              <td>{{ player.name }}</td>
+              <td>{{ player.rating }}</td>
+              <!-- <td>{{ player.points == null ? 0 : player.points }}</td> -->
+              <!-- <td>
+                          <input type="checkbox" (click)="playerForMainDraw($event, player)" [ngModel]="player.isSelected" />
+                      </td> -->
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </p-dialog>
+  </div>
+  <div class="settingDialog common-score">
+    <p-dialog closeIcon="pi pi-times-circle p-green" [resizable]="false" [(visible)]="_showSetting"
+      [style]="{width:'700px'}" [draggable]="false" [modal]="true">
+      <stupa-settings [_fixtureFormat]="_fixtureFormat" [currentParticipantId]="_currentParticipantId"
+        [selectedCategoryId]="_currentCategoryId"></stupa-settings>
+    </p-dialog>
+  </div>
+  <div class="updateScore-popup withoutHeader">
+    <p-dialog class="common-score" [resizable]="false" [(visible)]="_UpdateScore" [modal]="true"
+      closeIcon="pi pi-times-circle p-green" [draggable]="false" [style]="{ width: 'auto' }" [baseZIndex]="10000"
+      [resizable]="false">
+      <stupa-common-score [_currentCategoryId]="_currentCategoryId" [_parent_match_id]="_parent_match_id"
+        [_groupId]="_groupId" *ngIf="_UpdateScore" [scoreFullDetails]="_matchFullDetails"
+        (teamMatchCreated)="teamMatchCreated($event)"
+        [_currentParticipantId]="_currentParticipantId"></stupa-common-score>
+      <!-- <stupa-update-score  [_teamAPlayers]="_teamAPlayers"
+      [_teamAPlayersCopy]="_teamAPlayersCopy" [_currentParticipantId]="_currentParticipantId"
+      [_teamBPlayers]="_teamBPlayers" [_teamBPlayersCopy]="_teamBPlayersCopy"
+      [_teamMatchFullDetails]="_teamMatchFullDetails" [_teamA_participant_id]="_teamA_participant_id"
+      [_teamB_participant_id]="_teamB_participant_id" [_parent_match_id]="_parent_match_id"
+      (isScoreUpadted)="isScoreUpadted($event)" [_currentCategoryId]="_currentCategoryId" [_groupId]="_groupId"
+      (teamMatchCreated)="teamMatchCreated($event)"></stupa-update-score> -->
+    </p-dialog>
+  </div>
+  <stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>
+  <p-toast position="bottom-right" key="bc"></p-toast>

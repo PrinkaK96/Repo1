@@ -1,0 +1,524 @@
+.container {
+    max-width: 455px;
+    height: 200px;
+    padding: 2rem;
+    text-align: center;
+    border: solid 1px #979797;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    label {
+        color: white;
+        width: 173px;
+        height: 34px;
+        border-radius: 4px;
+        background-color: var(--main-color);
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--secondary-color);
+    }
+
+    p {
+        color: var(--secondary-color);
+    }
+}
+
+.float-container {
+    padding: 20px;
+    display: flex;
+
+    .uploadChild {
+        width: 50%;
+        float: left;
+        padding: 20px;
+    }
+
+    .uploadImage {
+        width: 50%;
+        float: right;
+        padding: 20px;
+
+        p {
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.button {
+    white-space: nowrap;
+    border: 1px solid #d3d3d3;
+    margin: 0 1% 0 0;
+    border-radius: 5px;
+    padding: 0.7% 6%;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-overflow: ellipsis;
+}
+
+.button:focus {
+    background-color: #01534d;
+    color: white;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.publishImages,
+.unpublishImage {
+    p {
+        color: var(--text-color);
+    }
+
+    .description {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--secondary_dark-color);
+    }
+
+    .bannerContainer {
+        width: 100%;
+        height: 150px;
+        position: relative;
+        border-radius: var(--common-border-radius);
+
+        .dropbtn {
+            ::ng-deep {
+                .p-button.p-button-icon-only.p-button-rounded {
+                    background: white;
+                    scale: 0.7;
+                    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+                    border: 1px solid #e9e9e9;
+                }
+            }
+
+            position: absolute;
+            top: -20px;
+            z-index: 999999;
+            right: -22px;
+        }
+
+        .publish,
+        .unpublish {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            border-radius: var(--common-border-radius);
+        }
+
+        .imageLength {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 3px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            min-width: 45px;
+            border-top-right-radius: var(--common-border-radius);
+        }
+    }
+}
+
+.button1 {
+    width: 30%;
+    border-radius: 7px;
+    padding: 6px;
+    border: 1px solid #01534d;
+    color: #01534d;
+    background-color: white;
+}
+
+.button1:disabled {
+    background-color: lightgray !important;
+}
+
+.button1:focus,
+.button2:focus {
+    background-color: #01534d;
+    color: white;
+}
+
+.button2 {
+    width: 30%;
+    border-radius: 7px;
+    padding: 6px;
+    border: 1px solid #01534d;
+    color: #01534d;
+    margin-left: 17px;
+    background-color: white;
+}
+
+.reupload {
+
+    input {
+        opacity: 0;
+    }
+
+    .repic {
+        width: 63%;
+        border-radius: 7px;
+        padding: 6px;
+        border: 1px solid #01534d;
+        color: #01534d;
+        margin-left: 1px;
+        text-align: center;
+        margin-top: -89px !important;
+        background-color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+.uploadIcon {
+    height: 50px;
+    width: 50px;
+    margin-top: -33px;
+}
+
+$mediaQueries: (
+    mobile: 576px,
+    tab: 1000px,
+);
+
+@mixin query($screen) {
+
+    @each $key,
+    $value in $mediaQueries {
+        @if ($screen ==$key) {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+.arrangeViewDrag {
+    width: 450px;
+    height: 200px;
+    padding: 2rem;
+    text-align: center;
+    border: dashed 1px #979797;
+    position: relative;
+    margin: 0 auto;
+}
+
+.banner-tabView {
+    ::ng-deep {
+        .p-link:focus {
+            box-shadow: none;
+        }
+
+        .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50px !important;
+        }
+
+        .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+            background-color: black !important;
+        }
+
+        input {
+            border: none !important;
+            padding-left: 0 !important;
+        }
+
+        input:focus {
+            box-shadow: 0 000 !important;
+        }
+
+        .p-tabview {
+            font-weight: 300 !important;
+            font-size: 100%;
+        }
+
+        .p-tabview-panels {
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        .p-tabview .p-tabview-nav {
+            border: 2px solid white;
+        }
+
+        .p-tabview .p-tabview-nav li:focus-within {
+            outline: none;
+        }
+
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+            padding: 0.5rem 1.25rem;
+            border: none;
+        }
+
+        .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+            color: var(--main-color);
+            border-bottom: 2px solid #f6bb41;
+        }
+
+        .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+            box-shadow: 0 0 0 0 !important;
+        }
+    }
+}
+
+.bannerHeading {
+    margin-left: 20px;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.icons_wrapper {
+    position: relative;
+
+    .icon_container {
+        cursor: pointer;
+        position: relative;
+        height: 150px;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .arrangeLength {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top-right-radius: 7px;
+        background: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+        font-size: 16px;
+        padding: 3px;
+        min-width: 40px;
+        text-align: center;
+    }
+
+    .arrangeViewDes {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+    }
+}
+
+.drag_container {
+    padding: 0px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.updatedSelection {
+    color: white;
+    background-color: var(--main-color-light);
+    margin-left: 810px;
+    width: 20%;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.updatedSelection:disabled {
+    background-color: lightgray !important;
+}
+
+.backbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+.NoImagesUploaded {
+    .noImages {
+        margin-left: 20px;
+        color: grey;
+    }
+
+    .noImagesUpload {
+        margin-left: 20px;
+        color: #1b403a;
+        font-size: 15px;
+    }
+
+    .arrangeUpload {
+        background-color: #1b403a;
+        color: white;
+        border-radius: 5px;
+        width: 40%;
+        padding: 6px;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+}
+
+.product-item {
+    .product-item-content {
+        position: relative;
+        //border: 1px solid var(--surface-d);
+        border-radius: 3px;
+        margin: 0;
+        text-align: center;
+        padding: 2rem 0;
+        width: 100%;
+        height: 200px;
+
+        .img-cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    button.p-link {
+        background-color: gray;
+    }
+}
+
+// .p-carousel .p-carousel-indicators .p-carousel-indicator button {
+//     background-color: #ced4da;
+//     width: 1rem;
+//     height: 0.5rem;
+//     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+// }
+.banner-tabView {
+    .hidden-input {
+        display: none;
+    }
+
+    .innerContent {
+        padding: 0.5rem;
+        background-color: var(--box-bg);
+
+        .pRelative {
+            position: relative;
+
+            .preview {
+                width: 100px;
+
+                p {
+                    text-decoration: underline;
+                }
+            }
+
+            ._recent.addBut {
+                top: 50%;
+                transform: translate(-50%, -64%);
+            }
+
+            .addBut {
+                position: absolute;
+                left: 1rem;
+            }
+        }
+
+    }
+}
+
+.remove {
+    margin-left: 10px;
+}
+
+.bkg {
+    color: red;
+}
+
+.thumbnailBut {
+    margin: 0.2rem 0 0.6rem 0;
+    height: 38px;
+    width: 100%;
+    background-color: #D9D9D9;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sectionDivider {
+    ::ng-deep {
+        .p-divider::before {
+            border-top: 2px solid #babdc1 !important;
+        }
+    }
+}
+
+
+.subMargin {
+    margin: -1px !important;
+}
+
+.prevBut {
+    .preview {
+        margin-left: 2.8rem !important;
+    }
+}
+
+.innerMatches {
+    margin-left: -1px;
+}
+
+.parent {
+    ::ng-deep {
+        p-dialog {
+            .p-dialog {
+                .p-dialog-header {
+                    padding: 0;
+                }
+
+                .p-dialog-content {
+                    padding: 0;
+                    position: relative;
+                    height: 400px;
+
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 96%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

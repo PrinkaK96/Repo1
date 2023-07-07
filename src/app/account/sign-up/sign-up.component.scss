@@ -1,0 +1,602 @@
+$white-container: #f5f5f5;
+$mediaQueries: (
+    mobile: 576px,
+    tab: 1000px,
+);
+
+@mixin query($screen) {
+
+    @each $key,
+    $value in $mediaQueries {
+        @if ($screen==$key) {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.step2 {
+    max-height: 82vh !important;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+input[type="file"]::file-selector-button {
+    display: none !important;
+}
+
+.signup-container {
+    background: var(--sidebarBg);
+    // min-height: 100vh;
+}
+
+.section-signup {
+    padding: 0 4rem 0 4rem;
+    position: relative;
+
+    .signup-row {
+        height: 100%;
+        justify-content: flex-end !important;
+
+        .centeredLogo {
+            img {
+                position: fixed;
+                left: 30%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .welcome {
+            a.signInUrl {
+                margin-left: 8px;
+                color: var(--main-color);
+                font-weight: bold !important;
+                text-decoration: underline;
+            }
+
+            border-radius: 8px;
+            background: var(--box-bg);
+            padding: 2rem 1rem;
+            max-width: 32vw;
+            min-width: 32vw;
+            position: relative;
+
+            .signup-form {
+                .agreetoCBTM {
+                    ::ng-deep {
+                        .p-checkbox .p-checkbox-box {
+                            border-radius: 50px !important;
+
+                            .p-checkbox-icon::before {
+                                font-size: 11px !important;
+                            }
+                        }
+                    }
+                }
+
+                .checkbox-row {
+                    margin: 4vh 1.5vw;
+
+                    .htmlCheckbox {
+                        width: auto !important;
+                        transform: scale(1.3);
+                        border-radius: 5px;
+                    }
+
+                    .htmlCheckbox :checked {
+                        background: green;
+                        background-color: #01534d;
+                    }
+                }
+            }
+
+            .backBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: none;
+                border: 1px solid black;
+                border-radius: 50px;
+                position: absolute;
+                left: 35px;
+                height: 30px;
+                width: 30px;
+                // transform: translate(-50%, -50%);
+            }
+
+            form {
+                margin: 5% 0;
+
+                input {
+                    border: 0.01em solid !important;
+                    margin: 0.6rem 0;
+                }
+
+                ::ng-deep {
+                    p-dropdown {
+                        width: 100%;
+                    }
+
+                    .p-inputtext {
+                        max-height: 38px;
+                        background: transparent;
+                        border: none !important;
+                    }
+
+                    .p-dropdown {
+                        margin: 0.6rem 0;
+                        width: 100%;
+                        border: 0.01em solid;
+                        max-height: 38px;
+                        background: transparent;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    p-inputnumber {
+                        width: 100%;
+                    }
+
+                    .p-inputnumber,
+                    .p-calendar {
+                        margin: 0.6rem 0;
+                        background: transparent;
+                        border-radius: 5px;
+                        width: 100%;
+                        border: 0.01em solid;
+                        max-height: 38px;
+                    }
+                }
+            }
+
+            .btn_green {
+                background: var(--main-bg);
+                margin: 4vh auto !important;
+                padding: 7px 20px;
+                width: 75%;
+                color: white;
+            }
+        }
+
+        .welcome-card {
+            margin: 4vw 0;
+        }
+
+        .step1 {
+            .signup-form {
+                margin: 5vh 0 !important;
+                height: 38vh;
+                overflow-y: auto;
+            }
+        }
+
+        .step2 {
+            .signup-form {
+                padding: 0 3.5vw !important;
+
+                .hrLine {
+                    width: 100%;
+                    display: inline-block;
+                    height: 1px;
+                    background: #828282;
+                }
+            }
+
+            margin: 4vw 0;
+        }
+    }
+}
+
+.poweredBy {
+    position: fixed;
+    bottom: 3vh;
+    left: 3vw;
+}
+
+
+/* hide arrows
+ Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+
+/* Firefox */
+
+//  input[type=number] {
+//    -moz-appearance: textfield !important;
+//  }
+.signup-container {
+    ::ng-deep {
+        .p-password {
+            margin: 0.6rem 0;
+            background: transparent;
+            border-radius: 5px;
+            width: 100%;
+            border: 0.01em solid;
+            max-height: 38px;
+        }
+    }
+}
+
+.col-lg-2 {
+    input {
+        width: 62px;
+    }
+}
+
+.main {
+    display: flex;
+
+    .left {
+        width: 80px;
+    }
+
+    .right {
+        width: 125%;
+    }
+}
+
+span:has(.p-input-icon-right) {
+    background-color: red($color: #000000);
+}
+
+.right {
+    gap: 5px;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.imagi {
+    width: 10%;
+    position: absolute;
+    bottom: 10px;
+
+    .text {
+        white-space: nowrap;
+        color: white;
+        margin-top: 10px;
+    }
+
+    img {
+        width: 70%;
+        mix-blend-mode: color-dodge;
+    }
+}
+
+// for mobile screens 
+@media screen and (width >=300px) and (width <=714px) {
+    .section-signup {
+        padding: 0;
+
+        // background-color: gray;
+        .signup-row {
+            .step2 {
+                margin: 0 10px;
+                max-width: 100%;
+                top: 72px;
+                height: 75vh !important;
+                margin: 0 10px;
+            }
+
+            .centeredLogo {
+                img {
+                    top: 6% !important;
+                    z-index: 9999;
+                    left: 50% !important;
+                    max-width: 38% !important;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            min-height: 100vh !important;
+            height: 0;
+
+            .welcome-card {
+                margin: 0;
+                overflow: hidden;
+                min-height: 100vh;
+                display: flex;
+                justify-self: center;
+                align-items: center;
+
+                .welcome {
+                    max-width: 100% !important;
+                    width: 100%;
+                    // padding: 1rem 1rem !important;
+                }
+
+                .step1 {
+                    max-height: 77vh !important;
+                    padding: 11px;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .imagi {
+            width: 25% !important;
+            left: 50%;
+            bottom: 1%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media screen and (width >=715px) and (width <=1100px) {
+    .section-signup {
+        padding: 0;
+
+        // background-color: gray;
+        .signup-row {
+            margin: auto;
+            display: flex;
+            justify-content: center !important;
+            align-items: center;
+
+            .step2 {
+                width: 80% !important;
+                max-width: 80% !important;
+                height: 77vh !important;
+                margin: 0 10px;
+            }
+
+            .centeredLogo {
+                img {
+                    top: 10% !important;
+                    z-index: 9999;
+                    left: 50% !important;
+                    max-width: 38% !important;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            min-height: 100vh !important;
+            height: 0;
+
+            .welcome-card {
+                margin: auto;
+                overflow: hidden;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .checkbox-row {
+                    margin: 4rem !important;
+                }
+
+                .welcome {
+                    width: 80% !important;
+                    max-width: 80% !important;
+                    // padding: 1rem 1rem !important;
+                }
+
+                .step1 {
+                    max-height: 77vh !important;
+                    padding: 11px;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .imagi {
+            width: 25% !important;
+            left: 50%;
+            bottom: 1%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+// for tablets 
+// @media screen and (width >=427px) and (width <=768px) {
+//   .section-signup {
+//     padding: 0;
+//     // background-color: gray;
+//     .signup-row {
+//       min-height: 100vh;
+//       .step2 {
+//         margin: 0 10px;
+//         max-width: 40%;
+//         top: 72px;
+//         left: 55%;
+//         height: 75vh !important;
+//         margin: 0 10px;
+//       }
+//       .centeredLogo {
+//         img {
+//           top: 50% !important;
+//           z-index: 9999;
+//           // left: 50% !important;
+//           // max-width: 38% !important;
+//           max-width: 15% !important;
+//           min-width: 35% !important;
+//         }
+//       }
+//       // min-height: 100vh !important;
+//       // height: 0;
+//       .welcome-card {
+//         margin: 0;
+//         width: 100%;
+//         overflow: hidden;
+//         min-height: 100vh;
+//         .welcome {
+//           top: 50px !important;
+//           max-width: 45% !important;
+//           // padding: 1rem 1rem !important;
+//         }
+//         .step1 {
+//           min-height: 80vh !important;
+//           padding: 11px;
+//           margin: 0 10px;
+//           margin-left: 54%;
+//         }
+//       }
+//     }
+//     .imagi {
+//       width: 18% !important;
+//       left: 40px;
+//       bottom: 1%;
+//     }
+//   }
+// }
+// for desktop 
+@media screen and (width >=1101px) and (width <=1440px) {
+    .signup-container {
+        .section-signup {
+            padding: 0;
+
+            // background-color: gray;
+            .signup-row {
+                min-height: 100vh;
+
+                .step2 {
+                    margin: 0 10px;
+                    max-width: 40%;
+                    top: 72px;
+                    left: 55%;
+                    height: 75vh !important;
+                    margin: 0 10px;
+                }
+
+                .centeredLogo {
+                    img {
+                        top: 50% !important;
+                        z-index: 9999;
+                        // left: 50% !important;
+                        max-width: 23% !important;
+                        min-width: 21% !important;
+                    }
+                }
+
+                // min-height: 100vh !important;
+                // height: 0;
+                .welcome-card {
+                    margin: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    min-height: 100vh;
+
+                    .welcome {
+                        top: 75px !important;
+                        max-width: 30% !important;
+                        min-width: 0;
+                        // padding: 1rem 1rem !important;
+                    }
+
+                    .step1 {
+                        min-height: 80vh !important;
+                        padding: 11px;
+                        margin: 0 10px;
+                        margin-left: 67%;
+                    }
+                }
+            }
+
+            .imagi {
+                width: 10% !important;
+                left: 40px;
+                bottom: 1%;
+            }
+        }
+    }
+}
+
+// for larger screens 
+@media screen and (width >=1441px) {
+    .signup-container {
+        .section-signup {
+            padding: 0;
+
+            // background-color: gray;
+            .signup-row {
+                min-height: 100vh;
+
+                .step2 {
+                    margin: 0 10px;
+                    max-width: 40%;
+                    top: 72px;
+                    left: 55%;
+                    height: 80vh !important;
+                    margin: 0 10px;
+                }
+
+                .centeredLogo {
+                    img {
+                        top: 50% !important;
+                        z-index: 9999;
+                        // left: 50% !important;
+                        max-width: 23% !important;
+                        min-width: 21% !important;
+                    }
+                }
+
+                // min-height: 100vh !important;
+                // height: 0;
+                .welcome-card {
+                    margin: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    min-height: 100vh;
+
+                    .welcome {
+                        top: 75px !important;
+                        max-width: 30% !important;
+                        min-width: 0;
+                        // padding: 1rem 1rem !important;
+                    }
+
+                    .step1 {
+                        min-height: 80vh !important;
+                        padding: 11px;
+                        margin: 0 10px;
+                        margin-left: 67%;
+                    }
+                }
+            }
+
+            .imagi {
+                width: 10% !important;
+                left: 40px;
+                bottom: 1%;
+            }
+        }
+    }
+}

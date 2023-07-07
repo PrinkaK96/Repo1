@@ -1,0 +1,368 @@
+<div class="requests">
+    <div class="tabContainer m-2">
+        <div class="innerBox">
+            <div class="mb-3" *ngIf="isAdmin()">
+                <button (click)="goBack()" class="" style="border: none; background: none">
+                    <img src="../../../assets/icons/backbtn/boldbackBTN.png" class="backButton_w33" alt="" />
+                </button>
+            </div>
+            <h4 class="p-secondary-dark">
+                <b>Event Verification Requests</b>
+            </h4>
+            <div class="requests-tabView my-3">
+                <p-tabView (onChange)="currentTab($event)" [activeIndex]="_tabIndex">
+                    <p-tabPanel header="{{ 'verificationRequests.pending' | translate }}">
+                        <!-- <div *ngIf="false" class="tabContainer">
+                            <div class="rejected">
+                                <img src="../../../assets/icons/Layer 1.png" class="w230180" />
+                                <h4>Empty!</h4>
+                                <p>{{ "verificationRequests.noPending" | translate }}</p>
+                            </div>
+                        </div> -->
+                        <div *ngIf="true">
+                            <br />
+                            <div class="tabContainer">
+                                <!-- (sortFunction)="customSort($event)" [customSort]="true" -->
+                                <div class="top-searchbar mt-3 mb-3">
+                                    <div class="flex-vc">
+                                        <div class="innerBox-input">
+                                            <span class="p-input-icon-left">
+                                                <i class="p-green pi pi-search"></i>
+                                                <input pInputText type="text" [(ngModel)]="_pending"
+                                                    (change)="getRequestsWithSearch('pending', _pending)"
+                                                    (keyup)="getRequestsWithSearch('pending', _pending)"
+                                                    placeholder="Search by event name" />
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p-table class="common-table text-start" #request [value]="_getPendingUserList"
+                                    [paginator]="false" [rows]="5" [showCurrentPageReport]="false"
+                                    [tableStyle]="{ 'min-width': '50rem' }"
+                                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+                                    <!-- class="common-table text-start" #request [value]="_getPendingUserList"
+                                    (sortFunction)="customSort($event)"
+                                    [customSort]="true"
+                                    [rows]="5"
+                                    [showCurrentPageReport]="true"
+                                    [paginator]="false"
+                                    [globalFilterFields]="['name', 'email', 'country']" -->
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th pSortableColumn="name" style="width: 40%">Name</th>
+                                            <th pSortableColumn="email" style="width: 40%">Club Name</th>
+                                            <th pSortableColumn="email" style="width: 20%"></th>
+                                            <th class="text-center" pSortableColumn="action" style="width: 10%">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </ng-template>
+
+                                    <ng-template pTemplate="body" let-users>
+                                        <tr>
+                                            <td>{{ users.event_name }}</td>
+                                            <td>{{ users.user_name }}</td>
+                                            <td> <a class="viewDialog p-green" (click)="openDialog(users)">View</a></td>
+                                            <td>
+                                                <div class="flex-vc">
+                                                    <button (click)="acceptRequest(users, 'pending')"
+                                                        class="btn tickAction">
+                                                        <i class="p-green i-small pi pi-check"></i>
+                                                    </button>
+                                                    <button (click)="rejectRequest(users, 'pending')"
+                                                        class="btn crossAction ms-2">
+                                                        <i class="p-green i-small pi pi-times"></i>
+                                                    </button>
+
+                                                    <p-dialog [resizable]="false" [(visible)]="showRejectionDialog"
+                                                        [modal]="true" [header]="'Alert!'" [draggable]="false"
+                                                        [style]="{ width: '50vw' }" [baseZIndex]="1000"
+                                                        (onHide)="closeRejectionPopUp()">
+                                                        <!-- {{'pending case '+showRejectionDialog}}{{'accept case '+showAcceptDialog}} -->
+                                                        <div class="innerContent">
+                                                            <textarea rows="6" cols="80" pInputTextarea
+                                                                [autoResize]="true" [(ngModel)]="_rejectionMsg"
+                                                                placeholder="Type here the valid reason for not accepting the event verification.."></textarea>
+                                                            <div class="alertOptions flex-e">
+                                                                <button (click)="closeRejectionPopUp()"
+                                                                    class="no me-2 btn">
+                                                                    No
+                                                                </button>
+                                                                <button
+                                                                    class="ms-3 send btn btn_green w-auto ms-2 m-0"
+                                                                    (click)="updaterejectRequest('pending',users)">
+                                                                    Send
+                                                                </button>
+                                                                <!-- (click)="rejectRequestByMessage('pending')" -->
+                                                            </div>
+                                                        </div>
+                                                    </p-dialog>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="emptymessage">
+                                        <tr>
+                                            <td colspan="8">No user found.</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="table-paginator mt-3" *ngIf="_getPendingUserList.length != 0">
+                                    <p-paginator [first]="first" [rows]="5" [totalRecords]="_totalPendingUser"
+                                        (onPageChange)="paginate($event, 'pending')"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="{{ 'verificationRequests.accepted' | translate }}">
+                        <div *ngIf="false" class="tabContainer">
+                            <div class="accepted">
+                                <img src="../../../assets/icons/Layer 1.png" class="w230180" />
+                                <h4>Empty!</h4>
+                                <p>{{ "verificationRequests.noAccepted" | translate }}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="true">
+                            <br />
+                            <div class="tabContainer">
+                                <!-- (sortFunction)="customSort($event)" [customSort]="true" -->
+                                <div class="top-searchbar mt-3 mb-3">
+                                    <div class="flex-vc">
+                                        <div class="innerBox-input">
+                                            <span class="p-input-icon-left">
+                                                <i class="p-green pi pi-search"></i>
+                                                <input pInputText type="text" [(ngModel)]="_accepted" (change)="
+                              getRequestsWithSearch('accepted', _accepted)
+                            " (keyup)="getRequestsWithSearch('accepted', _accepted)" placeholder="Search by event name" />
+                                                <!-- (change)="
+                              getRequestsWithSearch('accepted', _accepted)
+                            "
+                            (keyup)="getRequestsWithSearch('accepted', _accepted)"
+                            (keypress)="
+                              getRequestsWithSearch('accepted', _accepted)
+                            " -->
+                                            </span>
+                                        </div>
+                                        <!-- <div class="innerBox p-links">
+                                              <i class="pi pi-filter-fill i-small p-green"></i>
+                                          </div>
+                                          <div class="innerBox p-links">
+                                              <i class="pi pi-align-right i-small p-green"></i>
+                                          </div> -->
+                                    </div>
+                                </div>
+                                <p-table class="common-table text-center" #request [value]="_getAcceptedUserList"
+                                    (sortFunction)="customSort($event)" [customSort]="true" [rows]="10"
+                                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]"
+                                    [paginator]="false" [globalFilterFields]="['name', 'email', 'country']">
+
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th pSortableColumn="name" style="width: 40%">Name</th>
+                                            <th pSortableColumn="email" style="width: 40%">Club Name</th>
+                                            <th pSortableColumn="email" style="width: 20%"></th>
+
+                                            <th class="text-center" pSortableColumn="action" style="width: 10%">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </ng-template>
+
+                                    <ng-template pTemplate="body" let-users>
+                                        <tr>
+                                            <!-- <td>{{ users.name }}</td> -->
+                                            <td>{{ users.event_name}}</td>
+                                            <td>{{ users.user_name}}</td>
+                                            <td> <a class="viewDialog p-green" (click)="openDialog(users)">View</a></td>
+
+                                            <td>
+                                                <p-overlayPanel appendTo="body" #menuPopup1 [showCloseIcon]="false"
+                                                    [style]="{ width: '145px' }">
+                                                    <ng-template pTemplate>
+                                                        <div class="common-popup">
+                                                            <div class="innerContent">
+                                                                <!-- <div class="overlay-item menuItem ">
+                                                                      <p class="p-links">Add</p>
+                                                                  </div> -->
+                                                                <div class="overlay-item menuItem p-0"
+                                                                    (click)="rejectRequest(users, 'accepted')">
+                                                                    <p class="p-links">Remove</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ng-template>
+                                                </p-overlayPanel>
+                                                <p-dialog [resizable]="false" [(visible)]="showAcceptDialog"
+                                                    [modal]="true" [header]="'Alert!'" [draggable]="false"
+                                                    [style]="{ width: '50vw' }" [baseZIndex]="10000"
+                                                    (onHide)="closeRejectionPopUp()">
+                                                    <div class="innerContent">
+                                                        <textarea rows="6" cols="80" pInputTextarea [autoResize]="true"
+                                                            [(ngModel)]="_rejectionMsg"
+                                                            placeholder="Type here the valid reason for not accepting the event verification."></textarea>
+                                                        <div class="alertOptions flex-e">
+                                                            <button (click)="closeRejectionPopUp()" class="no me-2 btn">
+                                                                No
+                                                            </button>
+                                                            <button 
+                                                                class="ms-3 send btn btn_green w-auto ms-2 m-0"
+                                                                (click)="updaterejectRequest('accepted',users)">
+                                                                Send
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </p-dialog>
+                                                <div class="dropbtn">
+                                                    <div class="dropdownUnpublish">
+                                                        <button pButton pRipple (click)="menuPopup1.toggle($event)"
+                                                            type="button" icon="pi pi-ellipsis-v"
+                                                            class="p-button-plain p-button-text p-button-rounded"></button>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="emptymessage">
+                                        <tr>
+                                            <td colspan="8">No user found.</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="table-paginator mt-3" *ngIf="_getAcceptedUserList.length != 0">
+                                    <p-paginator [first]="first" [rows]="10" [totalRecords]="_totalAcceptedUser"
+                                        (onPageChange)="paginate($event, 'accepted')"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </p-tabPanel>
+                    <p-tabPanel header="{{ 'verificationRequests.rejected' | translate }}">
+                        <div *ngIf="false" class="tabContainer">
+                            <div class="rejected">
+                                <img src="../../../assets/icons/Layer 1.png" class="w230180" />
+                                <h4>Empty!</h4>
+                                <p>{{ "verificationRequests.noRejected" | translate }}</p>
+                            </div>
+                        </div>
+                        <div *ngIf="true">
+                            <br />
+                            <div class="tabContainer">
+                                <!-- (sortFunction)="customSort($event)" [customSort]="true" -->
+                                <div class="top-searchbar mt-3 mb-3">
+                                    <div class="flex-vc">
+                                        <div class="innerBox-input">
+                                            <span class="p-input-icon-left">
+                                                <i class="p-green pi pi-search"></i>
+                                                <input pInputText type="text" [(ngModel)]="_rejected" (change)="
+                              getRequestsWithSearch('rejected', _rejected)
+                            " (keyup)="getRequestsWithSearch('rejected', _rejected)" placeholder="Search by event name" />
+                                            </span>
+                                        </div>
+                                        <!-- <div class="innerBox p-links">
+                                              <i class="pi pi-filter-fill i-small p-green"></i>
+                                          </div>
+                                          <div class="innerBox p-links">
+                                              <i class="pi pi-align-right i-small p-green"></i>
+                                          </div> -->
+                                    </div>
+                                </div>
+                                <p-table class="common-table text-center" #request [value]="_getRejectedUserList"
+                                    (sortFunction)="customSort($event)" [customSort]="true" [rows]="5"
+                                    [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]"
+                                    [paginator]="false" [globalFilterFields]="['name', 'email', 'country']">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th pSortableColumn="name" style="width: 40%">Name</th>
+                                            <th pSortableColumn="email" style="width: 40%">Club Name</th>
+                                            <th pSortableColumn="email" style="width: 20%"></th>
+
+                                            <th class="text-center" pSortableColumn="action" style="width: 10%">
+                                                Action
+                                            </th>
+                                        </tr>
+                                    </ng-template>
+
+                                    <ng-template pTemplate="body" let-users>
+                                        <tr>
+                                            <!-- <td>{{ users.name }}</td> -->
+                                            <td>{{ users.event_name }}</td>
+                                            <td>{{ users.user_name }}</td>
+                                            <td> <a class="viewDialog p-green" (click)="openDialog(users)">View</a></td>
+                                            <td>
+                                                <p-overlayPanel appendTo="body" #menuPopup2 [showCloseIcon]="false"
+                                                    [style]="{ width: '145px' }">
+                                                    <ng-template pTemplate>
+                                                        <div class="common-popup">
+                                                            <div class="innerContent">
+                                                                <div class="overlay-item menuItem p-0"
+                                                                    (click)="acceptRequest(users, 'rejected')">
+                                                                    <p class="p-links">Verify</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ng-template>
+                                                </p-overlayPanel>
+
+                                                <!-- this was from the upper overlaypannel  <div class="overlay-item menuItem ">
+                                                      <p class="p-links">Remove</p>
+                                                  </div> -->
+                                                <div class="dropbtn">
+                                                    <div class="dropdownUnpublish">
+                                                        <button pButton pRipple (click)="menuPopup2.toggle($event)"
+                                                            type="button" icon="pi pi-ellipsis-v"
+                                                            class="p-button-plain p-button-text p-button-rounded"></button>
+                                                    </div>
+                                                </div>
+                                                <!-- <div> -->
+                                                <!-- <button (click)="acceptRequest(users)" class="tickAction"><img
+                                                      src="../../../assets/icons/Vector 76.png" class="img-fluid" alt="">
+  
+                                              </button>
+                                              <button (click)="rejectRequest()" class="crossAction"><img
+                                                      src="../../../assets/icons/Group 587.png" class="img-fluid" alt="">
+                                                  <p-dialog [resizable]="false" [(visible)]="showRejectionDialog" [modal]="true"
+                                                      [header]="'Alert!'" [draggable]="false" [style]="{width: '50vw'}"
+                                                      [baseZIndex]="10000" (onHide)="closeRejectionPopUp()">
+                                                      <div class="alertBox">
+                                                          <textarea rows="10" cols="50" class="textBox"  ></textarea>
+                                                          <div class="alertOptions">
+                                                              <button (click)="closeRejectionPopUp()"
+                                                                  class="no">No</button>
+                                                              <button (click)="sendRejectionMail()"
+                                                                  class="send">Send</button>
+                                                          </div>
+                                                      </div>
+                                                  </p-dialog>
+                                              </button> -->
+                                                <!-- </div> -->
+                                            </td>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="emptymessage">
+                                        <tr>
+                                            <td colspan="8">No user found.</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="table-paginator mt-3" *ngIf="_getRejectedUserList.length !=0">
+                                    <p-paginator [first]="first" [rows]="5" [totalRecords]="_totalRejectedUser"
+                                        (onPageChange)="paginate($event, 'rejected')"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+    </div>
+    <p-dialog [resizable]="false" [(visible)]="showDialog" [modal]="true" [header]="''" [draggable]="false"
+        [style]="{ width: '70vw' }" [baseZIndex]="10000" (onHide)="closePopUp()">
+        <stupa-view-admin-event *ngIf="_passData" [data]="_fieldData"></stupa-view-admin-event>
+    </p-dialog>
+</div>
+
+<router-outlet></router-outlet>
+<p-toast position="bottom-right" key="bc"></p-toast>
+
+
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

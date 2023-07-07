@@ -1,0 +1,323 @@
+<div class="landpage">
+    <!-- <p>
+        Select Language:
+        <select (click)="selectLang($any($event.target).value)">
+            <option *ngFor="let items of supportLanguages">{{items}}</option>
+        </select>
+    </p> -->
+    <div class="landpage-component">
+        <section class="section-top-image-slider">
+            <div class="common-carousel carousel_withDots">
+                <div class="topImageSlider">
+                    <owl-carousel-o [options]="headerImageSlider">
+
+                        <ng-container *ngFor="let slide of imagePublished">
+                            <ng-template carouselSlide>
+                                <img [src]="slide">
+                            </ng-template>
+                        </ng-container>
+                    </owl-carousel-o>
+                    <!-- <p-carousel [value]="images" [circular]="true" [showNavigators]="false"
+                        contentClass="carouselTheme">
+                        <ng-template let-image pTemplate="item">
+                            <img [src]="image" alt="">
+                        </ng-template>
+                    </p-carousel> -->
+                </div>
+            </div>
+        </section>
+        <section class="section-ongoing-events">
+            <div class="ongoingevent _events">
+                <div class="flex-e">
+                    <p class="seeAll">See all</p>
+                </div>
+
+                <div class="ongoing-heading text-end" *ngIf="noofpages <= 0 && innerWidth > 700">
+                    <h1 ><b>ONGOING <br> Event</b></h1>
+                    <!-- <h3>{{'home.title' | translate}}</h3> -->
+                </div>
+                <div class="flex-e">
+                    <div class="common-carousel my-4">
+                        <div class="ongoingevent_slider">
+                            <owl-carousel-o contentClass="carouselTheme" [options]="{loop: false,
+                            mouseDrag: false,
+                            touchDrag: false,
+                            pullDrag: false,
+                            dots: false,
+                            autoWidth:false,
+                            autoHeight:false,
+                            navSpeed: 700,
+                            navText:customArray,
+                            margin:15,
+                            responsive: setItems(),
+                            nav: false}" (changed)="getPassedData($event)" #owldata>
+                                <ng-container *ngFor="let event of _recentMatchList">
+                                    <ng-template carouselSlide>
+                                        <div class="flex-e">
+                                            <div class="event-card" [ngStyle]="setStyle()">
+                                                <div class="thumbnail">
+                                                    <img [src]="event.thumb_video === null || event.thumb_video === undefined || event.thumb_video ==='' ?staticImage:event.thumb_video"
+                                                        class="image-fit img-fluid">
+                                                    <!-- == null ? staticImage : event.thumb_video -->
+                                                </div>
+                                                <div class="tournament-info flex-sb flex-vc mt-2">
+                                                    <p class="p-small">{{event.name}}</p>
+                                                    <p class="p-small">{{event.start_date }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </ng-container>
+                            </owl-carousel-o>
+                            <div class="owlDta">
+                                <button class="btn w-auto owl-left p-button-rounded" *ngIf="leftCarouselBtn"
+                                    (click)="owldata.prev()">
+                                    <img src="../../assets/icons/angle-left-white.png" class="img-fluid" alt="">
+                                </button>
+                                <button class="btn w-auto owl-right p-button-rounded" (click)="owldata.next()"
+                                    *ngIf="rightCarouselBtn">
+                                    <img src="../../assets/icons/angle-right-white.png" class="img-fluid" alt="">
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-registration-open mt-5">
+            <div class="registration-component _events">
+                <div class="top-heading flex-sb flex-vc">
+                    <h3><b>Registration Open</b></h3>
+                    <p><a href="#">See all</a></p>
+                </div>
+                <div class="common-carousel carousel_withDots">
+                    <div class="registrationopen_slider mt-5">
+                        <owl-carousel-o [options]="registrationOpen_slider">
+
+                            <ng-container *ngFor="let event of registrationOpen">
+                                <ng-template carouselSlide>
+                                    <div class="registrationopen-card">
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <img class="img-fluid" [src]="event.image" alt="">
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <div class="event-info">
+                                                    <h3>{{event.name}}</h3>
+                                                    <p class="p-small my-3">Available Categories</p>
+                                                    <div class="event-flex d-flex">
+                                                        <div *ngFor="let eventsList of event.categories">
+                                                            <a href="" class="p-small eventList">{{eventsList.name}} ,
+                                                            </a>
+                                                        </div>
+                                                        <div class="more"><a href="" class="p-small">more</a></div>
+                                                    </div>
+                                                    <button class="btn btn_green w-auto registerNow">Register Now
+                                                        !</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                        <!-- <p-carousel [value]="registrationOpen" [numVisible]="1" [circular]="false"
+                            [showIndicators]="true" [showNavigators]="true" contentClass="carouselTheme">
+                            <ng-template pTemplate="item" *ngFor="let event of registrationOpen">
+                                <div class="registrationopen-card">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <img class="img-fluid" [src]="event.image" alt="">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="event-info">
+                                                <h3>{{event.name}}</h3>
+                                                <p class="p-small my-3">Available Categories</p>
+                                                <div class="event-flex d-flex">
+                                                    <div *ngFor="let eventsList of event.categories">
+                                                        <a href="" class="p-small eventList">{{eventsList.name}} , </a>
+                                                    </div>
+                                                    <div class="more"><a href="" class="p-small">more</a></div>
+                                                </div>
+                                                <button class="btn btn_green w-auto registerNow">Register Now !</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-recent-live">
+            <div class="recentlive _events">
+                <div class="flex-sb flex-vc">
+                    <div class="recentlive-heading">
+                        <h3><b>Recent Live</b></h3>
+                        <p>You might like!</p>
+                    </div>
+                    <div class="seeAll">
+                        <a href="#">see all</a>
+                    </div>
+                </div>
+                <div class="bigScreenvideo mt-3">
+                    <iframe width="100%" height="550" src="https://www.youtube-nocookie.com/embed/lnCfjF6RCZU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="common-slider mt-4">
+                    <div class="recentlive-slider">
+                        <owl-carousel-o [options]="recentLive_slider">
+                            <ng-container *ngFor="let event of registrationOpen">
+                                <ng-template carouselSlide>
+                                    <div class="recentlive-card">
+                                        <iframe width="100%" height="200"
+                                            src="https://www.youtube.com/embed/3uPkcRroNoQ" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                        <!-- <p-carousel [value]="registrationOpen" [numVisible]="3" [circular]="false"
+                            [showIndicators]="false" [showNavigators]="true" contentClass="carouselTheme">
+                            <ng-template pTemplate="item">
+                                <div class="recentlive-card">
+                                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/3uPkcRroNoQ"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </ng-template>
+                        </p-carousel> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-recent-events mt-5">
+            <div class="recentevent  _events">
+                <div class="flex-e">
+                    <p class="seeAll">See all</p>
+                </div>
+                <div class="recent-heading text-end" *ngIf="noofpages2 <= 0 && innerWidth > 700">
+                    <h1><b>RECENT <br> Event</b></h1>
+                </div>
+                <div class="flex-e">
+                    <div class="common-carousel my-4">
+                        <div class="recentevent_slider">
+                            <owl-carousel-o contentClass="carouselTheme" [options]="{loop: false,
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            dots: false,
+            autoWidth:false,
+            autoHeight:false,
+            navSpeed: 700,
+            navText:customArray,
+            margin:15,
+            items: setItems2(),
+            nav: false}" (changed)="getPassedData2($event)" #owldata2>
+                                <ng-container *ngFor="let event of events">
+                                    <ng-template carouselSlide>
+                                        <div class="flex-e">
+                                            <div class="event-card" [ngStyle]="setStyle2()">
+                                                <div class="thumbnail">
+                                                    <img [src]="event.thumb_video" class="image-fit img-fluid">
+                                                    <!-- == null ? staticImage : event.thumb_video -->
+                                                </div>
+                                                <div class="tournament-info flex-sb flex-vc mt-2">
+                                                    <p class="p-small">{{event.name}}</p>
+                                                    <p class="p-small">{{event.start_date }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </ng-container>
+                            </owl-carousel-o>
+                            <div class="owlDta">
+                                <button class="btn w-auto owl-left p-button-rounded" *ngIf="leftCarouselBtn"
+                                    (click)="owldata2.prev()">
+                                    <img src="../../assets/icons/angle-left-white.png" class="img-fluid" alt="">
+                                </button>
+                                <button class="btn w-auto owl-right p-button-rounded" (click)="owldata2.next()"
+                                    *ngIf="rightCarouselBtn">
+                                    <img src="../../assets/icons/angle-right-white.png" class="img-fluid" alt="">
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-upcomming-event mt-5">
+            <div class="upcomming-event-component _events">
+                <div class="top-heading flex-sb flex-vc">
+                    <h3><b>Upcomming Events</b></h3>
+                    <p><a href="#">See all</a></p>
+                </div>
+                <div class="common-carousel carousel_withDots">
+                    <div class="upcommingevent_slider mt-5">
+                        <owl-carousel-o [options]="registrationOpen_slider">
+
+                            <ng-container *ngFor="let event of upcommingevent">
+                                <ng-template carouselSlide>
+                                    <div class="registrationopen-card">
+                                        <div class="row">
+                                            <div class="col-lg-5">
+                                                <img class="img-fluid" [src]="event.image" alt="">
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <div class="event-info">
+                                                    <h3>{{event.name}}</h3>
+                                                    <p class="p-small my-3">Available Categories</p>
+                                                    <div class="event-flex d-flex">
+                                                        <div *ngFor="let eventsList of event.categories">
+                                                            <a href="" class="p-small eventList">{{eventsList.name}} ,
+                                                            </a>
+                                                        </div>
+                                                        <div class="more"><a href="" class="p-small">more</a></div>
+                                                    </div>
+                                                    <button class="btn btn_green w-auto registerNow">Register Now
+                                                        !</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                        <!-- <p-carousel [value]="upcommingevent" [numVisible]="1" [circular]="false"
+                            [showIndicators]="true" [showNavigators]="true" contentClass="carouselTheme">
+                            <ng-template pTemplate="item" *ngFor="let event of upcommingevent">
+                                <div class="rupcommingevent-card">
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <img class="img-fluid" [src]="event.image" alt="">
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="event-info">
+                                                <h3>{{event.name}}</h3>
+                                                <p class="p-small my-3">Available Categories</p>
+                                                <div class="event-flex d-flex">
+                                                    <div *ngFor="let eventsList of event.categories">
+                                                        <a href="" class="p-small eventList">{{eventsList.name}} , </a>
+                                                    </div>
+                                                    <div class="more"><a href="" class="p-small">more</a></div>
+                                                </div>
+                                                <button class="btn btn_green w-auto registerNow">Register Now !</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

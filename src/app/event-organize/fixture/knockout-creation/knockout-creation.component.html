@@ -1,0 +1,271 @@
+<div class="kntCont mt-3">
+    <div class="flex-e my-2">
+        <a class="p-green p-links" (click)="_showFull = true" *ngIf="!_showFull">Hide</a>
+        <a class="p-green p-links" (click)="_showFull = false" *ngIf="_showFull">Show Controller</a>
+    </div>
+    <section class="firsScreen">
+        <div *ngIf="!_showFull" class="topBar">
+            <div class="row row-gap-3">
+                <div class="col-lg-6">
+                    <div class="greyBox">
+                        <div class="empty h-100">
+                            <div class="row flex-vc h-100">
+                                <div class="col-5">
+                                    <img class="w150" src="../../../../assets/icons/svg/empty.svg" alt="">
+                                </div>
+                                <div class="col-7">
+                                    <p class="p-small p-secondary lineSpace">If you have any problem in creating
+                                        fixture you
+                                        can contact our support. Reach out to us at support@stupaanalytics.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="greyBox">
+                        <div class="header mb-2">
+                            <div class="flex-sb flex-vc">
+                                <div class="leftSection">
+                                    <div class="flex-vc">
+                                        <p *ngIf="_currentParticipantId==1">Total Number of players in this category are
+                                        </p>
+                                        <p *ngIf="_currentParticipantId==2">Total Number of Teams in this category are
+                                        </p>
+                                        <p *ngIf="_currentParticipantId==4 ||_currentParticipantId==3">Total Number of
+                                            pairs
+                                            in this category are</p>
+                                        <p class="p-combine ms-2" *ngIf="_currentParticipantId==1">
+                                            {{_topPlayers.length}}
+                                        </p>
+                                        <p class="p-combine ms-2" *ngIf="_currentParticipantId==2">{{_teamList.length}}
+                                        </p>
+                                        <p class="p-combine ms-2" *ngIf="_currentParticipantId==3">
+                                            {{_doubleList.length}}
+                                        </p>
+                                        <p class="p-combine ms-2" *ngIf="_currentParticipantId==4">
+                                            {{_mixDoubleList.length}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right-eventHandler flex-vc" (click)="viewPlayer()">
+                                    <div class="iconBox">
+                                        <i class="i-small p-green pi pi-eye"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="divider m-0">
+                        <div class="innerContent _center">
+                            <div class="detail-input mt-4">
+                            </div>
+                            <div class="mt-5">
+                                <button *ngIf="_arrangePlayer.length==0" (click)="generateFixtures()"
+                                    class="btn btn_green m-0 w-100">
+                                    Create Fixture
+                                </button>
+                                <button [disabled]="_matchFinished" *ngIf="_arrangePlayer.length!=0"
+                                    class="btn btn-danger m-0 w-100" (click)="deleteFixture()">
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centerElement mt-4">
+
+            <div class="row row-gap-3">
+                <div class="col-lg-6 centerBox">
+                    <div class="topButs p-links">
+                        <div class="gap-4 flex-vc p-links">
+                            <button *ngIf="_arrangePlayer.length!=0" (click)="saveCustomizedFixture()"
+                                class="btn btn_green btnDone m-0 p-links">Save
+                                Fixture</button>
+                        </div>
+                    </div>
+
+                    <div class="parentContainer">
+                        <div *ngFor="let item of _arrangePlayer; let position = index" appDragDropSwap
+                            [elemPosition]="position" [list]="_arrangePlayer" class="note flex-sb flex-vc"
+                            (returnUpdatedList)="returnUpdatedList($event)">
+                            <div class="col-1 absolute">
+                                <div class="flex-vc flex-hc h-100">
+                                    <p><b>{{position +1}}</b></p>
+                                </div>
+                            </div>
+                            <div class="flex-vc spec">
+                                <p-avatar class="avatar-small me-2" label={{getFirstLetters(item.participant_name)}}
+                                    shape="circle"></p-avatar>
+                                <p style="overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                max-width: 6rem;">{{item.participant_name}}</p>
+                            </div>
+
+                            <div class="flex-e dropdownIcon me-2" *ngIf="!hideBye(item)">
+                                <p class="p-combine">Points: {{item.rating}}</p>
+                                <i pTooltip={{item.club}} class="pi pi-info-circle p-secondary ms-2 p-links"
+                                    tooltipPosition="right"></i>
+                            </div>
+                            <div class="flex-e dropdownIcon me-2" *ngIf="hideBye(item)">
+                                <p class="p-combine">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="bottomBox greyBox">
+                        <div *ngIf="_arrangePlayer.length !== 0;else emptyBox2">
+                            <p-table class="common-table" [value]="_arrangePlayer">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Name</th>
+
+                                        <th>Club</th>
+                                        <th>Point</th>
+                                        <th *ngIf="_currentParticipantId==1">Email</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-player>
+                                    <tr *ngIf="hideBye(player)">
+                                        <td class="flex-s">{{ player.participant_name }}</td>
+                                        <td>{{'-'}}</td>
+
+                                        <td>{{'-'}}</td>
+                                        <td *ngIf="_currentParticipantId==1">{{'-'}}</td>
+                                    </tr>
+                                    <tr *ngIf="!hideBye(player)">
+                                        <td class="flex-s">{{ player.participant_name }}</td>
+
+                                        <td>{{player.club}}</td>
+                                        <td>{{player.rating}}</td>
+                                        <td *ngIf="_currentParticipantId==1">{{player.email}}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                    <ng-template #emptyBox2>
+                        <!-- <div class="player-empty greyBox">
+                            <div class="innerContent h-100 flex-hc flex-vc">
+                                <div class="m-3">
+                                    <img src="../../../../assets/icons/svg/fixure_noPlayer.svg" width="200" alt="">
+                                </div>
+                                <p class="text-center p-secondary">No player left!</p>
+                            </div>
+                        </div> -->
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<p-dialog [resizable]="false" [(visible)]="_isViewPlayerGrid" [style]="_dialogStyle" [draggable]="false" [modal]="true"
+    [style]="{ width: '50vw' }" (onHide)="closePopUpIsViewPlayerGrid()">
+    <div class="innerContent" *ngIf="_currentParticipantId==1">
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+                    (keyup)="searchPlayerInView()" (keypress)="searchPlayerInView()" [placeholder]="'Search Player'" />
+            </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_topPlayers">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Point</th>
+                    <th>Email</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-player let-columns="columns">
+                <tr>
+                    <td>{{ player.name }}</td>
+                    <td>{{ player.club }}</td>
+                    <td>{{ player.rating }}</td>
+                    <td>{{ player.email }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="innerContent" *ngIf="_currentParticipantId==2">
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+                    (keypress)="searchPlayerInView()" (keypress)="searchPlayerInView()"
+                    [placeholder]="'Search Player'" />
+            </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_teamList">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Point</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-player let-columns="columns">
+                <tr>
+                    <td>{{ player.participant_name }}</td>
+                    <td>{{ player.club }}</td>
+                    <td>{{ player.rating }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="innerContent" *ngIf="_currentParticipantId==3">
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+                    (keyup)="searchPlayerInView()" (keypress)="searchPlayerInView()" [placeholder]="'Search Player'" />
+            </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_doubleList">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Point</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-player let-columns="columns">
+                <tr>
+                    <td>{{ player.participant_name }}</td>
+
+                    <td>{{ player.club }}</td>
+                    <td>{{ player.rating }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="innerContent" *ngIf="_currentParticipantId==4">
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <input [(ngModel)]="_searchByPlayerNameView" type="text" pInputText (keydown)="searchPlayerInView()"
+                    (keypress)="searchPlayerInView()" (keyup)="searchPlayerInView()" [placeholder]="'Search Player'" />
+            </div>
+        </div>
+        <p-table class="common-table text-center" [value]="_mixDoubleList">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Point</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-player let-columns="columns">
+                <tr>
+                    <td>{{ player.participant_name }}</td>
+                    <td>{{ player.club }}</td>
+                    <td>{{ player.rating }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</p-dialog>

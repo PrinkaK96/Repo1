@@ -1,0 +1,145 @@
+<!-- skelton layout starts  -->
+<div class="skeletonlayout" *ngIf="_skeleton">
+  <div class="row">
+    <div class="col-lg-12">
+      <p-skeleton shape="rectangle" width="100%" height="300px" animation="wave"></p-skeleton>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 1rem;">
+    <div class="col-lg-1 col-md-2 col-sm-1" *ngFor="let item of idies">
+      <p-skeleton shape="rectangle" width="100px" height="15px" animation="wave"></p-skeleton>
+    </div>
+  </div>
+  <!-- <div class="row" style="margin-top: 1rem;">
+    <div class="col-lg-3" *ngFor="let item of id ">
+      <p-skeleton
+        shape="rectangle"
+        width="100%"
+        height="150px"
+        animation="wave"
+      ></p-skeleton>
+    </div>
+  </div> -->
+</div>
+<!-- skelton layout ends  -->
+
+
+<div class="outercontainer" *ngIf="!_skeleton">
+  <div class="topbar">
+    <div class="top-banner">
+      <div class="innerContent">
+        <img [src]="this._eventDetails?.image_url" class="img-cover" alt="Unable to Upload Images" />
+        <div class="innerInfo">
+          <!-- this btn should be commented because it's from the older design  -->
+          <div class="backBtn flex-vc p-links" (click)="back()">
+            <i class="pi pi-arrow-left text-white"></i>
+            <p class="text-white ms-2">Back</p>
+          </div>
+        </div>
+        <!-- here the new code starts for new design  -->
+        <!-- <div class="z2">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-5">
+              <div class="card">
+                <div class="champioShiP_Name ">
+                    <p class="text-overflow ">{{ this._eventDetails.event_name}}</p>
+                </div>
+                <div class="date_Section flex-vc">
+                  <div class="icons">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.75 1.83337H14.75C14.9489 1.83337 15.1397 1.91239 15.2803 2.05304C15.421 2.1937 15.5 2.38446 15.5 2.58337V14.5834C15.5 14.7823 15.421 14.9731 15.2803 15.1137C15.1397 15.2544 14.9489 15.3334 14.75 15.3334H1.25C1.05109 15.3334 0.860322 15.2544 0.71967 15.1137C0.579018 14.9731 0.5 14.7823 0.5 14.5834V2.58337C0.5 2.38446 0.579018 2.1937 0.71967 2.05304C0.860322 1.91239 1.05109 1.83337 1.25 1.83337H4.25V0.333374H5.75V1.83337H10.25V0.333374H11.75V1.83337ZM10.25 3.33337H5.75V4.83337H4.25V3.33337H2V6.33337H14V3.33337H11.75V4.83337H10.25V3.33337ZM14 7.83337H2V13.8334H14V7.83337ZM3.5 10.0834H5V11.5834H3.5V10.0834ZM6.5 10.0834H12.5V11.5834H6.5V10.0834Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </div>
+                  <div class="date_of_championShip">{{this._eventDetails?.event_start_time | date: 'dd/MM/YYYY'}}</div>
+                </div>
+                <div class="location_Section flex-vc">
+                  <div class="icons">
+                    <svg
+                      width="14"
+                      height="18"
+                      viewBox="0 0 15 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.3905 9.15863L9.6976 8.87161L10.3905 9.15862C10.5591 8.75168 10.6458 8.31552 10.6458 7.87504C10.6458 6.98546 10.2924 6.13232 9.66342 5.50329C9.03439 4.87426 8.18125 4.52087 7.29167 4.52087C6.40209 4.52087 5.54894 4.87426 4.91991 5.50329C4.29088 6.13232 3.9375 6.98546 3.9375 7.87504C3.9375 8.76462 4.29088 9.61777 4.91991 10.2468C5.54894 10.8758 6.40209 11.2292 7.29167 11.2292C7.73214 11.2292 8.1683 11.1425 8.57525 10.9739C8.9822 10.8053 9.35196 10.5583 9.66342 10.2468C9.97488 9.93533 10.2219 9.56557 10.3905 9.15863ZM7.29167 20.2706C7.13259 20.0821 6.94464 19.8559 6.73469 19.5972C6.06076 18.7669 5.16341 17.605 4.26756 16.2772C3.37026 14.9473 2.48371 13.4645 1.82378 11.9914C1.15943 10.5085 0.75 9.09048 0.75 7.87504C0.75 6.14008 1.43921 4.47618 2.66601 3.24938C3.89281 2.02258 5.55671 1.33337 7.29167 1.33337C9.02662 1.33337 10.6905 2.02258 11.9173 3.24938C13.1441 4.47618 13.8333 6.14008 13.8333 7.87504C13.8333 9.09048 13.4239 10.5085 12.7596 11.9914C12.0996 13.4645 11.2131 14.9473 10.3158 16.2772C9.41992 17.605 8.52258 18.7669 7.84865 19.5972C7.63869 19.8559 7.45074 20.0821 7.29167 20.2706Z"
+                        stroke="black"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="location_of_champtionShip">{{this._eventDetails?.address}}</div>
+                </div>
+              </div>
+            </div>
+             <div class="col-lg-8 col-md-8 col-sm-7 COL8">
+              <div class="BackBTN  flex-je" (click)="back()">
+             
+              <p class=" ms-2"><b>Back</b></p>
+          </div>
+            </div>
+          </div>
+      </div> -->
+        <!-- here the new code ends for new design  -->
+      </div>
+    </div>
+  </div>
+
+  <div class="common-tabView mt-2 burdder" *ngIf="!_isbroadcast">
+    <p-tabView [activeIndex]="_tabIndex" (onChange)="getTabIndex($event)">
+      <p-tabPanel *ngFor="let item of _tabList" [header]="item.header">
+        <div class="innerContent mt-3" [routerLink]="[item.path]">
+          <!-- {{item.path}} -->
+          <!-- <stupa-viewer-player-list *ngIf="item.path=='viewer/$/player-list'"></stupa-viewer-player-list> -->
+          <stupa-viewer-event-details *ngIf="item.path == 'viewer/$/Event-Details'"></stupa-viewer-event-details>
+          <stupa-viewer-player-list *ngIf="item.path == 'viewer/$/Player-list'"></stupa-viewer-player-list>
+          <stupa-viewer-fixtures *ngIf="item.path == 'viewer/$/fixture'"></stupa-viewer-fixtures>
+          <stupa-viewer-prospectus *ngIf="item.path == 'viewer/$/prospectus'"></stupa-viewer-prospectus>
+          <stupa-viewer-rankings *ngIf="item.path == 'viewer/$/ranking'"></stupa-viewer-rankings>
+          <stupa-viewer-results [_tabIndex]="_tabIndex" *ngIf="item.path == 'viewer/$/results'"></stupa-viewer-results>
+          <stupa-viewer-videos *ngIf="item.path == 'viewer/$/videos'"></stupa-viewer-videos>
+          <stupa-viewer-registration *ngIf="item.path == 'viewer/$/registration'"></stupa-viewer-registration>
+          <div class="topBar">
+            <!-- <div class="flex-sb flex-vc"></div> -->
+          </div>
+        </div>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  <div class="common-tabView mt-2 burdder" *ngIf="_isbroadcast">
+    <p-tabView [activeIndex]="_tabIndex" (onChange)="getTabIndex($event)">
+      <p-tabPanel [header]="'Videos'">
+        <div class="innerContent mt-3">
+          <stupa-broadcast-videos [_tabIndex]="_tabIndex"></stupa-broadcast-videos>
+
+          <div class="topBar">
+            <!-- <div class="flex-sb flex-vc"></div> -->
+          </div>
+        </div>
+      </p-tabPanel>
+      <p-tabPanel [header]="'Results'">
+        <div class="innerContent mt-3">
+          <stupa-viewer-broadcast-results  *ngIf="_tabIndex==1"></stupa-viewer-broadcast-results>
+          <div class="topBar">
+            <!-- <div class="flex-sb flex-vc"></div> -->
+          </div>
+        </div>
+      </p-tabPanel>
+
+    </p-tabView>
+  </div>
+</div>
+
+
+<div class="content">
+  <!-- <router-outlet></router-outlet> -->
+</div>

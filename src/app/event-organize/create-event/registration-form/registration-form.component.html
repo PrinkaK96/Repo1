@@ -1,0 +1,79 @@
+<div class="" *ngIf="event_id!=null">
+    <div class="flex-sb">
+        <h4 class="p-green"><b>Registration</b></h4>
+        <div class="flex-vc gap-2 p-links">
+            <p (click)="reset()" class="p-combine">Reset</p>
+            <i class="pi pi-refresh p-combine p-small"></i>
+        </div>
+    </div>
+    <div class="flex-sb mt-3">
+        <p class="p-green">Update category prices for the registration and Disabled category will not be
+            visible on the Registration Open Page.
+        </p>
+
+    </div>
+    <br>
+    <div class="innerContent">
+        <p class="heading"><b>Participant Type</b></p>
+        <div class="radioBox mt-2">
+            <div class="flex-vc gap-4">
+                <div class="flex-vc field-radiobutton" *ngFor="let item of _selectedFixtureFormat">
+                    <p-radioButton [value]="item.participant_description" name="participantType"
+                        (click)="showRegistrations(item.participant_description)"
+                        [(ngModel)]="_selectedParticipantTypes[0]" [ngModelOptions]="{standalone: true}">
+                    </p-radioButton>
+                    <label [for]="item.participant_description">{{item.participant_description}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+<div *ngIf="event_id!=null">
+    <div *ngFor="let item of _display; let i=index" class="showParticipants mt-3">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6 col-sm-6 flex-vc">
+                <p [ngClass]="item.published?'p-green f-medium':'p-secondary f-medium'">{{item.category_description}}
+                </p>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 flex-vc">
+                <div class="flex-vc">
+                    <p *ngIf="!item.published" class="p-secondary f-medium">Disabled</p>
+                    <p *ngIf="item.published" class="p-green f-medium">Enabled</p>
+                    <div class="switch ms-2">
+                        <p-inputSwitch *ngIf="!item.published" (onChange)="enableRegistration($event)"
+                            [(ngModel)]="item.published" [ngModelOptions]="{standalone: true}"></p-inputSwitch>
+                    </div>
+                    <div class="switch ms-2">
+                        <p-inputSwitch *ngIf="item.published" (onChange)="enableRegistration($event)"
+                            [(ngModel)]="item.published" [ngModelOptions]="{standalone: true}"></p-inputSwitch>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 flex-vc reg-calendar">
+                <p-calendar #startDate1 inputId="basic" placeholder="Select End Date" [minDate]="_catStartDate"
+                    dateFormat="dd/mm/yy" [maxDate]="_catEndDate" [showIcon]="true" [showSeconds]="true"
+                    [(ngModel)]="item.reg_end_time">
+                </p-calendar>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-6 flex-vc bgTransparent">
+                <p-inputNumber [inputStyle]="{color: 'var(--combinating-color)'}"
+                    class="p-inputtext-sm p-tabview-nav-link" [(ngModel)]="item.price" (focusout)="priceChange(item)"
+                    prefix="$">
+                </p-inputNumber>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="flex-e mt-2" *ngIf="event_id!=null">
+    <button class="btn btn_green" (click)="updateRegistrationFee(_display)">Update</button>
+</div>
+
+<p-toast position="bottom-right" key="bc"></p-toast>
+<stupa-common-svg-msg *ngIf="event_id===null" (eventClicked)="eventClicked()"></stupa-common-svg-msg>

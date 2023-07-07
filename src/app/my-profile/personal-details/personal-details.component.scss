@@ -1,0 +1,184 @@
+$border-radius: 7px;
+$without_hover_color: #4d4d4d;
+$border-CLR: #ced4da;
+
+@mixin flexing($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+.personal-details-container {
+  background-color: var(--profileDetails);
+  .container {
+    padding: 1rem 6rem;
+
+    .FirstSection {
+      @include flexing(space-between);
+
+      button {
+        // padding: 0.2rem 0.9rem;
+        // border-radius: $border-radius;
+        float: right;
+      }
+    }
+
+    .secondSection {
+      @include flexing(space-between);
+
+      .rightsection {
+        border-radius: $border-radius;
+        width: 50%;
+        height: 25vh;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        // background: 1px solid $border-radius;
+        border: 1px solid $without_hover_color;
+        position: relative;
+
+        .overlayBut {
+          background-color: var(--primary-color);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.7rem 1rem;
+          border-radius: 50px;
+          position: absolute;
+          filter: contrast(0.9);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        img {
+          position: absolute;
+          //content: "";
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          object-fit: cover;
+          object-position: center;
+          // background:$without_hover_color ;
+          // border-radius: 50%;
+        }
+
+        // &:after,
+        // &::before {
+        //   position: absolute;
+        //   content: "asfd";
+        //   width: 100%;
+        //   height: 100%;
+        //   background: $without_hover_color;
+        // }
+      }
+
+      .rightsection input[type="file"] {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        transform: scale(3);
+        opacity: 0;
+      }
+
+      input[type="file"]::-webkit-file-upload-button {
+        cursor: pointer;
+      }
+    }
+
+    input[type="text"] {
+      height: 38px;
+      // height: 7vh;
+    }
+
+    input[type="email"] {
+      height: 38px;
+      // height: 7vh;
+    }
+
+    input[type="number"] {
+      height: 38px;
+      // height: 7vh;
+    }
+
+    .thirdSection,
+    .fourthSection,
+    .fifthSection,
+    .sixthSection {
+      @include flexing(space-between);
+
+      .rightsection {
+        width: 50%;
+
+        input {
+          border: 1px solid $border-CLR;
+          border-radius: $border-radius;
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+}
+
+.rightsection {
+  .nameii {
+    cursor: not-allowed;
+  }
+  ::ng-deep {
+    p-calendar {
+      .p-calendar {
+        .p-inputtext {
+          padding: 0.75rem 2rem;
+        }
+      }
+    }
+    p-dropdown {
+      .p-dropdown {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 319px) and (width <= 425px) {
+  .personal-details-container {
+    .container {
+      // visibility: hidden;
+      padding: 3px 10px;
+      div {
+        &:not(:first-child) {
+          position: relative;
+          flex-direction: column;
+          margin-top: 0.7rem !important;
+        }
+        .leftsection,
+        .rightsection {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (width >= 426px) and (width <= 768px) {
+  .personal-details-container {
+    .container {
+      // visibility: hidden;
+      padding: 3px 10px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// @media screen and (width >= 769px) and (width <= 1440px) {
+//   .personal-details-container {
+//     .container {
+//       // visibility: hidden;
+//       padding: 3px 10px;
+//       margin-bottom: 5px;
+//     }
+//   }
+// }
+
+

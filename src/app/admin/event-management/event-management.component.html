@@ -1,0 +1,92 @@
+<div *ngIf="!CreateCategory && !eventRequest && !worldRank" class="settings" >
+  <div class="setting-component">
+      <h6><b>Event management</b></h6>
+      <div class="setting-card-row mt-4">
+          <div class="row">
+              <div class="col-xl-4">
+                  <div class="setting-card _signupManagement" (click)="createCategory('category')">
+                      <div class="d-flex mx-4">
+                          <div class="imgCover">
+                              <div class="imgcontainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                                  <!-- <img src="../../../assets/icons/setting-card-icon-1.png" class="img-fluid" alt=""> -->
+                              </div>
+                          </div>
+                          <div class="setting-card-written">
+                              <h6 class="mb-2 text-overflow"><b>Event Category/Class</b></h6>
+                              <p class="p-small text-overflow">Customize Master Categories/Classes</p>
+                          </div>
+                      </div>
+                      <div class="arrow-next d-flex justify-content-end">
+                          <div class="imgcontainer">
+                              <img src="../../../assets/icons/arrow-right-big.png" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4">
+                  <div class="setting-card _roleManagement" (click)="createCategory('event-verification')">
+                      <div class="d-flex mx-4">
+                          <div class="imgCover">
+                              <div class="imgcontainer">
+                                  <!-- <img src="../../../assets/icons/flag-icon-black.png" class="img-fluid" alt=""> -->
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                  </svg>
+                              </div>
+                          </div>
+                          <div class="setting-card-written">
+                              <h6 class="mb-2 text-overflow"><b>Event Request</b></h6>
+                              <p class="p-small text-overflow">Verify Events</p>
+                          </div>
+                      </div>
+                      <div class="arrow-next d-flex justify-content-end">
+                          <div class="imgcontainer">
+                              <img src="../../../assets/icons/arrow-right-big.png" class="img-fluid" alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="setting-card _roleManagement" (click)="createCategory('add-world-rank')">
+                    <div class="d-flex mx-4">
+                        <div class="imgCover">
+                            <div class="imgcontainer">
+                                <!-- <img src="../../../assets/icons/flag-icon-black.png" class="img-fluid" alt=""> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="setting-card-written">
+                            <h6 class="mb-2 text-overflow"><b>Add World Rank</b></h6>
+                            <!-- <p class="p-small text-overflow">Verify Events</p> -->
+                        </div>
+                    </div>
+                    <div class="arrow-next d-flex justify-content-end">
+                        <div class="imgcontainer">
+                            <img src="../../../assets/icons/arrow-right-big.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+          </div>
+      </div>
+  </div>
+</div>
+<div class="common">
+  <div class="flex-vc" (click)="goBack()">
+      <button class="backbtn ms-3" *ngIf="CreateCategory || eventRequest || worldRank">
+          <img class="me-2 w10"  src="../../../assets/icons/angle-left.png" alt="">{{'sidebar.back' |translate}}
+      </button>
+  </div>
+</div>
+<stupa-create-category *ngIf="CreateCategory"></stupa-create-category>
+<stupa-event-verification *ngIf="eventRequest"></stupa-event-verification>
+<stupa-add-world-rank *ngIf="worldRank"></stupa-add-world-rank>

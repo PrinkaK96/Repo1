@@ -1,0 +1,333 @@
+<div class="flex-e mr-1 mt-3" *ngIf="_matchDetailsList.length > 0">
+  <button class="profile_buttons2" ngxPrint printSectionId="main" [useExistingCss]="true">
+    Print
+  </button>
+</div>
+
+<div class="teamsPopUp">
+  <p-dialog [resizable]="false" [(visible)]="_showTeam" [showHeader]="false" [header]="'Team Score Card'" [modal]="true"
+    [draggable]="false" [baseZIndex]="10000" (onHide)="closePopUp()">
+    <div class="teamScreen">
+      <div class="cross" (click)="RemoveTeamScreen()">
+        <img src="../../../../assets/icons/cancle_circle.png" alt="" />
+      </div>
+
+      <!-- upper section starts -->
+      <div *ngIf="_team1.length > 0" class="upper">
+        <div class="left_section">{{ _team1 }}</div>
+        <div class="center">
+          <div class="leftScore">{{ _team2.set_won }}</div>
+          <div class="vs">vs</div>
+          <div class="rightScore">{{ _team2.set_lost }}</div>
+        </div>
+        <div class="right_section">{{ _team2.opponent_name }}</div>
+      </div>
+      <!-- upper section end -->
+
+      <!-- lower section starts  -->
+      <div *ngIf="_upperCross" class="class">
+        <div class="" *ngFor="let item of _matchesArray">
+          <div class="lower" style="margin-top: 3rem">
+            <div class="left_section">
+              <div class="row mt-3">
+                <div class="col-5 inner_left_section">
+                  <div class="row">
+                    <div class="col-5 use_flex">
+                      <ul>
+                        <li class="list_items">
+                          {{ item.participant_id_A.score }}
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-5" style="
+                        font-size: 0.9rem;
+                        letter-spacing: 1px;
+                        padding: 0;
+                        color: var(--primary-color);
+                        text-align: end;
+                        align-self: center;
+                      ">
+                      {{ item.participant_id_A.participant_name }}
+                    </div>
+                    <div class="col-2">
+                      <p-avatar icon="pi pi-user" styleClass="mr-2 ms-2" shape="square">
+                      </p-avatar>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2 score">
+                  <div class="left_section_score">
+                    {{ item.participant_id_A.set_won }}
+                  </div>
+                  <div class="vs">vs</div>
+                  <div class="right_section_score">
+                    {{ item.participant_id_A.set_lost }}
+                  </div>
+                </div>
+
+                <div class="col-5 right_section">
+                  <div class="row">
+                    <div class="col-2">
+                      <p-avatar icon="pi pi-user" styleClass="mr-2 " shape="square">
+                      </p-avatar>
+                    </div>
+                    <div class="col-5" style="
+                        font-size: 0.9rem;
+                        letter-spacing: 1px;
+                        padding: 0;
+                        color: var(--primary-color);
+                        text-align: left;
+                        align-self: center;
+                      ">
+                      {{ item.participant_id_B.participant_name }}
+                    </div>
+                    <div class="col-5 use_flex flex-e">
+                      <ul>
+                        <li class="list_items">
+                          {{ item.participant_id_B.score }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!_upperCross" class="class">
+        <div class="" *ngFor="let item of _matchesArray">
+          <div class="lower" style="margin-top: 3rem">
+            <div class="left_section">
+              <div class="row mt-3">
+                <div class="col-5 inner_left_section">
+                  <div class="row">
+                    <div class="col-5 use_flex">
+                      <ul>
+                        <li class="list_items">
+                          {{ item.participant_id_A.score }}
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-5" style="
+                        font-size: 0.9rem;
+                        letter-spacing: 1px;
+                        padding: 0;
+                        color: var(--primary-color);
+                        text-align: end;
+                        align-self: center;
+                      ">
+                      {{ item.participant_id_A.participant_name }}
+                    </div>
+                    <div class="col-2">
+                      <p-avatar icon="pi pi-user" styleClass="mr-2 ms-2" shape="square">
+                      </p-avatar>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2 score">
+                  <div class="left_section_score">
+                    {{ item.participant_id_A.set_won }}
+                  </div>
+                  <div class="vs">vs</div>
+                  <div class="right_section_score">
+                    {{ item.participant_id_A.set_lost }}
+                  </div>
+                </div>
+
+                <div class="col-5 right_section">
+                  <div class="row">
+                    <div class="col-2">
+                      <p-avatar icon="pi pi-user" styleClass="mr-2 " shape="square">
+                      </p-avatar>
+                    </div>
+                    <div class="col-5" style="
+                        font-size: 0.9rem;
+                        letter-spacing: 1px;
+                        padding: 0;
+                        color: var(--primary-color);
+                        text-align: left;
+                        align-self: center;
+                      ">
+                      {{ item.participant_id_B.participant_name }}
+                    </div>
+                    <div class="col-5 use_flex flex-e">
+                      <ul>
+                        <li class="list_items">
+                          {{ item.participant_id_B.score }}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+</div>
+
+
+<div id="main">
+  <div class="noMatches py-5" *ngIf="_matchDetailsList.length == 0">
+    <p class="text-center">Matches Not Found</p>
+  </div>
+  <div class="mainContainer">
+    <div class="card mt-3" *ngFor="let match of _matchDetailsList; let i = index">
+      <div class="card-body gap-2 flex-vc">
+        <div class="hr">
+          <p-divider></p-divider>
+        </div>
+        <div class="section sec-a">
+          <div class="headine text-center ">
+            <h6 class="fbold">Player</h6>
+          </div>
+          <div class="player-block">
+            <div class="innerPlayer-block flex-vc gap-2" *ngFor="let col of match; let p = index">
+              <p-avatar class="avatar-small" shape="circle" icon="pi pi-user"></p-avatar>
+              <p class="text-overflow" style="font-weight: bold;
+      letter-spacing: 0.7px;">{{col.participant_name}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="section sec-b">
+          <div class="headine text-center ">
+            <h6 class="fbold">Match</h6>
+          </div>
+          <div class="mainRow flex-vc" *ngFor="let col of match; let p = index">
+            <div class="score-col h-100 flex-vc flex-hc" *ngFor="let row of col.data; let j = index">
+              <div *ngIf="row.position == 0" class="col-2 x text-center"
+                style="font-size: 25px !important;font-weight: bold; color: var(--In--vs);">X</div>
+              <div class="" *ngIf="row.position !== 0" (click)="toggle(true, row, j, col.data, match, p)">
+                <div class="uppersection text-center fbold">
+                  <p class="g">{{ p + 1 }}-{{ j + 1 }} Player</p>
+                </div>
+                <div class="lowerScore flex-vc flex-hc gap-1 fbold">
+                  <div class="highNumber"
+                    [ngStyle]="row.set_won == row.set_lost ? { 'color': 'var(--In--vs)' } : (row.set_won > row.set_lost ? { 'color': 'var(--success-color)' } : { 'color': 'var(--In--vs)' })">
+                    {{ row.set_won }}</div>
+                  <div class="highFun" style="color: var(--In--vs);">-</div>
+                  <div class="lowNumber"
+                    [ngStyle]="row.set_won == row.set_lost ? { 'color': 'var(--In--vs)' } : (row.set_won > row.set_lost ? { 'color': 'var(--In--vs) ' } : { 'color': 'var(--success-color)' })">
+                    {{ row.set_lost }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section sec-c">
+          <div class="headerRow flex-vc gap-3">
+            <div class="headine _forPoint ">
+              <h6 class="fbold">Points</h6>
+            </div>
+            <div class="headine _forQ ">
+              <h6 class="fbold">Positions</h6>
+            </div>
+          </div>
+          <div class="mainInfo" *ngFor="let col of match; let p = index">
+            <div class="flex-vc h-100 gap-3">
+              <div class="sideInfo points _forPoint text-center">
+                <div class="sideInfo-body">
+                  {{col.points}}
+                </div>
+              </div>
+
+              <div class="sideInfo poition _forQ text-center">
+                <div class="sideInfo-body">
+                  {{col.rank==null?'--':col.rank}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parentOuter">
+    <div class="roundparent">
+      <p-dialog [resizable]="false" [(visible)]="_showPlayerData" [modal]="true"
+        [style]="{ width: '23vw', height: 'auto' }" [draggable]="false" [resizable]="false">
+        <div class="parent">
+          <div class="score-panel">
+            <div class="innerContent">
+              <div class="playerRow row flex-vc">
+                <div class="col-2 flex-hc h-100">
+                  <div class="avatar_class">
+                    <p-avatar shape="circle" label="{{ profileLetterService(_showName) }}" size="small"></p-avatar>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <p class="p-green w-100 text-overflow">
+                    <b style="font-size: 73%">{{ _showName }}</b>
+                  </p>
+                  <div class="scoreof">
+                    <ul class="flex-vc">
+                      <div *ngFor="let data of _showPlayer.score" class="flex-vc g">
+                        <li>{{ data }}</li>
+                        <p-divider layout="vertical"></p-divider>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="flex-vc">
+                    <p>
+                      <b style="font-size: 154%">{{ _showPlayer.set_won }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="playerRow row flex-vc">
+                <div class="col-2 flex-hc h-100">
+                  <div class="avatar_class">
+                    <p-avatar shape="circle" label="{{
+                        profileLetterService(_showPlayer.opponent_name)
+                      }}" size="small"></p-avatar>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <p class="p-green w-100 text-overflow">
+                    <b style="font-size: 75%">{{
+                      _showPlayer.opponent_name
+                      }}</b>
+                  </p>
+                  <div class="flex-vc mt-1 w-100">
+                    <div class="text-center me-2">
+                      <div class="scoreof">
+                        <ul class="flex-vc">
+                          <div *ngFor="let data of _showPlayer.opponent_score" class="flex-vc g">
+                            <li>{{ data }}</li>
+                            <p-divider layout="vertical"></p-divider>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="flex-vc">
+                    <p>
+                      <b style="font-size: 154%">{{ _showPlayer.set_lost }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="divider flex-vc">
+                <p-divider class="w-100"> </p-divider>
+                <div class="vs">
+                  <p><b>vs</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p-dialog>
+    </div>
+  </div>
+
+  <p-toast position="bottom-right" key="bc"></p-toast>
+</div>

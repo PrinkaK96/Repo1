@@ -1,0 +1,276 @@
+<form *ngIf="getMatches" [formGroup]="_matchDetailForm" action="">
+    <div class="bannerSection mt-3">
+        <div class="bannerFlex" *ngIf="_selectedBanner === ''">
+            <div class="bannerBox _dashed">
+                <input type="file" (change)="fileDetail($any($event.target).files)" class="fileUploader"
+                    accept="image/x-png, image/jpg, image/jpeg" />
+
+                <div class="overlap">
+                    <div class="flex-hc mb-3">
+                        <div class="info">
+                            <div class="choose">
+                                <p class="p-secondary-dark">
+                                </p>
+                            </div>
+                            <p class="p-secondary">
+                                <b></b>
+                            </p>
+                        </div>
+                        <div class="imgContainer">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="31.5981" cy="32.3867" r="31.5" fill="white" />
+                                <path
+                                    d="M30.5629 44.0704V35.1972H21.6897V32.2394H30.5629V23.3662H33.5207V32.2394H42.3939V35.1972H33.5207V44.0704H30.5629Z"
+                                    fill="#4E4E4E" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <p>Drag & Drop your image here. or <span
+                                (change)="fileDetail($any($event.target).files)">Browse</span></p>
+                        <p>Or choose a preselected one</p>
+                        <p>Format : Jpeg, png size : 50KB-800KB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bannerBox" *ngIf="_selectedBanner!=''">
+            <div class="relativeBody">
+                <input type="image" class="imgCover img-fluid" [src]="_selectedBanner" alt="" />
+                <div class="innerColor">
+                    <p>This will be the sample thumbnail of your match</p>
+                    <div class="reuploadBoxie">
+                        <input style="cursor: pointer" type="file" id="option-1"
+                            (change)="fileDetail($any($event.target).files)"
+                            accept="image/x-png, image/jpg, image/jpeg" />
+                        <label for="option-1">
+                            <div class="uploadbtn">Reupload</div>
+                            <img src="../../../../assets/icons/admin_dropdown_icons/reuploadtoevent.png" class="w1717"
+                                alt="" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputSection">
+            <div class="row mt-3">
+                <div class="col-lg-4 mt-2">
+                    <input id="frgtEmail" pInputText placeholder="Enter Player Name/ Team Name"
+                        [formControlName]="'playerNameA'" />
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['playerNameA'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-2">
+                    <input id="frgtEmail" pInputText placeholder="Enter Player Name/ Team Name"
+                        [formControlName]="'playerNameB'" />
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['playerNameB'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-2">
+                    <input id="frgtEmail" pInputText placeholder="Enter Category" [formControlName]="'categoryName'" />
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['categoryName'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 mt-3">
+                    <p-calendar #startDate1 inputId="basic" dateFormat="dd/mm/yy" placeholder="Date and Time"
+                        [showTime]="true" [formControlName]="'dateTime'"  [minDate]="_minDateValue" [maxDate]="_maxDateValue"
+                        >
+                        <!-- [showTime]="true" -->
+                    </p-calendar>
+                    
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['dateTime'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <input type="number" id="frgtEmail" pInputText placeholder="Table No"  [formControlName]="'tableNo'" />
+                    <!-- <p-inputNumber id="frgtEmail"  placeholder="Table No"  [formControlName]="'tableNo'" >
+                </p-inputNumber> -->
+                    <!-- <input id="frgtEmail" pInputText placeholder="Table No" [formControlName]="'tableNo'" /> -->
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['tableNo'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-3">
+                    <input id="frgtEmail" pInputText placeholder="Round Name" [formControlName]="'roundName'" />
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['roundName'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 mt-2">
+                    <p-dropdown class="custom-dropdown" [formControlName]="'participantType'"
+                        placeholder="Select Participant Type" [options]="_eventParticipantType" optionLabel="name"
+                        optionValue="name">
+                    </p-dropdown>
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['participantType'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-2">
+                    <p-dropdown class="custom-dropdown" [formControlName]="'fixtureFormat'"
+                        placeholder="Select Fixture Format" [options]="_fixtureFormat" optionLabel="name"
+                        optionValue="name">
+                    </p-dropdown>
+                    <div class="p-small error-txt-msg mb-2"
+                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls['fixtureFormat'].hasError('required')"
+                        style="color: red">
+                        <span style="color: red">*</span>Required
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-2">
+                    <p-dropdown [formControlName]="'umpireName'" [options]="_officialList" optionLabel="name"
+                        optionValue="name" placeholder="Select Umpire" (onChange)="showRuleField()" [filter]="true"
+                        [showClear]="true">
+                    </p-dropdown>
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <div *ngIf="_showRuleSetField" class="col-md-4 mt-2">
+                    <p-dropdown class="custom-dropdown" placeholder="Select Rule Point" [formControlName]="'rule_point'"
+                        optionLabel="name" [options]="_rulePoint" optionValue="name" >
+                    </p-dropdown>
+                    <div class="p-small error-txt-msg mb-2"
+                    *ngIf="_isSubmitEvent && this._matchDetailForm.controls['rule_point'].hasError('required')"
+                    style="color: red">
+                    <span style="color: red">*</span>Required
+                </div>
+                </div>
+                <div *ngIf="_showRuleSetField" class="col-md-4 mt-2">
+                    <p-dropdown class="custom-dropdown" placeholder="Select Best of" [formControlName]="'bestOf'"
+                        optionLabel="id" [options]="_bestOf" optionValue="id">
+                    </p-dropdown>
+                    <div class="p-small error-txt-msg mb-2"
+                    *ngIf="_isSubmitEvent && this._matchDetailForm.controls['bestOf'].hasError('required')"
+                    style="color: red">
+                    <span style="color: red">*</span>Required
+                </div>
+                </div>
+            </div>
+
+        </div>
+        <div class=" mt-3 flex-vc gapi">
+            <div class=" save">
+                <button *ngIf="!editMatchDetails" (click)="saveMatchDetails()" class="btn btn_green mt-4">Save</button>
+                <button *ngIf="editMatchDetails" (click)="editMatches()" class="btn btn_green mt-4">Update</button>
+            </div>
+            <div class="or">
+                <p>or</p>
+            </div>
+            <div class=" newInput">
+                <input class="input-attachment" type="file" accept=".xlsx" #selectFile
+                    (change)="importMatchDetails($event)" />
+                <button (click)="clearFile();selectFile.click()" label="Import" class="btn btn_green mt-4"
+                    style="width: 110px;">Import</button>
+                <!-- <button (click)="importMatchDetails()" class="btn btn_green mt-4">Import</button> -->
+            </div>
+            <div class=" Downlaod">
+                <button (click)="downloadTemplate()" class="btn btn_green mt-4">Download Template</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+<div class="parent">
+    <p-table *ngIf="_playersList.length>0" class="common-table text-center" #request [value]="_playersList" [rows]="10"
+        [paginator]="true" [globalFilterFields]="['name', 'email']">
+        <ng-template pTemplate="header">
+            <tr style="font-size: 11px;">
+                <th pSortableColumn="name" style="width: 20%">Match</th>
+                <th pSortableColumn="email" style="width: 14%">Participant Type</th>
+                <th pSortableColumn="email" style="width: 10%">Category</th>
+
+                <th pSortableColumn="state" style="width: 10%">Date</th>
+                <th pSortableColumn="club" style="width: 10%">Time</th>
+                <th pSortableColumn="playerType" style="width: 10%">
+                    Table No
+                </th>
+                <th pSortableColumn="details" style="width: 15%">Round Name</th>
+                <th pSortableColumn="details" style="width: 15%">Umpire Name</th>
+                <!-- <th pSortableColumn="details" style="width: 10%">Rule Point</th>
+            <th pSortableColumn="details" style="width: 10%">Best of</th> -->
+                <th pSortableColumn="details" style="width: 10%">Action</th>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-users>
+            <tr>
+                <td>{{ users.match_details[0].participant_name}} vs {{users.match_details[1].participant_name}}</td>
+                <td>{{ users.participant_type }}</td>
+                <td>{{ users.category }}</td>
+                <td>{{ users.start_time | date : "dd/MM/YYYY" }}</td>
+                <td>{{users.start_time.split('T')[1].slice(0,5)}}</td>
+                <td>{{ users.table }}</td>
+                <td>{{ users.round }}</td>
+                <td>{{ users.umpire_name }}</td>
+                <!-- <td>{{ users.umpire_name }}</td>
+            <td>{{ users.rule_set }}</td> -->
+                <td>
+                    <div>
+                        <p-overlayPanel appendTo="body" #menuPopup [showCloseIcon]="false" [style]="{width: '150px'}">
+                            <ng-template pTemplate>
+                                <div class="common-popup">
+                                    <div class="innerContent">
+                                        <div class="overlay-item menuItem ">
+                                            <a (click)="editMatchDetail(users)">Edit</a>
+                                        </div>
+                                        <div class="overlay-item menuItem ">
+                                            <a (click)="deleteMatch(users)">Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-overlayPanel>
+                        <div class="dropbtn">
+                            <div class="dropdownUnpublish">
+                                <button pButton pRipple (click)="menuPopup.toggle($event)" type="button"
+                                    icon="pi pi-ellipsis-v"
+                                    class="p-button-plain p-button-text p-button-rounded"></button>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="8">No user found.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+
+
+<div *ngIf="!getMatches" class="d-flex info-msg p-mt-5" style="justify-content: center;">
+    <i class="fa-solid fa-circle-info text-grey fs-5 p-mr-2"></i><label>Please Create <b class="nevigateLink"
+            role="button" (click)="nevigateToDetails()">Tournament&nbsp;</b>first to create Live Match</label>
+</div>
+<p-toast position="bottom-right" key="bc"></p-toast>

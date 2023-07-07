@@ -1,0 +1,79 @@
+<!--  <p>role-management works!</p> -->
+<!-- skelton layout starts  -->
+<!-- <div class="skeletonlayout" *ngIf="_skeleton" style="margin: 62px 20px">
+    <div class="d-flex justify-content-between mb-lg-5">
+        <p-skeleton
+        shape="rectangle"
+        width="150px"
+        height="40px"
+        styleClass="mt-2"
+        animation="wave"
+      ></p-skeleton>
+      <p-skeleton
+          shape="rectangle"
+          width="150px"
+          height="40px"
+          styleClass="mt-2"
+          animation="wave"
+        ></p-skeleton>
+    </div>
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let item of idies">
+      <div class="d-flex align-items-center gap-4">
+        <p-skeleton
+          shape="circle"
+          width="60px"
+          height="60px"
+          styleClass="mt-2"
+          animation="wave"
+        ></p-skeleton>
+        <p-skeleton
+          shape="rectangle"
+          width="150px"
+          height="15px"
+          styleClass="mt-2"
+          animation="wave"
+        ></p-skeleton>
+      </div>
+      <div *ngFor="let item of idies">
+        <p-skeleton
+          shape="rectangle"
+          width="150px"
+          height="15px"
+          styleClass="mt-2"
+          animation="wave"
+        ></p-skeleton>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- skelton layout ends  -->
+<!-- <div *ngIf="!_skeleton"> -->
+<div class="personal-details-container">
+  <div class="container">
+    <div class="FirstSection">
+      <p>Role Management</p>
+      <button [disabled]="true">+New Role</button>
+    </div>
+    <div class="aligncards">
+      <div class="cards" *ngFor="let item of cards">
+        <div class="card_upperSection">
+          <p-avatar
+            icon="pi pi-user"
+            styleClass="mr-2"
+            size="xlarge"
+            shape="circle"
+          ></p-avatar>
+          <div class="profilename">{{ item.role_data.title }}</div>
+        </div>
+        <div class="card_LowerSection">
+          <div class="item name">{{ item.name }}</div>
+          <div class="item email">{{ item.email }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+<p-toast position="bottom-right" key="bc"></p-toast>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

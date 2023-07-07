@@ -1,0 +1,94 @@
+<div class="historyContainer">
+    <div class="topBar">
+        <!-- <h6 class="p-green"><b class="fs-4">History</b> of changes</h6> -->
+        <p class="mt-4 p-green">
+            View a list of changes done and undo them if neccessary
+        </p>
+    </div>
+    <div class="centerTab mt-3">
+        <div class="common-tabView">
+            <p-tabView>
+                <p-tabPanel header="Individual players sent to another">
+                    <div class="individualPlayer-tab">
+                        <div class="flex-vc my-4" *ngFor="let item of _history">
+                            <div class="name flex-hc flex-100">
+                                <p>{{ item.name }}</p>
+                            </div>
+                            <div class="underline">
+                                <div class="line"></div>
+                            </div>
+                            <div class="fromTo flex-100 px-5">
+                                <div class="from flex-hc lex-vc">
+                                    <p class="p-secondary">
+                                        <b class="p-green me-2">From :</b>{{ item.from }}
+                                    </p>
+                                </div>
+                                <div class="to flex-hc flex-vc">
+                                    <p class="p-combine">
+                                        <b class="p-green me-2">Moved To :</b>{{ item.moveto }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="underline">
+                                <div class="line"></div>
+                            </div>
+                            <div class="undo flex-hc flex-100">
+                                <div class="flex-vc p-links">
+                                    <h6>Undo</h6>
+                                    <svg width="12" height="12" viewBox="0 0 14 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.07444 1.0216C4.13731 1.38903 3.20205 2.04552 2.55192 2.81502C2.3018 3.09986 2.08265 3.34153 2.0604 3.34519C2.03816 3.34885 1.96965 3.02506 1.90377 2.62468C1.75249 1.70529 1.69824 1.65329 0.949384 1.77651C0.148625 1.90828 0.164957 1.77613 0.584642 4.32669C0.899406 6.23962 0.955716 6.48927 1.08157 6.55994C1.19138 6.62564 1.65473 6.57224 3.35264 6.29286C5.84389 5.88293 5.73877 5.93831 5.65882 5.17471C5.6164 4.77809 5.58449 4.67673 5.41434 4.52196C5.22569 4.34739 5.21086 4.34983 4.39528 4.48403L3.56364 4.61326L3.91043 4.17544C4.36375 3.59824 5.19511 3.00454 5.85396 2.79713C7.1544 2.36992 8.53742 2.62972 9.68195 3.52275C10.5034 4.16434 10.9674 4.94849 11.1407 6.00134C11.3188 7.08385 11.0981 8.10253 10.5107 8.97592C10.0548 9.6297 9.63027 10.0118 8.86601 10.4117C8.33302 10.6898 8.21298 10.7933 8.10626 11.0241C7.85313 11.5683 8.16435 12.2101 8.74342 12.3509C9.01259 12.4132 9.07932 12.4022 9.52813 12.2141C12.5548 10.9394 14.0017 7.19068 12.5983 4.21561C12.0929 3.13366 11.1229 2.05199 10.1457 1.48172C9.55715 1.1445 8.41524 0.776492 7.71744 0.700932C7.17525 0.64546 5.54051 0.845912 5.07444 1.0216Z"
+                                            fill="#1B403A" />
+                                    </svg>
+                                    <!-- <iframe width="12" height="12" src="../../../../assets/icons/svg/reverse.svg"
+                                        frameborder="0"></iframe> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p-tabPanel>
+                <p-tabPanel header="Category">
+                    <div class="individualPlayer-tab">
+                        <div class="flex-vc my-4" *ngFor="let item of _category">
+                            <div class="name flex-hc flex-100">
+                                <p>{{ item.name }}</p>
+                            </div>
+                            <div class="underline">
+                                <div class="line"></div>
+                            </div>
+                            <div class="fromTo flex-100 px-5">
+                                <div class="from flex-hc lex-vc">
+                                    <p class="p-secondary">
+                                        <b class="p-green me-2">From :</b>{{ item.from }}
+                                    </p>
+                                </div>
+                                <div class="to flex-hc flex-vc">
+                                    <p class="p-combine">
+                                        <b class="p-green me-2">Moved To :</b>{{ item.moveto }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="underline">
+                                <div class="line"></div>
+                            </div>
+                            <div class="undo flex-hc flex-100">
+                                <div class="flex-vc p-links">
+                                    <h6>Undo</h6>
+                                    <svg width="12" height="12" viewBox="0 0 14 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.07444 1.0216C4.13731 1.38903 3.20205 2.04552 2.55192 2.81502C2.3018 3.09986 2.08265 3.34153 2.0604 3.34519C2.03816 3.34885 1.96965 3.02506 1.90377 2.62468C1.75249 1.70529 1.69824 1.65329 0.949384 1.77651C0.148625 1.90828 0.164957 1.77613 0.584642 4.32669C0.899406 6.23962 0.955716 6.48927 1.08157 6.55994C1.19138 6.62564 1.65473 6.57224 3.35264 6.29286C5.84389 5.88293 5.73877 5.93831 5.65882 5.17471C5.6164 4.77809 5.58449 4.67673 5.41434 4.52196C5.22569 4.34739 5.21086 4.34983 4.39528 4.48403L3.56364 4.61326L3.91043 4.17544C4.36375 3.59824 5.19511 3.00454 5.85396 2.79713C7.1544 2.36992 8.53742 2.62972 9.68195 3.52275C10.5034 4.16434 10.9674 4.94849 11.1407 6.00134C11.3188 7.08385 11.0981 8.10253 10.5107 8.97592C10.0548 9.6297 9.63027 10.0118 8.86601 10.4117C8.33302 10.6898 8.21298 10.7933 8.10626 11.0241C7.85313 11.5683 8.16435 12.2101 8.74342 12.3509C9.01259 12.4132 9.07932 12.4022 9.52813 12.2141C12.5548 10.9394 14.0017 7.19068 12.5983 4.21561C12.0929 3.13366 11.1229 2.05199 10.1457 1.48172C9.55715 1.1445 8.41524 0.776492 7.71744 0.700932C7.17525 0.64546 5.54051 0.845912 5.07444 1.0216Z"
+                                            fill="#1B403A" />
+                                    </svg>
+                                    <!-- <iframe width="12" height="12" src="../../../../assets/icons/svg/reverse.svg"
+                                        frameborder="0"></iframe> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p-tabPanel>
+            </p-tabView>
+        </div>
+    </div>
+</div>

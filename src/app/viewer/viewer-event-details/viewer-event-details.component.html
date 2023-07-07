@@ -1,0 +1,79 @@
+<!-- <p>viewer-event-details works!</p> -->
+
+<div class="event_details_container">
+    <div class="innerSection" *ngIf="data!==undefined">
+        <div class="col-9">
+            <div class="row firstRow">
+                <div class="col-4">
+                    <p class="fadeText"> Event Name</p>
+                    <p> {{data.event_name}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText">Championship Type </p>
+                    <p>{{data.championship_type}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText"> Event Type</p>
+                    <p>{{data.event_type == 5 ? 'International' : data.event_type == 6 ? 'Sweden Tour':data.event_type
+                        == 7 ?
+                        'National':data.event_type == 8 ? 'District':'Para Competition'}}</p>
+                </div>
+            </div>
+            <div class="row _secondRow">
+                <div class="col-4">
+                    <p class="fadeText"> Venue Address</p>
+                    <!-- <div *ngIf="data.address != ''"> -->
+                    <!-- <p></p> -->
+                    <p *ngIf="data.venue_details!==undefined"> {{data.venue_details.address != '' ?
+                        data.venue_details.address:'---------'}}</p>
+                    <!-- </div> -->
+                    <!-- <div *ngIf="data.address == ''">
+                    <p></p>
+                    <p>---------</p>
+                </div> -->
+                </div>
+                <div class="col-4">
+                    <p class="fadeText">Event Start Date</p>
+                    <p>{{data.event_start_time |date: "dd/MM/YYYY"}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText"> Event Start Date</p>
+                    <p>{{data.event_end_time |date: "dd/MM/YYYY"}}</p>
+                </div>
+            </div>
+            <div class="row _thirdRow">
+                <div class="col-4">
+                    <p class="fadeText"> Registration start date</p>
+                    <p> {{data.reg_start_time|date: "dd/MM/YYYY"}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText">Registration end date</p>
+                    <p>{{data.reg_end_time|date: "dd/MM/YYYY"}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText"> Organising Association</p>
+                    <p>{{data.organiser_detail==undefined?'---':data.organiser_details.organising_association}}</p>
+                </div>
+            </div>
+            <div class="row _fourthRow">
+                <div class="col-4">
+                    <p class="fadeText"> Organiser Name</p>
+                    <p> {{data.organiser_detail==undefined?'---':data.organiser_details.contact_person}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText">Organiser Contact</p>
+                    <p>{{data.organiser_detail==undefined?'---':data.organiser_details.telephone_no}}</p>
+                </div>
+                <div class="col-4">
+                    <p class="fadeText"> Organiser Email</p>
+                    <p>{{data.organiser_detail==undefined?'---':data.organiser_details.organiser_email}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- {{_fullDetail[0] | json}} -->

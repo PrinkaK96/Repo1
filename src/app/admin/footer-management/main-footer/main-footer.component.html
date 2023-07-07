@@ -1,0 +1,176 @@
+<div class="mainFooter-container">
+    <div class="mainFooter-content">
+        <form [formGroup]="_footerForm">
+            <div class="uploadLogo">
+                <div class="header">
+                    <h6>{{'footer.uploadlogo' | translate}}</h6>
+                </div>
+                <div class="uploadSection">
+                    <div class="flex-sb flex-vc flex-upload">
+                        <p class="uploadText">{{'footer.uploadFooter' | translate}}</p>
+                        <button class="btn btn_green w-auto m-0">{{'footer.takeBrand' | translate}}</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="socialLinks">
+                <div class="header">
+                    <h6>Add Social Links</h6>
+                </div>
+                <div class="socialLinkSection" *ngFor="let item of _linkList;let i=index">
+                    <div class="flex-vc link-flex pt-2">
+                        <div class="social-text text-overflow">
+                            <input *ngIf="item.isClicked" type="text" #fbInput pInputText
+                                [ngModelOptions]="{standalone: true}" (focusout)="editField(false,i)"
+                                placeholder={{item.title}} [(ngModel)]="item.url">
+                            <div [style.padding]="!item.isClicked ? '0.75rem 0.75rem 0.75rem 0':'0'">
+                                <div class="text-overflow" *ngIf="!item.isClicked" (click)="editField(true,i)">
+                                    <a href="https://{{item.url}}" target="_blank">{{item.url}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-icon" *ngIf="item.title=='Twitter'">
+                            <img *ngIf="showTwitter" src="../../../../assets/admin/footerManagement/twitter.png"
+                                class="social_icons_w20" alt="">
+                            <img *ngIf="!showTwitter"
+                                src="../../../../assets/admin/footerManagement/twitter-disabled.png" width="20" alt="">
+                        </div>
+                        <div class="social-icon" *ngIf="item.title=='LinkedIn'">
+                            <img *ngIf="showLinkedin" src="../../../../assets/admin/footerManagement/linkedin.png"
+                                class="social_icons_w20" alt="">
+                            <img *ngIf="!showLinkedin"
+                                src="../../../../assets/admin/footerManagement/linkedin-disabled.png" width="20" alt="">
+                        </div>
+                        <div class="social-icon" *ngIf="item.title=='YouTube'">
+                            <img *ngIf="showYoutube" src="../../../../assets/admin/footerManagement/youtube.png"
+                                class="social_icons_w20" alt="">
+                            <img *ngIf="!showYoutube"
+                                src="../../../../assets/admin/footerManagement/youtube-disabled.png"
+                                class="social_icons_w20" alt="">
+                        </div>
+                        <div class="social-icon" *ngIf="item.title=='Facebook'">
+                            <img *ngIf="showFacebook" src="../../../../assets/admin/footerManagement/facebook.png"
+                                class="social_icons_w20" alt="">
+                            <img *ngIf="!showFacebook"
+                                src="../../../../assets/admin/footerManagement/facebook-disabled.png"
+                                class="social_icons_w20" alt="">
+                        </div>
+                        <div class="social-check">
+                            <input type="checkbox" id="inputCheckbox" (click)="setCheckBox($event,i)"
+                                [checked]="item.published" class="htmlCheckbox ms-4">
+                        </div>
+                    </div>
+                    <hr class="divider">
+                </div>
+            </div>
+            <div class="contactDetails">
+                <div class="header">
+                    <h6>{{'footer.addContact' | translate}}</h6>
+                </div>
+                <div class="contactDetailsSection">
+                    <div class="flex-vc link-flex pt-2">
+                        <div class="contact-text">
+                            <input type="email" pInputText placeholder="{{'footer.enterEmail' | translate}}"
+                                [formControlName]="'email'">
+                        </div>
+                        <div class="contact-end">
+
+                            <!-- <p class="p-green"><b>Verified</b></p> -->
+                            <p class="header" *ngIf="_verifyEmail">Verification mail has been sent to your email . </p>
+                            <!-- <b class="p-green p-links" (click)="verifyEmail()">Resend Email</b> -->
+                        </div>
+                        <button *ngIf="!_verifyEmail" class="verifyBut btn btn_green w-auto m-0"
+                            (click)="verifyEmail()">Verify mail</button>
+                    </div>
+                    <hr class="divider">
+                    <div class="error-txt-msg mb-2"
+                        *ngIf="_isSubmit && _footerForm.controls['email'].hasError('pattern')" style="color: red;">
+                        Incorrect Format.</div>
+
+                    <div class="otpSection mt-4">
+                        <div class="flex-sb flex-vc mainFlex">
+                            <div *ngIf="_verifyEmail">
+                                <div class="flex-ve">
+                                    <div>
+                                        <label for="otpinput">{{'footer.enterOTP' | translate}}</label>
+
+                                    </div>
+                                    <div class="otpfiller">
+                                        <input type="number" pInputText placeholder='xxxxx' [formControlName]="'otp'">
+                                    </div>
+                                    <div>
+                                        <button *ngIf="timer !== 0" class="verifyBut btn btn_green w-auto m-0"
+                                            (click)="verifyOTP()">Verify
+                                            OTP</button>
+                                        <button *ngIf="timer === 0" class="verifyBut btn btn_green w-auto m-0"
+                                            (click)="sendOtp()">Resend
+                                            OTP</button>
+                                    </div>
+                                </div>
+                                <div class="flex-sb mt-4">
+                                    <!-- <div class="timeout">
+                                        Timeout:
+                                    </div>
+                                    <div class="resendOtp">
+                                        <p>Resend OTP</p>
+                                    </div>  -->
+                                    <div [ngClass]="timer > 0 ?'flex-sb mt-2':'flex-e mt-2'" *ngIf="_startCountdown">
+                                        <p *ngIf="timer > 0">{{'Timeout :'+ timer}}</p>
+                                        <!-- <button [disabled]="timer !== 0" class="resendOTP" (click)="sendOtp()">Resend
+                                            OTP</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex-vc link-flex pt-2 ">
+                        <div class="contact-text">
+                            <input type="number" pInputText placeholder='xxxxxxx908' [formControlName]="'phone'">
+                        </div>
+                        <div class="contact-end" *ngIf="false">
+                            <p class="header">{{'footer.verificationOtp' | translate}}</p>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                </div>
+            </div>
+            <div class="otpSection mt-4" *ngIf="false">
+                <div class="flex-sb flex-vc mainFlex">
+                    <div *ngIf="true">
+                        <div class="flex-ve">
+                            <div>
+                                <label for="otpinput">{{'footer.enterOTP' | translate}}</label>
+
+                            </div>
+                            <div class="otpfiller">
+                                <input type="number" pInputText placeholder='xxxxx'>
+                            </div>
+                            <div>
+                                <button class="verifyBut btn btn_green w-auto m-0">Verify OTP</button>
+
+                            </div>
+                        </div>
+                        <div class="flex-sb mt-4">
+                            <div class="timeout">
+                                Timeout:
+                            </div>
+                            <div class="resendOtp">
+                                <p>Resend OTP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="flex-e">
+                <button class="btn btn_green w-auto" (click)="updateFooter()">{{'footer.update' | translate}}</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<p-toast position="bottom-right" key="bc"></p-toast>
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

@@ -1,0 +1,256 @@
+.topBar,
+.bottomBar {
+  .greyBox {
+    background-color: var(--box-bg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    position: relative;
+    height: 150px;
+
+    .innerContent {
+      font-size: 90% !important;
+      overflow: hidden;
+      overflow-y: auto;
+
+      .detail-input {
+        label {
+          color: var(--secondary-color);
+        }
+
+        input {
+          border-bottom: 1px solid var(--secondary-color) !important;
+          border: none;
+          border-radius: 0 !important;
+          background-color: transparent;
+          font-size: 18px;
+          color: var(--main-color);
+          font-weight: bold;
+          padding-left: 0;
+        }
+
+        ::ng-deep {
+          .p-multiselect {
+            border: none;
+            border-bottom: 1px solid #5555;
+            border-radius: 0;
+          }
+
+          .p-dropdown {
+            border-bottom: 1px solid var(--secondary-color) !important;
+            border: none;
+            border-radius: 0 !important;
+            background-color: transparent;
+            font-size: 18px;
+            margin: 0 !important;
+
+            .p-dropdown-label {
+              padding-left: 0;
+              color: var(--main-color);
+            }
+
+            .p-dropdown-label.p-placeholder {
+              color: #6c757d !important;
+              font-size: 12px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .noPlayer {
+      position: absolute;
+      top: 61%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #bfbfbf;
+    }
+  }
+}
+
+.right-eventHandler {
+  .iconBox:not(:last-child) {
+    margin-right: 0.2rem;
+  }
+
+  .iconBox {
+    padding: 8px 6px;
+    border-radius: 3px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    svg.merge {
+      rotate: 180deg;
+      width: 12px !important;
+    }
+  }
+}
+
+.lineSpace {
+  line-height: 30px;
+}
+
+.matchRow {
+  padding: 6px 0;
+}
+
+.saveButs {
+  position: absolute;
+  width: 96%;
+}
+
+.greyBox {
+  background-color: #fbfbfb;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  position: relative;
+  height: 46vh;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+.gb2 {
+  margin-top: 38px;
+
+}
+
+.card-row {
+  display: flex;
+  font-size: 12px;
+
+  .innerBox {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 8px;
+  }
+
+  .cardflex {
+    flex-basis: 100%;
+  }
+
+  .mergeBox {
+    width: 7%;
+    margin-left: 5px;
+
+    .mergeIcon {
+      rotate: 90deg;
+      scale: 0.4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.parentFlex {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  .btnSchedule {
+    background-color: var(--combinating-color);
+    padding: 8px 15px;
+    font-size: 12px;
+    color: #ffffff;
+    width: 120px;
+    text-align: center;
+  }
+}
+
+.leftSide {
+  text-align: left;
+}
+
+.heading {
+  margin: 0 10px;
+}
+
+.kill {
+  font-weight: bold;
+}
+
+// skelton css starts
+.skeletonlayout {
+  .heading {
+    ::ng-deep {
+      p-skeleton {
+        .p-skeleton {
+          // z-index: 99999;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .cards {
+    .mt-2 {
+      .col-lg-6 {
+        &:nth-child(2) {
+          ::ng-deep {
+            p-skeleton {
+              float: right;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.id {
+  display: flex;
+  gap: 5px;
+
+  div {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    th {
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+}
+
+.settings {
+  button {
+    padding: 9px 15px;
+  }
+}
+
+// skeleton css end
+
+@media print {
+  .greyBox {
+    background-color: #fbfbfb !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .col-lg-8 {
+    ::ng-deep {
+      p-scrollpanel {
+        .p-scrollpanel {
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}

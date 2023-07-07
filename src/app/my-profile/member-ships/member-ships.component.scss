@@ -1,0 +1,270 @@
+$fadecolor: #c4c4c4;
+$border-radius: 7px;
+$main_color: #1B403A;
+
+@mixin flexing($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin margins($position, $value) {
+    margin-#{$position}: $value !important;
+}
+
+@mixin fontSizes($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+.personal-details-container {
+    .container {
+        padding: 2rem;
+
+        .FirstSection {
+            @include margins(bottom, 1rem);
+            @include fontSizes(1.5rem, bold);
+        }
+
+        .lowersection {
+            @include flexing(flex-start);
+            flex-wrap: wrap;
+            gap: 13rem;
+
+            .cards {
+                box-shadow: 2px 3px 5px $fadecolor;
+                border-radius: $border-radius;
+                padding: 1rem 2rem;
+                min-width: 40%;
+                border: 1px solid $fadecolor;
+                min-height: 30vh;
+
+                p:nth-child(1) {
+                    @include fontSizes(1, light);
+                    color: $fadecolor;
+                }
+
+                p:nth-child(2) {
+                    margin-bottom: 1rem !important;
+                    margin-top: 0.5rem;
+                    @include fontSizes(1.4rem, bold);
+                }
+
+                .items {
+                    @include margins(bottom, 0.4rem);
+                }
+            }
+
+            .right_section {
+                button {
+                    width: 18vw;
+                    min-height: 6vh;
+                    border-radius: 20px;
+                    border: 1px solid $main_color;
+                    color: $main_color;
+
+                    &:hover {
+                        box-shadow: 1px 2px 5px $fadecolor;
+                    }
+
+                    color: #fff;
+                    background-color: #1B403A;
+                }
+
+            }
+
+        }
+    }
+}
+
+$green-color: #01534d;
+$green-container: #1b403a;
+$white-container: #f5f5f5;
+$mediaQueries: (
+    mobile: 760px,
+    tab: 1000px,
+);
+
+@mixin query($screen) {
+
+    @each $key,
+    $value in $mediaQueries {
+        @if ($screen ==$key) {
+            @media only screen and (max-width: $value) {
+                @content;
+            }
+        }
+    }
+}
+
+.buy-membership {
+    .section-top {
+        background: $green-container;
+        position: relative;
+
+        .content {
+            padding: 1rem 0 5rem 0;
+
+            .imgContainer {
+                max-width: 200px;
+            }
+
+            .switchContainer {
+                color: white;
+
+                .switch {
+                    ::ng-deep {
+                        .p-inputswitch {
+                            scale: 0.7;
+                        }
+
+                        .p-inputswitch .p-inputswitch-slider {
+                            background: #ffffff1a;
+                        }
+
+                        .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+                            background: #2563eb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-bottom {
+        .cardsContainer {
+            top: 280px;
+            margin-top: -20px;
+            width: 100%;
+
+            margin: 2rem;
+
+            .cards {
+                flex-wrap: wrap;
+
+                ::ng-deep {
+                    .membership-card:not(:last-child) {
+                        margin-right: 2rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .membership-card {
+                        padding: 1.5rem 0;
+                        border-radius: 7px;
+                        width: 246px;
+                        background: white;
+                        border: 2px solid #d6d6d6;
+                        text-align: center;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                        .features {
+                            i {
+                                font-size: 10px;
+                            }
+                        }
+
+                        .buyButton {
+                            button {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include query(mobile) {
+    .cards {
+        .membership-card {
+            margin: 10px 0;
+        }
+    }
+}
+
+@include query(tab) {
+    .membership-card {
+        width: 200px !important;
+    }
+}
+
+.bk-color {
+    background-color: #e0e2dd;
+}
+
+.parent {
+    ::ng-deep {
+        .p-dialog-content {
+            padding: 0;
+        }
+    }
+
+    .selectedGateway {
+        transition: 0.2s ease;
+        filter: drop-shadow(2px 4px 6px black);
+    }
+}
+
+.text-size {
+    font-size: smaller;
+    font-weight: bold;
+}
+.parent {
+    ::ng-deep {
+      .p-dialog-content {
+        padding: 0;
+      }
+    }
+  
+    .selectedGateway {
+      transition: 0.2s ease;
+      filter: drop-shadow(2px 4px 6px black);
+    }
+  }
+  
+  .text-size {
+    font-size: smaller;
+    font-weight: bold;
+  }
+  .parent{
+    ::ng-deep{
+      p-dialog{
+        .p-element{
+          .p-dialog-header{
+            padding: 0 10px !important;
+          }
+          .p-dialog-content{
+            padding-top: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  .paymentMethod {
+    padding: 0 0 0 10px;
+    .options {
+      gap: 1rem;
+      margin: 0.5rem 0;
+      .radio{
+        gap: .5rem;
+      }
+    }
+  }
+  .paymentMessage {
+    height: 70px;
+    font-size:20px  ;
+    // border: 1px solid black;
+  }
+  .col-md-6{
+    img{
+      transition: scale .1s ease;
+      &:hover{
+        // visibility: hidden;
+        // filter: drop-shadow(2px 4px 6px black);
+        box-shadow: 1px 3px 5px #888888;
+        transform: scale(1.1);
+      }
+    }
+  }

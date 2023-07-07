@@ -1,0 +1,103 @@
+.centerElement {
+    .dayPlannerInputtext {
+        input {
+            background-color: var(--box-bg);
+            margin: 1rem 0;
+            color: var(--main-bg);
+            height: 34px;
+            border: 1px solid var(--main-bg);
+            border-radius: var(--common-border-radius);
+            padding-left: 1rem !important;
+
+        }
+    }
+
+    ::ng-deep {
+        .p-calendar {
+            margin: 1rem 0;
+            color: var(--main-color);
+            max-height: 34px;
+            border: 1px solid var(--main-color);
+            border-radius: var(--common-border-radius);
+
+            input {
+                padding-left: 1rem !important;
+            }
+
+            .p-button {
+                background: transparent;
+                border: none;
+
+                .p-button-icon {
+                    color: var(--main-color);
+                }
+            }
+
+            .p-button:focus {
+                box-shadow: none;
+            }
+        }
+
+        .p-calendar:focus-within {
+            color: white;
+
+            input {
+                background-color: var(--main-color);
+                color: white !important;
+            }
+
+            input::placeholder {
+                color: white !important;
+            }
+
+            .p-button {
+                background-color: var(--main-color);
+
+                .p-button-icon {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .heading {
+        p {
+            color: var(--secondary-color);
+            font-weight: 500 !important;
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
+.btn_green-bordered.selected {
+    background-color: var(--main-bg) !important;
+    color: var(--primary-color) !important;
+
+    i {
+        color: var(--primary-color) !important;
+    }
+}
+
+.btn_green-bordered:disabled {
+    background-color: lightgray !important;
+}
+
+.sidebuttons {
+    max-height: 702px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

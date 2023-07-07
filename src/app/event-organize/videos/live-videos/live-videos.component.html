@@ -1,0 +1,125 @@
+
+
+
+
+
+
+<div *ngIf="event_id != null" class="class">
+<div class="container">
+  <p class="my-3">Live Videos</p>
+  <div class="flex-vc flexing">
+    <span class="p-input-icon-left">
+      <i class="p-green pi pi-search"></i>
+      <input
+        id="headerInput"
+        [(ngModel)]="_searchByPlayerName"
+        pInputText
+        (keydown)="searchPlayer()"
+        (keypress)="searchPlayer()"
+        (keyup)="searchPlayer()"
+        pInputText
+        type="text"
+        placeholder="Find Player"
+      />
+    </span>
+      </div>
+      <div class="row my-3">
+          <div class=" col-sm-3 my-2 gap-4" *ngFor="let item of _liveMatchesList" >
+              <!-- <img class="border-round" [src]="item.thumbnail" alt="" (click)="viewVideo(item)"> -->
+              <mux-player [ngClass]="item.published===true ? '' : 'opacity'" stream-type="live" attr.playback-id="{{item.playback_id}}"
+                  metadata-video-title="Test VOD" metadata-viewer-user-id="user-24601"></mux-player>
+                  <div class="bannerContainer">
+                      <p-overlayPanel appendTo="body" #menuPopup [showCloseIcon]="false"
+                          [style]="{width: '150px'}">
+                          <ng-template pTemplate>
+                              <div class="common-popup">
+                                  <div class="innerContent">
+                                      <div class="overlay-item menuItem ">
+                                          <a (click)="publishStreamedVideos(item,true)">Publish</a>
+                                      </div>
+                                      <div class="overlay-item menuItem ">
+                                          <a (click)="publishStreamedVideos(item,false)">Unpublish</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </ng-template>
+                      </p-overlayPanel>
+                      <div class="dropbtn">
+                          <div class="dropdownUnpublish">
+                              <button pButton pRipple (click)="menuPopup.toggle($event)" type="button"
+                                  icon="pi pi-ellipsis-v"
+                                  class="p-button-plain p-button-text p-button-rounded"></button>
+                          </div>
+                      </div>
+                     
+                  </div>
+              <div class="playersInfo flex-vc">
+                  <p class="pname text-overflow">{{item.participants[0]}}</p>
+                  <p class="mx-2">VS</p>
+                  <p class="pname text-overflow">{{item.participants[1]}}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-3" *ngIf="_liveMatchesList.length == 0">
+    <p>No Live Video Found</p>
+  </div>
+  <!-- <div class="col-sm-3 ">
+          <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" width="100%" controls></video>
+      </div>
+  </div>
+</div>
+</div> -->
+<!-- </div>
+</div> -->
+
+<!-- <div class="videoDialog">
+<p-dialog
+  [resizable]="false"
+  [(visible)]="_showVideoOnFullScreen"
+  [closable]="true"
+  [showHeader]="false"
+  [modal]="true"
+  [draggable]="false"
+  [style]="{ width: '100vw', height: '100vh' }"
+  [baseZIndex]="10000"
+>
+  <div class="muxOverflow">
+    <div class="topHeader">
+      <div class="flex-sb px-3 py-2">
+        <div class="flex-vc">
+          <p class="pname text-overflow">{{ _playerAName }}</p>
+          <p class="px-2">vs</p>
+          <p class="pname text-overflow">{{ _playerBName }}</p>
+        </div>
+        <div class="flex-vc gap-4">
+          <p class="type">{{ _participantTypeName }}</p>
+          <p class="category">{{ _categoryName }}</p>
+          <i
+            (click)="closePopUp()"
+            class="pi pi-times-circle text-white p-links"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <mux-player
+      class="muxPlayer"
+      stream-type="on-demand"
+      attr.playback-id="{{ _currentAssetId }}"
+      metadata-video-title="Test VOD"
+      metadata-viewer-user-id="user-24601"
+    ></mux-player>
+  </div>
+</p-dialog>
+</div> -->
+
+<stupa-common-svg-msg
+*ngIf="event_id === null"
+(eventClicked)="eventClicked()"
+></stupa-common-svg-msg>
+
+<p-toast position="bottom-right" key="bc"></p-toast>
+
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>

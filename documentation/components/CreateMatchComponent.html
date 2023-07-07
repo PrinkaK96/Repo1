@@ -1,0 +1,3439 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>stupa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">stupa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  CreateMatchComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/broadcast-only/create-match/create-matchcomponent.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                            <code>DatePipe</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-create-match</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./create-match.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./create-match.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_bestOf" >_bestOf</a>
+                            </li>
+                            <li>
+                                <a href="#_currentDate" >_currentDate</a>
+                            </li>
+                            <li>
+                                <a href="#_dataObject" >_dataObject</a>
+                            </li>
+                            <li>
+                                <a href="#_eventParticipantType" >_eventParticipantType</a>
+                            </li>
+                            <li>
+                                <a href="#_fixtureFormat" >_fixtureFormat</a>
+                            </li>
+                            <li>
+                                <a href="#_isSubmitEvent" >_isSubmitEvent</a>
+                            </li>
+                            <li>
+                                <a href="#_isSubmitEventUmpire" >_isSubmitEventUmpire</a>
+                            </li>
+                            <li>
+                                <a href="#_matchDetailForm" >_matchDetailForm</a>
+                            </li>
+                            <li>
+                                <a href="#_maxDateValue" >_maxDateValue</a>
+                            </li>
+                            <li>
+                                <a href="#_minDateValue" >_minDateValue</a>
+                            </li>
+                            <li>
+                                <a href="#_officialList" >_officialList</a>
+                            </li>
+                            <li>
+                                <a href="#_playersList" >_playersList</a>
+                            </li>
+                            <li>
+                                <a href="#_rulePoint" >_rulePoint</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedBanner" >_selectedBanner</a>
+                            </li>
+                            <li>
+                                <a href="#_showRuleSetField" >_showRuleSetField</a>
+                            </li>
+                            <li>
+                                <a href="#_uploadImage" >_uploadImage</a>
+                            </li>
+                            <li>
+                                <a href="#azureLoggerConversion" >azureLoggerConversion</a>
+                            </li>
+                            <li>
+                                <a href="#editInfo" >editInfo</a>
+                            </li>
+                            <li>
+                                <a href="#editMatchDetails" >editMatchDetails</a>
+                            </li>
+                            <li>
+                                <a href="#element" >element</a>
+                            </li>
+                            <li>
+                                <a href="#event_id" >event_id</a>
+                            </li>
+                            <li>
+                                <a href="#getMatches" >getMatches</a>
+                            </li>
+                            <li>
+                                <a href="#index" >index</a>
+                            </li>
+                            <li>
+                                    <span class="modifier"></span>
+                                <a href="#selectFile" >selectFile</a>
+                            </li>
+                            <li>
+                                <a href="#umpire_id" >umpire_id</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clearFile" >clearFile</a>
+                            </li>
+                            <li>
+                                <a href="#deleteMatch" >deleteMatch</a>
+                            </li>
+                            <li>
+                                <a href="#downloadTemplate" >downloadTemplate</a>
+                            </li>
+                            <li>
+                                <a href="#editMatchDetail" >editMatchDetail</a>
+                            </li>
+                            <li>
+                                <a href="#editMatches" >editMatches</a>
+                            </li>
+                            <li>
+                                <a href="#eventsParticipant" >eventsParticipant</a>
+                            </li>
+                            <li>
+                                <a href="#fileDetail" >fileDetail</a>
+                            </li>
+                            <li>
+                                <a href="#getBroadcastMatches" >getBroadcastMatches</a>
+                            </li>
+                            <li>
+                                <a href="#getEventOfficial" >getEventOfficial</a>
+                            </li>
+                            <li>
+                                <a href="#importMatchDetails" >importMatchDetails</a>
+                            </li>
+                            <li>
+                                <a href="#loadTournamentDetails" >loadTournamentDetails</a>
+                            </li>
+                            <li>
+                                <a href="#nevigateToDetails" >nevigateToDetails</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#saveBulkMatches" >saveBulkMatches</a>
+                            </li>
+                            <li>
+                                <a href="#saveMatchDetails" >saveMatchDetails</a>
+                            </li>
+                            <li>
+                                <a href="#selectBestOf" >selectBestOf</a>
+                            </li>
+                            <li>
+                                <a href="#selectRulePoint" >selectRulePoint</a>
+                            </li>
+                            <li>
+                                <a href="#setFixtureFormat" >setFixtureFormat</a>
+                            </li>
+                            <li>
+                                <a href="#showRuleField" >showRuleField</a>
+                            </li>
+                            <li>
+                                <a href="#uploadBroadcastMatchBanner" >uploadBroadcastMatchBanner</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#tournamentIndex" >tournamentIndex</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(messageService: <a href="../interfaces/Message.html" target="_self">MessageService</a>, commonApiService: <a href="../injectables/CommonApiService.html" target="_self">CommonApiService</a>, formBuilder: FormBuilder, broadcastService: <a href="../injectables/BroadcastOnlyService.html" target="_self">BroadcastOnlyService</a>, jsonDataCallingService: <a href="../injectables/JsonDataCallingService.html" target="_self">JsonDataCallingService</a>, azureLoggerService: <a href="../injectables/MyMonitoringService.html" target="_self">MyMonitoringService</a>, encyptDecryptService: <a href="../injectables/EncyptDecryptService.html" target="_self">EncyptDecryptService</a>, datePipe: DatePipe)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:48</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>messageService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Message.html" target="_self" >MessageService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>commonApiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommonApiService.html" target="_self" >CommonApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                    <code>FormBuilder</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>broadcastService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BroadcastOnlyService.html" target="_self" >BroadcastOnlyService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>jsonDataCallingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/JsonDataCallingService.html" target="_self" >JsonDataCallingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>azureLoggerService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MyMonitoringService.html" target="_self" >MyMonitoringService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>encyptDecryptService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EncyptDecryptService.html" target="_self" >EncyptDecryptService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datePipe</td>
+                                                  
+                                                        <td>
+                                                                    <code>DatePipe</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tournamentIndex"></a>
+                        <b>tournamentIndex</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:32</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clearFile"></a>
+                    <span class="name">
+                        <span ><b>clearFile</b></span>
+                        <a href="#clearFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clearFile()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="560"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:560</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteMatch"></a>
+                    <span class="name">
+                        <span ><b>deleteMatch</b></span>
+                        <a href="#deleteMatch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteMatch(data: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="528"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:528</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadTemplate"></a>
+                    <span class="name">
+                        <span ><b>downloadTemplate</b></span>
+                        <a href="#downloadTemplate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>downloadTemplate()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="378"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:378</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMatchDetail"></a>
+                    <span class="name">
+                        <span ><b>editMatchDetail</b></span>
+                        <a href="#editMatchDetail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editMatchDetail(matchData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="453"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:453</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>matchData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMatches"></a>
+                    <span class="name">
+                        <span ><b>editMatches</b></span>
+                        <a href="#editMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editMatches()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="474"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:474</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eventsParticipant"></a>
+                    <span class="name">
+                        <span ><b>eventsParticipant</b></span>
+                        <a href="#eventsParticipant"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>eventsParticipant()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="151"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:151</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileDetail"></a>
+                    <span class="name">
+                        <span ><b>fileDetail</b></span>
+                        <a href="#fileDetail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileDetail(file: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBroadcastMatches"></a>
+                    <span class="name">
+                        <span ><b>getBroadcastMatches</b></span>
+                        <a href="#getBroadcastMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBroadcastMatches()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="399"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:399</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEventOfficial"></a>
+                    <span class="name">
+                        <span ><b>getEventOfficial</b></span>
+                        <a href="#getEventOfficial"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getEventOfficial()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="importMatchDetails"></a>
+                    <span class="name">
+                        <span ><b>importMatchDetails</b></span>
+                        <a href="#importMatchDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>importMatchDetails(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="291"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:291</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTournamentDetails"></a>
+                    <span class="name">
+                        <span ><b>loadTournamentDetails</b></span>
+                        <a href="#loadTournamentDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTournamentDetails()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nevigateToDetails"></a>
+                    <span class="name">
+                        <span ><b>nevigateToDetails</b></span>
+                        <a href="#nevigateToDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nevigateToDetails()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="393"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:393</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveBulkMatches"></a>
+                    <span class="name">
+                        <span ><b>saveBulkMatches</b></span>
+                        <a href="#saveBulkMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveBulkMatches(broadcast_list: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="566"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:566</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>broadcast_list</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveMatchDetails"></a>
+                    <span class="name">
+                        <span ><b>saveMatchDetails</b></span>
+                        <a href="#saveMatchDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveMatchDetails()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="227"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:227</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectBestOf"></a>
+                    <span class="name">
+                        <span ><b>selectBestOf</b></span>
+                        <a href="#selectBestOf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectBestOf()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="212"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:212</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectRulePoint"></a>
+                    <span class="name">
+                        <span ><b>selectRulePoint</b></span>
+                        <a href="#selectRulePoint"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectRulePoint()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:181</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setFixtureFormat"></a>
+                    <span class="name">
+                        <span ><b>setFixtureFormat</b></span>
+                        <a href="#setFixtureFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setFixtureFormat()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showRuleField"></a>
+                    <span class="name">
+                        <span ><b>showRuleField</b></span>
+                        <a href="#showRuleField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showRuleField()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="600"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:600</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="uploadBroadcastMatchBanner"></a>
+                    <span class="name">
+                        <span ><b>uploadBroadcastMatchBanner</b></span>
+                        <a href="#uploadBroadcastMatchBanner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>uploadBroadcastMatchBanner()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="424"
+                            class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:424</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_bestOf"></a>
+                    <span class="name">
+                        <span ><b>_bestOf</b></span>
+                        <a href="#_bestOf"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_currentDate"></a>
+                    <span class="name">
+                        <span ><b>_currentDate</b></span>
+                        <a href="#_currentDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Date()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_dataObject"></a>
+                    <span class="name">
+                        <span ><b>_dataObject</b></span>
+                        <a href="#_dataObject"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_eventParticipantType"></a>
+                    <span class="name">
+                        <span ><b>_eventParticipantType</b></span>
+                        <a href="#_eventParticipantType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_fixtureFormat"></a>
+                    <span class="name">
+                        <span ><b>_fixtureFormat</b></span>
+                        <a href="#_fixtureFormat"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isSubmitEvent"></a>
+                    <span class="name">
+                        <span ><b>_isSubmitEvent</b></span>
+                        <a href="#_isSubmitEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_isSubmitEventUmpire"></a>
+                    <span class="name">
+                        <span ><b>_isSubmitEventUmpire</b></span>
+                        <a href="#_isSubmitEventUmpire"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_matchDetailForm"></a>
+                    <span class="name">
+                        <span ><b>_matchDetailForm</b></span>
+                        <a href="#_matchDetailForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>FormGroup</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_maxDateValue"></a>
+                    <span class="name">
+                        <span ><b>_maxDateValue</b></span>
+                        <a href="#_maxDateValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_minDateValue"></a>
+                    <span class="name">
+                        <span ><b>_minDateValue</b></span>
+                        <a href="#_minDateValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_officialList"></a>
+                    <span class="name">
+                        <span ><b>_officialList</b></span>
+                        <a href="#_officialList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_playersList"></a>
+                    <span class="name">
+                        <span ><b>_playersList</b></span>
+                        <a href="#_playersList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_rulePoint"></a>
+                    <span class="name">
+                        <span ><b>_rulePoint</b></span>
+                        <a href="#_rulePoint"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_selectedBanner"></a>
+                    <span class="name">
+                        <span ><b>_selectedBanner</b></span>
+                        <a href="#_selectedBanner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_showRuleSetField"></a>
+                    <span class="name">
+                        <span ><b>_showRuleSetField</b></span>
+                        <a href="#_showRuleSetField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_uploadImage"></a>
+                    <span class="name">
+                        <span ><b>_uploadImage</b></span>
+                        <a href="#_uploadImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="azureLoggerConversion"></a>
+                    <span class="name">
+                        <span ><b>azureLoggerConversion</b></span>
+                        <a href="#azureLoggerConversion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Error()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editInfo"></a>
+                    <span class="name">
+                        <span ><b>editInfo</b></span>
+                        <a href="#editInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMatchDetails"></a>
+                    <span class="name">
+                        <span ><b>editMatchDetails</b></span>
+                        <a href="#editMatchDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="element"></a>
+                    <span class="name">
+                        <span ><b>element</b></span>
+                        <a href="#element"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="event_id"></a>
+                    <span class="name">
+                        <span ><b>event_id</b></span>
+                        <a href="#event_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMatches"></a>
+                    <span class="name">
+                        <span ><b>getMatches</b></span>
+                        <a href="#getMatches"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="index"></a>
+                    <span class="name">
+                        <span ><b>index</b></span>
+                        <a href="#index"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectFile"></a>
+                    <span class="name">
+                            <span class="modifier"></span>
+                        <span ><b>selectFile</b></span>
+                        <a href="#selectFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ElementRef | any</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;selectFile&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="umpire_id"></a>
+                    <span class="name">
+                        <span ><b>umpire_id</b></span>
+                        <a href="#umpire_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/broadcast-only/create-match/create-matchcomponent.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { DatePipe } from &#x27;@angular/common&#x27;;
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { get } from &#x27;http&#x27;;
+import { MessageService } from &#x27;primeng/api&#x27;;
+import { MyMonitoringService } from &#x27;src/app/services/AzureLogging/logging.service&#x27;;
+import { CommonApiService } from &#x27;src/app/services/Common/common-api.service&#x27;;
+import { EncyptDecryptService } from &#x27;src/app/services/EncryptDecrypt/encypt-decrypt.service&#x27;;
+import { JsonDataCallingService } from &#x27;src/app/services/LocalDataJsonDataAPI/json-data-calling.service&#x27;;
+import { BroadcastOnlyService } from &#x27;src/app/services/broadcastOnly/broadcast-only.service&#x27;;
+import * as XLSX from &#x27;xlsx&#x27;;
+const TEMPLATE &#x3D; &quot;assets/file/Import Player-Template.xlsx&quot;;
+@Component({
+  selector: &#x27;app-create-match&#x27;,
+  templateUrl: &#x27;./create-match.component.html&#x27;,
+  styleUrls: [&#x27;./create-match.component.scss&#x27;],
+  providers: [MessageService,DatePipe]
+})
+
+
+
+export class CreateMatchComponent implements OnInit {
+  _selectedBanner: any &#x3D; &#x27;&#x27;;
+  _eventParticipantType: any &#x3D; [];
+  azureLoggerConversion: any &#x3D; new Error();
+  _fixtureFormat: any &#x3D; [];
+  _officialList: any;
+  _matchDetailForm!: FormGroup;
+  _currentDate: any &#x3D; new Date();
+  index: any;
+  _playersList: any &#x3D; []
+  @Output() tournamentIndex &#x3D; new EventEmitter&lt;any&gt;();
+  _uploadImage: any;
+  editMatchDetails: boolean&#x3D; false;
+  editInfo: any&#x3D;[];
+  getMatches: boolean&#x3D;false;
+  event_id: any;
+  _bestOf: any;
+  @ViewChild(&#x27;selectFile&#x27;) selectFile: ElementRef | any;
+  element: any;
+  _isSubmitEvent:boolean&#x3D;false;
+  _showRuleSetField: boolean&#x3D;false;
+  _rulePoint: any&#x3D;[];
+  umpire_id: any;
+  _dataObject: any &#x3D; []
+  _minDateValue: any;
+  _maxDateValue: any;
+  _isSubmitEventUmpire: boolean&#x3D;false;
+
+  constructor(private messageService: MessageService, private commonApiService: CommonApiService, private formBuilder: FormBuilder, private broadcastService: BroadcastOnlyService,
+    private jsonDataCallingService: JsonDataCallingService, private azureLoggerService: MyMonitoringService,
+    private encyptDecryptService: EncyptDecryptService,private datePipe: DatePipe) {
+    this.eventsParticipant();
+    this.setFixtureFormat();
+    this.loadTournamentDetails();
+    this.getEventOfficial();
+    this.selectBestOf();
+    this.selectRulePoint()
+  }
+
+  ngOnInit(): void {
+    if (localStorage.getItem(&#x27;event_id&#x27;)) {
+      this.getMatches&#x3D;true;
+      this.event_id &#x3D; this.encyptDecryptService.decryptUsingAES256(
+        localStorage.getItem(&#x27;event_id&#x27;)
+      );
+      this._dataObject &#x3D; localStorage.getItem(&#x27;data&#x27;);
+      this._dataObject &#x3D; JSON.parse(this._dataObject)
+      //this._minDateValue &#x3D; new Date(this._dataObject.event_start_time.split(&#x27;T&#x27;)[0]);
+    //  this._maxDateValue &#x3D; new Date(this._dataObject.event_end_time.split(&#x27;T&#x27;)[0]);
+      const dateString1 &#x3D; this._dataObject.event_start_time;
+      this._minDateValue&#x3D; new Date(dateString1)//&#x3D; this.datePipe.transform(new Date(dateString1), &#x27;dd/mm/yy,HH:mm&#x27;);
+
+      const dateString &#x3D; this._dataObject.event_end_time;
+      this._maxDateValue &#x3D; new Date(dateString)//this.datePipe.transform(new Date(dateString), &#x27;dd/mm/yy,HH:mm&#x27;);
+
+      
+      this.getBroadcastMatches();
+    }
+    else{
+      this.getMatches&#x3D;false;
+    }
+  }
+
+  //#region FormControl for match details
+  loadTournamentDetails() {
+    this._matchDetailForm &#x3D; this.formBuilder.group({
+      playerNameA: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      playerNameB: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      dateTime: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      participantType: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      tableNo: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      fixtureFormat: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      categoryName: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      umpireName: new FormControl(&#x27;&#x27;),
+      roundName: new FormControl(&#x27;&#x27;, Validators.compose([Validators.required])),
+      bestOf: new FormControl(&#x27;&#x27;),
+      rule_point:new FormControl(&#x27;&#x27;),
+    });
+  }
+  //#endregion FormControl for match details
+
+  //#region function to upload banner
+  fileDetail(file: any) {
+    //this.showImage &#x3D; false;
+    //this._notSelectedImage&#x3D;true;
+    console.log(file)
+    const maxSize &#x3D; 800 * 1024; //800KB
+    const minSize &#x3D; 50 * 1024; //50KB
+    if (file) {
+      const extension &#x3D; file.item(0).name.split(&#x27;.&#x27;)[1];
+      if (extension !&#x3D;&#x3D; &#x27;jpg&#x27; &amp;&amp; extension !&#x3D;&#x3D; &#x27;jpeg&#x27; &amp;&amp; extension !&#x3D;&#x3D; &#x27;png&#x27;) {
+        // File format not allowed
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;info&#x27;,
+          summary: &#x27;Info&#x27;,
+          detail: &#x27;Only the jpg/jpeg/png file types are supported&#x27;,
+          life: 3000,
+        });
+      }
+      else {
+        if (file[0].size &gt; maxSize || file[0].size &lt; minSize) {
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;info&#x27;,
+            summary: &#x27;Info&#x27;,
+            detail: &#x27;File size must be between 50KB-800KB range&#x27;,
+            life: 3000,
+          });
+        }
+        else {
+          // this._showBanner &#x3D; true;
+          this._selectedBanner &#x3D; file.item(0);
+          // this._uploadImage &#x3D; this._selectedBanner
+          //this._selectedUpdateBanner &#x3D; this._selectedBanner
+          let reader &#x3D; new FileReader();
+          reader.onload &#x3D; (event: any) &#x3D;&gt; {
+            this._selectedBanner &#x3D; event.target.result;
+          };
+          reader.readAsDataURL(this._selectedBanner);
+          this.uploadBroadcastMatchBanner()
+        }
+      }
+    }
+  }
+  //#endregion function to upload banner
+
+
+  //#region fetching jsonData to get to get enum of events_participant
+  eventsParticipant() {
+    this.jsonDataCallingService.eventsParticipantType().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._eventParticipantType &#x3D; result;
+      },
+      error: (result) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion fetching jsonData to get to get enum of events_participant
+
+  //#region fetching jsonData to get to get enum of events_fixture_format
+  setFixtureFormat() {
+    this.jsonDataCallingService.eventsFixtureFormat().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._fixtureFormat &#x3D; result;
+      },
+      error: (result) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion fetching jsonData to get to get enum of events_fixture_format
+
+  //#region fetching jsonData to get to get enum of events_Point
+  selectRulePoint() {
+    this.jsonDataCallingService.selectRulePoint().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._rulePoint &#x3D; result;
+      },
+      error: (result) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+  //#endregion fetching jsonData to get to get enum of events_Point
+
+  //#region fetching official list through the API
+  getEventOfficial() {
+    this.broadcastService.getEventOfficial().subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this._officialList &#x3D; [];
+        this._officialList &#x3D; result.body;
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+      },
+      complete: () &#x3D;&gt; { },
+    })
+  }
+  //#endregion fetching official list through the API
+
+//#region fetching jsonData to get to get enum of rule_set
+selectBestOf() {
+  this.jsonDataCallingService.selectBestOf().subscribe({
+    next: (result: any) &#x3D;&gt; {
+      this._bestOf &#x3D; result;
+    },
+    error: (result) &#x3D;&gt; {
+      this.azureLoggerConversion &#x3D; result.error.msg
+      this.azureLoggerService.logException(this.azureLoggerConversion)
+    },
+    complete: () &#x3D;&gt; { },
+  });
+}
+//#endregion fetching jsonData to get to get enum of rule_set
+
+  //#region method to save match-details for any event
+  saveMatchDetails() { 
+    if(this._matchDetailForm.valid){ 
+    this._isSubmitEvent &#x3D; false;
+    this.umpire_id&#x3D; this._officialList.filter(((x:any)&#x3D;&gt; x.name &#x3D;&#x3D; this._matchDetailForm.controls[&#x27;umpireName&#x27;].value))
+    var data &#x3D; {
+      broadcast_list: [
+        {
+          start_time: this.commonApiService.convertUTCDateToLocalDate(new Date(this._matchDetailForm.controls[&#x27;dateTime&#x27;].value)),
+          playerA: this._matchDetailForm.controls[&#x27;playerNameA&#x27;].value,
+          playerB: this._matchDetailForm.controls[&#x27;playerNameB&#x27;].value,
+          umpire_id: this.umpire_id.length&#x3D;&#x3D;&#x3D;0 ? undefined : this.umpire_id[0].user_id,
+          umpire_name: this.umpire_id.length&#x3D;&#x3D;&#x3D;0 ? undefined : this._matchDetailForm.controls[&#x27;umpireName&#x27;].value,
+          rule_set: this.umpire_id.length&#x3D;&#x3D;&#x3D;0 ? undefined : this._matchDetailForm.controls[&#x27;bestOf&#x27;].value,
+          rule_point: this.umpire_id.length&#x3D;&#x3D;&#x3D;0 ? undefined :  this._matchDetailForm.controls[&#x27;rule_point&#x27;].value,
+          table: parseInt(this._matchDetailForm.controls[&#x27;tableNo&#x27;].value),
+          participant_type: this._matchDetailForm.controls[&#x27;participantType&#x27;].value,
+          round: this._matchDetailForm.controls[&#x27;roundName&#x27;].value,
+          fixture_format: this._matchDetailForm.controls[&#x27;fixtureFormat&#x27;].value,
+          image: this._uploadImage !&#x3D; undefined ? this._uploadImage : &#x27;https://stupaprodsguscentral.blob.core.windows.net/cbtm/livethumbnsil (1).jpg&#x27;,
+          category: this._matchDetailForm.controls[&#x27;categoryName&#x27;].value,
+        }
+      ]
+    }
+    this.broadcastService.saveMatchDetail(data, this.event_id)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this._matchDetailForm.reset()
+          this.getBroadcastMatches();
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;success&#x27;,
+            summary: &#x27;Success&#x27;,
+            detail: result.body.msg,
+            life: 3000,
+          });
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+    }
+    else{
+      this._isSubmitEvent &#x3D; true;
+      this.messageService.add({
+        key: &#x27;bc&#x27;,
+        severity: &#x27;error&#x27;,
+        summary: &#x27;Error&#x27;,
+        detail: &#x27;Please fill all required details&#x27;,
+        life: 3000,
+      });
+    }
+  }
+  //#endregion  method to save match-details for any event
+
+  //#region  method to import excel containing match-details 
+  importMatchDetails(event:any) {
+    //this.sharedService.setAppLoader(true);
+    /* wire up file reader */
+    const target: DataTransfer &#x3D; &lt;DataTransfer&gt;(event.target);
+    if (target.files.length !&#x3D;&#x3D; 1) {
+      throw new Error(&#x27;Cannot use multiple files&#x27;);
+    }
+    const reader: FileReader &#x3D; new FileReader();
+    reader.readAsBinaryString(target.files[0]);
+    reader.onload &#x3D; (e: any) &#x3D;&gt; {
+      /* create workbook */
+      const binarystr: string &#x3D; e.target.result;
+      const wb: XLSX.WorkBook &#x3D; XLSX.read(binarystr, { type: &#x27;binary&#x27; });
+
+      /* selected the first sheet */
+      const wsname: string &#x3D; wb.SheetNames[0];
+      const ws: XLSX.WorkSheet &#x3D; wb.Sheets[wsname];
+
+      /* save data */
+      const data &#x3D; XLSX.utils.sheet_to_json(ws); // to get 2d array pass 2nd parameter as object {header: 1}
+
+     
+
+
+      // validate the rows
+
+      for (let index &#x3D; 0; index &lt; data.length; index++) {
+        this.element &#x3D; data[index];
+        
+        const pattern &#x3D; /^\d{2}\/\d{2}\/\d{4}$/
+
+        if (new Date(this.element[&#x27;start_time&#x27;]) &lt; new Date() || pattern.test(this.element[&#x27;start_time&#x27;])) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 1), detail: &#x27;Old Date and time is not Accepted and date format must be mm/dd/yyyy with 24 hour time format.&#x27;, life: 3000 });
+          //this.sharedService.setAppLoader(false);
+          return;
+        }
+
+        if (!this.element[&#x27;playerA&#x27;]) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;PlayerAName is missing&#x27;, life: 3000 });
+          //this.sharedService.setAppLoader(false);
+          return;
+        }
+
+        if (!this.element[&#x27;playerB&#x27;]) {
+          this.messageService.add({  key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;PlayerBName is missing&#x27;, life: 3000 });
+          //this.sharedService.setAppLoader(false);
+          return;
+        }
+        if (!this.element[&#x27;participant_type&#x27;]) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;ParticipantType is missing&#x27;, life: 3000 });
+          
+          return;
+        }
+        if (!this.element[&#x27;table&#x27;]) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;TableNumber is missing&#x27;, life: 3000 });
+          
+          return;
+        }
+        if (!this.element[&#x27;round&#x27;]) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;RoundName is missing&#x27;, life: 3000 });
+          
+          return;
+        }
+        if (!this.element[&#x27;fixture_format&#x27;]) {
+          this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;error&#x27;, summary: &#x27;Found Error at Row &#x27; + (index + 2), detail: &#x27;Fixture Format is missing&#x27;, life: 3000 });
+          
+          return;
+        }
+        const dateStr &#x3D; this.element.start_time;
+        const [month, day, splittedYear] &#x3D; dateStr.split(&quot;/&quot;);
+        const year &#x3D; splittedYear.slice(0,4)
+        // Note that month is zero-indexed in the Date constructor
+        const date &#x3D; new Date(Date.UTC(year, month - 1, day, 0, 0, 0));
+        const utcDateTime &#x3D; date.toISOString();
+        
+        this.element.start_time &#x3D; utcDateTime.split(&#x27;T&#x27;)[0]+&quot;T&quot;+splittedYear.slice(5,10)+&#x27;:00Z&#x27;
+        //this.element[&#x27;TournamentId&#x27;] &#x3D; JSON.parse(localStorage.getItem(&#x27;event_id&#x27;))
+        // element[&#x27;MatchDate&#x27;] &#x3D; this.dateService.fulldateFormatter(this.liveMatchForm.value.date) + &quot;,&quot; + this.dateService.fullTimeFormatter(this.liveMatchForm.value.date)
+      }
+      
+       
+      this.saveBulkMatches(data);
+    };
+  }
+  //#endregion method to import excel containing match-details 
+
+  //#region method to download excel containing match-details template
+  downloadTemplate() {
+    const link &#x3D; document.createElement(&#x27;a&#x27;);
+    link.setAttribute(&#x27;target&#x27;, &#x27;_self&#x27;);
+
+    link.setAttribute(&#x27;href&#x27;, TEMPLATE);
+    link.setAttribute(&#x27;download&#x27;, &#x60;Import Player-Template.xlsx&#x60;);
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+  //#endregion method to download excel containing match-details template
+
+
+  //#region method to pass index to parent to navigate to create-tournament when no tournament is created
+  nevigateToDetails() {
+    this.tournamentIndex.emit(0)
+  }
+//#endregion method to pass index to parent to navigate to create-tournament when no tournament is created
+
+//#region API call to get broadcast matches
+getBroadcastMatches() {
+    this.broadcastService.getMatchDetails(this.event_id)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this._playersList &#x3D; []
+          this._playersList &#x3D; result.body
+          
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+  }
+  //#endregion API call to get broadcast matches
+
+ //#region upload banner of broadcast match
+  uploadBroadcastMatchBanner() {
+    this.event_id &#x3D; this.encyptDecryptService.decryptUsingAES256(
+      localStorage.getItem(&#x27;event_id&#x27;)
+    );
+    const formData &#x3D; new FormData();
+    formData.append(&#x27;file&#x27;, this._selectedBanner)
+    this.broadcastService.updateEventImage(formData).subscribe({
+      next: (data: any) &#x3D;&gt; {
+        this._uploadImage &#x3D; data.body.url;
+
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg
+        this.azureLoggerService.logException(this.azureLoggerConversion)
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;error&#x27;,
+          summary: &#x27;Error&#x27;,
+          detail: result.error.msg,
+          life: 3000,
+        });
+      },
+      complete: () &#x3D;&gt; console.info(&#x27;complete&#x27;)
+    })
+  }
+   //#endregion upload banner of broadcast match
+ 
+ 
+   //#region set values in form control in case of edit match action
+  editMatchDetail(matchData: any) {
+    this.editMatchDetails &#x3D; true;
+    this._showRuleSetField &#x3D; true;
+    this._isSubmitEvent &#x3D; false;
+    this.editInfo &#x3D; matchData;
+    
+    this._matchDetailForm.controls[&#x27;playerNameA&#x27;].setValue(matchData.match_details[0].participant_name);
+    this._matchDetailForm.controls[&#x27;playerNameB&#x27;].setValue(matchData.match_details[1].participant_name);
+    this._matchDetailForm.controls[&#x27;dateTime&#x27;].setValue(new Date(matchData.start_time));
+    this._matchDetailForm.controls[&#x27;umpireName&#x27;].setValue(matchData.umpire_name);
+    this._matchDetailForm.controls[&#x27;participantType&#x27;].setValue(matchData.participant_type);
+    this._matchDetailForm.controls[&#x27;fixtureFormat&#x27;].setValue(matchData.fixture_format);
+    this._matchDetailForm.controls[&#x27;roundName&#x27;].setValue(matchData.round);
+    this._matchDetailForm.controls[&#x27;tableNo&#x27;].setValue(matchData.table);
+    this._matchDetailForm.controls[&#x27;bestOf&#x27;].setValue(matchData.rule_set);
+    this._matchDetailForm.controls[&#x27;categoryName&#x27;].setValue(matchData.category);
+    this._matchDetailForm.controls[&#x27;rule_point&#x27;].setValue(matchData.rule_point);
+  }
+  //#endregion set values in form control in case of edit match action
+
+   //#region API CALL to update match details in case of edit-Match
+  editMatches(){
+   // this.umpire_id&#x3D; this._officialList.filter(((x:any)&#x3D;&gt; x.name &#x3D;&#x3D; this._matchDetailForm.controls[&#x27;umpireName&#x27;].value))
+    var data &#x3D; 
+        {
+          start_time: this.commonApiService.convertUTCDateToLocalDate(new Date(this._matchDetailForm.controls[&#x27;dateTime&#x27;].value)),
+          playerA: this._matchDetailForm.controls[&#x27;playerNameA&#x27;].value,
+          playerB: this._matchDetailForm.controls[&#x27;playerNameB&#x27;].value,
+          umpire_id: this.editInfo.umpire_id!&#x3D;undefined ?this.editInfo.umpire_id : undefined ,
+          umpire_name: this._matchDetailForm.controls[&#x27;umpireName&#x27;].value,
+          rule_set: this._matchDetailForm.controls[&#x27;bestOf&#x27;].value,
+          rule_point: this._matchDetailForm.controls[&#x27;rule_point&#x27;].value,
+          table: parseInt(this._matchDetailForm.controls[&#x27;tableNo&#x27;].value),
+          participant_type: this._matchDetailForm.controls[&#x27;participantType&#x27;].value,
+          round: this._matchDetailForm.controls[&#x27;roundName&#x27;].value,
+          fixture_format: this._matchDetailForm.controls[&#x27;fixtureFormat&#x27;].value,
+          image:  this._uploadImage !&#x3D; undefined ? this._uploadImage : &#x27;https://stupaprodsguscentral.blob.core.windows.net/cbtm/livethumbnsil (1).jpg&#x27;,
+          match_id: this.editInfo.match_id,
+          category: this._matchDetailForm.controls[&#x27;categoryName&#x27;].value,
+        }
+
+    
+    this.broadcastService.editMatches(data, this.event_id)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this.getBroadcastMatches();
+          this._matchDetailForm.reset();
+          this.editMatchDetails &#x3D; false;
+          this._showRuleSetField &#x3D; false;
+          this._isSubmitEvent &#x3D; false;
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;success&#x27;,
+            summary: &#x27;Success&#x27;,
+            detail: result.body.msg,
+            life: 3000,
+          });
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+  }
+   //#endregion API CALL to update match details in case of edit-Match
+
+   //#region API CALL to delete Match-details
+   deleteMatch(data:any){
+    this.broadcastService.deleteMatchDetail(this.event_id,data.match_id)
+    .subscribe({
+      next: (result: any) &#x3D;&gt; {
+        this.getBroadcastMatches();
+        this._matchDetailForm.reset();
+        this.editMatchDetails &#x3D; false;
+        this._showRuleSetField &#x3D; false;
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;success&#x27;,
+          summary: &#x27;Success&#x27;,
+          detail: result.body.msg,
+          life: 3000,
+        });
+      },
+      error: (result: any) &#x3D;&gt; {
+        this.azureLoggerConversion &#x3D; result.error.msg;
+        this.azureLoggerService.logException(this.azureLoggerConversion);
+        this.messageService.add({
+          key: &#x27;bc&#x27;,
+          severity: &#x27;error&#x27;,
+          summary: &#x27;Error&#x27;,
+          detail: result.error.msg,
+          life: 3000,
+        });
+      },
+      complete: () &#x3D;&gt; { },
+    });
+  }
+   //#endregion API CALL to delete Match-details
+
+  clearFile() {
+    this.messageService.add({ key: &#x27;bc&#x27;,severity: &#x27;success&#x27;, summary: &#x27;Important&#x27;, detail: &#x27;Date format should be in format mm/dd/yyyy.&#x27;, life: 3000 });
+    this.selectFile.nativeElement.value &#x3D; &quot;&quot;;
+  }
+
+  //#endregion save matches in bulk after saving details in excel and directly importing them
+  saveBulkMatches(broadcast_list:any){
+    var data &#x3D; {
+      broadcast_list
+    }
+    this.broadcastService.saveMatchDetail(data, this.event_id)
+      .subscribe({
+        next: (result: any) &#x3D;&gt; {
+          this._matchDetailForm.reset();
+          this.getBroadcastMatches();
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;success&#x27;,
+            summary: &#x27;Success&#x27;,
+            detail: result.body.msg,
+            life: 3000,
+          });
+        },
+        error: (result: any) &#x3D;&gt; {
+          this.azureLoggerConversion &#x3D; result.error.msg;
+          this.azureLoggerService.logException(this.azureLoggerConversion);
+          this.messageService.add({
+            key: &#x27;bc&#x27;,
+            severity: &#x27;error&#x27;,
+            summary: &#x27;Error&#x27;,
+            detail: result.error.msg,
+            life: 3000,
+          });
+        },
+        complete: () &#x3D;&gt; { },
+      });
+  }
+  //#endregion save matches in bulk after saving details in excel and directly importing them
+
+  //#region condition to show rule_set and rule_point field when umpire field is created
+  showRuleField(){
+    if(this._matchDetailForm.controls[&#x27;umpireName&#x27;].value&#x3D;&#x3D;&#x3D; null){
+      this._showRuleSetField &#x3D; false;
+      this._matchDetailForm.controls[&#x27;rule_point&#x27;].setValue(null);
+      this._matchDetailForm.controls[&#x27;bestOf&#x27;].setValue(null);
+      this._matchDetailForm.controls[&#x27;rule_point&#x27;].setValidators(null);
+      this._matchDetailForm.controls[&#x27;rule_point&#x27;].updateValueAndValidity();
+      this._matchDetailForm.controls[&#x27;bestOf&#x27;].setValidators(null);
+      this._matchDetailForm.controls[&#x27;bestOf&#x27;].updateValueAndValidity();
+    }
+    else{
+    this._showRuleSetField &#x3D; true;
+    this._isSubmitEventUmpire &#x3D; true
+    this._matchDetailForm.controls[&#x27;rule_point&#x27;].setValidators([Validators.required,]);
+    this._matchDetailForm.controls[&#x27;bestOf&#x27;].setValidators([Validators.required,]);
+    }
+  }
+  //#endregion condition to show rule_set and rule_point field when umpire field is created
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form *ngIf&#x3D;&quot;getMatches&quot; [formGroup]&#x3D;&quot;_matchDetailForm&quot; action&#x3D;&quot;&quot;&gt;
+    &lt;div class&#x3D;&quot;bannerSection mt-3&quot;&gt;
+        &lt;div class&#x3D;&quot;bannerFlex&quot; *ngIf&#x3D;&quot;_selectedBanner &#x3D;&#x3D;&#x3D; &#x27;&#x27;&quot;&gt;
+            &lt;div class&#x3D;&quot;bannerBox _dashed&quot;&gt;
+                &lt;input type&#x3D;&quot;file&quot; (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot; class&#x3D;&quot;fileUploader&quot;
+                    accept&#x3D;&quot;image/x-png, image/jpg, image/jpeg&quot; /&gt;
+
+                &lt;div class&#x3D;&quot;overlap&quot;&gt;
+                    &lt;div class&#x3D;&quot;flex-hc mb-3&quot;&gt;
+                        &lt;div class&#x3D;&quot;info&quot;&gt;
+                            &lt;div class&#x3D;&quot;choose&quot;&gt;
+                                &lt;p class&#x3D;&quot;p-secondary-dark&quot;&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;p class&#x3D;&quot;p-secondary&quot;&gt;
+                                &lt;b&gt;&lt;/b&gt;
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;imgContainer&quot;&gt;
+                            &lt;svg width&#x3D;&quot;64&quot; height&#x3D;&quot;64&quot; viewBox&#x3D;&quot;0 0 64 64&quot; fill&#x3D;&quot;none&quot;
+                                xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+                                &lt;circle cx&#x3D;&quot;31.5981&quot; cy&#x3D;&quot;32.3867&quot; r&#x3D;&quot;31.5&quot; fill&#x3D;&quot;white&quot; /&gt;
+                                &lt;path
+                                    d&#x3D;&quot;M30.5629 44.0704V35.1972H21.6897V32.2394H30.5629V23.3662H33.5207V32.2394H42.3939V35.1972H33.5207V44.0704H30.5629Z&quot;
+                                    fill&#x3D;&quot;#4E4E4E&quot; /&gt;
+                            &lt;/svg&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;box&quot;&gt;
+                        &lt;p&gt;Drag &amp; Drop your image here. or &lt;span
+                                (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot;&gt;Browse&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;Or choose a preselected one&lt;/p&gt;
+                        &lt;p&gt;Format : Jpeg, png size : 50KB-800KB&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;bannerBox&quot; *ngIf&#x3D;&quot;_selectedBanner!&#x3D;&#x27;&#x27;&quot;&gt;
+            &lt;div class&#x3D;&quot;relativeBody&quot;&gt;
+                &lt;input type&#x3D;&quot;image&quot; class&#x3D;&quot;imgCover img-fluid&quot; [src]&#x3D;&quot;_selectedBanner&quot; alt&#x3D;&quot;&quot; /&gt;
+                &lt;div class&#x3D;&quot;innerColor&quot;&gt;
+                    &lt;p&gt;This will be the sample thumbnail of your match&lt;/p&gt;
+                    &lt;div class&#x3D;&quot;reuploadBoxie&quot;&gt;
+                        &lt;input style&#x3D;&quot;cursor: pointer&quot; type&#x3D;&quot;file&quot; id&#x3D;&quot;option-1&quot;
+                            (change)&#x3D;&quot;fileDetail($any($event.target).files)&quot;
+                            accept&#x3D;&quot;image/x-png, image/jpg, image/jpeg&quot; /&gt;
+                        &lt;label for&#x3D;&quot;option-1&quot;&gt;
+                            &lt;div class&#x3D;&quot;uploadbtn&quot;&gt;Reupload&lt;/div&gt;
+                            &lt;img src&#x3D;&quot;../../../../assets/icons/admin_dropdown_icons/reuploadtoevent.png&quot; class&#x3D;&quot;w1717&quot;
+                                alt&#x3D;&quot;&quot; /&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;inputSection&quot;&gt;
+            &lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+                    &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Enter Player Name/ Team Name&quot;
+                        [formControlName]&#x3D;&quot;&#x27;playerNameA&#x27;&quot; /&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;playerNameA&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+                    &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Enter Player Name/ Team Name&quot;
+                        [formControlName]&#x3D;&quot;&#x27;playerNameB&#x27;&quot; /&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;playerNameB&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+                    &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Enter Category&quot; [formControlName]&#x3D;&quot;&#x27;categoryName&#x27;&quot; /&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;categoryName&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-3&quot;&gt;
+                    &lt;p-calendar #startDate1 inputId&#x3D;&quot;basic&quot; dateFormat&#x3D;&quot;dd/mm/yy&quot; placeholder&#x3D;&quot;Date and Time&quot;
+                        [showTime]&#x3D;&quot;true&quot; [formControlName]&#x3D;&quot;&#x27;dateTime&#x27;&quot;  [minDate]&#x3D;&quot;_minDateValue&quot; [maxDate]&#x3D;&quot;_maxDateValue&quot;
+                        &gt;
+                        &lt;!-- [showTime]&#x3D;&quot;true&quot; --&gt;
+                    &lt;/p-calendar&gt;
+                    
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;dateTime&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-md-4 mt-3&quot;&gt;
+                    &lt;input type&#x3D;&quot;number&quot; id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Table No&quot;  [formControlName]&#x3D;&quot;&#x27;tableNo&#x27;&quot; /&gt;
+                    &lt;!-- &lt;p-inputNumber id&#x3D;&quot;frgtEmail&quot;  placeholder&#x3D;&quot;Table No&quot;  [formControlName]&#x3D;&quot;&#x27;tableNo&#x27;&quot; &gt;
+                &lt;/p-inputNumber&gt; --&gt;
+                    &lt;!-- &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Table No&quot; [formControlName]&#x3D;&quot;&#x27;tableNo&#x27;&quot; /&gt; --&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;tableNo&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-3&quot;&gt;
+                    &lt;input id&#x3D;&quot;frgtEmail&quot; pInputText placeholder&#x3D;&quot;Round Name&quot; [formControlName]&#x3D;&quot;&#x27;roundName&#x27;&quot; /&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;roundName&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+                    &lt;p-dropdown class&#x3D;&quot;custom-dropdown&quot; [formControlName]&#x3D;&quot;&#x27;participantType&#x27;&quot;
+                        placeholder&#x3D;&quot;Select Participant Type&quot; [options]&#x3D;&quot;_eventParticipantType&quot; optionLabel&#x3D;&quot;name&quot;
+                        optionValue&#x3D;&quot;name&quot;&gt;
+                    &lt;/p-dropdown&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;participantType&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;col-lg-4 mt-2&quot;&gt;
+                    &lt;p-dropdown class&#x3D;&quot;custom-dropdown&quot; [formControlName]&#x3D;&quot;&#x27;fixtureFormat&#x27;&quot;
+                        placeholder&#x3D;&quot;Select Fixture Format&quot; [options]&#x3D;&quot;_fixtureFormat&quot; optionLabel&#x3D;&quot;name&quot;
+                        optionValue&#x3D;&quot;name&quot;&gt;
+                    &lt;/p-dropdown&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                        *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;fixtureFormat&#x27;].hasError(&#x27;required&#x27;)&quot;
+                        style&#x3D;&quot;color: red&quot;&gt;
+                        &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class&#x3D;&quot;col-md-4 mt-2&quot;&gt;
+                    &lt;p-dropdown [formControlName]&#x3D;&quot;&#x27;umpireName&#x27;&quot; [options]&#x3D;&quot;_officialList&quot; optionLabel&#x3D;&quot;name&quot;
+                        optionValue&#x3D;&quot;name&quot; placeholder&#x3D;&quot;Select Umpire&quot; (onChange)&#x3D;&quot;showRuleField()&quot; [filter]&#x3D;&quot;true&quot;
+                        [showClear]&#x3D;&quot;true&quot;&gt;
+                    &lt;/p-dropdown&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+                &lt;div *ngIf&#x3D;&quot;_showRuleSetField&quot; class&#x3D;&quot;col-md-4 mt-2&quot;&gt;
+                    &lt;p-dropdown class&#x3D;&quot;custom-dropdown&quot; placeholder&#x3D;&quot;Select Rule Point&quot; [formControlName]&#x3D;&quot;&#x27;rule_point&#x27;&quot;
+                        optionLabel&#x3D;&quot;name&quot; [options]&#x3D;&quot;_rulePoint&quot; optionValue&#x3D;&quot;name&quot; &gt;
+                    &lt;/p-dropdown&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                    *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;rule_point&#x27;].hasError(&#x27;required&#x27;)&quot;
+                    style&#x3D;&quot;color: red&quot;&gt;
+                    &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;_showRuleSetField&quot; class&#x3D;&quot;col-md-4 mt-2&quot;&gt;
+                    &lt;p-dropdown class&#x3D;&quot;custom-dropdown&quot; placeholder&#x3D;&quot;Select Best of&quot; [formControlName]&#x3D;&quot;&#x27;bestOf&#x27;&quot;
+                        optionLabel&#x3D;&quot;id&quot; [options]&#x3D;&quot;_bestOf&quot; optionValue&#x3D;&quot;id&quot;&gt;
+                    &lt;/p-dropdown&gt;
+                    &lt;div class&#x3D;&quot;p-small error-txt-msg mb-2&quot;
+                    *ngIf&#x3D;&quot;_isSubmitEvent &amp;&amp; this._matchDetailForm.controls[&#x27;bestOf&#x27;].hasError(&#x27;required&#x27;)&quot;
+                    style&#x3D;&quot;color: red&quot;&gt;
+                    &lt;span style&#x3D;&quot;color: red&quot;&gt;*&lt;/span&gt;Required
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot; mt-3 flex-vc gapi&quot;&gt;
+            &lt;div class&#x3D;&quot; save&quot;&gt;
+                &lt;button *ngIf&#x3D;&quot;!editMatchDetails&quot; (click)&#x3D;&quot;saveMatchDetails()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;Save&lt;/button&gt;
+                &lt;button *ngIf&#x3D;&quot;editMatchDetails&quot; (click)&#x3D;&quot;editMatches()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;Update&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;or&quot;&gt;
+                &lt;p&gt;or&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot; newInput&quot;&gt;
+                &lt;input class&#x3D;&quot;input-attachment&quot; type&#x3D;&quot;file&quot; accept&#x3D;&quot;.xlsx&quot; #selectFile
+                    (change)&#x3D;&quot;importMatchDetails($event)&quot; /&gt;
+                &lt;button (click)&#x3D;&quot;clearFile();selectFile.click()&quot; label&#x3D;&quot;Import&quot; class&#x3D;&quot;btn btn_green mt-4&quot;
+                    style&#x3D;&quot;width: 110px;&quot;&gt;Import&lt;/button&gt;
+                &lt;!-- &lt;button (click)&#x3D;&quot;importMatchDetails()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;Import&lt;/button&gt; --&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot; Downlaod&quot;&gt;
+                &lt;button (click)&#x3D;&quot;downloadTemplate()&quot; class&#x3D;&quot;btn btn_green mt-4&quot;&gt;Download Template&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/form&gt;
+&lt;div class&#x3D;&quot;parent&quot;&gt;
+    &lt;p-table *ngIf&#x3D;&quot;_playersList.length&gt;0&quot; class&#x3D;&quot;common-table text-center&quot; #request [value]&#x3D;&quot;_playersList&quot; [rows]&#x3D;&quot;10&quot;
+        [paginator]&#x3D;&quot;true&quot; [globalFilterFields]&#x3D;&quot;[&#x27;name&#x27;, &#x27;email&#x27;]&quot;&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;header&quot;&gt;
+            &lt;tr style&#x3D;&quot;font-size: 11px;&quot;&gt;
+                &lt;th pSortableColumn&#x3D;&quot;name&quot; style&#x3D;&quot;width: 20%&quot;&gt;Match&lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;email&quot; style&#x3D;&quot;width: 14%&quot;&gt;Participant Type&lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;email&quot; style&#x3D;&quot;width: 10%&quot;&gt;Category&lt;/th&gt;
+
+                &lt;th pSortableColumn&#x3D;&quot;state&quot; style&#x3D;&quot;width: 10%&quot;&gt;Date&lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;club&quot; style&#x3D;&quot;width: 10%&quot;&gt;Time&lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;playerType&quot; style&#x3D;&quot;width: 10%&quot;&gt;
+                    Table No
+                &lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;details&quot; style&#x3D;&quot;width: 15%&quot;&gt;Round Name&lt;/th&gt;
+                &lt;th pSortableColumn&#x3D;&quot;details&quot; style&#x3D;&quot;width: 15%&quot;&gt;Umpire Name&lt;/th&gt;
+                &lt;!-- &lt;th pSortableColumn&#x3D;&quot;details&quot; style&#x3D;&quot;width: 10%&quot;&gt;Rule Point&lt;/th&gt;
+            &lt;th pSortableColumn&#x3D;&quot;details&quot; style&#x3D;&quot;width: 10%&quot;&gt;Best of&lt;/th&gt; --&gt;
+                &lt;th pSortableColumn&#x3D;&quot;details&quot; style&#x3D;&quot;width: 10%&quot;&gt;Action&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/ng-template&gt;
+
+        &lt;ng-template pTemplate&#x3D;&quot;body&quot; let-users&gt;
+            &lt;tr&gt;
+                &lt;td&gt;{{ users.match_details[0].participant_name}} vs {{users.match_details[1].participant_name}}&lt;/td&gt;
+                &lt;td&gt;{{ users.participant_type }}&lt;/td&gt;
+                &lt;td&gt;{{ users.category }}&lt;/td&gt;
+                &lt;td&gt;{{ users.start_time | date : &quot;dd/MM/YYYY&quot; }}&lt;/td&gt;
+                &lt;td&gt;{{users.start_time.split(&#x27;T&#x27;)[1].slice(0,5)}}&lt;/td&gt;
+                &lt;td&gt;{{ users.table }}&lt;/td&gt;
+                &lt;td&gt;{{ users.round }}&lt;/td&gt;
+                &lt;td&gt;{{ users.umpire_name }}&lt;/td&gt;
+                &lt;!-- &lt;td&gt;{{ users.umpire_name }}&lt;/td&gt;
+            &lt;td&gt;{{ users.rule_set }}&lt;/td&gt; --&gt;
+                &lt;td&gt;
+                    &lt;div&gt;
+                        &lt;p-overlayPanel appendTo&#x3D;&quot;body&quot; #menuPopup [showCloseIcon]&#x3D;&quot;false&quot; [style]&#x3D;&quot;{width: &#x27;150px&#x27;}&quot;&gt;
+                            &lt;ng-template pTemplate&gt;
+                                &lt;div class&#x3D;&quot;common-popup&quot;&gt;
+                                    &lt;div class&#x3D;&quot;innerContent&quot;&gt;
+                                        &lt;div class&#x3D;&quot;overlay-item menuItem &quot;&gt;
+                                            &lt;a (click)&#x3D;&quot;editMatchDetail(users)&quot;&gt;Edit&lt;/a&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class&#x3D;&quot;overlay-item menuItem &quot;&gt;
+                                            &lt;a (click)&#x3D;&quot;deleteMatch(users)&quot;&gt;Remove&lt;/a&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/ng-template&gt;
+                        &lt;/p-overlayPanel&gt;
+                        &lt;div class&#x3D;&quot;dropbtn&quot;&gt;
+                            &lt;div class&#x3D;&quot;dropdownUnpublish&quot;&gt;
+                                &lt;button pButton pRipple (click)&#x3D;&quot;menuPopup.toggle($event)&quot; type&#x3D;&quot;button&quot;
+                                    icon&#x3D;&quot;pi pi-ellipsis-v&quot;
+                                    class&#x3D;&quot;p-button-plain p-button-text p-button-rounded&quot;&gt;&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/ng-template&gt;
+        &lt;ng-template pTemplate&#x3D;&quot;emptymessage&quot;&gt;
+            &lt;tr&gt;
+                &lt;td colspan&#x3D;&quot;8&quot;&gt;No user found.&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/ng-template&gt;
+    &lt;/p-table&gt;
+&lt;/div&gt;
+
+
+
+&lt;div *ngIf&#x3D;&quot;!getMatches&quot; class&#x3D;&quot;d-flex info-msg p-mt-5&quot; style&#x3D;&quot;justify-content: center;&quot;&gt;
+    &lt;i class&#x3D;&quot;fa-solid fa-circle-info text-grey fs-5 p-mr-2&quot;&gt;&lt;/i&gt;&lt;label&gt;Please Create &lt;b class&#x3D;&quot;nevigateLink&quot;
+            role&#x3D;&quot;button&quot; (click)&#x3D;&quot;nevigateToDetails()&quot;&gt;Tournament&amp;nbsp;&lt;/b&gt;first to create Live Match&lt;/label&gt;
+&lt;/div&gt;
+&lt;p-toast position&#x3D;&quot;bottom-right&quot; key&#x3D;&quot;bc&quot;&gt;&lt;/p-toast&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./create-match.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.bannerSection {
+  .bannerFlex {
+    height: 180px;
+  }
+
+  .flexBox1 {
+    flex-basis: 100%;
+    height: 100%;
+
+    .choose {
+      margin: 17% 0;
+    }
+  }
+
+  .flex-line {
+    flex-basis: 75px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 47px;
+
+    .divider {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      transform: translate(-50%, -50%);
+      background: var(--secondary-color);
+      height: 67%;
+    }
+  }
+
+  .bannerBox {
+    height: 100%;
+    border-radius: var(--common-border-radius);
+    position: relative;
+
+    .fileUploader {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    .overlap {
+      position: absolute;
+      top: 0;
+      padding: 1rem;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--box-bg);
+    }
+
+    .relativeBody {
+      position: relative;
+      color: white;
+      height: 180px;
+
+      input[type&#x3D;&quot;image&quot;] {
+        border-radius: 7px;
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .innerColor {
+        border-radius: 7px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background-color: rgba(75, 75, 75, 0.555);
+
+        .reuploadBoxie {
+          input[type&#x3D;&quot;file&quot;] {
+            display: none;
+          }
+
+          label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--secondary-color);
+            width: max-content;
+            border-radius: 7px;
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            cursor: pointer;
+
+            img {
+              //align-self: flex-start;
+            }
+          }
+        }
+
+        .uploadbtn {
+          letter-spacing: 1px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .setCheck {
+      position: relative;
+
+      .checkImage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .imgContainer {
+      //width: 80px;
+      // right: 600px;
+      // left: 50%;
+      // position: absolute;
+    }
+  }
+
+  ._dashed {
+    border: 1px dashed var(--secondary-color) !important;
+    padding: 1rem;
+  }
+
+  ._solid {
+    padding: 1rem;
+    border: 1px solid var(--secondary-color) !important;
+  }
+
+  .col-lg-12 {
+    ::ng-deep {
+      .p-inputtext {
+        max-height: 21vh;
+      }
+    }
+  }
+
+  .description {
+    height: 400px;
+  }
+
+  #frgtEmail {
+    max-height: 150px;
+  }
+
+  .custom-dropdown {
+    max-height: 150px;
+  }
+
+  .inputSection {
+    ::ng-deep {
+      .p-inputtext {
+        max-height: 21vh;
+        width: 100%;      }
+
+      .p-inputnumber {
+        max-height: 21vh;
+        width: 100%;
+      }
+
+      .p-dropdown {
+        max-height: 150px;
+      }
+
+      .p-inputNumber {
+        max-height: 150px;
+      }
+    }
+  }
+}
+
+.box {
+  font-size: 80%;
+  letter-spacing: 0.2px;
+
+  span {
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 99999;
+  }
+
+  p {
+    text-align: center;
+
+    &amp;:not(:nth-child(3)) {
+      color: var(--main-color);
+    }
+
+    &amp;:nth-child(3) {
+      // background-color: red;
+      color: var(--In--vs);
+    }
+  }
+}
+
+.newInput {
+  input[type&#x3D;&quot;file&quot;] {
+    display: none;
+    width: 0;
+  }
+}
+
+.gapi {
+  gap: 1.6rem;
+
+  .or {
+    font-size: 17px;
+  }
+}
+
+@media screen and (width &gt;&#x3D;319px) and (width &lt;&#x3D;425px) {
+  .bannerSection {
+    .inputSection {
+      .row {
+        &amp;:nth-child(2) {
+          margin-top: 0 !important;
+
+          .col-lg-4,
+          .col-md-4 {
+            &amp;:not(:first-child) {
+              margin-top: 0.5rem !important;
+            }
+          }
+        }
+        &amp;:nth-child(3) {
+          margin-top: 0 !important;
+          .col-md-4,
+          .col-lg-4 {
+            &amp;:not(:first-child) {
+              margin-top: -0.5rem !important;
+            }
+          }
+          .col-md-4,
+          .col-lg-4 {
+            &amp;:first-child {
+              margin-top: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gapi {
+    gap: 8px !important;
+    .save {
+      button {
+        font-size: 10px !important;
+        padding: 7px 16px !important;
+      }
+    }
+    .newInput {
+      button {
+        width: 76px !important;
+        font-size: 10px;
+        padding: 7px 10px;
+      }
+    }
+    .Downlaod {
+      button {
+        white-space: nowrap;
+        font-size: 10px;
+        padding: 7px 9px;
+      }
+    }
+  }
+  .parent {
+    ::ng-deep {
+      p-paginator {
+        .p-paginator {
+          flex-wrap: nowrap !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (width &gt;&#x3D; 426px) and (width &lt;&#x3D;768px) {
+}
+@media screen and (width &gt;&#x3D; 769px) {
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><form *ngIf="getMatches" [formGroup]="_matchDetailForm" action="">    <div class="bannerSection mt-3">        <div class="bannerFlex" *ngIf="_selectedBanner === \'\'">            <div class="bannerBox _dashed">                <input type="file" (change)="fileDetail($any($event.target).files)" class="fileUploader"                    accept="image/x-png, image/jpg, image/jpeg" />                <div class="overlap">                    <div class="flex-hc mb-3">                        <div class="info">                            <div class="choose">                                <p class="p-secondary-dark">                                </p>                            </div>                            <p class="p-secondary">                                <b></b>                            </p>                        </div>                        <div class="imgContainer">                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"                                xmlns="http://www.w3.org/2000/svg">                                <circle cx="31.5981" cy="32.3867" r="31.5" fill="white" />                                <path                                    d="M30.5629 44.0704V35.1972H21.6897V32.2394H30.5629V23.3662H33.5207V32.2394H42.3939V35.1972H33.5207V44.0704H30.5629Z"                                    fill="#4E4E4E" />                            </svg>                        </div>                    </div>                    <div class="box">                        <p>Drag & Drop your image here. or <span                                (change)="fileDetail($any($event.target).files)">Browse</span></p>                        <p>Or choose a preselected one</p>                        <p>Format : Jpeg, png size : 50KB-800KB</p>                    </div>                </div>            </div>        </div>        <div class="bannerBox" *ngIf="_selectedBanner!=\'\'">            <div class="relativeBody">                <input type="image" class="imgCover img-fluid" [src]="_selectedBanner" alt="" />                <div class="innerColor">                    <p>This will be the sample thumbnail of your match</p>                    <div class="reuploadBoxie">                        <input style="cursor: pointer" type="file" id="option-1"                            (change)="fileDetail($any($event.target).files)"                            accept="image/x-png, image/jpg, image/jpeg" />                        <label for="option-1">                            <div class="uploadbtn">Reupload</div>                            <img src="../../../../assets/icons/admin_dropdown_icons/reuploadtoevent.png" class="w1717"                                alt="" />                        </label>                    </div>                </div>            </div>        </div>        <div class="inputSection">            <div class="row mt-3">                <div class="col-lg-4 mt-2">                    <input id="frgtEmail" pInputText placeholder="Enter Player Name/ Team Name"                        [formControlName]="\'playerNameA\'" />                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'playerNameA\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-lg-4 mt-2">                    <input id="frgtEmail" pInputText placeholder="Enter Player Name/ Team Name"                        [formControlName]="\'playerNameB\'" />                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'playerNameB\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-lg-4 mt-2">                    <input id="frgtEmail" pInputText placeholder="Enter Category" [formControlName]="\'categoryName\'" />                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'categoryName\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>            </div>            <div class="row mt-3">                <div class="col-lg-4 mt-3">                    <p-calendar #startDate1 inputId="basic" dateFormat="dd/mm/yy" placeholder="Date and Time"                        [showTime]="true" [formControlName]="\'dateTime\'"  [minDate]="_minDateValue" [maxDate]="_maxDateValue"                        >                        <!-- [showTime]="true" -->                    </p-calendar>                                        <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'dateTime\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-md-4 mt-3">                    <input type="number" id="frgtEmail" pInputText placeholder="Table No"  [formControlName]="\'tableNo\'" />                    <!-- <p-inputNumber id="frgtEmail"  placeholder="Table No"  [formControlName]="\'tableNo\'" >                </p-inputNumber> -->                    <!-- <input id="frgtEmail" pInputText placeholder="Table No" [formControlName]="\'tableNo\'" /> -->                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'tableNo\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-lg-4 mt-3">                    <input id="frgtEmail" pInputText placeholder="Round Name" [formControlName]="\'roundName\'" />                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'roundName\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>            </div>            <div class="row mt-3">                <div class="col-lg-4 mt-2">                    <p-dropdown class="custom-dropdown" [formControlName]="\'participantType\'"                        placeholder="Select Participant Type" [options]="_eventParticipantType" optionLabel="name"                        optionValue="name">                    </p-dropdown>                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'participantType\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-lg-4 mt-2">                    <p-dropdown class="custom-dropdown" [formControlName]="\'fixtureFormat\'"                        placeholder="Select Fixture Format" [options]="_fixtureFormat" optionLabel="name"                        optionValue="name">                    </p-dropdown>                    <div class="p-small error-txt-msg mb-2"                        *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'fixtureFormat\'].hasError(\'required\')"                        style="color: red">                        <span style="color: red">*</span>Required                    </div>                </div>                <div class="col-md-4 mt-2">                    <p-dropdown [formControlName]="\'umpireName\'" [options]="_officialList" optionLabel="name"                        optionValue="name" placeholder="Select Umpire" (onChange)="showRuleField()" [filter]="true"                        [showClear]="true">                    </p-dropdown>                </div>            </div>            <div class="row mt-3">                <div *ngIf="_showRuleSetField" class="col-md-4 mt-2">                    <p-dropdown class="custom-dropdown" placeholder="Select Rule Point" [formControlName]="\'rule_point\'"                        optionLabel="name" [options]="_rulePoint" optionValue="name" >                    </p-dropdown>                    <div class="p-small error-txt-msg mb-2"                    *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'rule_point\'].hasError(\'required\')"                    style="color: red">                    <span style="color: red">*</span>Required                </div>                </div>                <div *ngIf="_showRuleSetField" class="col-md-4 mt-2">                    <p-dropdown class="custom-dropdown" placeholder="Select Best of" [formControlName]="\'bestOf\'"                        optionLabel="id" [options]="_bestOf" optionValue="id">                    </p-dropdown>                    <div class="p-small error-txt-msg mb-2"                    *ngIf="_isSubmitEvent && this._matchDetailForm.controls[\'bestOf\'].hasError(\'required\')"                    style="color: red">                    <span style="color: red">*</span>Required                </div>                </div>            </div>        </div>        <div class=" mt-3 flex-vc gapi">            <div class=" save">                <button *ngIf="!editMatchDetails" (click)="saveMatchDetails()" class="btn btn_green mt-4">Save</button>                <button *ngIf="editMatchDetails" (click)="editMatches()" class="btn btn_green mt-4">Update</button>            </div>            <div class="or">                <p>or</p>            </div>            <div class=" newInput">                <input class="input-attachment" type="file" accept=".xlsx" #selectFile                    (change)="importMatchDetails($event)" />                <button (click)="clearFile();selectFile.click()" label="Import" class="btn btn_green mt-4"                    style="width: 110px;">Import</button>                <!-- <button (click)="importMatchDetails()" class="btn btn_green mt-4">Import</button> -->            </div>            <div class=" Downlaod">                <button (click)="downloadTemplate()" class="btn btn_green mt-4">Download Template</button>            </div>        </div>    </div></form><div class="parent">    <p-table *ngIf="_playersList.length>0" class="common-table text-center" #request [value]="_playersList" [rows]="10"        [paginator]="true" [globalFilterFields]="[\'name\', \'email\']">        <ng-template pTemplate="header">            <tr style="font-size: 11px;">                <th pSortableColumn="name" style="width: 20%">Match</th>                <th pSortableColumn="email" style="width: 14%">Participant Type</th>                <th pSortableColumn="email" style="width: 10%">Category</th>                <th pSortableColumn="state" style="width: 10%">Date</th>                <th pSortableColumn="club" style="width: 10%">Time</th>                <th pSortableColumn="playerType" style="width: 10%">                    Table No                </th>                <th pSortableColumn="details" style="width: 15%">Round Name</th>                <th pSortableColumn="details" style="width: 15%">Umpire Name</th>                <!-- <th pSortableColumn="details" style="width: 10%">Rule Point</th>            <th pSortableColumn="details" style="width: 10%">Best of</th> -->                <th pSortableColumn="details" style="width: 10%">Action</th>            </tr>        </ng-template>        <ng-template pTemplate="body" let-users>            <tr>                <td>{{ users.match_details[0].participant_name}} vs {{users.match_details[1].participant_name}}</td>                <td>{{ users.participant_type }}</td>                <td>{{ users.category }}</td>                <td>{{ users.start_time | date : "dd/MM/YYYY" }}</td>                <td>{{users.start_time.split(\'T\')[1].slice(0,5)}}</td>                <td>{{ users.table }}</td>                <td>{{ users.round }}</td>                <td>{{ users.umpire_name }}</td>                <!-- <td>{{ users.umpire_name }}</td>            <td>{{ users.rule_set }}</td> -->                <td>                    <div>                        <p-overlayPanel appendTo="body" #menuPopup [showCloseIcon]="false" [style]="{width: \'150px\'}">                            <ng-template pTemplate>                                <div class="common-popup">                                    <div class="innerContent">                                        <div class="overlay-item menuItem ">                                            <a (click)="editMatchDetail(users)">Edit</a>                                        </div>                                        <div class="overlay-item menuItem ">                                            <a (click)="deleteMatch(users)">Remove</a>                                        </div>                                    </div>                                </div>                            </ng-template>                        </p-overlayPanel>                        <div class="dropbtn">                            <div class="dropdownUnpublish">                                <button pButton pRipple (click)="menuPopup.toggle($event)" type="button"                                    icon="pi pi-ellipsis-v"                                    class="p-button-plain p-button-text p-button-rounded"></button>                            </div>                        </div>                    </div>                </td>            </tr>        </ng-template>        <ng-template pTemplate="emptymessage">            <tr>                <td colspan="8">No user found.</td>            </tr>        </ng-template>    </p-table></div><div *ngIf="!getMatches" class="d-flex info-msg p-mt-5" style="justify-content: center;">    <i class="fa-solid fa-circle-info text-grey fs-5 p-mr-2"></i><label>Please Create <b class="nevigateLink"            role="button" (click)="nevigateToDetails()">Tournament&nbsp;</b>first to create Live Match</label></div><p-toast position="bottom-right" key="bc"></p-toast></div>'
+    var COMPONENTS = [{'name': 'AccountLayoutComponent', 'selector': 'app-account-layout'},{'name': 'AddCategoryComponent', 'selector': 'stupa-add-category'},{'name': 'AddFieldDialogComponent', 'selector': 'app-add-field-dialog'},{'name': 'AddOfficialComponent', 'selector': 'app-add-official'},{'name': 'AddPlayerComponent', 'selector': 'app-add-player'},{'name': 'AddPlayersComponent', 'selector': 'stupa-add-players'},{'name': 'AddWorldRankComponent', 'selector': 'stupa-add-world-rank'},{'name': 'AdminClubDashboardComponent', 'selector': 'stupa-admin-club-dashboard'},{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AdminPlayerDashboardComponent', 'selector': 'stupa-admin-player-dashboard'},{'name': 'AdminSidebarComponent', 'selector': 'app-admin-sidebar'},{'name': 'AllIncompletedComponent', 'selector': 'stupa-all-incompleted'},{'name': 'AllLiveMatchesComponent', 'selector': 'stupa-all-live-matches'},{'name': 'AllOngoingComponent', 'selector': 'stupa-all-ongoing'},{'name': 'AllotRankPointersComponent', 'selector': 'stupa-allot-rank-pointers'},{'name': 'AllRecentsComponent', 'selector': 'stupa-all-recents'},{'name': 'AllRegistrationComponent', 'selector': 'stupa-all-registration'},{'name': 'AllUpcomingComponent', 'selector': 'stupa-all-upcoming'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ArrangeDialogComponent', 'selector': 'stupa-arrange-dialog'},{'name': 'BannerManagementComponent', 'selector': 'app-banner-management'},{'name': 'BroadcastOnlyComponent', 'selector': 'app-broadcast-only'},{'name': 'BroadcastVideosComponent', 'selector': 'stupa-broadcast-videos'},{'name': 'BroadcastViewerResultsComponent', 'selector': 'stupa-viewer-broadcast-results'},{'name': 'BuyMembershipComponent', 'selector': 'app-buy-membership'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'CommonScoreComponent', 'selector': 'stupa-common-score'},{'name': 'CommonSvgMsgComponent', 'selector': 'stupa-common-svg-msg'},{'name': 'CommonUpdateScoreComponent', 'selector': 'stupa-common-update-score'},{'name': 'ConfirmationDialogComponent', 'selector': 'app-confirmation-dialog'},{'name': 'Consolation', 'selector': 'stupa-consolation'},{'name': 'CreateCategoryComponent', 'selector': 'stupa-create-category'},{'name': 'CreateDoublesComponent', 'selector': 'stupa-create-doubles'},{'name': 'CreateEventComponent', 'selector': 'app-create-event'},{'name': 'CreateMatchComponent', 'selector': 'app-create-match'},{'name': 'CreateMembershipDialogComponent', 'selector': 'app-create-membership-dialog'},{'name': 'CreateMixDouble', 'selector': 'stupa-create-mix-double'},{'name': 'CreateOfficialComponent', 'selector': 'stupa-create-official'},{'name': 'CreateRoleDialogComponent', 'selector': 'app-create-role-dialog'},{'name': 'CreateTeamComponent', 'selector': 'stupa-create-team'},{'name': 'CreateTieComponent', 'selector': 'app-create-tie'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DashboardMainComponent', 'selector': 'stupa-dashboard-main'},{'name': 'DayPlannerComponent', 'selector': 'stupa-day-planner'},{'name': 'DeteteAccountComponent', 'selector': 'stupa-detete-account'},{'name': 'DragDropFixtureComponent', 'selector': 'stupa-drag-drop-fixture'},{'name': 'DshboardDoublesComponent', 'selector': 'stupa-dshboard-doubles'},{'name': 'DshboardMixDoublesComponent', 'selector': 'stupa-dshboard-mix-doubles'},{'name': 'DshboardSingleComponent', 'selector': 'stupa-dshboard-single'},{'name': 'DshboardTeamsComponent', 'selector': 'stupa-dshboard-teams'},{'name': 'EventDetailsComponent', 'selector': 'app-event-details'},{'name': 'EventManagementComponent', 'selector': 'stupa-event-management'},{'name': 'EventMoreVideosComponent', 'selector': 'stupa-event-more-videos'},{'name': 'EventOrganizComponent', 'selector': 'app-event-organiz'},{'name': 'EventOrganizeLayoutComponent', 'selector': 'app-event-organize-layout'},{'name': 'EventOrgSidebarComponent', 'selector': 'app-event-org-sidebar'},{'name': 'EventVerificationComponent', 'selector': 'stupa-event-verification'},{'name': 'EventVideosComponent', 'selector': 'stupa-event-videos'},{'name': 'EventVideosListComponent', 'selector': 'stupa-event-videos-list'},{'name': 'EventVideosViewComponent', 'selector': 'stupa-event-videos-view'},{'name': 'FeedBackComponent', 'selector': 'stupa-feed-back'},{'name': 'FeedbacksComponent', 'selector': 'app-feedbacks'},{'name': 'FixDoubleTreeComponent', 'selector': 'stupa-fix-double-tree'},{'name': 'FixSingleTreeComponent', 'selector': 'stupa-fix-single-tree'},{'name': 'FixtureComponent', 'selector': 'app-fixture'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FooterManagementComponent', 'selector': 'app-footer-management'},{'name': 'ForgotPasswordComponent', 'selector': 'app-forgot-password'},{'name': 'GifLoaderComponent', 'selector': 'stupa-gif-loader'},{'name': 'GlobalRankComponent', 'selector': 'stupa-global-rank'},{'name': 'GRankLayoutComponent', 'selector': 'stupa-g-rank-layout'},{'name': 'GroupCreationComponent', 'selector': 'stupa-group-creation'},{'name': 'GrpPlayerSwapComponent', 'selector': 'stupa-grp-player-swap'},{'name': 'GrpPlayOffComponent', 'selector': 'stupa-grp-play-off'},{'name': 'GrpPlayOffConsolidationComponent', 'selector': 'stupa-grp-play-off-consolidation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HistoryComponent', 'selector': 'stupa-history'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ImportMemberDialogComponent', 'selector': 'stupa-import-member-dialog'},{'name': 'ImportPlayerComponent', 'selector': 'stupa-import-player'},{'name': 'KnockoutComponent', 'selector': 'stupa-knockout'},{'name': 'KnockoutCreationComponent', 'selector': 'stupa-knockout-creation'},{'name': 'LandpageComponent', 'selector': 'app-landpage'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LiveLayoutComponent', 'selector': 'app-live-layout'},{'name': 'LiveMatchesComponent', 'selector': 'stupa-live-matches'},{'name': 'LiveMatchesListComponent', 'selector': 'stupa-live-matches-list'},{'name': 'LiveMatchViewComponent', 'selector': 'stupa-live-match-view'},{'name': 'LiveSettingsComponent', 'selector': 'stupa-live-settings'},{'name': 'LiveStreamComponent', 'selector': 'app-live-stream'},{'name': 'LiveVideosComponent', 'selector': 'stupa-live-videos'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MainDrawComponent', 'selector': 'stupa-main-draw'},{'name': 'MainFooterComponent', 'selector': 'app-main-footer'},{'name': 'MamberComponent', 'selector': 'app-mamber'},{'name': 'MamberManagementComponent', 'selector': 'app-mamber-management'},{'name': 'ManageComponent', 'selector': 'app-manage'},{'name': 'MatchComponent', 'selector': 'stupa-match'},{'name': 'MatchSchedulerComponent', 'selector': 'stupa-match-scheduler'},{'name': 'MemberShipsComponent', 'selector': 'stupa-member-ships'},{'name': 'MergeCategoryComponent', 'selector': 'stupa-merge-category'},{'name': 'MobileappDetailsComponent', 'selector': 'app-mobileapp-details'},{'name': 'MSGrpPlayOffComponent', 'selector': 'stupa-m-s-grp-play-off'},{'name': 'MSKnockoutComponent', 'selector': 'stupa-m-s-knockout'},{'name': 'MSRoundRobinComponent', 'selector': 'stupa-m-s-round-robin'},{'name': 'MyAccountComponent', 'selector': 'stupa-my-account'},{'name': 'MyEventsComponent', 'selector': 'stupa-my-events'},{'name': 'MyProfileLayoutComponent', 'selector': 'stupa-my-profile-layout'},{'name': 'MyProfileSidebarComponent', 'selector': 'stupa-my-profile-sidebar'},{'name': 'NewScheduleComponent', 'selector': 'stupa-new-schedule'},{'name': 'NotificationsComponent', 'selector': 'app-notifications'},{'name': 'OfficialListComponent', 'selector': 'stupa-official-list'},{'name': 'OpenRegistrationComponent', 'selector': 'stupa-open-registration'},{'name': 'OrderHistoryComponent', 'selector': 'stupa-order-history'},{'name': 'PaymentMethodComponent', 'selector': 'app-payment-method'},{'name': 'PersonalDetailsComponent', 'selector': 'stupa-personal-details'},{'name': 'PlatformHeadersComponent', 'selector': 'stupa-platform-headers'},{'name': 'PlayerDetailsComponent', 'selector': 'stupa-player-details'},{'name': 'ProsGuidelinesComponent', 'selector': 'app-pros-guidelines'},{'name': 'RankingsComponent', 'selector': 'app-rankings'},{'name': 'RecentlyDeletedComponent', 'selector': 'stupa-recently-deleted'},{'name': 'RecentRemovedComponent', 'selector': 'stupa-recent-removed'},{'name': 'RecentVideosComponent', 'selector': 'stupa-recent-videos'},{'name': 'RecentVideosListComponent', 'selector': 'stupa-recent-videos-list'},{'name': 'RecentVideosViewComponent', 'selector': 'stupa-recent-videos-view'},{'name': 'RegDoublesComponent', 'selector': 'stupa-reg-doubles'},{'name': 'RegisterComponent', 'selector': 'stupa-register'},{'name': 'RegisteredComponent', 'selector': 'stupa-registered'},{'name': 'RegistrationFormComponent', 'selector': 'app-registration-form'},{'name': 'RegMixDoublesComponent', 'selector': 'stupa-reg-mix-doubles'},{'name': 'RegSingleComponent', 'selector': 'stupa-reg-single'},{'name': 'RegTeamsComponent', 'selector': 'stupa-reg-teams'},{'name': 'ReportIssueComponent', 'selector': 'stupa-report-issue'},{'name': 'RequestsComponent', 'selector': 'app-requests'},{'name': 'ResultConsolationComponent', 'selector': 'stupa-result-consolation'},{'name': 'ResultGPlayOffComponent', 'selector': 'stupa-result-g-play-off'},{'name': 'ResultGroupsComponent', 'selector': 'stupa-result-groups'},{'name': 'ResultKnockoutComponent', 'selector': 'stupa-result-knockout'},{'name': 'ResultRRobinComponent', 'selector': 'stupa-result-r-robin'},{'name': 'ResultsComponent', 'selector': 'app-results'},{'name': 'RoleManagementComponent', 'selector': 'app-role-management'},{'name': 'RoleManagementComponent', 'selector': 'stupa-role-management'},{'name': 'RoundRobinComponent', 'selector': 'stupa-round-robin'},{'name': 'RuleSettingComponent', 'selector': 'app-rule-setting'},{'name': 'SampleViewComponent', 'selector': 'app-sample-view'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SettingsComponent', 'selector': 'stupa-settings'},{'name': 'SignUpComponent', 'selector': 'app-sign-up'},{'name': 'SignupManagementComponent', 'selector': 'app-signup-management'},{'name': 'SocialShareComponent', 'selector': 'stupa-social-share'},{'name': 'SpecialFixtureComponent', 'selector': 'stupa-special-fixture'},{'name': 'SquadComponent', 'selector': 'app-squad'},{'name': 'StreamMatchesComponent', 'selector': 'stupa-stream-matches'},{'name': 'SuccessPageComponent', 'selector': 'stupa-success-page'},{'name': 'SupportComponent', 'selector': 'stupa-support'},{'name': 'TermsConditionComponent', 'selector': 'app-terms-condition'},{'name': 'ToastComponent', 'selector': 'stupa-toast'},{'name': 'TournamentDetailsComponent', 'selector': 'stupa-tournament-details'},{'name': 'UpdateMatchScoreComponent', 'selector': 'stupa-update-match-score'},{'name': 'UpdateScoreComponent', 'selector': 'stupa-update-score'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UttLayoutComponent', 'selector': 'stupa-utt-layout'},{'name': 'VerifyComponent', 'selector': 'app-verify'},{'name': 'VideosComponent', 'selector': 'app-videos'},{'name': 'VideosComponent', 'selector': 'stupa-videos'},{'name': 'ViewAdminEventComponent', 'selector': 'stupa-view-admin-event'},{'name': 'ViewerEventDetailsComponent', 'selector': 'stupa-viewer-event-details'},{'name': 'ViewerFixturesComponent', 'selector': 'stupa-viewer-fixtures'},{'name': 'ViewerGroupCreationComponent', 'selector': 'stupa-viewer-group-creation'},{'name': 'ViewerGrpPlayOffComponent', 'selector': 'stupa-viewer-grp-play-off'},{'name': 'ViewerKnockoutComponent', 'selector': 'stupa-viewer-knockout'},{'name': 'ViewerLayoutComponent', 'selector': 'stupa-viewer-layout'},{'name': 'ViewerPlayerListComponent', 'selector': 'stupa-viewer-player-list'},{'name': 'ViewerProspectusComponent', 'selector': 'stupa-viewer-prospectus'},{'name': 'ViewerRankingsComponent', 'selector': 'stupa-viewer-rankings'},{'name': 'ViewerRegistrationComponent', 'selector': 'stupa-viewer-registration'},{'name': 'ViewerResultsComponent', 'selector': 'stupa-viewer-results'},{'name': 'ViewerRoundRobinComponent', 'selector': 'stupa-viewer-round-robin'},{'name': 'ViewerTreeComponent', 'selector': 'stupa-viewer-tree'},{'name': 'ViewerVideosComponent', 'selector': 'stupa-viewer-videos'},{'name': 'WebImagesComponent', 'selector': 'app-web-images'},{'name': 'WebViewComponent', 'selector': 'stupa-web-view'},{'name': 'WttStarContComponent', 'selector': 'stupa-wtt-star-cont'},{'name': 'WttStarMatchesListComponent', 'selector': 'stupa-wtt-star-matches-list'},{'name': 'WttStarMatchesViewComponent', 'selector': 'stupa-wtt-star-matches-view'}];
+    var DIRECTIVES = [{'name': 'ContDwnTimerDirective', 'selector': '[stupaContDwnTimer]'},{'name': 'DndDirective', 'selector': '[appDnd]'},{'name': 'DragDropItemDirective', 'selector': '[stupaDragDropItem]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'DragDropSwapDirective', 'selector': '[appDragDropSwap]'},{'name': 'PreventCharDirective', 'selector': '[stupaPreventChar]'},{'name': 'PreventEDirective', 'selector': '[preventE]'}];
+    var ACTUAL_COMPONENT = {'name': 'CreateMatchComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateMatchComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,1374 @@
+<!-- skelton layout starts  -->
+<div class="skeletonlayout" *ngIf="false">
+  <div class="row" style="margin-top: 1rem">
+    <div class="col-lg-3" *ngFor="let item of id">
+      <p-skeleton shape="rectangle" width="100%" height="150px" animation="wave"></p-skeleton>
+    </div>
+  </div>
+</div>
+<!-- skelton layout ends  -->
+
+<div class="container-xxl">
+  <p-panel *ngIf="_liveMatcheScoreDetails.length > 0" [toggleable]="true">
+    <ng-template pTemplate="header">
+      <div class="upperSection flex-vc">
+        <div class="dot"></div>
+        <div class="textb">Live</div>
+      </div>
+    </ng-template>
+    <div class="liveViewerSection" *ngIf="_liveMatcheScoreDetails.length > 0">
+      <div class="ViewerResultContainer">
+        <div class="row">
+          <div [ngClass]="isEmptyExtra(item.extra)?'col-lg-4 col-sm-12':'dNone'"
+            *ngFor="let item of _liveMatcheScoreDetails; trackBy: trackById">
+            <div *ngIf="isEmptyExtra(item.extra)">
+              <div *ngIf="item.participant_type_id !== 2" class="matchCard" (click)="showDialog()">
+                <div class="innerCard">
+                  <div class="UpperDetails flex-vc flex-sb">
+                    <div class="matchDetailLeft">
+                      <p>
+                        {{ item.extra.nameValuePairs.EventName }}
+                      </p>
+                    </div>
+                    <div class="matchDetailRight" *ngIf="item.islive">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                          fill="#1B403A" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="middle d-flex">
+                    <p>
+                      {{ item.round_description }} | T- {{ item.extra.nameValuePairs.TableNo }}
+                    </p>
+                  </div>
+                  <div class="LowerDetails">
+                    <div class="lowerCard">
+                      <div class="row row1">
+                        <div class="col-6  flex-vc pe-0">
+                          <!-- <div class="avatar">
+
+              <p-avatar icon="pi pi-user" styleClass="mr-2" size="small"  shape="circle"></p-avatar>
+            </div> -->
+                          <svg *ngIf="item.extra.nameValuePairs.playerAColour != ''" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="18" viewBox="0 0 24 24"
+                            [ngStyle]="{ 'fill': item.extra.nameValuePairs.playerAColour }">
+                            <path
+                              d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                            </path>
+                          </svg>
+                          <svg *ngIf="item.extra.nameValuePairs.playerAColour == ''" width="20" height="18"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+                            xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                            </metadata>
+                            <g>
+                              <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                <path
+                                  d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                              </g>
+                            </g>
+                          </svg>
+                          <div class="dotGap">
+                            <div class="green ps-2" *ngIf="
+                  item.extra.nameValuePairs.PlayerAId ==
+                  item.extra.nameValuePairs.ServiceBy
+                ">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="playerName text-overflow">
+                            {{ item.extra.nameValuePairs.PlayerAName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+
+                            <div class="yellow" *ngIf="
+                  item.extra.nameValuePairs.PlayerAyellowCardCount > 0
+                ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                  item.extra.nameValuePairs.PlayerARedCardCount > 0
+                ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 ">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[0].set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[0].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p-divider type="dashed"></p-divider>
+                      <div class="row row2">
+                        <div class="col-6 flex-vc pe-0">
+                          <!-- <div class="avatar">
+              <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+            </div> -->
+                          <svg *ngIf="item.extra.nameValuePairs.playerBColour != ''" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="18" viewBox="0 0 24 24"
+                            [ngStyle]="{ 'fill': item.extra.nameValuePairs.playerBColour }">
+                            <path
+                              d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                            </path>
+                          </svg>
+                          <svg *ngIf="item.extra.nameValuePairs.playerBColour == ''" width="20" height="18"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+                            xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                            </metadata>
+                            <g>
+                              <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                <path
+                                  d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                              </g>
+                            </g>
+                          </svg>
+                          <div class="dotGap">
+                            <div class="green ps-2" *ngIf="
+                  item.extra.nameValuePairs.PlayerBId ==
+                  item.extra.nameValuePairs.ServiceBy
+                ">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="playerName text-overflow">
+                            {{ item.extra.nameValuePairs.PlayerBName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+                            <div class="yellow" *ngIf="
+                  item.extra.nameValuePairs.PlayerBYellowYardCount > 0
+                ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                  item.extra.nameValuePairs.PlayerBRedCardCount > 0
+                ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 ">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[1].set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[1].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="item.participant_type_id == 2" class="matchCard " (click)="showDialog()">
+                <div class="innerCard">
+                  <div class="UpperDetails flex-vc flex-sb">
+                    <div class="matchDetailLeft">
+                      <p>
+                        {{ item.category_description }} | {{ item.round_description }} | {{ "T-"
+                        + item.table }}
+                      </p>
+                    </div>
+                    <div class="matchDetailRight" *ngIf="item.islive">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                          fill="#1B403A" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="middle d-flex gap-3">
+                    <div>
+                      <p>{{ item.match_details[0]?.team_name }}</p>
+                    </div>
+                    <div>
+                      <p>
+                        {{ item.team_match_data.match_details[0]?.set_won }}-{{
+                        item.team_match_data.match_details[1]?.set_won }}
+                      </p>
+                    </div>
+                    <div>
+                      <p>{{ item.match_details[1]?.team_name }}</p>
+                    </div>
+                  </div>
+
+                  <div class="LowerDetails">
+                    <div class="lowerCard">
+                      <div class="row row1">
+                        <div class="col-6 flex-vc pe-2">
+                          <!-- <div class="avatar">
+              <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+            </div> -->
+                          <svg *ngIf="item.extra.nameValuePairs.playerAColour != ''" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="18" viewBox="0 0 24 24"
+                            [ngStyle]="{ 'fill': item.extra.nameValuePairs.playerAColour }">
+                            <path
+                              d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                            </path>
+                          </svg>
+                          <svg *ngIf="item.extra.nameValuePairs.playerAColour == ''" width="20" height="18"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+                            xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                            </metadata>
+                            <g>
+                              <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                <path
+                                  d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                              </g>
+                            </g>
+                          </svg>
+                          <div class="dotGap">
+                            <div class="green ps-2" *ngIf="
+                item.extra.nameValuePairs.PlayerAId ==
+                item.extra.nameValuePairs.ServiceBy
+              ">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="playerName text-overflow">
+                            {{ item.extra.nameValuePairs.PlayerAName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+                            <div class="yellow" *ngIf="
+                  item.extra.nameValuePairs.PlayerAyellowCardCount > 0
+                ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                  item.extra.nameValuePairs.PlayerARedCardCount > 0
+                ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[0]?.set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[0].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p-divider type="dashed"></p-divider>
+                      <div class="row row2">
+                        <div class="col-6 flex-vc pe-0">
+                          <!-- <div class="avatar">
+              <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+            </div> -->
+                          <svg *ngIf="item.extra.nameValuePairs.playerBColour != ''" xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="18" viewBox="0 0 24 24"
+                            [ngStyle]="{ 'fill': item.extra.nameValuePairs.playerBColour }">
+                            <path
+                              d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                            </path>
+                          </svg>
+                          <svg *ngIf="item.extra.nameValuePairs.playerBColour == ''" width="20" height="18"
+                            version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000"
+                            xml:space="preserve">
+                            <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                            </metadata>
+                            <g>
+                              <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                <path
+                                  d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                              </g>
+                            </g>
+                          </svg>
+                          <div class="dotGap">
+                            <div class="green ps-2" *ngIf="
+                item.extra.nameValuePairs.PlayerBId ==
+                item.extra.nameValuePairs.ServiceBy
+              ">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+                          </div>
+                          <p class="playerName text-overflow">
+                            {{ item.extra.nameValuePairs.PlayerBName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+                            <div class="yellow" *ngIf="
+                  item.extra.nameValuePairs.PlayerBYellowYardCount > 0
+                ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                  item.extra.nameValuePairs.PlayerBRedCardCount > 0
+                ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[1].set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[1].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div *ngIf="false">
+            <div id="TeamScoreCard" class="TeamScore col-lg-4 col-md-4 col-sm-12"
+              *ngFor="let item of _liveMatcheScoreDetails; trackBy: trackById">
+              <div class="matchCard" (click)="showDialog()">
+                <div class="innerCard">
+                  <div class="UpperDetails flex-vc flex-sb">
+                    <div class="matchDetailLeft">
+                      <p>Mens Team | Final | T-3</p>
+                    </div>
+                    <div class="matchDetailRight" *ngIf="!item.islive">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                          fill="#1B403A" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="middle d-flex gap-3 justify-content-center fbold">
+                    <div>
+                      <p>China</p>
+                    </div>
+                    <div>
+                      <p> 1-1</p>
+                    </div>
+                    <div>
+                      <p>India</p>
+                    </div>
+                  </div>
+
+                  <div class="LowerDetails">
+                    <div class="lowerCard">
+                      <div class="row row1">
+                        <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                          <div class="avatar">
+                            <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                          </div>
+                          <p class="playerName">
+                            {{ item.extra.nameValuePairs.PlayerAName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+
+                            <div class="green" *ngIf="false">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+
+                            <div class="yellow" *ngIf="
+                item.extra.nameValuePairs.PlayerAyellowCardCount > 0
+              ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                item.extra.nameValuePairs.PlayerARedCardCount > 0
+              ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[0].set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[0].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <p-divider type="dashed"></p-divider>
+                      <div class="row row2">
+                        <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                          <div class="avatar">
+                            <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                          </div>
+                          <p class="playerName">
+                            {{ item.extra.nameValuePairs.PlayerBName }}
+                          </p>
+                          <div class="cards_show_here flex-vc">
+                            <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                              <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                  fill="#FF783E" />
+                              </svg>
+                            </div>
+
+                            <div class="green" *ngIf="false">
+                              <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                              </svg>
+                            </div>
+
+                            <div class="yellow" *ngIf="
+                item.extra.nameValuePairs.PlayerBYellowYardCount > 0
+              ">
+                              <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                  fill="#F5DD00" />
+                              </svg>
+                            </div>
+
+                            <div class="red" *ngIf="
+                item.extra.nameValuePairs.PlayerBRedCardCount > 0
+              ">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                  transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                          <div class="FullScore d-flex">
+                            <div class="setScore">
+                              {{ item.match_details[1].set_won }}
+                            </div>
+                            <div class="MatchScore d-flex">
+                              <ul class="d-flex" *ngFor="let details of item.match_details[1].score">
+                                <li>{{ details }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-panel>
+  <div *ngIf="_streamedVideos.length > 0">
+    <b>
+      <h3>Recent</h3>
+    </b>
+    <!-- <div class="upperSection flex-vc">
+        <div class="dot"></div>
+        <div class="textb">Live</div>
+      </div> -->
+    <div class="ViewerResultContainer">
+      <div class="row" id="one">
+        <div class="col-3" style="margin-top: 0.5rem" *ngFor="let item of _streamedVideos">
+          <div>
+            <div class="matchCard" (click)="showDialog()">
+              <div class="innerCard">
+                <div class="UpperDetails flex-vc flex-sb">
+                  <div class="matchDetailLeft">
+                    <p>
+                      {{ item.round }}
+                    </p>
+                  </div>
+                  <div class="matchDetailRight" *ngIf="item.islive">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                        fill="#1B403A" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="middle d-flex">
+                  <p>
+                    {{ item.participant_type }} | T-
+                    {{ item.fixture_format }}
+                  </p>
+                </div>
+                <div class="LowerDetails">
+                  <div class="lowerCard">
+                    <div class="row row1">
+                      <div class="col-6 flex-vc pe-0">
+                        <!-- <div class="avatar">
+    
+                        <p-avatar icon="pi pi-user" styleClass="mr-2" size="small"  shape="circle"></p-avatar>
+                      </div> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24">
+                          <path
+                            d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                          </path>
+                        </svg>
+
+                        <p class="playerName text-overflow">
+                          {{ item.match_details[0].participant_name }}
+                        </p>
+                        <!-- <div class="cards_show_here flex-vc">
+    
+                              <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                    fill="#FF783E" />
+                                </svg>
+                              </div>
+    
+                              <div class="yellow" *ngIf="
+                            item.extra.nameValuePairs.PlayerAyellowCardCount > 0
+                          ">
+                                <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                    fill="#F5DD00" />
+                                </svg>
+                              </div>
+    
+                              <div class="red" *ngIf="
+                            item.extra.nameValuePairs.PlayerARedCardCount > 0
+                          ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                    transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                                </svg>
+                              </div>
+                            </div> -->
+                      </div>
+                      <div class="col-6">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[0].set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[0].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p-divider type="dashed"></p-divider>
+                    <div class="row row2">
+                      <div class="col-6 flex-vc pe-0">
+                        <!-- <div class="avatar">
+                        <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                      </div> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24">
+                          <path
+                            d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                          </path>
+                        </svg>
+                        <!-- <svg *ngIf="item.extra.nameValuePairs.playerBColour == ''" width="20" height="18" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
+                              <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                              <g>
+                                <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                                  <path
+                                    d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                                </g>
+                              </g>
+                            </svg>
+                            <div class="dotGap">
+                              <div class="green ps-2" *ngIf="
+                            item.extra.nameValuePairs.PlayerBId ==
+                            item.extra.nameValuePairs.ServiceBy
+                          ">
+                                <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                                </svg>
+                              </div>
+                            </div> -->
+                        <p class="playerName text-overflow">
+                          {{ item.match_details[1].participant_name }}
+                        </p>
+                        <!-- <div class="cards_show_here flex-vc">
+    
+                              <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                    fill="#FF783E" />
+                                </svg>
+                              </div>
+                              <div class="yellow" *ngIf="
+                            item.extra.nameValuePairs.PlayerBYellowYardCount > 0
+                          ">
+                                <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                    fill="#F5DD00" />
+                                </svg>
+                              </div>
+    
+                              <div class="red" *ngIf="
+                            item.extra.nameValuePairs.PlayerBRedCardCount > 0
+                          ">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                    transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                                </svg>
+                              </div>
+                            </div> -->
+                      </div>
+                      <div class="col-6">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[1].set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[1].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="item.participant_type_id == 2" class="matchCard" (click)="showDialog()">
+              <div class="innerCard">
+                <div class="UpperDetails flex-vc flex-sb">
+                  <div class="matchDetailLeft">
+                    <p>
+                      {{ item.category_description }} |
+                      {{ item.round_description }} | {{ "T-" + item.table }}
+                    </p>
+                  </div>
+                  <div class="matchDetailRight" *ngIf="item.islive">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                        fill="#1B403A" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="middle d-flex gap-3">
+                  <div>
+                    <p>{{ item.match_details[0]?.team_name }}</p>
+                  </div>
+                  <div>
+                    <p>
+                      {{ item.team_match_data.match_details[0]?.set_won }}-{{
+                      item.team_match_data.match_details[1]?.set_won
+                      }}
+                    </p>
+                  </div>
+                  <div>
+                    <p>{{ item.match_details[1]?.team_name }}</p>
+                  </div>
+                </div>
+
+                <div class="LowerDetails">
+                  <div class="lowerCard">
+                    <div class="row row1">
+                      <div class="col-lg-6 col-md-12 col-sm-12 flex-vc pe-2">
+                        <!-- <div class="avatar">
+                        <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                      </div> -->
+                        <svg *ngIf="
+                              item.extra.nameValuePairs.playerAColour != ''
+                            " xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" [ngStyle]="{
+                              fill: item.extra.nameValuePairs.playerAColour
+                            }">
+                          <path
+                            d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                          </path>
+                        </svg>
+                        <svg *ngIf="
+                              item.extra.nameValuePairs.playerAColour == ''
+                            " width="20" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
+                          enable-background="new 0 0 1000 1000" xml:space="preserve">
+                          <metadata>
+                            Svg Vector Icons :
+                            http://www.onlinewebfonts.com/icon
+                          </metadata>
+                          <g>
+                            <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                              <path
+                                d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                            </g>
+                          </g>
+                        </svg>
+                        <div class="dotGap">
+                          <div class="green ps-2" *ngIf="
+                                item.extra.nameValuePairs.PlayerAId ==
+                                item.extra.nameValuePairs.ServiceBy
+                              ">
+                            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                            </svg>
+                          </div>
+                        </div>
+                        <p class="playerName text-overflow">
+                          {{ item.extra.nameValuePairs.PlayerAName }}
+                        </p>
+                        <div class="cards_show_here flex-vc">
+                          <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                fill="#FF783E" />
+                            </svg>
+                          </div>
+                          <div class="yellow" *ngIf="
+                                item.extra.nameValuePairs
+                                  .PlayerAyellowCardCount > 0
+                              ">
+                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                fill="#F5DD00" />
+                            </svg>
+                          </div>
+
+                          <div class="red" *ngIf="
+                                item.extra.nameValuePairs.PlayerARedCardCount >
+                                0
+                              ">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[0]?.set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[0].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p-divider type="dashed"></p-divider>
+                    <div class="row row2">
+                      <div class="col-lg-6 col-md-12 col-sm-12 flex-vc pe-0">
+                        <!-- <div class="avatar">
+                        <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                      </div> -->
+                        <svg *ngIf="
+                              item.extra.nameValuePairs.playerBColour != ''
+                            " xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" [ngStyle]="{
+                              fill: item.extra.nameValuePairs.playerBColour
+                            }">
+                          <path
+                            d="M21.316 4.055C19.556 3.478 15 1.985 15 2a3 3 0 1 1-6 0c0-.015-4.556 1.478-6.317 2.055A.992.992 0 0 0 2 5.003v3.716a1 1 0 0 0 1.242.97L6 9v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9l2.758.689A1 1 0 0 0 22 8.719V5.003a.992.992 0 0 0-.684-.948z">
+                          </path>
+                        </svg>
+                        <svg *ngIf="
+                              item.extra.nameValuePairs.playerBColour == ''
+                            " width="20" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
+                          enable-background="new 0 0 1000 1000" xml:space="preserve">
+                          <metadata>
+                            Svg Vector Icons :
+                            http://www.onlinewebfonts.com/icon
+                          </metadata>
+                          <g>
+                            <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+                              <path
+                                d="M2509.9,3813.8c-30.2-12.6-2379.5-1552-2409.7-1579.6c-20.1-20.1,1192.3-1821.1,1219.9-1811c17.6,5,261.6,150.9,545.8,324.5l518.2,311.9v-2336.7v-2336.7h2615.9H7616v2326.7c0,1280.3,7.5,2326.7,15.1,2326.7c10.1,0,254.1-143.4,543.3-316.9c289.3-176.1,528.2-314.4,533.3-309.4c32.7,35.2,1199.8,1816.1,1192.3,1821.1c-5,2.5-545.8,362.2-1202.3,794.8l-1194.8,789.8l-744.5,7.5l-744.6,7.6l-65.4-100.6c-216.3-327-548.3-508.1-938.2-510.6c-374.8-2.5-699.3,156-915.6,455.3l-113.2,153.4l-716.9-2.5C2869.6,3828.9,2530,3821.4,2509.9,3813.8z M3873.2,3328.4c128.3-153.4,364.7-319.5,586.1-407.5c193.7-78,213.8-83,553.4-83c324.5,2.5,364.7,7.5,528.2,70.4c226.4,90.6,400,206.3,571,379.8l138.3,140.9h560.9h563.4l940.7-621.3c518.2-342.1,965.9-638.9,993.6-661.5c47.8-40.2,37.7-57.8-332-621.3l-382.3-583.5l-684.2,412.5l-684.2,410l-7.5-2487.7l-5-2487.6H5000.1H2786.6v2490.2v2490.2l-664-402.5c-364.7-221.3-674.1-402.5-686.7-402.5c-22.6,0-754.6,1079.1-767.2,1131.9c-5,15.1,435.2,319.4,973.4,676.6l981,651.5l583.6,2.5l581,2.5L3873.2,3328.4z" />
+                            </g>
+                          </g>
+                        </svg>
+                        <div class="dotGap">
+                          <div class="green ps-2" *ngIf="
+                                item.extra.nameValuePairs.PlayerBId ==
+                                item.extra.nameValuePairs.ServiceBy
+                              ">
+                            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                            </svg>
+                          </div>
+                        </div>
+                        <p class="playerName text-overflow">
+                          {{ item.extra.nameValuePairs.PlayerBName }}
+                        </p>
+                        <div class="cards_show_here flex-vc">
+                          <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                fill="#FF783E" />
+                            </svg>
+                          </div>
+                          <div class="yellow" *ngIf="
+                                item.extra.nameValuePairs
+                                  .PlayerBYellowYardCount > 0
+                              ">
+                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                fill="#F5DD00" />
+                            </svg>
+                          </div>
+
+                          <div class="red" *ngIf="
+                                item.extra.nameValuePairs.PlayerBRedCardCount >
+                                0
+                              ">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[1].set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[1].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="false">
+          <div id="TeamScoreCard" class="TeamScore col-lg-4 col-md-4 col-sm-12"
+            *ngFor="let item of _liveMatcheScoreDetails; trackBy: trackById">
+            <div class="matchCard" (click)="showDialog()">
+              <div class="innerCard">
+                <div class="UpperDetails flex-vc flex-sb">
+                  <div class="matchDetailLeft">
+                    <p>Mens Team | Final | T-3</p>
+                  </div>
+                  <div class="matchDetailRight" *ngIf="!item.islive">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                        fill="#1B403A" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="middle d-flex gap-3 justify-content-center fbold">
+                  <div>
+                    <p>China</p>
+                  </div>
+                  <div>
+                    <p>1-1</p>
+                  </div>
+                  <div>
+                    <p>India</p>
+                  </div>
+                </div>
+
+                <div class="LowerDetails">
+                  <div class="lowerCard">
+                    <div class="row row1">
+                      <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                        <div class="avatar">
+                          <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                        </div>
+                        <p class="playerName">
+                          {{ item.extra.nameValuePairs.PlayerAName }}
+                        </p>
+                        <div class="cards_show_here flex-vc">
+                          <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerATimeout">
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                fill="#FF783E" />
+                            </svg>
+                          </div>
+
+                          <div class="green" *ngIf="false">
+                            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                            </svg>
+                          </div>
+
+                          <div class="yellow" *ngIf="
+                                item.extra.nameValuePairs
+                                  .PlayerAyellowCardCount > 0
+                              ">
+                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                fill="#F5DD00" />
+                            </svg>
+                          </div>
+
+                          <div class="red" *ngIf="
+                                item.extra.nameValuePairs.PlayerARedCardCount >
+                                0
+                              ">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[0].set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[0].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p-divider type="dashed"></p-divider>
+                    <div class="row row2">
+                      <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                        <div class="avatar">
+                          <p-avatar icon="pi pi-user" styleClass="mr-2" size="small" shape="circle"></p-avatar>
+                        </div>
+                        <p class="playerName">
+                          {{ item.extra.nameValuePairs.PlayerBName }}
+                        </p>
+                        <div class="cards_show_here flex-vc">
+                          <div class="timeOUt" *ngIf="item.extra.nameValuePairs.PlayerBTimeout">
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M8.54285 2.73275L9.32989 1.94571L10.0958 2.71162L9.30877 3.49866C10.0865 4.47213 10.4619 5.70643 10.358 6.94807C10.2541 8.18971 9.67873 9.34443 8.75003 10.1751C7.82134 11.0058 6.60984 11.4493 5.36434 11.4146C4.11885 11.38 2.9339 10.8697 2.05286 9.98866C1.17182 9.10762 0.661562 7.92267 0.62689 6.67717C0.592217 5.43167 1.03576 4.22017 1.86642 3.29148C2.69708 2.36279 3.85181 1.78741 5.09345 1.6835C6.33509 1.57959 7.56939 1.95504 8.54285 2.73275ZM5.49977 10.3334C5.9977 10.3334 6.49075 10.2353 6.95078 10.0448C7.4108 9.85424 7.82879 9.57495 8.18088 9.22286C8.53297 8.87077 8.81226 8.45278 9.00281 7.99276C9.19336 7.53273 9.29143 7.03968 9.29143 6.54175C9.29143 6.04382 9.19336 5.55077 9.00281 5.09074C8.81226 4.63071 8.53297 4.21272 8.18088 3.86063C7.82879 3.50855 7.4108 3.22925 6.95078 3.0387C6.49075 2.84816 5.9977 2.75008 5.49977 2.75008C4.49416 2.75008 3.52973 3.14956 2.81865 3.86063C2.10758 4.57171 1.7081 5.53614 1.7081 6.54175C1.7081 7.54736 2.10758 8.51178 2.81865 9.22286C3.52973 9.93394 4.49416 10.3334 5.49977 10.3334ZM4.9581 3.83341H6.04143V7.08341H4.9581V3.83341ZM3.3331 0.041748H7.66643V1.12508H3.3331V0.041748Z"
+                                fill="#FF783E" />
+                            </svg>
+                          </div>
+
+                          <div class="green" *ngIf="false">
+                            <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="3.5" cy="4.00024" r="3.5" fill="#05F300" />
+                            </svg>
+                          </div>
+
+                          <div class="yellow" *ngIf="
+                                item.extra.nameValuePairs
+                                  .PlayerBYellowYardCount > 0
+                              ">
+                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.865723" width="8" height="9" rx="1" transform="rotate(-5 0 0.865723)"
+                                fill="#F5DD00" />
+                            </svg>
+                          </div>
+
+                          <div class="red" *ngIf="
+                                item.extra.nameValuePairs.PlayerBRedCardCount >
+                                0
+                              ">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.623047" y="0.865967" width="8" height="9" rx="1"
+                                transform="rotate(-5 0.623047 0.865967)" fill="#F50000" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="FullScore d-flex">
+                          <div class="setScore">
+                            {{ item.match_details[1].set_won }}
+                          </div>
+                          <div class="MatchScore d-flex">
+                            <ul class="d-flex" *ngFor="
+                                  let details of item.match_details[1].score
+                                ">
+                              <li>{{ details }}</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <p-divider></p-divider> -->
+
+  <div class="ViewerResultContainer" *ngIf="false">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12" *ngFor="let item of _MatchDetail">
+        <div class="matchCard" (click)="showDialog()">
+          <div class="innerCard">
+            <div class="UpperDetails flex-vc flex-sb">
+              <div class="matchDetailLeft">
+                <p>{{ item.Rname }} - Round of {{ item.Rno }}</p>
+                <p>{{ item.PlaceName }} | Table {{ item.tableno }}</p>
+              </div>
+              <div class="matchDetailRight" *ngIf="item.islive">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17 9.2L22.213 5.55C22.288 5.49746 22.3759 5.4665 22.4672 5.4605C22.5586 5.4545 22.6498 5.4737 22.731 5.51599C22.8122 5.55829 22.8802 5.62206 22.9276 5.70035C22.9751 5.77865 23.0001 5.86846 23 5.96V18.04C23.0001 18.1315 22.9751 18.2214 22.9276 18.2996C22.8802 18.3779 22.8122 18.4417 22.731 18.484C22.6498 18.5263 22.5586 18.5455 22.4672 18.5395C22.3759 18.5335 22.288 18.5025 22.213 18.45L17 14.8V19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H2C1.73478 20 1.48043 19.8946 1.29289 19.7071C1.10536 19.5196 1 19.2652 1 19V5C1 4.73478 1.10536 4.48043 1.29289 4.29289C1.48043 4.10536 1.73478 4 2 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V9.2ZM17 12.359L21 15.159V8.84L17 11.64V12.358V12.359ZM3 6V18H15V6H3ZM5 8H7V10H5V8Z"
+                    fill="#1B403A" />
+                </svg>
+              </div>
+            </div>
+            <div class="LowerDetails">
+              <div class="lowerCard">
+                <div class="row row1">
+                  <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                    <div class="avatar">
+                      <p-avatar label="G" styleClass="mr-2" [style]="{
+                          'background-color': '#FF783E',
+                          color: '#ffffff'
+                        }" shape="circle"></p-avatar>
+                    </div>
+                    <p class="playerName">{{ item.playerName }}</p>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="FullScore d-flex">
+                      <div class="setScore">{{ item.playerOneset }}</div>
+                      <div class="MatchScore d-flex">
+                        <ul class="d-flex" *ngFor="let details of item.playerOneMatchScore">
+                          <li>{{ details }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p-divider type="dashed"></p-divider>
+                <div class="row row2">
+                  <div class="col-lg-6 col-md-12 col-sm-12 flex-vc">
+                    <div class="avatar">
+                      <p-avatar label="A" styleClass="mr-2" [style]="{
+                          'background-color': '#9c27b0',
+                          color: '#ffffff'
+                        }" shape="circle"></p-avatar>
+                    </div>
+                    <p class="playerName">{{ item.playerName2 }}</p>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="FullScore d-flex">
+                      <div class="setScore">{{ item.playerOneset2 }}</div>
+                      <div class="MatchScore d-flex">
+                        <ul class="d-flex" *ngFor="let score of item.playerOneMatchScore2">
+                          <li>{{ score }}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ViewerResultPopup">
+    <p-dialog [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false"
+      [resizable]="false" [modal]="true" [dismissableMask]="true">
+      <div class="ViewerUpperSection">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="Team Team1 o-flex flex-vc flex-hc h-100">
+              <div class="TeamName">Punjab</div>
+              <div class="crown">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.31621 2.30352L3.29051 3.61972L5.25823 0.865099C5.30171 0.804163 5.35912 0.754494 5.42567 0.720224C5.49223 0.685954 5.566 0.668076 5.64086 0.668076C5.71572 0.668076 5.7895 0.685954 5.85606 0.720224C5.92261 0.754494 5.98002 0.804163 6.0235 0.865099L7.99122 3.61972L9.96552 2.30352C10.0402 2.25381 10.1276 2.22652 10.2174 2.22489C10.3071 2.22326 10.3954 2.24735 10.4719 2.29431C10.5484 2.34128 10.6098 2.40915 10.6489 2.48992C10.6881 2.57068 10.7033 2.66096 10.6927 2.75008L9.92039 9.31557C9.90692 9.42991 9.85195 9.53534 9.76591 9.61185C9.67987 9.68836 9.56875 9.73063 9.45361 9.73064H1.82812C1.71298 9.73063 1.60185 9.68836 1.51581 9.61185C1.42977 9.53534 1.37481 9.42991 1.36134 9.31557L0.589008 2.74961C0.578572 2.66053 0.593843 2.57032 0.633016 2.48963C0.67219 2.40894 0.733631 2.34114 0.810088 2.29424C0.886544 2.24734 0.974823 2.22329 1.0645 2.22493C1.15418 2.22658 1.24152 2.25384 1.31621 2.30352ZM5.64086 6.91022C5.89021 6.91022 6.12933 6.81116 6.30565 6.63485C6.48196 6.45854 6.58101 6.21941 6.58101 5.97007C6.58101 5.72073 6.48196 5.4816 6.30565 5.30529C6.12933 5.12898 5.89021 5.02993 5.64086 5.02993C5.39152 5.02993 5.15239 5.12898 4.97608 5.30529C4.79977 5.4816 4.70072 5.72073 4.70072 5.97007C4.70072 6.21941 4.79977 6.45854 4.97608 6.63485C5.15239 6.81116 5.39152 6.91022 5.64086 6.91022Z"
+                    fill="#ffffff" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="Score o-flex flex-vc flex-hc h-100">
+              <div class="Team Team1Score bolder">
+                <p>3</p>
+              </div>
+              <div class="VS">
+                <p>Vs</p>
+              </div>
+              <div class="Team Team2Score bolder">
+                <p>0</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="Team Team2 o-flex flex-vc flex-hc h-100">
+              <div class="TeamName">Haryana</div>
+              <div class="crown">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.31621 2.30352L3.29051 3.61972L5.25823 0.865099C5.30171 0.804163 5.35912 0.754494 5.42567 0.720224C5.49223 0.685954 5.566 0.668076 5.64086 0.668076C5.71572 0.668076 5.7895 0.685954 5.85606 0.720224C5.92261 0.754494 5.98002 0.804163 6.0235 0.865099L7.99122 3.61972L9.96552 2.30352C10.0402 2.25381 10.1276 2.22652 10.2174 2.22489C10.3071 2.22326 10.3954 2.24735 10.4719 2.29431C10.5484 2.34128 10.6098 2.40915 10.6489 2.48992C10.6881 2.57068 10.7033 2.66096 10.6927 2.75008L9.92039 9.31557C9.90692 9.42991 9.85195 9.53534 9.76591 9.61185C9.67987 9.68836 9.56875 9.73063 9.45361 9.73064H1.82812C1.71298 9.73063 1.60185 9.68836 1.51581 9.61185C1.42977 9.53534 1.37481 9.42991 1.36134 9.31557L0.589008 2.74961C0.578572 2.66053 0.593843 2.57032 0.633016 2.48963C0.67219 2.40894 0.733631 2.34114 0.810088 2.29424C0.886544 2.24734 0.974823 2.22329 1.0645 2.22493C1.15418 2.22658 1.24152 2.25384 1.31621 2.30352ZM5.64086 6.91022C5.89021 6.91022 6.12933 6.81116 6.30565 6.63485C6.48196 6.45854 6.58101 6.21941 6.58101 5.97007C6.58101 5.72073 6.48196 5.4816 6.30565 5.30529C6.12933 5.12898 5.89021 5.02993 5.64086 5.02993C5.39152 5.02993 5.15239 5.12898 4.97608 5.30529C4.79977 5.4816 4.70072 5.72073 4.70072 5.97007C4.70072 6.21941 4.79977 6.45854 4.97608 6.63485C5.15239 6.81116 5.39152 6.91022 5.64086 6.91022Z"
+                    fill="#ffffff" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="viewerLower">
+        <div class="row hi" *ngFor="let item of _MatchDetail">
+          <div class="col-lg-5">
+            <div class="playersection o-flex flex-vc h-100">
+              <div class="avatars">
+                <p-avatarGroup>
+                  <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" size="large"
+                    shape="circle"></p-avatar>
+                  <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" size="large"
+                    shape="circle"></p-avatar>
+                </p-avatarGroup>
+              </div>
+
+              <div class="oneunit">
+                <div class="TeamName Team1Name">
+                  <p>{{ item.playerName }}</p>
+                </div>
+                <div class="Score">
+                  <div class="row helloe">
+                    <div class="col-lg-12 o-flex">
+                      <div class="setScore">
+                        <p>{{ item.playerOneset }}</p>
+                      </div>
+                      <ul class="o-flex ulM-0 Lnone" *ngFor="let score of item.playerOneMatchScore">
+                        <li>{{ score }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 flex-vc flex-hc">
+            <div class="team1Score">
+              <p>{{ item.playerOneset }}</p>
+            </div>
+            <div class="vs">
+              <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.66457 6.49983C8.66701 6.94319 7.78029 8.07376 7.78029 8.93831C7.78029 9.93587 8.4675 10.7339 10.0193 11.532C11.3493 12.197 11.6375 12.6625 11.0612 13.2389C10.64 13.6601 9.35422 13.5493 8.42316 13.0172C7.66945 12.596 7.51427 12.5739 7.24825 12.8621C6.69405 13.4606 1.79492 19.6898 1.79492 19.8006C1.79492 19.845 2.96983 18.6922 4.38858 17.2513C6.49454 15.101 7.07091 14.6133 7.44777 14.7242C7.69162 14.8128 8.42316 14.9902 9.04386 15.1232C11.0612 15.5222 12.8568 14.6798 13.3445 13.0837C13.7435 11.7315 13.1893 10.8226 11.3715 9.91371C9.77541 9.11566 9.5759 8.87181 10.1079 8.31761C10.5956 7.82991 11.9035 7.87425 12.6351 8.40628L13.2558 8.82747L13.8765 8.1846C14.5859 7.43089 14.475 7.18704 13.2336 6.61067C12.1696 6.12297 10.6178 6.07864 9.66457 6.49983Z"
+                  fill="#1B403A" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.76715 5.25772L8.00209 5.38587L12.3578 0.384841C12.4901 0.24995 12.5682 0.185593 12.5878 0.200129C12.6867 0.273369 11.3015 2.34934 7.89113 7.49739L3.45753 14.17H2.5708H1.66192L1.17422 10.1132C0.908204 7.89641 0.686523 5.90129 0.686523 5.70178C0.686523 5.41359 0.886036 5.32492 1.57324 5.34709C2.06094 5.34709 2.5043 5.41359 2.54864 5.50227C2.61514 5.59094 2.77032 6.92102 2.92549 8.47278C3.08067 10.0245 3.25801 11.2881 3.32452 11.2881C3.39102 11.266 4.25557 9.98021 5.23097 8.38411C6.58322 6.21164 7.13742 5.4801 7.58078 5.34709C7.62952 5.3349 7.69209 5.30471 7.76715 5.25772Z"
+                  fill="#1B403A" />
+              </svg>
+            </div>
+            <div class="team2Score">
+              <p>{{ item.playerOneset2 }}</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="playersection o-flex flex-vc h-100">
+              <div class="avatars">
+                <p-avatarGroup>
+                  <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" size="large"
+                    shape="circle"></p-avatar>
+                  <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" size="large"
+                    shape="circle"></p-avatar>
+                </p-avatarGroup>
+              </div>
+              <div class="oneunit">
+                <div class="TeamName Team1Name">
+                  <p>{{ item.playerName2 }}</p>
+                </div>
+                <div class="Score">
+                  <div class="row helloe">
+                    <div class="col-lg-12 o-flex">
+                      <div class="setScore">
+                        <p>{{ item.playerOneset2 }}</p>
+                      </div>
+                      <ul class="o-flex ulM-0 Lnone" *ngFor="let score of item.playerOneMatchScore2">
+                        <li>{{ score }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-dialog>
+  </div>
+
+  <div *ngIf="_streamedVideos.length < 1" class="empty h-100">
+    <div class="innerContent py-3">
+      <img class="m-auto flex-vc" src="../../../assets/icons/svg/undraw_in_progress_re_m1l6 1.svg" alt="" />
+      <p class="text-center mt-2"><b>Results is in Progress</b></p>
+    </div>
+  </div>
+</div>

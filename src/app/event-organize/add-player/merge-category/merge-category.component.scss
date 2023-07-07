@@ -1,0 +1,46 @@
+.dialogContainer {
+    .playerTable {
+        thead {
+            white-space: nowrap;
+        }
+
+        tbody {
+            td {
+                color: var(--main-color);
+                white-space: nowrap;
+
+                iframe #document {
+                    height: auto;
+
+                    svg {
+                        height: auto !important;
+                    }
+                }
+            }
+
+            .remover {
+                color: var(--danger-color);
+            }
+
+            .categoryDropdown {
+                ::ng-deep {
+                    .p-dropdown {
+                        border: none;
+                        border-bottom: 1px solid #5555;
+                        border-radius: 0;
+                        max-height: 32px !important;
+                    }
+
+                    .p-dropdown-label {
+                        max-width: 170px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .table> :not(caption)>*>* {
+        border: none;
+    }
+}

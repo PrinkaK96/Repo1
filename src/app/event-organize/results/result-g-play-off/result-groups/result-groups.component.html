@@ -1,0 +1,33 @@
+<div class="container-xxl">
+    <div *ngIf="_selectedFixtureFormat == 'Group-PlayOff'"  class="centerElement mt-1">
+        <div class="topBar flex-sb flex-vc">
+            <div class="flex-sb flex-vc topflex">
+  
+                <div *ngIf="_showPTimeLine" class="steps ">
+                    <p-steps [(activeIndex)]="_activeIndex"
+                        [model]="_groupPlayOffSteps" [readonly]="!_isNextStepActive">
+                    </p-steps>
+                </div>
+               
+               
+            </div>
+        </div>
+    </div>
+    <div *ngIf="_selectedFixtureFormat == 'group playoff + consolation'" class="centerElement mt-1">
+        <div class="topBar flex-sb flex-vc">
+            <div class="flex-sb flex-vc topflex">
+                <div *ngIf="_showPTimeLine" class="steps ">
+                    <p-steps [(activeIndex)]="_activeIndex"
+                        [model]="_consolationSteps" [readonly]="!_isNextStepActive">
+                    </p-steps>
+                </div>
+               
+               
+            </div>
+        </div>
+    </div>
+    <stupa-result-g-play-off *ngIf="_activeIndex == 0" [_currentCategoryId]="_currentCategoryId" [_currentParticipantId]="_currentParticipantId"  (_showSteper)="_showSteperFlag($event)"></stupa-result-g-play-off>
+    <stupa-result-knockout *ngIf="_activeIndex == 1" [_currentCategoryId]="_currentCategoryId" [_currentParticipantId]="_currentParticipantId" ></stupa-result-knockout>
+    <stupa-result-consolation *ngIf="_activeIndex == 2" [_currentCategoryId]="_currentCategoryId" [_currentParticipantId]="_currentParticipantId" ></stupa-result-consolation>
+
+</div>

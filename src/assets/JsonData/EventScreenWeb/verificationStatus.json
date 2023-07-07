@@ -1,0 +1,22 @@
+[
+    {
+        "status_id": 9,
+        "status_description": "Verfication Accepted",
+        "is_active": true
+    },
+    {
+        "status_id": 10,
+        "status_description": "Verfication Rejected",
+        "is_active": true
+    },
+    {
+        "status_id": 11,
+        "status_description": "Unverified",
+        "is_active": true
+    },
+    {
+        "status_id": 8,
+        "status_description": "Verfication Sent",
+        "is_active": true
+    }
+]

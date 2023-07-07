@@ -1,0 +1,202 @@
+<!-- <div class="container-xxl"> -->
+<div class="app-footer mt-4" style="overflow: hidden">
+  <div class="footer-inner">
+    <div class="row footerRow">
+      <div class="col-md-4 footerColumn">
+        <div>
+          <!-- <div class="cbtm">
+              <img src="../../../assets/logos/footer_cbtm_logo.png" class="img-fluid" alt="">
+            </div> -->
+          <div class="section-top mt-3">
+            <!-- <div class="imgTop">
+                <div class="imgContainer">
+                  <img src="../../../assets/logos/footer_cbtm_logo.png" class="img-fluid" alt="">
+                </div>
+              </div> -->
+          </div>
+          <div class="section-center">
+            <div class="">
+              <div class="flex-vc">
+                <div class="generatedLinks" *ngFor="let item of _links; let i = index">
+                  <div class="icon _facebook p-links" *ngIf="item.title == 'Facebook' && item.published==true">
+                    <a href="{{ item.url }}" target="_blank">
+                      <img src="../../../assets/landpage/footer/facebook-icon.png" />
+                    </a>
+                  </div>
+                  <div class="icon _twitter p-links" *ngIf="item.title == 'Twitter'&& item.published==true">
+                    <a href="{{ item.url }}" target="_blank">
+                      <img src="../../../assets/landpage/footer/twitter-icon.png" />
+                    </a>
+                  </div>
+                  <div class="icon _linkedin p-links" *ngIf="item.title == 'LinkedIn' && item.published==true">
+                    <a href="{{ item.url }}" target="_blank">
+                      <img src="../../../assets/landpage/footer/linkedin-icon.png" />
+                    </a>
+                  </div>
+                  <div class="icon _youtube p-links" *ngIf="item.title == 'YouTube' && item.published==true">
+                    <a href="{{ item.url }}" target="_blank">
+                      <img src="../../../assets/landpage/footer/youtube-icon.png" />
+                    </a>
+                  </div>
+                </div>
+                <!-- <div class="icon _twitter">
+                                      <img src="../../../assets/landpage/footer/twitter-icon.png" alt="">
+                                  </div>
+                                  <div class="icon _linkedin">
+                                      <img src="../../../assets/landpage/footer/linkedin-icon.png" alt="">
+                                  </div>
+                                  <div class="icon _youtube">
+                                      <img src="../../../assets/landpage/footer/youtube-icon.png" alt="">
+                                  </div> -->
+              </div>
+              <div class="text-start">
+                <div class="contacts p-links">
+                  <div class="flex-vc" *ngIf="_email != ''">
+                    <!-- *ngIf="_email != ''" this check is removed from the upper code  -->
+                    <div class="contact-image">
+                      <img src="../../../assets/icons/mail-icon.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="contact-text ms-1">
+                      <p>
+                        <a class="no-line" href="mailto: {{ _email }}">{{
+                          _email
+                          }} </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-vc">
+                    <div class="contact-image">
+                      <img src="../../../assets/icons/phone-icon.png" class="img-fluid" alt="" />
+                    </div>
+                    <div class="contact-text ms-1">
+                      <p>+91- 7979761065</p>
+                      <!-- <a class="no-line" href="tel(21) 2579-0650"></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <div class="text-center mt-2">
+              <div class="poweredBy">
+                <p>Powered By </p>
+                <div class="imgContainer IC d-flex justify-content-center">
+                  <div class="img-box w100">
+                    <img *ngIf="!isReferesh" src="../../../assets/icons/stupalogo.png" class="img-fluid" alt="" />
+                    <img *ngIf="isReferesh" src="../../../assets/logos/stupalogobiginsize.png" class="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 footerColumn">
+        <div class="section-top">
+          <div class="heading-top">
+            <div class="text-center mt-4">
+              <h6>{{ "footer.termsCondition" | translate }}</h6>
+            </div>
+          </div>
+        </div>
+        <div class="section-center flexColumn my-5">
+          <div class="policies text-center" *ngFor="let item of _termsLinks">
+            <div class="policy">
+              <a class="no-line p-green" href="{{ item.url }}" target="_blank">
+                <span class="nameUnderline p-small">{{ item.title }}</span>
+              </a>
+            </div>
+            <!-- <div class="policy">
+                              <p class="p-small">Privacy Policiy</p>
+                          </div>
+                          <div class="policy">
+                              <p class="p-small">Content Policy</p>
+                          </div>
+                          <div class="policy">
+                              <p class="p-small">Subscription Policy</p>
+  
+                          </div> -->
+          </div>
+        </div>
+        <div class="section-bottom my-4">
+          <div class="rights">
+            <!-- <p class="p-small text-grey">
+                &#169; 2023, Brazilian Table Tennis Confederation. All rights
+                reserved.
+              </p> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 footerColumn">
+        <div class="section-top">
+          <div class="heading-top">
+            <div class="text-center mt-4">
+              <h6>{{ "header.Mobileapp" | translate }}</h6>
+            </div>
+          </div>
+        </div>
+        <div class="section-center my-3">
+          <div class="downloadApp">
+            <div class="flex-vc">
+              <div class="organizer _appType">
+                <div class="text-center _relative p-3">
+                  <div class="imgTop">
+                    <img src="../../../assets/landpage/footer/stupaorganisers.png" class="w50" alt="" />
+                  </div>
+                  <div class="dowloadButtons">
+                    <div class="text_tag">
+                      <p>organisers</p>
+                    </div>
+                    <div class="downloadBut">
+                      <a href="https://apps.apple.com/in/app/stupatournament/id1611230342" target="_blank">
+                        <img src="../../../assets/landpage/footer/appStore.png" class="w150" alt="" />
+                      </a>
+                    </div>
+                    <div class="downloadBut">
+                      <a href="https://play.google.com/store/apps/details?id=com.stupa.tournament&hl=en&gl=US"
+                        target="_blank">
+                        <img src="../../../assets/landpage/footer/playStore.png" class="w150" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Players _appType">
+                <div class="text-center _relative p-3">
+                  <div class="imgTop">
+                    <img src="../../../assets/landpage/footer/stupaPlayers.png" class="w50" alt="" />
+                  </div>
+                  <div class="dowloadButtons">
+                    <div class="text_tag">
+                      <p>Players</p>
+                    </div>
+                    <div class="downloadBut">
+                      <a href="https://apps.apple.com/in/app/stupa-analytics/id1480094754" target="_blank">
+                        <img src="../../../assets/landpage/footer/appStore.png" class="w150" alt="" />
+                      </a>
+                    </div>
+                    <div class="downloadBut">
+                      <a href="https://play.google.com/store/apps/details?id=com.dharmah.stupasports&hl=en&gl=US"
+                        target="_blank">
+                        <img src="../../../assets/landpage/footer/playStore.png" class="w150" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-bottom">
+          <div class="differece">
+            <p class="p-small">
+              <a> {{ "footer.checkoutDiff" | translate }} </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

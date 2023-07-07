@@ -1,0 +1,48 @@
+$commonHeight: 350px;
+
+.fullHeight {
+  height: 100%;
+}
+
+.common-svg-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20rem;
+
+  .container-xxl.maxW {
+    max-width: 30vw;
+    padding: 1rem;
+
+    .centerImage {
+      padding: 3rem 5rem;
+    }
+
+    .btnMain {
+      border-radius: 50px;
+      padding: 10.5px 20px !important;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .common-svg-msg {
+    padding: 0 !important;
+
+    .container-xxl.maxW {
+      //   background-color: lightblue;
+      max-width: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .common-svg-msg {
+    padding: 0 5rem;
+  }
+}

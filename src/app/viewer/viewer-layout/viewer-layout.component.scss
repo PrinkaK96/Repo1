@@ -1,0 +1,266 @@
+.outercontainer {
+  // lower padding is the new design padding
+  // padding: 20px 60px 30px;
+}
+
+.topbar {
+  .top-banner {
+    .innerContent {
+      position: relative;
+      height: 300px;
+
+      // height: 200px;
+      // this is the height for the new design by govind
+      .img-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+        // lower border-radius is the new design radius
+        // border-radius: 6px;
+      }
+
+      .innerInfo {
+        position: absolute;
+        background-color: #00000070;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 1rem;
+
+        // border radius for the new design
+        // border-radius: 6px;
+        .backBtn,
+        .title {
+          position: absolute;
+          left: 1rem;
+        }
+
+        .backBtn {
+          top: 1rem;
+        }
+
+        .title {
+          bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.common-tabView {
+  ::ng-deep {
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+      border-bottom: 2px solid var(--main-color) !important;
+    }
+  }
+}
+
+.COL8 {
+  align-self: center;
+}
+
+.z2 {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  padding: 15px 24px;
+}
+
+.card {
+  height: 130px;
+  padding: 20px 15px 20px 19px;
+}
+
+.BackBTN {
+  cursor: pointer;
+
+  p {
+    background: white;
+    color: black;
+    padding: 3px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 100%;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: rgba(156, 153, 153, 0.5);
+      width: 0;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 5px;
+      transition: 0.4s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.champioShiP_Name {
+  font-weight: bold;
+  font-size: 1rem;
+
+  P {
+    width: 100%;
+  }
+}
+
+.date_Section,
+.location_Section {
+  margin-top: 7px;
+  gap: 0.7rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .BackBTN {
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+
+    p {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 820px) and (min-width: 1180px) {
+  .col-md-4 {
+    width: 60%;
+  }
+
+  .col-md-8 {
+    width: 40%;
+  }
+}
+
+.burdder {
+  // border: 1px solid lightgray;
+  // padding: 10px;
+  border-radius: 6px;
+
+  ::ng-deep {
+    p-tabview {
+      .p-tabview {
+        .p-tabview-nav-container {
+          // below code is commented becuase their is another css for the new designs its for the old design
+          // padding: 10px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.topbar {
+  .top-banner {
+    .innerContent {
+      position: relative;
+      height: 300px;
+
+      .img-cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+      }
+
+      .innerInfo {
+        position: absolute;
+        background-color: #00000070;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 1rem;
+
+        .backBtn,
+        .title {
+          position: absolute;
+          left: 1rem;
+        }
+
+        .backBtn {
+          top: 1rem;
+        }
+
+        .title {
+          bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.common-tabView {
+  ::ng-deep {
+    .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+      border-bottom: 2px solid var(--main-color) !important;
+    }
+  }
+}
+
+@media screen and (width >=319px) and (width <=425px) {
+  .skeletonlayout {
+    .row {
+      .col-lg-1 {
+        &:not(:first-child){
+          margin-top: 1rem;
+        }
+        // margin-top: 1rem;
+      }
+    }
+  }
+}
+@media screen and (width >= 426px) and (width <=767px) {
+  .skeletonlayout {
+    .row {
+      .col-lg-1 {
+        &:not(:first-child){
+          width: 11.333333%;
+          margin-left: 1rem;
+        }
+        // margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 768px) and (width <= 1023px) {
+  .skeletonlayout {
+    //     width: 11.333333%;
+    .row {
+      .col-lg-1 {
+        &:not(:first-child){
+          margin-left: 1rem;
+        }
+        // margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 1024px)  {
+  .skeletonlayout {
+    //     width: 11.333333%;
+    .row {
+      .col-lg-1 {
+        &:not(:first-child){
+          margin-left: 1rem;
+        }
+        // margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,248 @@
+.radioBox {
+  padding: 5px 0;
+
+  ::ng-deep {
+    p-radiobutton {
+      scale: 0.6;
+    }
+
+    .p-radiobutton .p-radiobutton-box.p-highlight {
+      background: var(--main-color);
+      border-color: var(--main-color);
+    }
+  }
+
+  .field-radiobutton {
+    label {
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.flexing {
+  gap: 30px;
+}
+
+.p-tabview .p-tabview-panels {
+  padding: 0;
+}
+
+.filter__image {
+  border: 1px solid var(--secondary-color);
+  padding: 8px 10px;
+  transition: background 1s, border-radius 1s;
+}
+
+.filter__image:hover {
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 7px;
+}
+
+video:hover {
+  transform: scale(1.2);
+}
+
+.container-xxl {
+
+  // this is removed because showing the old code comment off the below padding 
+  // padding: 0;
+  // here g
+  .heading {
+    font-size: 13px !important;
+    color: var(--secondary-color) !important;
+    margin: 1rem 0;
+  }
+
+  .container {
+    h2 {
+      color: var(--main-color);
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--main-color-light);
+    }
+
+    video {
+      border-radius: 7px;
+      box-shadow: 0px 2px 10px 2px black;
+      transition: transform 0.8s;
+    }
+
+    .row2 {
+      margin-top: 2px;
+    }
+  }
+}
+
+// new live section design starts
+.liveViewerSection {
+  width: 100%;
+  // height: 400px;
+  height: 485px;
+  background: var(--live-bg);
+  padding: 24px;
+  overflow: auto;
+
+  .upperSection {
+    gap: 3px;
+    margin-bottom: 6px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .textb {
+      font-weight: bold;
+    }
+  }
+
+  .videoSectionsss {
+    .row {
+      .col-lg-3 {
+
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+          margin-top: 20px;
+        }
+      }
+
+      .cards {
+        .videoContainer {
+
+          // position: relative;
+          // width: 230px;
+          video {
+            // position: absolute;
+            width: 100%;
+            border-radius: 7px;
+
+            &:hover {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.recentlyFinishedMatches {
+  // margin-top: 2rem;
+  padding: 24px;
+
+  .upperSection {
+    p {
+      font-size: 120%;
+      font-weight: bold;
+    }
+  }
+
+  .topBar {
+    .row {
+      .col-lg-2 {
+        .innerContent {
+          .centerElement {
+            margin: 0.6rem 0;
+          }
+        }
+      }
+
+      .ree {
+        position: relative;
+
+        .top-searchbar {
+          position: absolute;
+          width: 97%;
+          top: 0;
+          left: 0;
+          transform: translate(0, 129%);
+        }
+      }
+    }
+  }
+
+  .videoSectionsss {
+
+    // padding: 24px;
+    .row {
+      .col-lg-3 {
+        margin-top: 20px;
+      }
+
+      .cards {
+        .videoContainer {
+
+          // position: relative;
+          // width: 230px;
+          video {
+            // position: absolute;
+            width: 100%;
+            border-radius: 7px;
+
+            &:hover {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-searchbar .innerBox-input .p-inputtext {
+  background: #f8f8f8;
+  box-shadow: none;
+}
+
+
+
+@media screen and (width >=319px) and (width <=425px) {
+  .skeletonlayout {
+    .row {
+      .col-lg-3 {
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width >=426px) and (width <=767px) {
+  .skeletonlayout {
+    .row {
+      .col-lg-3 {
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width >=768px) and (width <=1023px) {
+  .skeletonlayout {
+    .col-lg-3 {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+.imageCover {
+  position: relative;
+
+  .fitImage {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--common-border-radius);
+  }
+}

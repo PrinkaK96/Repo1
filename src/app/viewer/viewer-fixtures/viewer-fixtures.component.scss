@@ -1,0 +1,45 @@
+.container-xxl {
+    .heading {
+        font-size: 13px !important;
+        color: var(--secondary-color) !important;
+        margin: 1rem 0;
+    }
+
+    .topBar {
+        font-size: 90% !important;
+    }
+
+    .radioBox {
+        padding: 5px 0;
+
+        ::ng-deep {
+            p-radiobutton {
+                scale: 0.6;
+            }
+
+            .p-radiobutton .p-radiobutton-box.p-highlight {
+                background: var(--main-bg);
+                border-color: var(--main-color);
+            }
+        }
+
+        .field-radiobutton {
+            label {
+                margin-left: 0.3rem;
+            }
+        }
+    }
+}
+
+
+.innerContent {
+    gap: 10px;
+    .category {
+        padding: 6.6px;
+        border: 1px solid #d4d4d4;
+        border-radius: 7px;
+        p{
+            font-size: 14px !important;
+        }
+    }
+}

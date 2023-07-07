@@ -1,0 +1,13 @@
+.dialogContainer {
+    .officialTable {
+        tbody {
+            .remover {
+                color: var(--danger-color);
+            }
+        }
+    }
+
+    .table> :not(caption)>*>* {
+        border: none;
+    }
+}

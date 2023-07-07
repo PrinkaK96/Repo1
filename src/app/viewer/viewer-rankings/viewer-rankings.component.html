@@ -1,0 +1,191 @@
+<!-- skelton layout starts  -->
+<div class="skeletonlayout" *ngIf="_skeleton && event_id !== null" style="margin: 11px 20px">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="id" *ngFor="let item of idies">
+        <p-skeleton shape="rectangle" width="15px" height="15px" animation="wave"></p-skeleton>
+        <p-skeleton shape="rectangle" width="90px" height="15px" animation="wave"></p-skeleton>
+      </div>
+    </div>
+  </div>
+  <table style="margin-top: 4rem">
+    <tr>
+      <th *ngFor="let item of tables">
+        <p-skeleton shape="rectangle" width="90px" height="15px" animation="wave"></p-skeleton>
+      </th>
+    </tr>
+    <tr *ngFor="let item of tables">
+      <td *ngFor="let item of tables">
+        <p-skeleton shape="rectangle" width="90px" height="15px" animation="wave"></p-skeleton>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- skelton layout ends  -->
+
+<div class="container-xxl" *ngIf="!_skeleton">
+ 
+  <div class="topBar">
+    <h3 class="p-green"><b>Rankings</b></h3>
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="innerContent">
+          <!-- <p class="heading mb-0">Male</p> -->
+          <div class="common-tabView mt-1">
+            <p-tabView (onChange)="currentTab($event)" [activeIndex]="_tabIndex">
+              <p-tabPanel header="Male">
+              
+              </p-tabPanel>
+              <p-tabPanel header="Female">
+              
+              </p-tabPanel>
+            </p-tabView>
+
+          </div>
+          <!-- <p-dropdown
+            class="m-0"
+            [options]="_participantTypesList"
+            [(ngModel)]="_selectedParticipantTypes"
+            optionLabel="participant_description"
+            appendTo="body"
+            [autoDisplayFirst]="true"
+            (onChange)="setType($event)"
+            placeholder="Type"
+          >
+          </p-dropdown> -->
+        </div>
+      </div>
+      <!-- <div class="col-lg-2">
+        <div class="innerContent">
+          <p class="heading mb-0"><b>Category</b></p>
+          <p-dropdown
+            class="m-0"
+            [options]="_categoryList"
+            [(ngModel)]="_categoryList.category_description"
+            optionLabel="category_description"
+            [autoDisplayFirst]="true"
+            appendTo="body"
+            (onChange)="tabSelection($event)"
+          >
+          </p-dropdown>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- <p-divider></p-divider> -->
+  <!-- <div *ngIf="_showFixtureFormat" class="centerElement">
+    <div class="category">
+      <div class="radioBox mt-2">
+        <div class="flex-vc gap-4">
+          <div
+            class="flex-vc field-radiobutton"
+            *ngFor="let item of _fixtureFormat"
+          >
+            <p-radioButton
+              name="participantType"
+              [value]="item"
+              [(ngModel)]="_fixtureFormat[0]"
+              [inputId]="item.key"
+            ></p-radioButton>
+            <label for="city1">{{ item.name }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="tabContainer">
+    <div class="innerBox">
+      <div class="centerElement">
+        <div class="heading flex-e flex-vc"  *ngIf="_playerrank.length>0">
+          <!-- <h4 class="p-green"><b>Rankings</b></h4> -->
+          <button class="profile_buttons2" ngxPrint printSectionId="printthis"
+            styleSheetFile="src/app/viewer/viewer-rankings/viewer-rankings.component.scss,src/styles.scss "
+            [useExistingCss]="true">
+            Print
+          </button>
+        </div>
+        <div class="common-tabView mt-3">
+          <div class="innerContent mt-3">
+            <div class="top-searchbar mt-3">
+              <div class="flex-vc">
+                <div class="innerBox-input">
+                  <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <input type="text" [(ngModel)]="search" pInputText 
+                      (keyup)="searchPlayers()" placeholder=" Find Player" />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3" id="printthis">
+              <p-table class="common-table text-center" styleClass="p-datatable-sm" [value]="_playerrank">
+                <ng-template pTemplate="header">
+                  <tr>
+                   
+                    <th>Name</th>
+                    <th>Club</th>
+                    <th>Previous Points</th>
+                    <th> Event Points</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-player>
+                  <tr>
+                    <td class="flex-vc rem1  "><p-avatar label="{{  profileLetterService(player.name) }}" size="small" shape="circle" class="filled-avatar"></p-avatar>{{ player.name }}</td>
+                    <td class="p-green"> {{ player.club }} </td>
+                    <td class="p-secondary"><b>{{player.previous_points}}</b> </td>
+                    <td class="p-green"> <b>{{ player.event_points }} </b><i class="pi pi-exclamation-circle p-links" (mouseover)="showRanks(true,player)"></i></td>
+                    <!--  (mouseover)="showRanks(item)" -->
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                  <tr>
+                      <td colspan="8">No user found.</td>
+                  </tr>
+              </ng-template>
+              </p-table>
+              <div class="table-paginator mt-3">
+                <p-paginator [rows]="10" [first]="first" [totalRecords]="_totalPlayers"
+                  (onPageChange)="paginate($event)"></p-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="_playerrank.length == 0" class="empty h-100">
+  <div class="innerContent py-3">
+    <img class="m-auto flex-vc" src="../../../assets/icons/svg/undraw_in_progress_re_m1l6 1.svg" alt="" />
+    <p class="text-center mt-2"><b>Rankings is in Progress</b></p>
+  </div>
+</div> -->
+
+<p-dialog [resizable]="false" #pDialog [(visible)]="overlayVisible" [style]="{ width: '55vw' }" [draggable]="false"
+  [modal]="true" [showHeader]="false">
+  <div class="innerContent">
+    <div class="flex-e">
+      <i class="pi pi-times-circle p-links" (click)="showRanks(false,'')" style="margin-bottom: 1rem;"></i>
+    </div>
+    <p-table class="common-table text-center" [value]="_ratingHistory">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th>Match </th>
+          <th>Time</th>
+          <th>Increment</th>
+          <th>Decrement</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body"  let-player let-columns="columns">
+        <tr>
+          <td>{{ player.match_id }}</td>
+          <td>{{ player.time| date:'dd/MM/YY,HH:mm' }}</td>
+          <td>{{ player.increment }}</td>
+          <td>{{ player.decrement }}</td>
+        </tr>
+      </ng-template>
+      
+    </p-table>
+  </div>
+</p-dialog>

@@ -1,0 +1,167 @@
+.container-xxl {
+  .heading {
+    .generateRank {
+      svg {
+        path {
+          fill: var(--combinating-color) !important;
+        }
+      }
+    }
+  }
+
+  .topBar {
+    font-size: 90% !important;
+
+    .radioBox {
+      padding: 5px 0;
+
+      ::ng-deep {
+        p-radiobutton {
+          scale: 0.6;
+        }
+
+        .p-radiobutton .p-radiobutton-box.p-highlight {
+          background: var(--main-bg);
+          border-color: var(--main-bg);
+        }
+      }
+
+      .field-radiobutton {
+        label {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+
+  .common-tabView {
+    .p-tabview {
+      font-family: 'Figtree', sans-serif !important;
+      font-weight: 300 !important;
+      font-size: 100% !important;
+    }
+
+    .topBar {
+      .steps {
+        width: 420px;
+
+        ::ng-deep {
+          .p-steps {
+            font-family: 'Figtree', sans-serif !important;
+
+            .p-steps-item .p-menuitem-link .p-steps-number {
+              color: var(--main-color);
+              border: 1px solid var(--main-color);
+            }
+
+            .p-steps-item.p-steps-current .p-menuitem-link {
+              .p-steps-number {
+                color: var(--primary-color) !important;
+                background: var(--main-bg) !important;
+              }
+            }
+
+            .p-steps-number {
+              min-width: 1.5rem;
+              height: 1.5rem;
+              font-size: 12px;
+            }
+
+            .p-steps-title {
+              font-size: 12px;
+              color: var(--main-color);
+              margin-top: 0;
+            }
+
+            .p-steps-item:before {
+              top: 65%;
+            }
+
+            .p-steps-item:last-child::before {
+              width: 50%;
+              right: 50%;
+            }
+
+            .p-steps-item:first-child::before {
+              width: 50%;
+              left: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// skelton css starts
+.skeletonlayout {
+  .row {
+    .col-lg-6 {
+      display: flex;
+      gap: 5px;
+    }
+  }
+
+  .heading {
+    ::ng-deep {
+      p-skeleton {
+        .p-skeleton {
+          // z-index: 99999;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .cards {
+    .mt-2 {
+      .col-lg-6 {
+        &:nth-child(2) {
+          ::ng-deep {
+            p-skeleton {
+              float: right;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.id {
+  display: flex;
+  gap: 5px;
+
+  div {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    th {
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+}
+
+// skeleton css end
+.generateRank {
+  gap: 1rem;
+}
+
+.rem1 {
+  gap: 1rem;
+}

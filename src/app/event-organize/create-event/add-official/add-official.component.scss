@@ -1,0 +1,34 @@
+.centerElement {
+    .fillBox {
+        margin-bottom: 5vh;
+        .filler {
+            border: 2px solid var(--main-color);
+            border-radius: var(--common-border-radius);
+            height: 180px;
+            .info {
+                background-color: var(--main-color);
+                opacity: 0.9;
+                color: white;
+                height: 100%;
+                padding: 1rem;
+                flex-basis: 100%;
+                border-radius: var(--common-border-radius);
+                .eventText {
+                    margin-top: 5rem;
+                    i {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .representer {
+                flex-basis: auto;
+                .imgContainer {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+.innerBox{
+    padding: 1rem;
+}

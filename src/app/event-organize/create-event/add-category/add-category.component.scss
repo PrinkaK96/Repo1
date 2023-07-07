@@ -1,0 +1,281 @@
+.centerElement {
+  ::ng-deep {
+    .p-multiselect {
+      margin: 0 !important;
+    }
+  }
+
+  .dateSection {
+    margin-top: 3rem;
+
+    ::ng-deep {
+      .p-calendar input {
+        color: var(--main-color);
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .p-calendar input::placeholder {
+        font-size: 20px;
+        font-weight: 300 !important;
+      }
+    }
+
+    .dateFlex {
+      border-bottom: 1px solid var(--secondary-color);
+
+      .endDate {
+        ::ng-deep {
+          .p-calendar {
+            input {
+              text-align: end;
+              padding-right: 0 !important;
+            }
+          }
+        }
+      }
+
+      .flex1 {
+        flex-basis: 100%;
+
+        label {
+          color: var(--secondary-color);
+        }
+
+        .statDate-flexLine {
+          .text {
+            flex-basis: 10vw;
+          }
+
+          span.divider {
+            position: relative;
+            flex-basis: 100%;
+            height: 1px;
+            background-color: var(--secondary-color);
+          }
+        }
+      }
+
+      .flex-line {
+        flex-basis: 75px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .divider {
+          display: block;
+          width: 1px;
+          background: var(--secondary-color);
+          height: 190px;
+        }
+      }
+    }
+
+
+  }
+
+  .detail-input {
+    label {
+      color: var(--secondary-color);
+    }
+
+    input {
+      border-bottom: 1px solid var(--secondary-color) !important;
+      border: none;
+      border-radius: 0 !important;
+      background-color: transparent;
+      margin: 0 !important;
+    }
+
+    ::ng-deep {
+      .p-calendar .p-inputtext {
+        border-bottom: 0.01em solid #ced4da !important;
+        border-radius: 0;
+      }
+
+      .p-multiselect {
+        border: none;
+        border-bottom: 1px solid #5555;
+        border-radius: 0;
+        margin: 0 !important;
+      }
+
+      .p-dropdown {
+        border: none;
+        border-bottom: 1px solid #5555;
+        border-radius: 0;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .bannerSection {
+    .bannerFlex {
+      height: 180px;
+    }
+
+    .flexBox1 {
+      flex-basis: 100%;
+      height: 100%;
+
+      .choose {
+        margin: 17% 0;
+      }
+    }
+
+    .flex-line {
+      flex-basis: 75px;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 47px;
+
+      .divider {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        transform: translate(-50%, -50%);
+        background: var(--secondary-color);
+        height: 67%;
+      }
+    }
+
+    .bannerBox {
+      height: 100%;
+      border-radius: var(--common-border-radius);
+      position: relative;
+
+      .fileUploader {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        position: relative;
+      }
+
+      .overlap {
+        position: absolute;
+        top: 0;
+        padding: 1rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .relativeBody {
+        position: relative;
+        color: white;
+        height: 180px;
+
+        input[type="image"] {
+          border-radius: 7px;
+          position: absolute;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        .innerColor {
+          border-radius: 7px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          right: 0;
+          padding: 1.5rem;
+          background-color: rgba(75, 75, 75, 0.555);
+
+          .reuploadBoxie {
+            input[type="file"] {
+              display: none;
+            }
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 0.6rem;
+              padding: 0.2rem 0.6rem;
+              background: var(--secondary-color);
+              width: max-content;
+              border-radius: 7px;
+              position: absolute;
+              bottom: 2vh;
+              right: 2vw;
+              cursor: pointer;
+
+              img {
+                align-self: flex-start;
+              }
+            }
+          }
+
+          .uploadbtn {
+            letter-spacing: 1px;
+            font-weight: bold;
+          }
+
+          
+        }
+      }
+
+      .setCheck {
+        position: relative;
+
+        .checkImage {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .imgContainer {
+        width: 80px;
+      }
+    }
+
+    ._dashed {
+      border: 1px dashed var(--secondary-color) !important;
+      padding: 1rem;
+    }
+
+    ._solid {
+      padding: 1rem;
+      border: 1px solid var(--secondary-color) !important;
+    }
+  }
+  .btn_green {
+    background: var(--main-color);
+    margin: 3vh 0;
+    font-size: 12px;
+    padding: 7px 20px;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+  }
+
+  .updateBtn{
+    background: var(--main-color);
+    margin: 3vh 0;
+    font-size: 12px;
+    padding: 7px 20px;
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white !important;
+    margin-right: 10px;
+    border-radius: 7px;
+  }
+
+    .update {
+      margin: 1vh
+    }
+}
+

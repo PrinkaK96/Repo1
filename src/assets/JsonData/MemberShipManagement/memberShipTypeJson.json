@@ -1,0 +1,10 @@
+[
+    {
+        "typeId": 1,
+        "typeName": "Subscription"
+    },
+    {
+        "typeId": 2,
+        "typeName": "One-Time"
+    }
+]

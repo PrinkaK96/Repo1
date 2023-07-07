@@ -1,0 +1,231 @@
+<div class="ngtt__match-wrapper" #matchWrapper>
+  <div class="parentContainer">
+    <div *ngIf="!viewer">
+      <div class="updateScore flex-vc flex-hc" (click)="showEdit(match)" *ngIf="showEditIcon(match)">
+        <i class="pi pi-pencil i-small"></i>
+      </div>
+    </div>
+    <div *ngFor="let note of match.match_details; let position = index">
+      <div class="playerIndex">
+        <p>{{ getIndex(position) }}</p>
+      </div>
+      <div class="topbar box-siders" *ngIf="match.start_time !== null">
+        <div class="flex-sb flex-vc">
+          <div class="flex-vc dateTime">
+            <i class="pi pi-calendar p-green i-small"></i>
+            <p class="ms-2">{{match.start_time | date:'yyyy-MM-dd,HH:mm' }}</p>
+          </div>
+          <div class="flex-vc tableNo">
+            <p>Table No:</p>
+            <p class="ms-2 p-green">{{ match.table }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar box-siders" *ngIf="match.start_time !== null">
+        <div class="flex-vc">
+          <p>Umpire:</p>
+          <p class="ms-2 p-green">{{ match.umpire_name }}</p>
+        </div>
+      </div>
+      <!-- <div class="ngtt__team-wrapper" *ngIf="note.participant_name != 'BYE'"> -->
+      <!--  pTooltip="Click to see Score" -->
+      <div class="ngtt__team-wrapper" (click)="showScore(true, match)">
+        <p-avatar *ngIf="note.participant_name !== '' && note.participant_name !== null" class="avatar-small"
+          label="{{ getFirstLetters(note.participant_name) }}" shape="circle"></p-avatar>
+        <p class="ngtt__team-title text-overflow">
+          {{ note.participant_name }}
+        </p>
+        <div class="ngtt__team-score me-4" *ngIf="note.participant_name !== '' && note.participant_name !== null">
+          {{ note.set_won }}
+        </div>
+
+        <!-- <div class="crown" *ngIf="showCrown(note.participant_id,match.winner)">
+          <div class="icons">
+            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.31621 2.30352L3.29051 3.61972L5.25823 0.865099C5.30171 0.804163 5.35912 0.754494 5.42567 0.720224C5.49223 0.685954 5.566 0.668076 5.64086 0.668076C5.71572 0.668076 5.7895 0.685954 5.85606 0.720224C5.92261 0.754494 5.98002 0.804163 6.0235 0.865099L7.99122 3.61972L9.96552 2.30352C10.0402 2.25381 10.1276 2.22652 10.2174 2.22489C10.3071 2.22326 10.3954 2.24735 10.4719 2.29431C10.5484 2.34128 10.6098 2.40915 10.6489 2.48992C10.6881 2.57068 10.7033 2.66096 10.6927 2.75008L9.92039 9.31557C9.90692 9.42991 9.85195 9.53534 9.76591 9.61185C9.67987 9.68836 9.56875 9.73063 9.45361 9.73064H1.82812C1.71298 9.73063 1.60185 9.68836 1.51581 9.61185C1.42977 9.53534 1.37481 9.42991 1.36134 9.31557L0.589008 2.74961C0.578572 2.66053 0.593843 2.57032 0.633016 2.48963C0.67219 2.40894 0.733631 2.34114 0.810088 2.29424C0.886544 2.24734 0.974823 2.22329 1.0645 2.22493C1.15418 2.22658 1.24152 2.25384 1.31621 2.30352ZM5.64086 6.91022C5.89021 6.91022 6.12933 6.81116 6.30565 6.63485C6.48196 6.45854 6.58101 6.21941 6.58101 5.97007C6.58101 5.72073 6.48196 5.4816 6.30565 5.30529C6.12933 5.12898 5.89021 5.02993 5.64086 5.02993C5.39152 5.02993 5.15239 5.12898 4.97608 5.30529C4.79977 5.4816 4.70072 5.72073 4.70072 5.97007C4.70072 6.21941 4.79977 6.45854 4.97608 6.63485C5.15239 6.81116 5.39152 6.91022 5.64086 6.91022Z"
+                fill="#FF783E" />
+            </svg>
+
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- teams screen popup in teams events  -->
+<div *ngIf="_currentParticipantId === 2 && isShowScoreTeams(match.match_details)">
+  <div class="parent" *ngIf="
+      match.match_details[0].participant_name != '' &&
+      match.match_details[1].participant_name != null
+    ">
+    <p-dialog [(visible)]="_showScorePanel" [modal]="true" [draggable]="false"
+      [style]="{ width: '75vw', height: '60vh' }" [baseZIndex]="10000" [resizable]="false">
+      <div class="teamScore">
+        <div class="cross" (click)="showScore(false, '')">
+          <i class="pi pi-times-circle p-combine"></i>
+        </div>
+        <div class="topbar flex-vc flex-hc">
+          <div class="flex-vc w-100">
+            <div class="flex-100 p-0">
+              <div class="filterCard _big _left text-end">
+                <h4 class="text-end me-5">
+                  {{ match.match_details[0].participant_name }}
+                </h4>
+              </div>
+            </div>
+            <div class="flex-10 p-0">
+              <div class="scoreFlex gap-4 flex-hc flex-vc h-100">
+                <div class="score">
+                  <h4>{{ match.match_details[0].set_won }}</h4>
+                </div>
+                <div class="vs_small">
+                  <p class="p-green">vs</p>
+                </div>
+                <div class="score">
+                  <h4>{{ match.match_details[1].set_won }}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="flex-100 p-0">
+              <div class="filterCard _big _right">
+                <h4 class="text-start ms-5">
+                  {{ match.match_details[1].participant_name }}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="innerContent">
+          <div class="centerElement flex-vc flex-hc p-5">
+            <div class="flex-vc w-100 mb-2" *ngFor="let details of this._teamMatchDetails">
+              <div class="flex-100 p-0">
+                <div class="filterCard _left">
+                  <div class="row">
+                    <div class="col-5 flex-vc">
+                      <div class="flex-vc setScoreRow" *ngFor="let item of details.match_details[0].score">
+                        <p class="setScore px-1">{{ item }}</p>
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <p class="pName text-overflow w-100">
+                        {{ details.match_details[0].participant_name }}
+                      </p>
+                    </div>
+                    <div class="col-2">
+                      <p-avatar class="avatar-small p-green" label="{{
+                          getFirstLetters(
+                            details.match_details[0].participant_name
+                          )
+                        }}" shape="square"></p-avatar>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-10 p-0">
+                <div class="scoreFlex gap-4 flex-hc flex-vc h-100">
+                  <div class="score">
+                    <h6>{{ details.match_details[0].set_won }}</h6>
+                  </div>
+                  <div class="vs_small">
+                    <p class="p-green p-small">vs</p>
+                  </div>
+                  <div class="score">
+                    <h6>{{ details.match_details[1].set_won }}</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-100 p-0">
+                <div class="filterCard _right">
+                  <div class="row">
+                    <div class="col-2 flex-e">
+                      <p-avatar class="avatar-small p-green" label="{{
+                          getFirstLetters(
+                            details.match_details[1].participant_name
+                          )
+                        }}" shape="square"></p-avatar>
+                    </div>
+                    <div class="col-5">
+                      <p class="text-overflow w-100 text_left">
+                        {{ details.match_details[1].participant_name }}
+                      </p>
+                    </div>
+                    <div class="col-5 flex-vc flex-e">
+                      <div class="flex-vc setScoreRow" *ngFor="let item of details.match_details[1].score">
+                        <p class="setScore px-1">{{ item }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p-dialog>
+  </div>
+</div>
+
+<!-- new small screen   -->
+
+<p-overlay *ngIf="
+    isShowScore(match.match_details) &&
+    (_currentParticipantId === 1 ||
+      _currentParticipantId === 3 ||
+      _currentParticipantId === 4)
+  " [(visible)]="_showPanel" appendTo="body" [style]="{ width: '240px' }">
+  <div class="score-panel">
+    <div class="innerContent">
+      <div class="playerRow row flex-vc" *ngFor="let player of match.match_details">
+        <!-- <div class="col-2 flex-hc h-100">
+          <div class="">
+            <p-avatar class="avatar-small" shape="circle" label="{{ getFirstLetters(player.participant_name) }}"
+              size="small"></p-avatar>
+          </div>
+        </div> -->
+        <div class="col-10">
+          <p class="p-green names">{{ player.participant_name }}</p>
+          <div class="flex-vc mt-1 w-100">
+            <div class="text-center px-1 scoreCont" *ngFor="let item of player.score;let i=index">
+              <p class="p-secondary scores">
+                <b *ngIf="player.score[i] !==0 ">{{ item }}</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="flex-vc">
+            <h4>
+              <b>{{ player.set_won }}</b>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="divider flex-vc">
+        <p-divider class="w-100"> </p-divider>
+        <div class="vs">
+          <p><b>vs</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-overlay>
+
+<div class="updateScore-popup withoutHeader">
+  <p-dialog class="common-score" (onHide)="refreshScoreTree()" [resizable]="false" [(visible)]="_updateScore"
+    [modal]="true" closeIcon="pi pi-times-circle p-green" [draggable]="false" [style]="{ width: 'auto'}"
+    [baseZIndex]="10000" [resizable]="false">
+    <stupa-common-score [_currentCategoryId]="selectedCategoryId" [_parent_match_id]="_parent_match_id"
+      [_groupId]="_groupId" *ngIf="_updateScore" [scoreFullDetails]="_matchFullDetails"
+      (teamMatchCreated)="refreshScoreTree()" (isScoreUpadted)="refreshScoreTree()"
+      [_currentParticipantId]="_currentParticipantId" [groupType]="groupType"></stupa-common-score>
+    <!-- <stupa-update-score  [_teamAPlayers]="_teamAPlayers"
+    [_teamAPlayersCopy]="_teamAPlayersCopy" [_currentParticipantId]="_currentParticipantId"
+    [_teamBPlayers]="_teamBPlayers" [_teamBPlayersCopy]="_teamBPlayersCopy"
+    [_teamMatchFullDetails]="_teamMatchFullDetails" [_teamA_participant_id]="_teamA_participant_id"
+    [_teamB_participant_id]="_teamB_participant_id" [_parent_match_id]="_parent_match_id"
+    (isScoreUpadted)="isScoreUpadted($event)" [_currentCategoryId]="_currentCategoryId" [_groupId]="_groupId"
+    (teamMatchCreated)="teamMatchCreated($event)"></stupa-update-score> -->
+  </p-dialog>
+</div>

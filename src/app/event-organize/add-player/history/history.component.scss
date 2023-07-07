@@ -1,0 +1,28 @@
+.individualPlayer-tab {
+    .flex-100 {
+        flex-basis: 100%;
+    }
+    .underline {
+        flex-basis: 100px;
+        justify-content: center;
+        align-items: center;
+        .line {
+            width: 2px;
+            height: 40px !important;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+    }
+    .undo {
+        iframe #document {
+            height: auto !important;
+        }
+        svg {
+            height: auto !important;
+            margin-left: 10px;
+            path {
+                fill: var(--main-color) !important;
+            }
+        }
+    }
+}

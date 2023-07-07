@@ -1,0 +1,198 @@
+<!-- skelton layout starts  -->
+<!-- <div class="skeletonlayout" *ngIf="!_skeleton" style="margin: 29px 20px">
+  <table style="margin-top: 4rem">
+    <tr>
+      <th *ngFor="let item of tables">
+        <p-skeleton
+          shape="rectangle"
+          width="90px"
+          height="15px"
+          animation="wave"
+        ></p-skeleton>
+      </th>
+    </tr>
+    <tr *ngFor="let item of tables">
+      <td *ngFor="let item of tables">
+        <p-skeleton
+          shape="rectangle"
+          width="90px"
+          height="15px"
+          animation="wave"
+        ></p-skeleton>
+      </td>
+    </tr>
+  </table>
+</div> -->
+<!-- skelton layout ends  -->
+
+<div class="container-xxl">
+  <div class="innerContent">
+    <div class="topbar">
+      <div class="py-3">
+        <div class="back flex-vc gap-2 mb-2">
+          <button style="border: none; background: none" (click)="goBack()" class="backBtn">
+            <div class="commonBackBtn p-green">
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="currentColor"
+                class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+              </svg>
+            </div>
+          </button>
+          Back
+        </div>
+        <div class="heading">
+          <h4 class="p-green"><b>Order History</b></h4>
+        </div>
+      </div>
+    </div>
+    <div class="centerElement mt-4">
+      <div class="heading">
+        <h6 class="p-secondary-dark"><b>Order Summary</b></h6>
+      </div>
+
+      <div class="mt-3 mb-3">
+        <p-table class="common-table text-start" #request [value]="_eventList" [paginator]="false" [rows]="10"
+          [showCurrentPageReport]="true" [tableStyle]="{ 'min-width': '50rem' }"
+          currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+          <ng-template pTemplate="header">
+            <tr>
+              <th style="width: 20%">Name of Event</th>
+              <th style="width: 20%">Registered Participants</th>
+              <th style="width: 20%">Participant Type</th>
+              <th style="width: 20%">Amount</th>
+              <th style="width: 20%">Status</th>
+              <th style="width: 20%">Action</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-event>
+            <tr>
+              <!-- <td>{{ users.name }}</td> -->
+              <td>{{ event.event_name }}</td>
+              <td>
+                <div class="flex-vc g">
+                  <i class="pi pi-eye i-small p-combine ms-2 p-links" (click)="showDialog(event)"></i>
+                  <p class="p-secondary-dark">{{ event.total_players }}</p>
+                  <p class="p-secondary-dark ms-1" *ngIf="event.participant_type_description === 'Single'">
+                    Players
+                  </p>
+                  <p class="p-secondary-dark ms-1" *ngIf="event.participant_type_description === 'Teams'">
+                    Teams
+                  </p>
+                  <!-- <p class="p-secondary-dark ms-1" *ngIf="
+                      event.participant_type_description === 'Doubles' || event.participant_type_description === 'Mix Doubles'
+                    ">
+                    Pair
+                  </p> -->
+                  <!-- <i
+                    class="pi pi-eye i-small p-combine ms-2 p-links"
+                    (click)="showDialog(event)"
+                  ></i> -->
+                </div>
+              </td>
+              <td class="p-secondary-dark">
+                {{ event.participant_type_description }}
+              </td>
+              <td class="p-secondary-dark f">
+                &#82;&#36;{{ event.event_total }}
+              </td>
+              <td [ngClass]="{
+                  'p-success fw-bold': event.payment_status === 'Success',
+                  'p-danger fw-bold': event.payment_status === 'Failed',
+                  'p-secondary-dark fw-bold': event.payment_status === 'Pending'
+                }">
+                {{ event.payment_status }}
+              </td>
+              <td class="p-combine">
+                <!-- Print Invoice -->
+                <!-- <button
+                    class="profile_buttons2"
+                    ngxPrint
+                    printSectionId="print_section" 
+                    [useExistingCss]="true"
+                    (click)="printInvoice()"
+                  >
+                    Print
+                  </button> -->
+                <a class="p-combine p-links" *ngIf="event.payment_status=='Complete'" (click)="showInvoice(event)">Show
+                  Invoice</a>
+                <a class="p-secondary p-links" *ngIf="event.payment_status!='Complete'">Show Invoice</a>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+            <tr>
+              <td colspan="8" style="text-align: center">No orders found.</td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <div class="table-paginator mt-3">
+          <p-paginator [rows]="10" [first]="first" [totalRecords]="_totalAcceptedUser"
+            (onPageChange)="paginate($event)"></p-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p-dialog [resizable]="false" [(visible)]="_showRegisered" closeIcon="pi pi-times-circle p-combine" [modal]="true"
+    [draggable]="false" [header]="'History'" [style]="{ width: '1000px', maxHeight: '535px', overflow: 'hidden' }"
+    [baseZIndex]="10000">
+    <stupa-registered [_showDetailsonIcon]="_showDetailsonIcon"></stupa-registered>
+  </p-dialog>
+</div>
+
+
+<p-toast position="bottom-right" key="bc"></p-toast>
+
+<stupa-gif-loader *ngIf="_showLoader"></stupa-gif-loader>
+<!-- Invoice Screen -->
+<div>
+  <p-dialog [resizable]="false" [(visible)]="_showInvoice" closeIcon="pi pi-times-circle p-combine" [modal]="true"
+    [draggable]="false" [header]="'Invoice'" [style]="{ width: '1000px', maxHeight: '535px', overflow: 'hidden' }"
+    [baseZIndex]="10000">
+    <button class="profile_buttons2" ngxPrint printSectionId="print_section" [useExistingCss]="true">
+      Print </button>
+    <div id="print_section">
+      <div class="container">
+        <div class="invoiceContainer">
+          <div *ngFor="let item of _invoiceData">
+
+            <div class="row mt-2">
+              <div class="col-6">
+                <div class="invoiceNO">
+                  <p>Invoice no :- ST{{- item.order_id}}</p>
+                  <p>Date :- {{item.created_date| date : "dd/MM/YYYY"}} </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <p class="bigger">Billed To</p>
+                <!-- <p>Club Name</p> -->
+                <p>Address- {{item.address}}</p>
+              </div>
+            </div>
+            <div class="DescriptionSection mt-3">
+              <table>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Participants</th>
+                  <th>Amount</th>
+                </tr>
+                <tr *ngFor="let items of item.players">
+                  <td>{{item.event_name}}</td>
+                  <td>{{items.participant_name}}</td>
+                  <td> &#36; {{items.total}}</td>
+
+                </tr>
+
+                <tr>
+                  <td></td>
+                  <td> Total</td>
+                  <td>${{item.event_total}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+</div>
