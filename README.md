@@ -1,49 +1,22 @@
-# Stupa - necessary for the project
-Angular CLI: 15.0.1
-Node: 18.12.1
-Package Manager: npm 8.19.2
-# This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+# Azure Static Web Apps
 
-## Development server
+Azure App Service Static Web Apps is a streamlined hosting option for developers building modern full-stack JavaScript web apps on Azure. Static Web Apps is tailored for apps with static front-end and optional dynamic back-end powered by Azure Functions serverless APIs. Static Web Apps feature: 
+* A single unified workflow based on GitHub actions from source code to global availability in the cloud
+* Integrated serverless APIs powered by Azure Functions to extend and evolve your app 
+* Authentication and Authorization with flexible role and access definitions
+ 
+To get started, follow the [Static Web Apps quickstart](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?WT.mc_id=staticwebapps-docs-cxa) to build and deploy your first static web app in minutes. For more info about Static Web Apps, see the [Static Web Apps documentation](https://docs.microsoft.com/en-us/azure/static-web-apps/?WT.mc_id=build2020_swa-docs-cxa) and the guided learning paths in Microsoft Learn for [creating and publishing an Angular, React, Svelte, or Vue JavaScript app and API](https://docs.microsoft.com/en-us/learn/modules/publish-app-service-static-web-app-api/?WT.mc_id=build2020_swa-frameworks-cxa) or for [creating and publishing an app with the Gatsby static site generator](https://docs.microsoft.com/en-us/learn/modules/create-deploy-static-webapp-gatsby-app-service/?WT.mc_id=build2020_swa-sitegen-cxa).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Contributing
 
-## Code scaffolding
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+When you submit a pull request, a CLA bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Folder/Project Structure
-[![](https://mermaid.ink/img/pako:eNpt0clqwzAQBuBXEXNOXsCHQovTLS09OLexD1NpEgu0GC2GEPLuVYhL7TQ6CX3_jNDoBNIrhgoOgYZe7OrWibIeMQbZifX64QlpGDpxeyyRYuQUu1uokd2og3eWXWHxr3KDxksyPNHU_yLiGUlKn126dp3TC5Ky2k3XzeUVv4MnJSmmL2eOdxJvaMipgQ58B9_R6JEtJdnz72uWiS02HEYtZ7zwD2x6Cqz-dMGfmHwOjq7zgBVYDpa0KjM_XSpaSD1bbqEqW8V7yia10LpziVJOvjk6CVUKmVeQB0WJa03ltyxUezKRzz-5nowB?type=png)](https://mermaid.live/edit#pako:eNpt0clqwzAQBuBXEXNOXsCHQovTLS09OLexD1NpEgu0GC2GEPLuVYhL7TQ6CX3_jNDoBNIrhgoOgYZe7OrWibIeMQbZifX64QlpGDpxeyyRYuQUu1uokd2og3eWXWHxr3KDxksyPNHU_yLiGUlKn126dp3TC5Ky2k3XzeUVv4MnJSmmL2eOdxJvaMipgQ58B9_R6JEtJdnz72uWiS02HEYtZ7zwD2x6Cqz-dMGfmHwOjq7zgBVYDpa0KjM_XSpaSD1bbqEqW8V7yia10LpziVJOvjk6CVUKmVeQB0WJa03ltyxUezKRzz-5nowB)
-  
-## Inside Master Folders
-app: contains components and services required for the project.
-assets: containsimages, JSon files
-environments:consists of environment files
-locale: consists of translation files.
-
-## src -> app(core)
-account: contains all the components related to login, sign-up,forgot password,verify .
-admin: contains all the components related to admin module. [For more Information dig into src -> app -> admin].
-broadcast-only: contains all the components related to broadcast-only module.
-landpage: The home module 
-layout: having common header footer component.
-live-matches: 
-services: used for Http calling 
-shared: common component, methods and modules used in whole project.
-tournaments: contains all the components related to TMS(Tournament Management System).
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
